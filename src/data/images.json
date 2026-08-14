@@ -545,6 +545,14 @@
       "tags": ["healthcare", "telehealth", "portal"]
     },
     {
+      "id": "case-study-hero-4",
+      "url": "https://images.pexels.com/photos/30170004/pexels-photo-30170004.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "alt": "Smart home automation with mobile phone control",
+      "attribution": { "author": "Jakub Zerdzicki", "source": "pexels", "url": "https://www.pexels.com/photo/30170004/" },
+      "category": "case-study",
+      "tags": ["smart-home", "iot", "automation"]
+    },
+    {
       "id": "about-hero",
       "url": "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "alt": "Professional workspace with design tools",
@@ -583,6 +591,166 @@
       "attribution": { "author": "cottonbro studio", "source": "pexels", "url": "https://www.pexels.com/photo/4508751/" },
       "category": "carousel",
       "tags": ["dashboard", "analytics", "data-viz"]
+    },
+    {
+      "id": "project-cover-16",
+      "url": "https://images.pexels.com/photos/4114788/pexels-photo-4114788.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Smartphone displaying music streaming app interface",
+      "attribution": { "author": "Castorly Stock", "source": "pexels", "url": "https://www.pexels.com/photo/4114788/" },
+      "category": "project-cover",
+      "tags": ["music", "streaming", "mobile"]
+    },
+    {
+      "id": "gallery-16-1",
+      "url": "https://images.pexels.com/photos/218686/pexels-photo-218686.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Smartphone with music app login screen beside laptop",
+      "attribution": { "author": "AS Photography", "source": "pexels", "url": "https://www.pexels.com/photo/218686/" },
+      "category": "gallery",
+      "tags": ["music", "app", "mobile"]
+    },
+    {
+      "id": "gallery-16-2",
+      "url": "https://images.pexels.com/photos/340103/pexels-photo-340103.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Person holding smartphone with music streaming app",
+      "attribution": { "author": "John (Giannis) Tekeridis", "source": "pexels", "url": "https://www.pexels.com/photo/340103/" },
+      "category": "gallery",
+      "tags": ["music", "streaming", "mobile"]
+    },
+    {
+      "id": "gallery-16-3",
+      "url": "https://images.pexels.com/photos/4114788/pexels-photo-4114788.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Hand holding smartphone with music apps",
+      "attribution": { "author": "Castorly Stock", "source": "pexels", "url": "https://www.pexels.com/photo/4114788/" },
+      "category": "gallery",
+      "tags": ["music", "social", "app"]
+    },
+    {
+      "id": "project-cover-17",
+      "url": "https://images.pexels.com/photos/35262608/pexels-photo-35262608.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Modern car dashboard with digital touchscreen interface",
+      "attribution": { "author": "Sina Rezakhani", "source": "pexels", "url": "https://www.pexels.com/photo/35262608/" },
+      "category": "project-cover",
+      "tags": ["ev", "car-dashboard", "iot"]
+    },
+    {
+      "id": "gallery-17-1",
+      "url": "https://images.pexels.com/photos/36169956/pexels-photo-36169956.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Smartphone with map app displayed inside a car",
+      "attribution": { "author": "Alicia Christin Gerald", "source": "pexels", "url": "https://www.pexels.com/photo/36169956/" },
+      "category": "gallery",
+      "tags": ["ev", "navigation", "maps"]
+    },
+    {
+      "id": "gallery-17-2",
+      "url": "https://images.pexels.com/photos/4678065/pexels-photo-4678065.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Public EV charging station with eco-friendly design",
+      "attribution": { "author": "Reinhard Bruckner", "source": "pexels", "url": "https://www.pexels.com/photo/4678065/" },
+      "category": "gallery",
+      "tags": ["ev", "charging", "clean-energy"]
+    },
+    {
+      "id": "gallery-17-3",
+      "url": "https://images.pexels.com/photos/35262608/pexels-photo-35262608.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Car digital dashboard touchscreen with apps",
+      "attribution": { "author": "Sina Rezakhani", "source": "pexels", "url": "https://www.pexels.com/photo/35262608/" },
+      "category": "gallery",
+      "tags": ["ev", "dashboard", "touchscreen"]
+    },
+    {
+      "id": "project-cover-18",
+      "url": "https://images.pexels.com/photos/4487383/pexels-photo-4487383.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Workers handling packages in warehouse",
+      "attribution": { "author": "Tiger Lily", "source": "pexels", "url": "https://www.pexels.com/photo/4487383/" },
+      "category": "project-cover",
+      "tags": ["logistics", "warehouse", "supply-chain"]
+    },
+    {
+      "id": "gallery-18-1",
+      "url": "https://images.pexels.com/photos/36697940/pexels-photo-36697940.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Warehouse worker checking inventory on clipboard",
+      "attribution": { "author": "Vitaly Gariev", "source": "pexels", "url": "https://www.pexels.com/photo/36697940/" },
+      "category": "gallery",
+      "tags": ["logistics", "inventory", "warehouse"]
+    },
+    {
+      "id": "gallery-18-2",
+      "url": "https://images.pexels.com/photos/30824313/pexels-photo-30824313.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Warehouse with workers and forklift in aisles",
+      "attribution": { "author": "GB The Green Brand", "source": "pexels", "url": "https://www.pexels.com/photo/30824313/" },
+      "category": "gallery",
+      "tags": ["logistics", "warehouse", "operations"]
+    },
+    {
+      "id": "gallery-18-3",
+      "url": "https://images.pexels.com/photos/4487383/pexels-photo-4487383.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Workers handling package in warehouse shelves",
+      "attribution": { "author": "Tiger Lily", "source": "pexels", "url": "https://www.pexels.com/photo/4487383/" },
+      "category": "gallery",
+      "tags": ["logistics", "shipping", "warehouse"]
+    },
+    {
+      "id": "project-cover-19",
+      "url": "https://images.pexels.com/photos/6962655/pexels-photo-6962655.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Two people meditating outdoors focusing on hands",
+      "attribution": { "author": "Cup of Couple", "source": "pexels", "url": "https://www.pexels.com/photo/6962655/" },
+      "category": "project-cover",
+      "tags": ["wellness", "meditation", "mindfulness"]
+    },
+    {
+      "id": "gallery-19-1",
+      "url": "https://images.pexels.com/photos/6496095/pexels-photo-6496095.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Couple meditating on yoga mats in bright modern living room",
+      "attribution": { "author": "Gustavo Fring", "source": "pexels", "url": "https://www.pexels.com/photo/6496095/" },
+      "category": "gallery",
+      "tags": ["wellness", "meditation", "yoga"]
+    },
+    {
+      "id": "gallery-19-2",
+      "url": "https://images.pexels.com/photos/8556604/pexels-photo-8556604.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Group of people meditating outdoors in serene setting",
+      "attribution": { "author": "Edmond Dantes", "source": "pexels", "url": "https://www.pexels.com/photo/8556604/" },
+      "category": "gallery",
+      "tags": ["wellness", "community", "meditation"]
+    },
+    {
+      "id": "gallery-19-3",
+      "url": "https://images.pexels.com/photos/6962655/pexels-photo-6962655.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "People meditating outdoors focusing on mindfulness",
+      "attribution": { "author": "Cup of Couple", "source": "pexels", "url": "https://www.pexels.com/photo/6962655/" },
+      "category": "gallery",
+      "tags": ["wellness", "mindfulness", "outdoor"]
+    },
+    {
+      "id": "project-cover-20",
+      "url": "https://images.pexels.com/photos/4960438/pexels-photo-4960438.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Digital screen displaying stock trading graphs and cryptocurrency values",
+      "attribution": { "author": "George Morina", "source": "pexels", "url": "https://www.pexels.com/photo/4960438/" },
+      "category": "project-cover",
+      "tags": ["crypto", "trading", "finance"]
+    },
+    {
+      "id": "gallery-20-1",
+      "url": "https://images.pexels.com/photos/38375327/pexels-photo-38375327.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Cryptocurrency trading charts on digital screens",
+      "attribution": { "author": "Rafael Minguet Delgado", "source": "pexels", "url": "https://www.pexels.com/photo/38375327/" },
+      "category": "gallery",
+      "tags": ["crypto", "charts", "trading"]
+    },
+    {
+      "id": "gallery-20-2",
+      "url": "https://images.pexels.com/photos/5833263/pexels-photo-5833263.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Cryptocurrency trading screen with graphs and charts",
+      "attribution": { "author": "AlphaTradeZone", "source": "pexels", "url": "https://www.pexels.com/photo/5833263/" },
+      "category": "gallery",
+      "tags": ["crypto", "trading", "data-viz"]
+    },
+    {
+      "id": "gallery-20-3",
+      "url": "https://images.pexels.com/photos/4960438/pexels-photo-4960438.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Stock trading graphs and crypto values on screen",
+      "attribution": { "author": "George Morina", "source": "pexels", "url": "https://www.pexels.com/photo/4960438/" },
+      "category": "gallery",
+      "tags": ["crypto", "finance", "trading"]
     }
   ]
 }

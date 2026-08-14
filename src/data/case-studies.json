@@ -287,6 +287,102 @@
           "Caregiver access is essential: 28% of portal sessions were from family members managing care for others"
         ]
       }
+    },
+    {
+      "slug": "smart-home-automation",
+      "title": "Smart Home Automation Dashboard",
+      "hero": {
+        "image": "case-study-hero-4",
+        "tagline": "Unifying 50+ IoT device types into a single, intuitive control experience",
+        "metrics": [
+          { "label": "Device Response", "value": "3.2s" },
+          { "label": "Setup Completion", "value": "94%" },
+          { "label": "App Store Rating", "value": "4.7★" },
+          { "label": "Device Types", "value": "50+" }
+        ]
+      },
+      "metadata": {
+        "role": ["Lead Product Designer", "Frontend Developer"],
+        "timeline": "January 2024 - May 2024 (4 months)",
+        "team": "3 Designers, 6 Engineers, 1 Product Manager",
+        "platform": ["Web", "iOS", "Android"],
+        "tools": ["Figma", "React", "TypeScript", "WebSocket", "Storybook", "Jest"],
+        "industry": "IoT & Smart Home"
+      },
+      "sections": {
+        "problem": "A leading smart home manufacturer had grown through acquisitions, resulting in 5 disconnected apps controlling different device categories. Users managed lights, thermostats, cameras, and locks across separate interfaces with inconsistent patterns. The fragmentation caused 38% of new users to abandon setup before completing their first device, and support costs were rising 15% quarter-over-quarter.\n\nThe challenge was creating a unified control surface that accommodated 50+ device types -- from simple on/off switches to complex multi-sensor devices -- while maintaining the simplicity that smart home users expect. The app needed to work across web, iOS, and Android with real-time state synchronization.",
+        "research": {
+          "methods": [
+            "Contextual inquiry with 22 users in their homes observing device management routines",
+            "Competitive analysis of 10 smart home apps including Google Home, Apple Home, and Samsung SmartThings",
+            "Analytics review of 3 months of onboarding funnels and support ticket categorization",
+            "Usability testing of prototype with 18 participants across 3 device complexity levels",
+            "Stakeholder interviews with 5 support representatives and 3 engineering leads"
+          ],
+          "insights": [
+            "Users think in rooms and routines, not device categories -- they wanted to control 'living room' not 'Type-7 smart bulb'",
+            "Setup was the #1 friction point: 38% abandonment was concentrated at the Wi-Fi pairing stage",
+            "Real-time feedback was essential -- users needed to see device state change within 2 seconds to trust the system",
+            "Power users wanted automation rules but 80% of users never advanced beyond basic on/off control",
+            "Energy analytics were requested by 45% of users who wanted to understand consumption patterns"
+          ]
+        },
+        "solution": {
+          "approach": "We designed the platform around a room-first information architecture with progressive disclosure for advanced features. The core experience was a real-time device grid organized by room, with one-tap controls for common actions and expandable cards for detailed settings.\n\nThe automation rule builder used a visual block-based interface inspired by the SATH notification system, allowing users to chain triggers and actions without programming. We built a unified WebSocket layer enabling sub-second state updates across all platforms, and a responsive design system with 65 components that adapted from mobile to web.",
+          "keyFeatures": [
+            "Room-First Dashboard with real-time device grid and contextual quick actions",
+            "Guided Device Setup with animated pairing flow reducing abandonment from 38% to 6%",
+            "Visual Automation Builder with drag-and-drop triggers, conditions, and actions",
+            "Energy Analytics dashboard with consumption trends, cost projections, and efficiency recommendations",
+            "Cross-Platform Sync with sub-second state updates via WebSocket",
+            "Scene Management for one-tap multi-device routines like 'Movie Night' or 'Away Mode'",
+            "Voice Control integration with Alexa, Google Assistant, and Siri Shortcuts"
+          ]
+        },
+        "design": {
+          "wireframes": "Created 28 screen wireframes across 4 user journey maps. Conducted 4 rounds of usability testing with clickable prototypes on actual devices. Validated room-based information architecture through card sorting with 15 users.",
+          "system": "Built a 65-component cross-platform design system with responsive variants for web, iOS, and Android. Established real-time interaction patterns for device state, offline handling, and conflict resolution. Created a motion specification for 8 device-state transitions."
+        },
+        "results": {
+          "metrics": [
+            {
+              "label": "94% Setup Completion",
+              "value": "Up from 62% pre-redesign",
+              "context": "Measured across 50K+ new device pairings in first 3 months"
+            },
+            {
+              "label": "3.2s Response Time",
+              "value": "Average device command-to-action latency",
+              "context": "Measured across 10M+ commands via WebSocket infrastructure"
+            },
+            {
+              "label": "4.7★ App Store",
+              "value": "Up from 3.1★ across iOS and Android",
+              "context": "Based on 8,500+ ratings in first 6 months post-launch"
+            },
+            {
+              "label": "72% Automation Adoption",
+              "value": "Of active users created at least one automation rule",
+              "context": "Compared to 12% in the legacy app, measured 90 days post-launch"
+            }
+          ],
+          "testimonial": {
+            "quote": "The new app finally makes my smart home feel smart. I set up a 'Goodnight' routine in under 2 minutes that locks the doors, dims the lights, and adjusts the thermostat. The real-time feedback gives me confidence everything actually happened.",
+            "author": "David Park",
+            "role": "Smart Home Enthusiast",
+            "company": "Early Access User"
+          }
+        },
+        "learnings": [
+          "Room-first IA beats device-first: organizing by room reduced time-to-action by 45%",
+          "Guided onboarding is critical for IoT: animated pairing flow cut setup abandonment from 38% to 6%",
+          "Real-time feedback builds trust: sub-second state updates increased user confidence and reduced support tickets",
+          "Progressive disclosure works for IoT: 80% of users stayed in simple mode while power users discovered automations naturally",
+          "Cross-platform consistency matters: a unified design system reduced maintenance by 35% across web and mobile",
+          "Energy analytics drive engagement: 45% of users who saw consumption data engaged more frequently with the app",
+          "Visual automation builders democratize smart homes: 72% adoption vs. 12% in the legacy text-based rule system"
+        ]
+      }
     }
   ]
 }
