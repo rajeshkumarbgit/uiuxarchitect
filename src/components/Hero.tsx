@@ -1,4 +1,4 @@
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles, ArrowDown } from 'lucide-react';
 import { useHeroContent } from '../hooks/useContent';
 
 interface HeroProps {
@@ -9,72 +9,76 @@ export default function Hero({ onNavigate }: HeroProps) {
   const content = useHeroContent();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 sm:px-8 lg:px-12 overflow-hidden bg-gradient-to-br from-white via-blue-50/20 to-white">
+    <section className="relative min-h-screen flex items-center justify-center px-6 sm:px-8 lg:px-12 overflow-hidden bg-gradient-to-b from-ink-50/40 via-white to-white pt-20">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-20 right-10 w-[32rem] h-[32rem] bg-blue-300/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-10 left-5 w-[28rem] h-[28rem] bg-brand-200/20 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-10 right-5 w-[32rem] h-[32rem] bg-accent-200/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '2.5s' }} />
+        <div className="absolute inset-0 bg-grid-pattern opacity-40" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto w-full">
-        <div className="text-center space-y-8 animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/90 backdrop-blur-md border border-gray-200 rounded-full text-sm font-semibold text-gray-700 shadow-sm animate-slide-up">
-            <Sparkles className="w-4 h-4 text-blue-600" />
+      <div className="relative section-container w-full">
+        <div className="text-center space-y-7 max-w-4xl mx-auto animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm border border-ink-200 rounded-full text-sm font-medium text-ink-600 shadow-soft animate-slide-up">
+            <span className="flex items-center justify-center w-5 h-5 rounded-full bg-brand-100">
+              <Sparkles className="w-3 h-3 text-brand-600" />
+            </span>
             <span>{content.subtext.split('—')[0].trim()}</span>
           </div>
 
-          <h1 className="text-5xl sm:text-6xl lg:text-[5.5rem] font-bold text-gray-900 leading-[1.1] tracking-tight animate-slide-up" style={{ animationDelay: '0.1s' }}>
-            <span className="block mb-3">Designing Systems.</span>
-            <span className="block bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] font-bold text-ink-900 leading-[1.05] tracking-tight animate-slide-up" style={{ animationDelay: '0.08s' }}>
+            <span className="block mb-2">Designing Systems.</span>
+            <span className="block text-gradient-brand">
               Shipping Experiences.
             </span>
           </h1>
 
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s', lineHeight: '1.6' }}>
+          <p className="text-lg sm:text-xl text-ink-500 max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.16s' }}>
             {content.description}
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-4 animate-slide-up" style={{ animationDelay: '0.3s' }}>
+          <div className="flex flex-wrap items-center justify-center gap-3 pt-2 animate-slide-up" style={{ animationDelay: '0.24s' }}>
             {content.ctas.map((cta, idx) => (
               <button
                 key={idx}
                 type="button"
                 onClick={() => onNavigate(cta.action)}
-                className={`group inline-flex items-center px-8 py-4 font-semibold rounded-2xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer ${
+                className={`group inline-flex items-center px-7 py-3.5 font-semibold rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
                   cta.variant === 'primary'
-                    ? 'bg-gradient-to-r from-blue-600 to-blue-500 text-white hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-1 focus:ring-blue-500'
+                    ? 'bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-soft hover:shadow-glow hover:-translate-y-0.5 focus:ring-brand-500'
                     : cta.variant === 'secondary'
-                    ? 'bg-white text-gray-900 border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg focus:ring-blue-500'
-                    : 'text-gray-700 hover:text-blue-600'
+                    ? 'bg-white text-ink-900 border-2 border-ink-200 hover:border-ink-300 hover:bg-ink-50 focus:ring-ink-300'
+                    : 'text-ink-600 hover:text-brand-600 focus:ring-brand-200'
                 }`}
               >
                 {cta.label}
                 {cta.variant === 'primary' && (
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 )}
               </button>
             ))}
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-16 max-w-5xl mx-auto animate-slide-up" style={{ animationDelay: '0.4s' }}>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-12 max-w-4xl mx-auto animate-slide-up" style={{ animationDelay: '0.32s' }}>
             {content.stats.map((stat, idx) => (
-              <div key={idx} className="group">
-                <div className="relative p-8 bg-white/90 backdrop-blur-md border border-gray-200 rounded-3xl hover:border-gray-300 hover:shadow-lg transition-all duration-500">
-                  <div className="text-5xl font-bold bg-gradient-to-br from-gray-900 to-gray-700 bg-clip-text text-transparent mb-2">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-gray-500 font-medium">{stat.label}</div>
+              <div
+                key={idx}
+                className="group relative p-5 sm:p-6 bg-white/80 backdrop-blur-sm border border-ink-100 rounded-2xl hover:border-ink-200 hover:shadow-card transition-all duration-500"
+              >
+                <div className="text-3xl sm:text-4xl font-bold text-ink-900 mb-1 tracking-tight">
+                  {stat.value}
                 </div>
+                <div className="text-xs sm:text-sm text-ink-500 font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
 
-          <div className="pt-20 animate-slide-up" style={{ animationDelay: '0.5s' }}>
-            <p className="text-sm text-gray-400 mb-8 font-medium">{content.trustBar.title}</p>
-            <div className="flex flex-wrap items-center justify-center gap-12">
+          <div className="pt-14 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+            <p className="text-xs text-ink-400 mb-5 font-medium uppercase tracking-wider">{content.trustBar.title}</p>
+            <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-10">
               {content.trustBar.clients.map((client, idx) => (
                 <div
                   key={idx}
-                  className="text-xl font-semibold text-gray-300 hover:text-gray-600 transition-colors duration-300"
+                  className="text-base sm:text-lg font-semibold text-ink-300 hover:text-ink-500 transition-colors duration-300"
                 >
                   {client}
                 </div>
@@ -84,9 +88,12 @@ export default function Hero({ onNavigate }: HeroProps) {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-gray-300 rounded-full p-1">
-          <div className="w-1.5 h-3 bg-gray-400 rounded-full mx-auto animate-pulse" />
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce-slow">
+        <div className="flex flex-col items-center gap-2">
+          <div className="w-5 h-9 border-2 border-ink-200 rounded-full p-1 flex justify-center">
+            <div className="w-1 h-2 bg-ink-300 rounded-full animate-pulse" />
+          </div>
+          <ArrowDown className="w-3 h-3 text-ink-300" />
         </div>
       </div>
     </section>

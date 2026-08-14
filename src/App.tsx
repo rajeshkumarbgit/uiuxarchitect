@@ -1,8 +1,3 @@
-/**
- * Main App Component
- * References: REQ-03 (Navigation & IA)
- */
-
 import { useState, useEffect } from 'react';
 import { usePageMetadata } from './hooks/useContent';
 import Header from './components/Header';
@@ -20,6 +15,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [projectSlug, setProjectSlug] = useState<string>('');
   const [caseStudySlug, setCaseStudySlug] = useState<string>('');
+  const [scrollProgress, setScrollProgress] = useState(0);
   const metadata = usePageMetadata(currentPage);
 
   const handleNavigate = (page: string, slug?: string) => {
@@ -41,9 +37,32 @@ function App() {
     }
   }, [currentPage, metadata]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const isDetailPage = currentPage === 'portfolio-detail' || currentPage === 'case-study-detail';
+
   return (
     <div className="min-h-screen bg-white">
-      {currentPage !== 'portfolio-detail' && currentPage !== 'case-study-detail' && (
+      {!isDetailPage && (
+        <div className="fixed top-0 left-0 right-0 z-[60] h-1 bg-transparent pointer-events-none">
+          <div
+            className="h-full bg-gradient-to-r from-brand-500 to-accent-500 transition-all duration-150"
+            style={{ width: `${scrollProgress}%` }}
+          />
+        </div>
+      )}
+
+      {!isDetailPage && (
         <Header currentPage={currentPage} onNavigate={handleNavigate} />
       )}
 
@@ -51,7 +70,7 @@ function App() {
         {currentPage === 'home' && (
           <>
             <Hero onNavigate={handleNavigate} />
-            <FeaturedWork />
+            <FeaturedWork onNavigate={handleNavigate} />
           </>
         )}
         {currentPage === 'about' && <About />}
@@ -62,7 +81,7 @@ function App() {
         {currentPage === 'contact' && <Contact onNavigate={handleNavigate} />}
       </main>
 
-      {currentPage !== 'portfolio-detail' && currentPage !== 'case-study-detail' && (
+      {!isDetailPage && (
         <Footer onNavigate={handleNavigate} />
       )}
     </div>

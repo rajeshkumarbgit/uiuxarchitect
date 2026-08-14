@@ -17,11 +17,11 @@ export default function About() {
   const timeline = useTimeline();
 
   return (
-    <section className="py-32 px-6 sm:px-8 lg:px-12 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section className="pt-28 sm:pt-32 pb-20 px-6 sm:px-8 lg:px-12 bg-white">
+      <div className="section-container">
         <div className="max-w-4xl mb-20">
-          <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-8 tracking-tight">{content.title}</h1>
-          <div className="space-y-6 text-xl text-gray-600 leading-relaxed">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-ink-900 mb-8 tracking-tight">{content.title}</h1>
+          <div className="space-y-5 text-lg text-ink-600 leading-relaxed">
             {content.introduction.map((paragraph, idx) => (
               <p key={idx} className="leading-[1.7]">{paragraph}</p>
             ))}
@@ -29,20 +29,20 @@ export default function About() {
         </div>
 
         <div className="mb-24">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12 tracking-tight">{content.principlesTitle}</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <h2 className="text-3xl font-bold text-ink-900 mb-10 tracking-tight">{content.principlesTitle}</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {content.principles.map((principle, idx) => {
               const Icon = iconMap[principle.icon];
               return (
                 <div
                   key={idx}
-                  className="group p-8 bg-gray-50 rounded-3xl hover:bg-gray-100 transition-all duration-300 border border-transparent hover:border-gray-200"
+                  className="group p-7 bg-ink-50/60 rounded-2xl hover:bg-ink-50 transition-all duration-300 border border-transparent hover:border-ink-200 hover:shadow-soft"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <Icon className="w-6 h-6 text-gray-900" />
+                  <div className="w-11 h-11 rounded-xl bg-white flex items-center justify-center mb-5 group-hover:scale-110 group-hover:shadow-soft transition-all duration-300">
+                    <Icon className="w-5 h-5 text-ink-900" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{principle.title}</h3>
-                  <p className="text-gray-600 text-base leading-relaxed">{principle.description}</p>
+                  <h3 className="text-lg font-bold text-ink-900 mb-2">{principle.title}</h3>
+                  <p className="text-ink-600 text-sm leading-relaxed">{principle.description}</p>
                 </div>
               );
             })}
@@ -50,28 +50,28 @@ export default function About() {
         </div>
 
         <div className="mb-24">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12 tracking-tight">{content.skillsTitle}</h2>
-          <div className="grid md:grid-cols-2 gap-12">
+          <h2 className="text-3xl font-bold text-ink-900 mb-10 tracking-tight">{content.skillsTitle}</h2>
+          <div className="grid md:grid-cols-2 gap-10">
             {skillCategories.map((category, idx) => {
               const Icon = iconMap[category.icon];
               return (
-                <div key={idx} className="space-y-6">
-                  <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-2xl bg-gray-100 flex items-center justify-center">
-                      <Icon className="w-7 h-7 text-gray-900" />
+                <div key={idx} className="space-y-5">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-xl bg-ink-50 flex items-center justify-center">
+                      <Icon className="w-6 h-6 text-ink-900" />
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900">{category.category}</h3>
+                    <h3 className="text-xl font-bold text-ink-900">{category.category}</h3>
                   </div>
-                  <div className="space-y-5 pl-2">
+                  <div className="space-y-4 pl-1">
                     {category.skills.map((skill, skillIdx) => (
                       <div key={skillIdx} className="space-y-2">
                         <div className="flex items-center justify-between text-sm">
-                          <span className="font-semibold text-gray-900">{skill.name}</span>
-                          <span className="text-gray-500">{skill.years}</span>
+                          <span className="font-semibold text-ink-900">{skill.name}</span>
+                          <span className="text-ink-500">{skill.years}</span>
                         </div>
-                        <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+                        <div className="h-2 bg-ink-100 rounded-full overflow-hidden">
                           <div
-                            className="h-full bg-gray-900 rounded-full transition-all duration-1000"
+                            className="h-full bg-gradient-to-r from-brand-600 to-accent-500 rounded-full transition-all duration-1000"
                             style={{ width: `${skill.level}%` }}
                           />
                         </div>
@@ -85,24 +85,24 @@ export default function About() {
         </div>
 
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-12 tracking-tight">{content.timelineTitle}</h2>
-          <div className="space-y-8">
+          <h2 className="text-3xl font-bold text-ink-900 mb-10 tracking-tight">{content.timelineTitle}</h2>
+          <div className="space-y-6">
             {timeline.map((entry, idx) => (
               <div
                 key={idx}
-                className="relative pl-12 pb-8 border-l-2 border-gray-200 last:border-transparent"
+                className="relative pl-10 pb-6 border-l-2 border-ink-200 last:border-transparent last:pb-0"
               >
-                <div className="absolute -left-[9px] top-0 w-4 h-4 bg-gray-900 rounded-full" />
-                <div className="text-sm font-semibold text-gray-500 mb-2">{entry.year}</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-1">{entry.role}</h3>
-                <div className="text-lg text-gray-600 mb-4">{entry.company}</div>
-                <p className="text-base text-gray-600 leading-relaxed mb-4">{entry.description}</p>
+                <div className="absolute -left-[7px] top-0 w-3.5 h-3.5 bg-brand-600 rounded-full ring-4 ring-brand-100" />
+                <div className="text-sm font-semibold text-brand-600 mb-1.5">{entry.year}</div>
+                <h3 className="text-xl font-bold text-ink-900 mb-0.5">{entry.role}</h3>
+                <div className="text-base text-ink-600 mb-3">{entry.company}</div>
+                <p className="text-sm text-ink-600 leading-relaxed mb-3">{entry.description}</p>
                 {entry.achievements && entry.achievements.length > 0 && (
-                  <ul className="space-y-2">
+                  <ul className="space-y-1.5">
                     {entry.achievements.map((achievement, achIdx) => (
-                      <li key={achIdx} className="flex items-start gap-3 text-gray-600">
-                        <span className="text-gray-900 font-bold mt-1">•</span>
-                        <span className="text-base leading-relaxed">{achievement}</span>
+                      <li key={achIdx} className="flex items-start gap-2.5 text-ink-600">
+                        <span className="text-brand-600 font-bold mt-0.5 text-sm">•</span>
+                        <span className="text-sm leading-relaxed">{achievement}</span>
                       </li>
                     ))}
                   </ul>
