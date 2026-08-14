@@ -21,8 +21,10 @@ export default function Footer({ onNavigate }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-ink-950 text-white">
-      <div className="section-container py-14">
+    <footer className="bg-ink-950 text-white relative overflow-hidden">
+      <div className="absolute top-0 left-1/3 w-96 h-96 bg-brand-500/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-accent-500/5 rounded-full blur-3xl" />
+      <div className="relative section-container py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-8">
           <div className="space-y-4">
             <div className="flex items-center gap-2.5">
@@ -37,7 +39,7 @@ export default function Footer({ onNavigate }: FooterProps) {
           </div>
 
           <div className="space-y-4">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-ink-400">Navigation</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-ink-500">Navigation</h4>
             <ul className="space-y-2">
               {navItems.map((item) => (
                 <li key={item.id}>
@@ -56,7 +58,7 @@ export default function Footer({ onNavigate }: FooterProps) {
           </div>
 
           <div className="space-y-4">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-ink-400">Contact</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-ink-500">Contact</h4>
             <ul className="space-y-2.5">
               <li>
                 <a
@@ -84,7 +86,7 @@ export default function Footer({ onNavigate }: FooterProps) {
           </div>
 
           <div className="space-y-4">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-ink-400">Connect</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-ink-500">Connect</h4>
             <div className="flex flex-wrap gap-2">
               {socialLinks.map((link) => {
                 const Icon = iconMap[link.icon] || Linkedin;
@@ -94,7 +96,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2.5 bg-ink-800 hover:bg-ink-700 rounded-lg transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:ring-offset-ink-950"
+                    className="p-2.5 bg-ink-800 hover:bg-gradient-to-br hover:from-brand-600 hover:to-accent-500 rounded-lg transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:ring-offset-ink-950"
                     aria-label={link.platform}
                   >
                     <Icon className="w-4 h-4" />
@@ -107,10 +109,10 @@ export default function Footer({ onNavigate }: FooterProps) {
 
         <div className="pt-8 border-t border-ink-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-ink-400">
+            <p className="text-sm text-ink-500">
               © {currentYear} Rajesh Kumar. All rights reserved.
             </p>
-            <div className="flex gap-6 text-sm text-ink-400">
+            <div className="flex gap-6 text-sm text-ink-500">
               <button
                 type="button"
                 onClick={() => {

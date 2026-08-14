@@ -36,6 +36,10 @@ export default function Contact({ onNavigate }: ContactProps) {
     <section className="pt-28 sm:pt-32 pb-20 px-6 sm:px-8 lg:px-12 bg-white">
       <div className="section-container">
         <div className="text-center mb-14">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-50 text-brand-700 rounded-full text-sm font-medium mb-4">
+            <Mail className="w-4 h-4" />
+            Let's Talk
+          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4 tracking-tight">{content.title}</h2>
           <p className="text-lg text-ink-500 max-w-2xl mx-auto leading-relaxed">{content.description}</p>
         </div>
@@ -45,8 +49,8 @@ export default function Contact({ onNavigate }: ContactProps) {
             <div className="space-y-5">
               <h3 className="text-xl font-bold text-ink-900">Get in Touch</h3>
               <div className="space-y-3">
-                <div className="flex items-start gap-3 p-4 bg-ink-50/60 rounded-xl border border-ink-100">
-                  <div className="p-2.5 bg-ink-900 rounded-lg flex-shrink-0">
+                <div className="flex items-start gap-3 p-4 bg-ink-50/60 rounded-xl border border-ink-100 hover:border-brand-200 transition-colors">
+                  <div className="p-2.5 bg-gradient-to-br from-brand-600 to-accent-500 rounded-lg flex-shrink-0">
                     <Mail className="w-4 h-4 text-white" />
                   </div>
                   <div className="min-w-0">
@@ -60,8 +64,8 @@ export default function Contact({ onNavigate }: ContactProps) {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 p-4 bg-ink-50/60 rounded-xl border border-ink-100">
-                  <div className="p-2.5 bg-ink-900 rounded-lg flex-shrink-0">
+                <div className="flex items-start gap-3 p-4 bg-ink-50/60 rounded-xl border border-ink-100 hover:border-brand-200 transition-colors">
+                  <div className="p-2.5 bg-gradient-to-br from-brand-600 to-accent-500 rounded-lg flex-shrink-0">
                     <Phone className="w-4 h-4 text-white" />
                   </div>
                   <div className="min-w-0">
@@ -75,8 +79,8 @@ export default function Contact({ onNavigate }: ContactProps) {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 p-4 bg-ink-50/60 rounded-xl border border-ink-100">
-                  <div className="p-2.5 bg-ink-900 rounded-lg flex-shrink-0">
+                <div className="flex items-start gap-3 p-4 bg-ink-50/60 rounded-xl border border-ink-100 hover:border-brand-200 transition-colors">
+                  <div className="p-2.5 bg-gradient-to-br from-brand-600 to-accent-500 rounded-lg flex-shrink-0">
                     <MapPin className="w-4 h-4 text-white" />
                   </div>
                   <div className="min-w-0">
@@ -149,9 +153,9 @@ export default function Contact({ onNavigate }: ContactProps) {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex items-center gap-3 p-3.5 bg-white border border-ink-200 rounded-xl hover:border-ink-300 transition-all duration-300 hover:shadow-soft"
+                      className="group flex items-center gap-3 p-3.5 bg-white border border-ink-200 rounded-xl hover:border-brand-300 transition-all duration-300 hover:shadow-soft"
                     >
-                      <div className="p-2 bg-ink-50 group-hover:bg-ink-900 rounded-lg transition-colors">
+                      <div className="p-2 bg-ink-50 group-hover:bg-gradient-to-br group-hover:from-brand-600 group-hover:to-accent-500 rounded-lg transition-all">
                         <Icon className="w-4 h-4 text-ink-700 group-hover:text-white transition-colors" />
                       </div>
                       <div className="min-w-0">
@@ -230,7 +234,7 @@ export default function Contact({ onNavigate }: ContactProps) {
               <button
                 type="submit"
                 disabled={submitted}
-                className="w-full flex items-center justify-center gap-2.5 px-6 py-3.5 bg-ink-900 text-white font-semibold rounded-xl hover:bg-ink-800 transition-all disabled:bg-success-600 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-ink-900 focus:ring-offset-2"
+                className="w-full flex items-center justify-center gap-2.5 px-6 py-3.5 bg-gradient-to-r from-brand-600 to-brand-500 text-white font-semibold rounded-xl hover:shadow-glow transition-all disabled:bg-success-600 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
               >
                 {submitted ? (
                   <>
@@ -248,24 +252,28 @@ export default function Contact({ onNavigate }: ContactProps) {
           </div>
         </div>
 
-        <div className="p-8 sm:p-10 bg-gradient-to-br from-ink-900 to-ink-800 text-white rounded-2xl text-center">
-          <h3 className="text-2xl font-bold mb-3">{content.ctaTitle}</h3>
-          <p className="text-ink-300 mb-6 max-w-xl mx-auto leading-relaxed">{content.ctaDescription}</p>
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            <a
-              href={`mailto:${contactInfo.email}`}
-              className="inline-flex items-center px-6 py-3 bg-white text-ink-900 font-semibold rounded-xl hover:bg-ink-50 transition-all hover:shadow-card focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-ink-900"
-            >
-              <Calendar className="w-4 h-4 mr-2" />
-              Schedule a Call
-            </a>
-            <button
-              type="button"
-              onClick={() => onNavigate('portfolio')}
-              className="inline-flex items-center px-6 py-3 bg-transparent border-2 border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 hover:border-white/40 transition-all focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-ink-900"
-            >
-              View My Work
-            </button>
+        <div className="p-8 sm:p-10 bg-gradient-to-br from-ink-950 to-ink-900 text-white rounded-3xl text-center relative overflow-hidden">
+          <div className="absolute top-0 left-1/4 w-72 h-72 bg-brand-500/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-accent-500/10 rounded-full blur-3xl" />
+          <div className="relative">
+            <h3 className="text-2xl font-bold mb-3">{content.ctaTitle}</h3>
+            <p className="text-ink-400 mb-6 max-w-xl mx-auto leading-relaxed">{content.ctaDescription}</p>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <a
+                href={`mailto:${contactInfo.email}`}
+                className="inline-flex items-center px-6 py-3 bg-white text-ink-900 font-semibold rounded-xl hover:bg-ink-50 transition-all hover:shadow-card focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-ink-950"
+              >
+                <Calendar className="w-4 h-4 mr-2" />
+                Schedule a Call
+              </a>
+              <button
+                type="button"
+                onClick={() => onNavigate('portfolio')}
+                className="inline-flex items-center px-6 py-3 bg-transparent border-2 border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 hover:border-white/40 transition-all focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-ink-950"
+              >
+                View My Work
+              </button>
+            </div>
           </div>
         </div>
       </div>

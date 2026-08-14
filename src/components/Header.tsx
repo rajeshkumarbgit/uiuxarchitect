@@ -46,7 +46,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
         isScrolled
-          ? 'bg-white/90 backdrop-blur-xl shadow-soft border-b border-ink-100'
+          ? 'glass shadow-soft border-b border-ink-100'
           : 'bg-transparent'
       } ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}
     >
@@ -61,7 +61,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
             <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-brand-600 to-accent-500 text-white font-bold text-lg shadow-soft group-hover:shadow-glow transition-all duration-300">
               RK
             </span>
-            <span className="hidden sm:block text-sm font-semibold text-ink-700 group-hover:text-ink-900 transition-colors">
+            <span className={`hidden sm:block text-sm font-semibold transition-colors ${isScrolled ? 'text-ink-700 group-hover:text-ink-900' : 'text-ink-300 group-hover:text-white'}`}>
               Rajesh Kumar
             </span>
           </button>
@@ -75,7 +75,9 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                 className={`relative px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 ${
                   currentPage === item.id
                     ? 'text-brand-700'
-                    : 'text-ink-600 hover:text-ink-900 hover:bg-ink-50'
+                    : isScrolled
+                    ? 'text-ink-600 hover:text-ink-900 hover:bg-ink-50'
+                    : 'text-ink-400 hover:text-white hover:bg-white/5'
                 }`}
                 aria-current={currentPage === item.id ? 'page' : undefined}
               >
@@ -86,13 +88,17 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
               </button>
             ))}
 
-            <div className="ml-3 flex items-center gap-2 pl-3 border-l border-ink-100">
+            <div className="ml-3 flex items-center gap-2 pl-3 border-l border-ink-100/50">
               {githubLink && (
                 <a
                   href={githubLink.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 text-ink-600 hover:text-brand-600 hover:bg-ink-50 rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
+                  className={`inline-flex items-center justify-center w-10 h-10 rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 ${
+                    isScrolled
+                      ? 'text-ink-600 hover:text-brand-600 hover:bg-ink-50'
+                      : 'text-ink-400 hover:text-white hover:bg-white/5'
+                  }`}
                   aria-label="Visit GitHub profile"
                 >
                   <Github className="w-[18px] h-[18px]" />
@@ -101,7 +107,11 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
               <button
                 type="button"
                 onClick={() => handleNavClick('contact')}
-                className="inline-flex items-center px-3.5 py-2.5 text-sm font-medium text-ink-600 hover:text-ink-900 hover:bg-ink-50 transition-all focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 rounded-lg"
+                className={`inline-flex items-center px-3.5 py-2.5 text-sm font-medium transition-all focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 rounded-lg ${
+                  isScrolled
+                    ? 'text-ink-600 hover:text-ink-900 hover:bg-ink-50'
+                    : 'text-ink-400 hover:text-white hover:bg-white/5'
+                }`}
               >
                 <Download className="w-4 h-4 mr-1.5" />
                 Resume
@@ -119,7 +129,11 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
           <button
             type="button"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2.5 text-ink-700 hover:bg-ink-50 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
+            className={`md:hidden p-2.5 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 ${
+              isScrolled
+                ? 'text-ink-700 hover:bg-ink-50'
+                : 'text-white hover:bg-white/10'
+            }`}
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isMenuOpen}
           >
@@ -128,7 +142,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
         </div>
 
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-ink-100 animate-fade-in">
+          <div className="md:hidden py-4 border-t border-ink-100 animate-fade-in glass">
             <div className="flex flex-col gap-1">
               {navItems.map((item) => (
                 <button

@@ -553,6 +553,22 @@
       "tags": ["smart-home", "iot", "automation"]
     },
     {
+      "id": "case-study-hero-5",
+      "url": "https://images.pexels.com/photos/4114788/pexels-photo-4114788.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "alt": "Smartphone displaying music streaming app interface",
+      "attribution": { "author": "Castorly Stock", "source": "pexels", "url": "https://www.pexels.com/photo/4114788/" },
+      "category": "case-study",
+      "tags": ["music", "streaming", "social"]
+    },
+    {
+      "id": "case-study-hero-6",
+      "url": "https://images.pexels.com/photos/4960438/pexels-photo-4960438.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "alt": "Digital screen displaying stock trading graphs and cryptocurrency values",
+      "attribution": { "author": "George Morina", "source": "pexels", "url": "https://www.pexels.com/photo/4960438/" },
+      "category": "case-study",
+      "tags": ["crypto", "trading", "finance"]
+    },
+    {
       "id": "about-hero",
       "url": "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "alt": "Professional workspace with design tools",

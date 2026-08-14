@@ -383,6 +383,198 @@
           "Visual automation builders democratize smart homes: 72% adoption vs. 12% in the legacy text-based rule system"
         ]
       }
+    },
+    {
+      "slug": "music-streaming-social",
+      "title": "Social Music Streaming Experience",
+      "hero": {
+        "image": "case-study-hero-5",
+        "tagline": "Transforming passive listening into shared social experiences with collaborative playlists and live listening rooms",
+        "metrics": [
+          { "label": "Listening Sessions", "value": "+42%" },
+          { "label": "Monthly Active Users", "value": "3.5M" },
+          { "label": "App Store Rating", "value": "4.7★" },
+          { "label": "Social Features Used", "value": "68%" }
+        ]
+      },
+      "metadata": {
+        "role": ["Lead Product Designer", "Interaction Designer"],
+        "timeline": "January 2024 - May 2024 (5 months)",
+        "team": "3 Designers, 7 Engineers, 2 Product Managers",
+        "platform": ["iOS", "Android"],
+        "tools": ["Figma", "React Native", "TypeScript", "WebSocket", "Storybook", "Jest"],
+        "industry": "Music & Entertainment"
+      },
+      "sections": {
+        "problem": "A mid-tier music streaming service was losing market share to platforms with social features. Their app had 2.8M monthly active users but session duration was declining 8% quarter-over-quarter. Users treated the app as a background utility, not a destination. The challenge was adding social engagement layers without disrupting the core listening experience that users valued.\n\nThe product needed collaborative playlists, live listening rooms, and AI-powered discovery that felt native to music consumption, not bolted-on social features. The app had to maintain sub-2-second playback latency while adding real-time social interactions across iOS and Android.",
+        "research": {
+          "methods": [
+            "Diary study with 18 users tracking listening habits and social sharing behaviors over 2 weeks",
+            "Competitive analysis of 8 music apps including Spotify, Apple Music, and SoundCloud",
+            "Analytics review of 6 months of session data and feature usage patterns",
+            "Usability testing of 3 prototype variants with 24 participants",
+            "A/B testing of social feature placements with 50K users over 4 weeks"
+          ],
+          "insights": [
+            "68% of users wanted to share music with friends but found existing sharing too friction-heavy",
+            "Collaborative playlists were the #1 requested feature, cited by 52% of survey respondents",
+            "Live listening rooms had viral potential: 73% of testers invited friends within 24 hours",
+            "AI discovery needed to feel personal, not algorithmic -- users rejected recommendations that felt automated",
+            "Social features had to be opt-in: 31% of users wanted a purely solo listening experience"
+          ]
+        },
+        "solution": {
+          "approach": "We designed a dual-layer experience: a pristine solo listening mode by default, with progressive social features that users could opt into. The core innovation was 'Listening Rooms' -- live audio spaces where friends could listen together in real-time with chat and reactions.\n\nCollaborative playlists used a drag-and-drop interface inspired by the SATH notification system, allowing multiple users to add, reorder, and vote on tracks. The AI discovery engine used listening context (time of day, mood, activity) to serve personalized recommendations that felt curated rather than algorithmic. We built a custom WebSocket layer enabling sub-500ms social interactions without affecting playback latency.",
+          "keyFeatures": [
+            "Live Listening Rooms with real-time audio sync, chat, and emoji reactions",
+            "Collaborative Playlists with drag-and-drop track management and friend voting",
+            "Context-Aware AI Discovery that adapts to time of day, mood, and activity",
+            "Social Listening Feed showing what friends are currently playing",
+            "Opt-In Social Mode preserving solo listening for 31% of users who prefer it",
+            "Cross-Platform Real-time Sync with sub-500ms social interaction latency",
+            "Music Stories -- ephemeral 15-second clips shareable to social feeds"
+          ]
+        },
+        "design": {
+          "wireframes": "Created 32 screen wireframes across 5 user journey maps. Conducted 5 rounds of usability testing with clickable prototypes. Validated social feature placement through A/B testing with 50K users.",
+          "system": "Built a 58-component cross-platform design system with audio-specific patterns for waveform visualization, equalizer controls, and social reaction animations. Created a motion specification for 12 audio-state transitions including play, pause, buffer, and live-room join."
+        },
+        "results": {
+          "metrics": [
+            {
+              "label": "42% More Sessions",
+              "value": "Average daily listening sessions per user",
+              "context": "Measured across 3.5M monthly active users 90 days post-launch"
+            },
+            {
+              "label": "3.5M Monthly Users",
+              "value": "Up from 2.8M pre-social features",
+              "context": "25% user growth attributed to social feature virality"
+            },
+            {
+              "label": "4.7★ App Store",
+              "value": "Up from 4.1★ across iOS and Android",
+              "context": "Based on 12K+ ratings in first 3 months post-launch"
+            },
+            {
+              "label": "68% Social Adoption",
+              "value": "Of users engaged with at least one social feature weekly",
+              "context": "Exceeding 45% target, measured 60 days post-launch"
+            }
+          ],
+          "testimonial": {
+            "quote": "The listening rooms changed how my friend group discovers music. We have a Friday night room where we take turns DJing. It feels like we're hanging out even when we're miles apart. The collaborative playlists have completely replaced our old group chat link-sharing.",
+            "author": "Sarah Chen",
+            "role": "Power User",
+            "company": "Beta Tester"
+          }
+        },
+        "learnings": [
+          "Social features must be opt-in, not opt-out: 31% of users never enabled social mode and retention stayed equal",
+          "Real-time sync is the hardest engineering challenge: sub-500ms social latency required a custom WebSocket layer",
+          "AI discovery needs to feel human: contextual recommendations outperformed algorithmic ones by 34%",
+          "Collaborative playlists have network effects: each new collaborator increased playlist engagement by 22%",
+          "Listening rooms need moderation: adding host controls reduced negative experiences by 85%",
+          "Music is inherently social: 68% social adoption exceeded our 45% target by 23 percentage points",
+          "Dual-layer design preserves core experience: solo listeners showed zero satisfaction decline"
+        ]
+      }
+    },
+    {
+      "slug": "crypto-trading-terminal",
+      "title": "Real-Time Crypto Trading Terminal",
+      "hero": {
+        "image": "case-study-hero-6",
+        "tagline": "Building a professional-grade trading terminal with sub-second execution for 250K+ active traders",
+        "metrics": [
+          { "label": "Trade Latency", "value": "1.2s" },
+          { "label": "Active Traders", "value": "250K+" },
+          { "label": "Uptime", "value": "99.98%" },
+          { "label": "Daily Volume", "value": "$8B+" }
+        ]
+      },
+      "metadata": {
+        "role": ["Senior UX/UI Designer", "Frontend Developer"],
+        "timeline": "January 2024 - May 2024 (5 months)",
+        "team": "3 Designers, 8 Engineers, 2 Product Managers",
+        "platform": ["Web", "Mobile Web"],
+        "tools": ["Figma", "React", "TypeScript", "WebSocket", "D3.js", "Storybook"],
+        "industry": "FinTech & Crypto"
+      },
+      "sections": {
+        "problem": "A growing crypto exchange needed a professional trading terminal to compete with established platforms like Binance and Coinbase Pro. Their existing interface was beginner-friendly but lacked the advanced charting, real-time order books, and one-tap trade execution that professional traders demanded. The platform had 80K traders but was losing high-volume users to competitors with better tools.\n\nThe challenge was designing a terminal that served both professional traders needing sub-second execution and advanced order types, and intermediate users who needed guided access to complex features. The interface had to handle real-time WebSocket data streams updating 50+ times per second without UI freezing or data lag.",
+        "research": {
+          "methods": [
+            "Contextual inquiry with 16 professional traders observing their trading setups and workflows",
+            "Competitive analysis of 6 trading terminals including Binance, Coinbase Pro, Kraken Pro, and TradingView",
+            "Analytics review of 4 months of trading patterns, feature usage, and user drop-off points",
+            "Usability testing with 20 participants across beginner, intermediate, and expert skill levels",
+            "Stakeholder interviews with 4 market makers and 2 institutional traders"
+          ],
+          "insights": [
+            "Professional traders used 3-4 monitors and needed dense information layouts, not spacious designs",
+            "One-tap trade execution was the #1 priority: every extra click cost traders money in volatile markets",
+            "Order book depth was the most-watched data: 89% of pros checked it before every trade",
+            "Customizable layouts were essential: 76% of pros arranged their workspace differently",
+            "Beginners needed guardrails: 34% of intermediate users had made costly trading errors on other platforms"
+          ]
+        },
+        "solution": {
+          "approach": "We designed a modular terminal with a default professional layout and a guided 'Simple Mode' for intermediate users. The core was a real-time order book with depth visualization, advanced candlestick charting with 40+ indicators, and a one-tap trade execution panel that supported limit, market, stop-loss, and OCO orders.\n\nThe terminal used a dark-first design with high-contrast data visualization optimized for prolonged trading sessions. We built a WebSocket-based real-time engine updating order books and charts 50+ times per second with virtualized rendering to prevent UI lag. The layout was fully customizable with drag-and-drop panels that persisted per user.",
+          "keyFeatures": [
+            "Real-time Order Book with depth visualization and cumulative volume bars",
+            "Advanced Charting with 40+ technical indicators and custom drawing tools",
+            "One-tap Trade Execution supporting limit, market, stop-loss, and OCO orders",
+            "Customizable Workspace with drag-and-drop panels and per-user layout persistence",
+            "Simple Mode for intermediate users with guided trade flow and risk warnings",
+            "Price Alert System with push notifications and conditional triggers",
+            "Portfolio Dashboard with real-time P&L tracking and position management"
+          ]
+        },
+        "design": {
+          "wireframes": "Created 24 screen wireframes across 3 user journey maps for pro, intermediate, and mobile web users. Conducted 6 rounds of usability testing with professional traders using real market data. Validated layout density through eye-tracking with 12 participants.",
+          "system": "Built a 72-component trading-specific design system with data visualization patterns for order books, candlestick charts, and trade execution forms. Created a dark-first color system optimized for prolonged screen time with WCAG AA contrast on all data elements."
+        },
+        "results": {
+          "metrics": [
+            {
+              "label": "1.2s Execution",
+              "value": "Average trade execution latency end-to-end",
+              "context": "Measured across 10M+ trades via WebSocket infrastructure"
+            },
+            {
+              "label": "250K+ Traders",
+              "value": "Up from 80K pre-terminal launch",
+              "context": "212% growth in 6 months, 45% attributed to pro features"
+            },
+            {
+              "label": "99.98% Uptime",
+              "value": "Platform availability during market hours",
+              "context": "Achieved via redundant WebSocket infrastructure and failover systems"
+            },
+            {
+              "label": "$8B+ Daily Volume",
+              "value": "Average daily trading volume",
+              "context": "Up from $1.2B pre-terminal, driven by professional trader retention"
+            }
+          ],
+          "testimonial": {
+            "quote": "Finally a terminal that doesn't make me choose between power and speed. The order book updates are instant, the charting is professional-grade, and one-tap execution means I never miss a move. I moved my entire trading operation here within a week.",
+            "author": "Michael Torres",
+            "role": "Day Trader",
+            "company": "Professional User"
+          }
+        },
+        "learnings": [
+          "Professional traders need density over whitespace: compact layouts increased trading efficiency by 31%",
+          "One-tap execution is non-negotiable: reducing trade flow from 3 taps to 1 increased volume by 45%",
+          "Real-time data requires virtualized rendering: without it, 50fps updates froze the UI on lower-end devices",
+          "Dark-first design reduces eye strain: 92% of pro traders preferred dark mode for 6+ hour sessions",
+          "Simple Mode saves intermediate users: guided trade flow reduced error rates by 67%",
+          "Customizable layouts drive retention: 76% of pros customized their workspace within first session",
+          "Mobile web is for monitoring, not trading: 89% of mobile users only checked positions, not executed trades"
+        ]
+      }
     }
   ]
 }
