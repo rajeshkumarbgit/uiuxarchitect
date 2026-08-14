@@ -22,19 +22,19 @@ export default function Footer({ onNavigate }: FooterProps) {
 
   return (
     <footer className="bg-ink-950 text-white relative overflow-hidden">
-      <div className="absolute top-0 left-1/3 w-96 h-96 bg-brand-500/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-accent-500/5 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-1/3 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl" />
       <div className="relative section-container py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-8">
           <div className="space-y-4">
             <div className="flex items-center gap-2.5">
-              <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-brand-600 to-accent-500 text-white font-bold text-lg">
+              <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 text-white font-bold text-lg">
                 RK
               </span>
               <h3 className="text-lg font-bold">Rajesh Kumar</h3>
             </div>
             <p className="text-ink-400 text-sm leading-relaxed max-w-xs">
-              UI/UX Product Designer & UI Developer with 20+ years of experience creating impactful digital experiences.
+              UI/UX Architect & Senior Product Designer with 18+ years of experience creating impactful digital experiences.
             </p>
           </div>
 
@@ -96,7 +96,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2.5 bg-ink-800 hover:bg-gradient-to-br hover:from-brand-600 hover:to-accent-500 rounded-lg transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:ring-offset-ink-950"
+                    className="p-2.5 bg-ink-800 hover:bg-gradient-to-br hover:from-brand-500 hover:to-accent-500 rounded-lg transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:ring-offset-ink-950"
                     aria-label={link.platform}
                   >
                     <Icon className="w-4 h-4" />

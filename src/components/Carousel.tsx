@@ -85,7 +85,7 @@ export default function Carousel({ items, autoPlay = false, interval = 5000, cla
   return (
     <div className={`relative w-full ${className}`}>
       <div
-        className="relative aspect-[16/9] overflow-hidden rounded-3xl bg-ink-100 shadow-card touch-pan-y"
+        className="relative aspect-[16/9] overflow-hidden rounded-3xl bg-ink-100 dark:bg-ink-800 shadow-card touch-pan-y"
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
@@ -123,9 +123,9 @@ export default function Carousel({ items, autoPlay = false, interval = 5000, cla
               onClick={handlePrevious}
               disabled={isTransitioning}
               aria-label="Previous slide"
-              className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 p-3 sm:p-4 bg-white/90 backdrop-blur-sm hover:bg-white rounded-full shadow-card transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 p-3 sm:p-4 bg-white/90 dark:bg-ink-900/90 backdrop-blur-sm hover:bg-white dark:hover:bg-ink-800 rounded-full shadow-card transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <ChevronLeft className="w-5 h-5 text-ink-900" />
+              <ChevronLeft className="w-5 h-5 text-ink-900 dark:text-white" />
             </button>
 
             <button
@@ -133,9 +133,9 @@ export default function Carousel({ items, autoPlay = false, interval = 5000, cla
               onClick={handleNext}
               disabled={isTransitioning}
               aria-label="Next slide"
-              className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 p-3 sm:p-4 bg-white/90 backdrop-blur-sm hover:bg-white rounded-full shadow-card transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 p-3 sm:p-4 bg-white/90 dark:bg-ink-900/90 backdrop-blur-sm hover:bg-white dark:hover:bg-ink-800 rounded-full shadow-card transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <ChevronRight className="w-5 h-5 text-ink-900" />
+              <ChevronRight className="w-5 h-5 text-ink-900 dark:text-white" />
             </button>
           </>
         )}
@@ -152,8 +152,8 @@ export default function Carousel({ items, autoPlay = false, interval = 5000, cla
               aria-label={`Go to slide ${index + 1}`}
               className={`transition-all duration-500 rounded-full focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 ${
                 index === currentIndex
-                  ? 'w-8 h-2.5 bg-brand-600'
-                  : 'w-2.5 h-2.5 bg-ink-300 hover:bg-ink-400'
+                  ? 'w-8 h-2.5 bg-brand-500'
+                  : 'w-2.5 h-2.5 bg-ink-300 dark:bg-ink-600 hover:bg-ink-400 dark:hover:bg-ink-500'
               }`}
             />
           ))}

@@ -55,9 +55,9 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
 
   if (!project) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-white">
+      <div className="min-h-screen flex items-center justify-center bg-white dark:bg-ink-950">
         <div className="text-center">
-          <p className="text-lg text-ink-600 mb-6">Project not found</p>
+          <p className="text-lg text-ink-600 dark:text-ink-400 mb-6">Project not found</p>
           <button
             type="button"
             onClick={() => onNavigate('portfolio')}
@@ -100,7 +100,7 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
     .slice(0, 3);
 
   return (
-    <div className="min-h-screen bg-white flex flex-col">
+    <div className="min-h-screen bg-white dark:bg-ink-950 flex flex-col transition-colors duration-500">
       <div
         ref={heroRef}
         className="relative h-screen bg-gradient-to-br from-ink-950 via-ink-900 to-ink-800 overflow-hidden flex-1 group cursor-grab active:cursor-grabbing"
@@ -122,7 +122,7 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
 
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-0 w-1/3 h-1/3 bg-white/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-brand-500/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-brand-500/10 rounded-full blur-3xl" />
         </div>
 
         <div className="absolute top-6 left-6 right-6 flex items-start justify-between gap-4 z-10">
@@ -215,63 +215,63 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
         </div>
       )}
 
-      <div className="bg-white overflow-y-auto">
+      <div className="bg-white dark:bg-ink-950 overflow-y-auto transition-colors duration-500">
         <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 py-16 sm:py-24">
           <div className="space-y-14">
             <div className="space-y-6 animate-fadeIn">
               {project.featured && (
-                <span className="badge bg-warning-50 text-warning-800 border border-warning-200">
+                <span className="badge bg-warning-50 text-warning-800 dark:bg-warning-950 dark:text-warning-400 border border-warning-200 dark:border-warning-900">
                   <Award className="w-3.5 h-3.5" />
                   Featured Project
                 </span>
               )}
-              <p className="text-xl text-ink-700 leading-relaxed max-w-3xl font-light">
+              <p className="text-xl text-ink-700 dark:text-ink-300 leading-relaxed max-w-3xl font-light">
                 {project.summary}
               </p>
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
               <div>
-                <p className="text-xs font-bold text-ink-400 uppercase tracking-widest mb-2">Industry</p>
-                <p className="text-lg font-semibold text-ink-900">{project.industry}</p>
+                <p className="text-xs font-bold text-ink-400 dark:text-ink-500 uppercase tracking-widest mb-2">Industry</p>
+                <p className="text-lg font-semibold text-ink-900 dark:text-white">{project.industry}</p>
               </div>
               <div>
-                <p className="text-xs font-bold text-ink-400 uppercase tracking-widest mb-2">Timeline</p>
-                <p className="text-lg font-semibold text-ink-900">{project.timeline}</p>
+                <p className="text-xs font-bold text-ink-400 dark:text-ink-500 uppercase tracking-widest mb-2">Timeline</p>
+                <p className="text-lg font-semibold text-ink-900 dark:text-white">{project.timeline}</p>
               </div>
               <div>
-                <p className="text-xs font-bold text-ink-400 uppercase tracking-widest mb-2">Platform</p>
-                <p className="text-sm font-semibold text-ink-900">{project.platform.join(', ')}</p>
+                <p className="text-xs font-bold text-ink-400 dark:text-ink-500 uppercase tracking-widest mb-2">Platform</p>
+                <p className="text-sm font-semibold text-ink-900 dark:text-white">{project.platform.join(', ')}</p>
               </div>
               <div>
-                <p className="text-xs font-bold text-ink-400 uppercase tracking-widest mb-2">Role</p>
-                <p className="text-sm font-semibold text-ink-900">{project.role.join(', ')}</p>
+                <p className="text-xs font-bold text-ink-400 dark:text-ink-500 uppercase tracking-widest mb-2">Role</p>
+                <p className="text-sm font-semibold text-ink-900 dark:text-white">{project.role.join(', ')}</p>
               </div>
             </div>
 
             {project.kpis.length > 0 && (
-              <div className="space-y-5 pt-10 border-t border-ink-100">
-                <h3 className="text-2xl font-bold text-ink-900">Key Results</h3>
+              <div className="space-y-5 pt-10 border-t border-ink-100 dark:border-ink-800">
+                <h3 className="text-2xl font-bold text-ink-900 dark:text-white">Key Results</h3>
                 <div className="grid sm:grid-cols-2 gap-3">
                   {project.kpis.map((kpi, idx) => (
-                    <div key={idx} className="flex items-start gap-3 p-5 rounded-xl bg-ink-50/60 border border-ink-100 hover:shadow-soft transition-all duration-300">
-                      <div className="w-9 h-9 rounded-full bg-gradient-to-br from-brand-600 to-accent-500 flex items-center justify-center flex-shrink-0 shadow-soft">
+                    <div key={idx} className="flex items-start gap-3 p-5 rounded-xl bg-ink-50/60 dark:bg-ink-900/60 border border-ink-100 dark:border-ink-800 hover:shadow-soft transition-all duration-300">
+                      <div className="w-9 h-9 rounded-full bg-gradient-to-br from-brand-500 to-accent-500 flex items-center justify-center flex-shrink-0 shadow-soft">
                         <span className="text-xs font-bold text-white">{idx + 1}</span>
                       </div>
-                      <p className="text-base text-ink-700 leading-relaxed mt-1">{kpi}</p>
+                      <p className="text-base text-ink-700 dark:text-ink-300 leading-relaxed mt-1">{kpi}</p>
                     </div>
                   ))}
                 </div>
               </div>
             )}
 
-            <div className="space-y-5 pt-10 border-t border-ink-100">
-              <h3 className="text-2xl font-bold text-ink-900">Technologies</h3>
+            <div className="space-y-5 pt-10 border-t border-ink-100 dark:border-ink-800">
+              <h3 className="text-2xl font-bold text-ink-900 dark:text-white">Technologies</h3>
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag, idx) => (
                   <span
                     key={idx}
-                    className="px-4 py-2 bg-ink-50 border border-ink-200 text-ink-700 text-sm font-medium rounded-full hover:bg-ink-100 hover:shadow-soft transition-all duration-300"
+                    className="px-4 py-2 bg-ink-50 dark:bg-ink-900 border border-ink-200 dark:border-ink-700 text-ink-700 dark:text-ink-300 text-sm font-medium rounded-full hover:bg-ink-100 dark:hover:bg-ink-800 hover:shadow-soft transition-all duration-300"
                   >
                     {tag}
                   </span>
@@ -280,13 +280,13 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
             </div>
 
             {(project.liveUrl || project.codeUrl) && (
-              <div className="flex flex-wrap gap-3 pt-10 border-t border-ink-100">
+              <div className="flex flex-wrap gap-3 pt-10 border-t border-ink-100 dark:border-ink-800">
                 {project.liveUrl && (
                   <a
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center px-7 py-3.5 bg-ink-900 text-white font-semibold rounded-xl hover:bg-ink-800 hover:shadow-card hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-ink-900 focus:ring-offset-2 group"
+                    className="inline-flex items-center px-7 py-3.5 bg-ink-900 dark:bg-white text-white dark:text-ink-900 font-semibold rounded-xl hover:bg-ink-800 dark:hover:bg-ink-100 hover:shadow-card hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-ink-900 dark:focus:ring-white focus:ring-offset-2 dark:focus:ring-offset-ink-950 group"
                   >
                     <span>View Live Project</span>
                     <ExternalLink className="ml-2.5 w-4 h-4 transition-transform group-hover:translate-x-0.5" />
@@ -297,7 +297,7 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
                     href={project.codeUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center px-7 py-3.5 bg-white border-2 border-ink-200 text-ink-900 font-semibold rounded-xl hover:border-ink-300 hover:bg-ink-50 hover:shadow-soft hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-ink-300 focus:ring-offset-2 group"
+                    className="inline-flex items-center px-7 py-3.5 bg-white dark:bg-ink-900 border-2 border-ink-200 dark:border-ink-700 text-ink-900 dark:text-ink-100 font-semibold rounded-xl hover:border-ink-300 dark:hover:border-ink-600 hover:bg-ink-50 dark:hover:bg-ink-800 hover:shadow-soft hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-ink-300 dark:focus:ring-ink-600 focus:ring-offset-2 dark:focus:ring-offset-ink-950 group"
                   >
                     <Github className="mr-2.5 w-4 h-4" />
                     <span>View on GitHub</span>
@@ -310,9 +310,9 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
       </div>
 
       {relatedProjects.length > 0 && (
-        <div className="bg-gradient-to-b from-white to-ink-50/40 px-6 sm:px-8 lg:px-12 py-16 border-t border-ink-100">
+        <div className="bg-gradient-to-b from-white to-ink-50/40 dark:from-ink-950 dark:to-ink-900/30 px-6 sm:px-8 lg:px-12 py-16 border-t border-ink-100 dark:border-ink-800 transition-colors duration-500">
           <div className="max-w-5xl mx-auto">
-            <h3 className="text-2xl font-bold text-ink-900 mb-8 tracking-tight">Related Projects</h3>
+            <h3 className="text-2xl font-bold text-ink-900 dark:text-white mb-8 tracking-tight">Related Projects</h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
               {relatedProjects.map((rp) => {
                 const rpCover = useImageUrl(rp.cover);
@@ -323,7 +323,7 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
                     onClick={() => onNavigate('portfolio-detail', rp.slug)}
                     className="group text-left card-base card-hover cursor-pointer overflow-hidden"
                   >
-                    <div className="relative aspect-[4/3] overflow-hidden bg-ink-100">
+                    <div className="relative aspect-[4/3] overflow-hidden bg-ink-100 dark:bg-ink-800">
                       <img
                         src={rpCover}
                         alt={rp.title}
@@ -332,8 +332,8 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
                       />
                     </div>
                     <div className="p-4">
-                      <h4 className="text-base font-bold text-ink-900 group-hover:text-brand-600 transition-colors line-clamp-1">{rp.title}</h4>
-                      <p className="text-sm text-ink-500 mt-1 line-clamp-2">{rp.summary}</p>
+                      <h4 className="text-base font-bold text-ink-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors line-clamp-1">{rp.title}</h4>
+                      <p className="text-sm text-ink-500 dark:text-ink-400 mt-1 line-clamp-2">{rp.summary}</p>
                     </div>
                   </button>
                 );
@@ -343,18 +343,18 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
         </div>
       )}
 
-      <div className="bg-white border-t border-ink-100 px-6 sm:px-8 lg:px-12 py-6 shadow-soft">
+      <div className="bg-white dark:bg-ink-950 border-t border-ink-100 dark:border-ink-800 px-6 sm:px-8 lg:px-12 py-6 shadow-soft transition-colors duration-500">
         <div className="max-w-5xl mx-auto flex items-center justify-between gap-3">
           <button
             type="button"
             onClick={handlePrevProject}
-            className="group flex items-center gap-2.5 px-4 sm:px-5 py-3 bg-ink-50 hover:bg-ink-100 text-ink-900 rounded-xl transition-all duration-300 hover:shadow-soft focus:outline-none focus:ring-2 focus:ring-ink-300 focus:ring-offset-2 cursor-pointer flex-1 sm:flex-none border border-ink-200"
+            className="group flex items-center gap-2.5 px-4 sm:px-5 py-3 bg-ink-50 dark:bg-ink-900 hover:bg-ink-100 dark:hover:bg-ink-800 text-ink-900 dark:text-ink-100 rounded-xl transition-all duration-300 hover:shadow-soft focus:outline-none focus:ring-2 focus:ring-ink-300 dark:focus:ring-ink-600 focus:ring-offset-2 dark:focus:ring-offset-ink-950 cursor-pointer flex-1 sm:flex-none border border-ink-200 dark:border-ink-700"
             aria-label="Previous project"
           >
             <ChevronLeft className="w-5 h-5 transition-transform group-hover:-translate-x-0.5" />
             <div className="text-left hidden sm:block">
-              <div className="text-xs font-bold text-ink-400 uppercase tracking-wider">Prev</div>
-              <div className="text-sm font-bold text-ink-900 truncate max-w-[180px]">
+              <div className="text-xs font-bold text-ink-400 dark:text-ink-500 uppercase tracking-wider">Prev</div>
+              <div className="text-sm font-bold text-ink-900 dark:text-white truncate max-w-[180px]">
                 {allProjects[currentIndex === 0 ? allProjects.length - 1 : currentIndex - 1]?.title}
               </div>
             </div>
@@ -363,7 +363,7 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
           <button
             type="button"
             onClick={handleClose}
-            className="inline-flex items-center justify-center px-5 py-3 bg-ink-50 hover:bg-ink-100 text-ink-900 font-semibold rounded-xl transition-all duration-300 hover:shadow-soft focus:outline-none focus:ring-2 focus:ring-ink-300 focus:ring-offset-2 cursor-pointer border border-ink-200"
+            className="inline-flex items-center justify-center px-5 py-3 bg-ink-50 dark:bg-ink-900 hover:bg-ink-100 dark:hover:bg-ink-800 text-ink-900 dark:text-ink-100 font-semibold rounded-xl transition-all duration-300 hover:shadow-soft focus:outline-none focus:ring-2 focus:ring-ink-300 dark:focus:ring-ink-600 focus:ring-offset-2 dark:focus:ring-offset-ink-950 cursor-pointer border border-ink-200 dark:border-ink-700"
             aria-label="Close portfolio"
           >
             <X className="w-5 h-5 transition-transform hover:rotate-90" />
@@ -372,12 +372,12 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
           <button
             type="button"
             onClick={handleNextProject}
-            className="group flex items-center gap-2.5 px-4 sm:px-5 py-3 bg-ink-50 hover:bg-ink-100 text-ink-900 rounded-xl transition-all duration-300 hover:shadow-soft focus:outline-none focus:ring-2 focus:ring-ink-300 focus:ring-offset-2 cursor-pointer flex-1 sm:flex-none justify-end border border-ink-200"
+            className="group flex items-center gap-2.5 px-4 sm:px-5 py-3 bg-ink-50 dark:bg-ink-900 hover:bg-ink-100 dark:hover:bg-ink-800 text-ink-900 dark:text-ink-100 rounded-xl transition-all duration-300 hover:shadow-soft focus:outline-none focus:ring-2 focus:ring-ink-300 dark:focus:ring-ink-600 focus:ring-offset-2 dark:focus:ring-offset-ink-950 cursor-pointer flex-1 sm:flex-none justify-end border border-ink-200 dark:border-ink-700"
             aria-label="Next project"
           >
             <div className="text-right hidden sm:block">
-              <div className="text-xs font-bold text-ink-400 uppercase tracking-wider">Next</div>
-              <div className="text-sm font-bold text-ink-900 truncate max-w-[180px]">
+              <div className="text-xs font-bold text-ink-400 dark:text-ink-500 uppercase tracking-wider">Next</div>
+              <div className="text-sm font-bold text-ink-900 dark:text-white truncate max-w-[180px]">
                 {allProjects[currentIndex === allProjects.length - 1 ? 0 : currentIndex + 1]?.title}
               </div>
             </div>
