@@ -1,8 +1,8 @@
 {
   "hero": {
     "tagline": "Designing Systems. Shipping Experiences.",
-    "subtext": "UI/UX Product Designer & UI Developer — 20+ years — Frontend across Angular/React/Next, Design Systems, Data-dense UIs",
-    "description": "Bridging UX strategy and production-grade frontend for 20+ years. I create data-dense enterprise experiences and consumer apps that scale across teams and time.",
+    "subtext": "UI/UX Architect & Senior Product Designer — 18+ years — Frontend across Angular/React, Design Systems, Data-dense UIs, AI-assisted tools",
+    "description": "Bridging UX strategy and production-grade frontend for 18+ years. I create data-dense enterprise experiences and AI-assisted tools that scale across teams and time.",
     "ctas": [
       {
         "label": "View Portfolio",
@@ -23,7 +23,7 @@
     "stats": [
       {
         "label": "Years Experience",
-        "value": "20+"
+        "value": "18+"
       },
       {
         "label": "Projects Delivered",
@@ -47,7 +47,7 @@
       {
         "icon": "Code",
         "title": "Frontend Development",
-        "description": "React, Angular, Next.js, TypeScript, Performance"
+        "description": "Angular, TypeScript, RxJS, NgRx, React, Performance"
       },
       {
         "icon": "Briefcase",
@@ -57,15 +57,15 @@
     ],
     "trustBar": {
       "title": "Trusted by leading organizations",
-      "clients": ["SATH", "FinServ", "HealthCo", "TravelTech", "EdLearn"]
+      "clients": ["Nokia", "Randstad", "Giant Media", "eMahatva"]
     }
   },
   "about": {
     "title": "About Me",
     "introduction": [
-      "I'm Rajesh Kumar, a UI/UX Product Designer and UI Developer with over 20 years of experience crafting digital experiences that users love and businesses value. I bridge the gap between design strategy and production-grade code, ensuring products are not just beautiful, but performant, accessible, and engineered to scale.",
-      "My unique dual expertise in design and frontend development allows me to think holistically about problems. I understand the constraints and possibilities of implementation, which informs smarter, more feasible design decisions. I've worked across enterprise SaaS, fintech, healthcare, e-commerce, and consumer products, always focused on measurable outcomes.",
-      "I specialize in complex, data-dense interfaces where clarity and usability are critical. Whether it's building design systems that unify product teams, architecting information hierarchies for enterprise platforms, or optimizing mobile experiences for millions of users, I bring systematic thinking and craft to every project."
+      "I'm Rajesh Kumar, a UI/UX Architect and Senior Product Designer with over 18 years of experience crafting digital experiences that users love and businesses value. I bridge the gap between design strategy and production-grade code, ensuring products are not just beautiful, but performant, accessible, and engineered to scale.",
+      "My unique dual expertise in design and frontend development allows me to think holistically about problems. I understand the constraints and possibilities of implementation, which informs smarter, more feasible design decisions. At Nokia, I've led UX architecture for complex telecom and enterprise applications serving 2,500+ users across global delivery centres, and built automation tools that reduced manual effort by up to 90%.",
+      "I specialize in complex, data-dense interfaces where clarity and usability are critical. Whether it's building design systems that unify product teams, architecting information hierarchies for enterprise platforms, or designing AI-assisted tools with human oversight, I bring systematic thinking and craft to every project."
     ],
     "principlesTitle": "Design Principles",
     "principles": [
@@ -183,12 +183,12 @@
   "metadata": {
     "home": {
       "title": "Rajesh Kumar - UI/UX Product Designer & UI Developer",
-      "description": "UI/UX Product Designer and UI Developer with 20+ years of experience. Specializing in enterprise applications, design systems, and frontend development with React, Angular, and Next.js.",
+      "description": "UI/UX Architect and Senior Product Designer with 18+ years of experience. Specializing in enterprise applications, design systems, and frontend development with Angular, TypeScript, and React.",
       "keywords": ["UX Designer", "UI Developer", "Product Designer", "Frontend Developer", "Design Systems", "React", "Angular", "Portfolio"]
     },
     "about": {
       "title": "About | Rajesh Kumar",
-      "description": "Learn about my 20+ year journey in UI/UX design and frontend development. From early web development to leading enterprise design systems.",
+      "description": "Learn about my 18+ year journey in UI/UX design and frontend development. From early web design at eMahatva to leading UX architecture at Nokia.",
       "keywords": ["About", "Experience", "Skills", "Career", "Designer Bio"]
     },
     "portfolio": {

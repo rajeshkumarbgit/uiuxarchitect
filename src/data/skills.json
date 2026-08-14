@@ -16,24 +16,24 @@
       "category": "Frontend Development",
       "icon": "Code",
       "skills": [
-        { "name": "React & React Native", "level": 95, "years": "8+" },
-        { "name": "Angular & RxJS", "level": 92, "years": "9+" },
+        { "name": "Angular & RxJS", "level": 95, "years": "12+" },
         { "name": "TypeScript & JavaScript", "level": 95, "years": "15+" },
-        { "name": "Next.js & Vue.js", "level": 88, "years": "5+" },
-        { "name": "State Management (Redux/NgRx)", "level": 90, "years": "7+" },
-        { "name": "Testing (Jest/Cypress)", "level": 85, "years": "6+" }
+        { "name": "NgRx & State Management", "level": 92, "years": "8+" },
+        { "name": "React & React Native", "level": 90, "years": "8+" },
+        { "name": "HTML5 & CSS3/Sass", "level": 98, "years": "20+" },
+        { "name": "API-Driven UI Patterns", "level": 92, "years": "12+" }
       ]
     },
     {
       "category": "Tools & Platforms",
       "icon": "Zap",
       "skills": [
-        { "name": "Figma & Sketch", "level": 95, "years": "12+" },
-        { "name": "HTML5 & CSS3/Sass", "level": 98, "years": "20+" },
+        { "name": "Figma & Design Systems", "level": 95, "years": "12+" },
         { "name": "Tailwind & Styled Components", "level": 92, "years": "5+" },
         { "name": "Git & CI/CD", "level": 90, "years": "15+" },
         { "name": "Web Performance Optimization", "level": 88, "years": "10+" },
-        { "name": "Accessibility (WCAG 2.2)", "level": 92, "years": "8+" }
+        { "name": "Accessibility (WCAG 2.2)", "level": 92, "years": "8+" },
+        { "name": "AI-Assisted Development & RAG", "level": 88, "years": "3+" }
       ]
     },
     {

@@ -1,75 +1,51 @@
 {
   "timeline": [
     {
-      "year": "2024-Present",
-      "role": "Lead UX Designer & Senior Frontend Developer",
-      "company": "SATH (Enterprise SaaS)",
-      "description": "Leading design and development of enterprise incident management platform. Built comprehensive design system and reduced incident resolution time by 35%.",
+      "year": "Dec 2012 – Present",
+      "role": "UI/UX Architect / Senior Product Design & Front-End Lead",
+      "company": "Nokia Networks & Solutions",
+      "description": "Lead UX architecture for complex telecom and enterprise applications — converting business, operational, and technical requirements into clear IA, workflows, interaction models, and production-ready UI specifications. Partner with product managers, domain experts, architects, developers, QA, and global stakeholders from discovery through release.",
       "achievements": [
-        "Redesigned notification system handling 10M+ daily alerts",
-        "Increased user satisfaction from 61% to 92%",
-        "Reduced misconfiguration rate by 14% through better UX",
-        "Built design system with 45 reusable components"
+        "Delivered Nokia Enterprise Operations Portal for 2,500+ users across global delivery centres",
+        "Built automation tools reducing manual effort by up to 90%",
+        "Define reusable interaction patterns, responsive layouts, and design-system guidance improving consistency, scalability, and WCAG accessibility",
+        "Provide hands-on front-end architecture using Angular, TypeScript, RxJS, NgRx, and API-driven UI patterns",
+        "Earned Nokia Excellence Award for Time Tracking & Cost Recharge workflow redesign",
+        "Led AI product portfolio: Telecom Support Copilot (secure RAG), AI UX Review Assistant, Smart Notification Rule Builder, Local Private AI Workspace"
       ]
     },
     {
-      "year": "2021-2024",
-      "role": "Principal Product Designer",
-      "company": "FinTech Startup",
-      "description": "Led product design for investment banking mobile app serving 5M+ users. Increased DAU by 28% and achieved 4.8★ App Store rating through user-centered design.",
+      "year": "Apr 2011 – Dec 2012",
+      "role": "Software Developer / UI Designer",
+      "company": "Randstad India (Nokia engagement)",
+      "description": "Designed and developed user interfaces for Nokia internal applications, combining visual design, responsive front-end implementation, and stakeholder collaboration. Created an internal tools gallery and produced a monthly interactive flipbook newsletter for Nokia delivery teams.",
       "achievements": [
-        "Designed mobile-first platform managing $2B+ in assets",
-        "Increased daily active users by 28%",
-        "Achieved 4.8★ App Store rating with 10K+ reviews",
-        "Optimized load times to 2.1s average"
+        "Designed and developed UI for Nokia internal applications",
+        "Created internal tools gallery for Nokia delivery teams",
+        "Produced monthly interactive flipbook newsletter",
+        "Combined visual design with responsive front-end implementation"
       ]
     },
     {
-      "year": "2018-2021",
-      "role": "Design System Lead & Component Architect",
-      "company": "Global E-commerce Platform",
-      "description": "Built design system from ground up unifying 12 products. Created 120+ components, established governance, and achieved 70% faster component development.",
+      "year": "Jun 2007 – Apr 2011",
+      "role": "Visualizer",
+      "company": "Giant Media",
+      "description": "Led visual concepts across web, print, outdoor, branding, illustration, and advertising campaigns for startup, FMCG, and corporate clients across multiple concurrent projects.",
       "achievements": [
-        "Created comprehensive design system with 120+ components",
-        "Unified 12 product teams under single design language",
-        "Reduced component development time by 70%",
-        "Achieved 95% adoption rate across organization"
+        "Led visual concepts across web, print, outdoor, and branding campaigns",
+        "Served startup, FMCG, and corporate clients across multiple concurrent projects",
+        "Built foundation in visual design, illustration, and advertising"
       ]
     },
     {
-      "year": "2015-2018",
-      "role": "Senior UX Designer & Frontend Developer",
-      "company": "Healthcare Technology",
-      "description": "Redesigned patient portal for 2M+ patients. Improved accessibility to WCAG 2.2 AA, reduced support calls by 40%, and achieved 89% task completion rate.",
+      "year": "May 2006 – Jun 2007",
+      "role": "Web Designer",
+      "company": "eMahatva Technologies Pvt. Ltd.",
+      "description": "Designed 100+ microsites, landing pages, web templates, banners, and brand assets for a commercial template gallery.",
       "achievements": [
-        "Transformed legacy portal serving 2M+ patients",
-        "Achieved WCAG 2.2 AA compliance",
-        "Reduced support calls by 40%",
-        "Improved task completion rate to 89%"
-      ]
-    },
-    {
-      "year": "2010-2015",
-      "role": "UX Designer & Frontend Developer",
-      "company": "Travel & Hospitality SaaS",
-      "description": "Designed AI-powered travel booking platform. Increased booking conversion by 31%, optimized search performance to 1.8s, and achieved 4.7★ user rating.",
-      "achievements": [
-        "Built AI-powered platform for 5M+ users",
-        "Increased booking conversion by 31%",
-        "Optimized search results to 1.8s average",
-        "Achieved 4.7★ overall user rating"
-      ]
-    },
-    {
-      "year": "2004-2010",
-      "role": "UI Designer & Web Developer",
-      "company": "Digital Agency",
-      "description": "Designed and built websites, brand identities, and digital campaigns for Fortune 500 clients. Specialized in conversion optimization and user engagement.",
-      "achievements": [
-        "Delivered 50+ websites for Fortune 500 clients",
-        "Specialized in conversion optimization and analytics",
-        "Built expertise in HTML, CSS, JavaScript, and PHP",
-        "Developed foundation in user-centered design"
+        "Designed 100+ microsites, landing pages, and web templates",
+        "Created banners and brand assets for a commercial template gallery",
+        "Built early expertise in web design and digital brand assets"
       ]
     }
   ]
