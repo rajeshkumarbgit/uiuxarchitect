@@ -68,6 +68,7 @@ export interface ProjectMetadata {
   team: string;
   platform: string[];
   tools: string[];
+  industry?: string;
 }
 
 export interface CaseStudySections {

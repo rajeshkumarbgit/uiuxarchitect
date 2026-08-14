@@ -54,8 +54,9 @@ export default function CaseStudyDetail({ caseStudySlug, onNavigate }: CaseStudy
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <button
+            type="button"
             onClick={() => onNavigate('case-studies')}
-            className="inline-flex items-center text-white/80 hover:text-white mb-8 focus:outline-none focus:ring-2 focus:ring-white/50 rounded-lg px-4 py-2 transition-all"
+            className="inline-flex items-center text-white/80 hover:text-white mb-8 focus:outline-none focus:ring-2 focus:ring-white/50 rounded-lg px-4 py-2 transition-all cursor-pointer"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Case Studies
@@ -236,19 +237,19 @@ export default function CaseStudyDetail({ caseStudySlug, onNavigate }: CaseStudy
 
           <section className="relative">
             <div className="flex items-center gap-4 mb-8">
-              <div className="p-3 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl">
+              <div className="p-3 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl">
                 <BookOpen className="w-6 h-6 text-white" />
               </div>
               <div>
-                <span className="text-sm font-semibold text-purple-600 uppercase tracking-wide">05 / Learnings</span>
+                <span className="text-sm font-semibold text-amber-600 uppercase tracking-wide">05 / Learnings</span>
                 <h2 className="text-3xl font-bold text-gray-900">Key Takeaways</h2>
               </div>
             </div>
             <div className="pl-16">
               <div className="space-y-4">
                 {caseStudy.sections.learnings.map((learning, idx) => (
-                  <div key={idx} className="flex gap-4 p-5 bg-purple-50 rounded-xl border border-purple-100">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold text-sm">
+                  <div key={idx} className="flex gap-4 p-5 bg-amber-50 rounded-xl border border-amber-100">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-amber-600 text-white flex items-center justify-center font-bold text-sm">
                       {idx + 1}
                     </div>
                     <p className="text-sm text-gray-700 leading-relaxed">{learning}</p>
@@ -261,8 +262,9 @@ export default function CaseStudyDetail({ caseStudySlug, onNavigate }: CaseStudy
 
         <div className="flex items-center justify-between py-12 mt-12 border-t-2 border-gray-200">
           <button
+            type="button"
             onClick={handlePrevCaseStudy}
-            className="group flex items-center gap-3 px-6 py-4 bg-gray-50 hover:bg-gray-100 rounded-2xl transition-all focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+            className="group flex items-center gap-3 px-6 py-4 bg-gray-50 hover:bg-gray-100 rounded-2xl transition-all focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 cursor-pointer"
           >
             <ChevronLeft className="w-5 h-5 text-gray-600 group-hover:text-gray-900" />
             <div className="text-left">
@@ -274,8 +276,9 @@ export default function CaseStudyDetail({ caseStudySlug, onNavigate }: CaseStudy
           </button>
 
           <button
+            type="button"
             onClick={handleNextCaseStudy}
-            className="group flex items-center gap-3 px-6 py-4 bg-gray-50 hover:bg-gray-100 rounded-2xl transition-all focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+            className="group flex items-center gap-3 px-6 py-4 bg-gray-50 hover:bg-gray-100 rounded-2xl transition-all focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 cursor-pointer"
           >
             <div className="text-right">
               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Next</div>
@@ -293,8 +296,9 @@ export default function CaseStudyDetail({ caseStudySlug, onNavigate }: CaseStudy
             Let's discuss how I can help transform your product with strategic design and technical expertise.
           </p>
           <button
+            type="button"
             onClick={() => onNavigate('contact')}
-            className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-2xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600"
+            className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-2xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 cursor-pointer"
           >
             Get in Touch
             <ExternalLink className="ml-2 w-5 h-5" />

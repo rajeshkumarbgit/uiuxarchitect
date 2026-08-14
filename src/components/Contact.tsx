@@ -4,9 +4,9 @@
  */
 
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Calendar, Download, Send, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Calendar, Download, Send, CheckCircle, Github, Linkedin, Twitter, Briefcase } from 'lucide-react';
 import { useContactContent } from '../hooks/useContent';
-import { useContactInfo } from '../hooks/useConfig';
+import { useContactInfo, useSocialLinks } from '../hooks/useConfig';
 
 interface ContactProps {
   onNavigate: (page: string, slug?: string) => void;
@@ -15,6 +15,7 @@ interface ContactProps {
 export default function Contact({ onNavigate }: ContactProps) {
   const content = useContactContent();
   const contactInfo = useContactInfo();
+  const socialLinks = useSocialLinks();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -139,6 +140,32 @@ export default function Contact({ onNavigate }: ContactProps) {
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                 <span className="text-sm font-medium text-gray-900">{content.availabilityStatus}</span>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-2xl font-bold text-gray-900">Find Me Online</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {socialLinks.map((link) => {
+                  const Icon = link.icon === 'Github' ? Github : link.icon === 'Linkedin' ? Linkedin : link.icon === 'Twitter' ? Twitter : Briefcase;
+                  return (
+                    <a
+                      key={link.platform}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center gap-4 p-4 bg-white border-2 border-gray-200 rounded-xl hover:border-gray-900 transition-all duration-300 hover:shadow-md"
+                    >
+                      <div className="p-2.5 bg-gray-100 group-hover:bg-gray-900 rounded-lg transition-colors">
+                        <Icon className="w-5 h-5 text-gray-700 group-hover:text-white transition-colors" />
+                      </div>
+                      <div>
+                        <div className="font-semibold text-gray-900 text-sm">{link.platform}</div>
+                        <div className="text-xs text-gray-500">{link.username}</div>
+                      </div>
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </div>

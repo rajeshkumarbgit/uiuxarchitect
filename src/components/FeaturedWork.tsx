@@ -1,33 +1,20 @@
 import Carousel from './Carousel';
 import { useImageUrl } from '../hooks/useImages';
+import { useFeaturedProjects } from '../hooks/useProjects';
 
 export default function FeaturedWork() {
-  const carouselItems = [
-    {
-      image: useImageUrl('carousel-1'),
-      title: 'Modern Mobile Banking App',
-      description: 'Complete redesign of mobile banking experience with focus on accessibility and performance - 40% increase in user engagement',
-      alt: 'Modern mobile app UI design showcase'
-    },
-    {
-      image: useImageUrl('carousel-2'),
-      title: 'Enterprise Dashboard Platform',
-      description: 'Multi-device responsive dashboard for data analytics - serving 50K+ users with 99.9% uptime',
-      alt: 'Website design on multiple devices'
-    },
-    {
-      image: useImageUrl('carousel-3'),
-      title: 'Healthcare UX Research & Design',
-      description: 'Comprehensive UX research leading to patient portal that improved satisfaction by 35%',
-      alt: 'Creative UI design process and wireframes'
-    },
-    {
-      image: useImageUrl('carousel-4'),
-      title: 'Real-time Analytics Dashboard',
-      description: 'Data visualization platform processing 1M+ events per day with sub-second latency',
-      alt: 'Dashboard analytics and data visualization'
-    }
-  ];
+  const featuredProjects = useFeaturedProjects();
+
+  const carouselItems = featuredProjects.slice(0, 4).map((project) => ({
+    image: useImageUrl(project.cover),
+    title: project.title,
+    description: project.summary,
+    alt: project.title
+  }));
+
+  if (carouselItems.length === 0) {
+    return null;
+  }
 
   return (
     <section className="py-24 px-6 sm:px-8 lg:px-12 bg-gradient-to-b from-white to-gray-50">

@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Download, Calendar } from 'lucide-react';
-import { useNavigation, useContactInfo } from '../hooks/useConfig';
-import { useLabels } from '../hooks/useContent';
+import { Menu, X, Download, Calendar, Github } from 'lucide-react';
+import { useNavigation, useContactInfo, useSocialLinks } from '../hooks/useConfig';
 
 interface HeaderProps {
   currentPage: string;
@@ -16,7 +15,8 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
 
   const navItems = useNavigation();
   const { email } = useContactInfo();
-  const labels = useLabels('buttons');
+  const socialLinks = useSocialLinks();
+  const githubLink = socialLinks.find(s => s.platform === 'GitHub');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,6 +77,17 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
             ))}
 
             <div className="ml-4 flex items-center space-x-3 pl-4 border-l border-gray-200">
+              {githubLink && (
+                <a
+                  href={githubLink.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-10 h-10 text-gray-700 hover:text-blue-600 hover:bg-gray-100 rounded-xl transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                  aria-label="Visit GitHub profile"
+                >
+                  <Github className="w-5 h-5" />
+                </a>
+              )}
               <button
                 type="button"
                 onClick={() => handleNavClick('contact')}
@@ -128,6 +139,17 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
               ))}
 
               <div className="pt-4 flex flex-col space-y-2 border-t border-gray-100 mt-2">
+                {githubLink && (
+                  <a
+                    href={githubLink.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-5 py-3 text-sm font-semibold text-gray-700 hover:bg-gray-100 rounded-xl transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                  >
+                    <Github className="w-4 h-4 mr-2" />
+                    GitHub Profile
+                  </a>
+                )}
                 <button
                   type="button"
                   onClick={() => handleNavClick('contact')}

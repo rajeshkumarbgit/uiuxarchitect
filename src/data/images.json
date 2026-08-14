@@ -4,11 +4,7 @@
       "id": "hero-bg-1",
       "url": "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "alt": "Modern workspace with design tools and laptop",
-      "attribution": {
-        "author": "ThisIsEngineering",
-        "source": "pexels",
-        "url": "https://www.pexels.com/photo/3861969/"
-      },
+      "attribution": { "author": "ThisIsEngineering", "source": "pexels", "url": "https://www.pexels.com/photo/3861969/" },
       "category": "hero",
       "tags": ["workspace", "design", "technology"]
     },
@@ -16,11 +12,7 @@
       "id": "project-cover-1",
       "url": "https://images.pexels.com/photos/7599735/pexels-photo-7599735.jpeg?auto=compress&cs=tinysrgb&w=1200",
       "alt": "Enterprise dashboard interface design with analytics",
-      "attribution": {
-        "author": "MART PRODUCTION",
-        "source": "pexels",
-        "url": "https://www.pexels.com/photo/7599735/"
-      },
+      "attribution": { "author": "MART PRODUCTION", "source": "pexels", "url": "https://www.pexels.com/photo/7599735/" },
       "category": "project-cover",
       "tags": ["enterprise", "dashboard", "ui-design"]
     },
@@ -28,11 +20,7 @@
       "id": "project-cover-2",
       "url": "https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg?auto=compress&cs=tinysrgb&w=1200",
       "alt": "Mobile banking application interface on smartphone",
-      "attribution": {
-        "author": "cottonbro studio",
-        "source": "pexels",
-        "url": "https://www.pexels.com/photo/4226140/"
-      },
+      "attribution": { "author": "cottonbro studio", "source": "pexels", "url": "https://www.pexels.com/photo/4226140/" },
       "category": "project-cover",
       "tags": ["mobile", "fintech", "app-design"]
     },
@@ -40,11 +28,7 @@
       "id": "project-cover-3",
       "url": "https://images.pexels.com/photos/7579831/pexels-photo-7579831.jpeg?auto=compress&cs=tinysrgb&w=1200",
       "alt": "Healthcare patient portal design on tablet",
-      "attribution": {
-        "author": "Anna Shvets",
-        "source": "pexels",
-        "url": "https://www.pexels.com/photo/7579831/"
-      },
+      "attribution": { "author": "Anna Shvets", "source": "pexels", "url": "https://www.pexels.com/photo/7579831/" },
       "category": "project-cover",
       "tags": ["healthcare", "portal", "accessibility"]
     },
@@ -52,11 +36,7 @@
       "id": "project-cover-4",
       "url": "https://images.pexels.com/photos/4065876/pexels-photo-4065876.jpeg?auto=compress&cs=tinysrgb&w=1200",
       "alt": "E-commerce design system components on screen",
-      "attribution": {
-        "author": "cottonbro studio",
-        "source": "pexels",
-        "url": "https://www.pexels.com/photo/4065876/"
-      },
+      "attribution": { "author": "cottonbro studio", "source": "pexels", "url": "https://www.pexels.com/photo/4065876/" },
       "category": "project-cover",
       "tags": ["e-commerce", "design-system", "components"]
     },
@@ -64,11 +44,7 @@
       "id": "project-cover-5",
       "url": "https://images.pexels.com/photos/6801874/pexels-photo-6801874.jpeg?auto=compress&cs=tinysrgb&w=1200",
       "alt": "Data analytics dashboard visualization interface",
-      "attribution": {
-        "author": "Tima Miroshnichenko",
-        "source": "pexels",
-        "url": "https://www.pexels.com/photo/6801874/"
-      },
+      "attribution": { "author": "Tima Miroshnichenko", "source": "pexels", "url": "https://www.pexels.com/photo/6801874/" },
       "category": "project-cover",
       "tags": ["analytics", "data-viz", "dashboard"]
     },
@@ -76,11 +52,7 @@
       "id": "project-cover-6",
       "url": "https://images.pexels.com/photos/3183165/pexels-photo-3183165.jpeg?auto=compress&cs=tinysrgb&w=1200",
       "alt": "Luxury brand campaign creative on display",
-      "attribution": {
-        "author": "fauxels",
-        "source": "pexels",
-        "url": "https://www.pexels.com/photo/3183165/"
-      },
+      "attribution": { "author": "fauxels", "source": "pexels", "url": "https://www.pexels.com/photo/3183165/" },
       "category": "project-cover",
       "tags": ["branding", "luxury", "campaign"]
     },
@@ -88,11 +60,7 @@
       "id": "project-cover-7",
       "url": "https://images.pexels.com/photos/4145353/pexels-photo-4145353.jpeg?auto=compress&cs=tinysrgb&w=1200",
       "alt": "Online learning platform interface on laptop",
-      "attribution": {
-        "author": "cottonbro studio",
-        "source": "pexels",
-        "url": "https://www.pexels.com/photo/4145353/"
-      },
+      "attribution": { "author": "cottonbro studio", "source": "pexels", "url": "https://www.pexels.com/photo/4145353/" },
       "category": "project-cover",
       "tags": ["education", "learning", "platform"]
     },
@@ -100,11 +68,7 @@
       "id": "project-cover-8",
       "url": "https://images.pexels.com/photos/4553277/pexels-photo-4553277.jpeg?auto=compress&cs=tinysrgb&w=1200",
       "alt": "Travel booking platform interface with maps",
-      "attribution": {
-        "author": "Vlada Karpovich",
-        "source": "pexels",
-        "url": "https://www.pexels.com/photo/4553277/"
-      },
+      "attribution": { "author": "Vlada Karpovich", "source": "pexels", "url": "https://www.pexels.com/photo/4553277/" },
       "category": "project-cover",
       "tags": ["travel", "booking", "ai"]
     },
@@ -112,11 +76,7 @@
       "id": "project-cover-9",
       "url": "https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=1200",
       "alt": "Nonprofit donation platform mobile interface",
-      "attribution": {
-        "author": "RODNAE Productions",
-        "source": "pexels",
-        "url": "https://www.pexels.com/photo/6646918/"
-      },
+      "attribution": { "author": "RODNAE Productions", "source": "pexels", "url": "https://www.pexels.com/photo/6646918/" },
       "category": "project-cover",
       "tags": ["nonprofit", "donation", "social-impact"]
     },
@@ -124,11 +84,7 @@
       "id": "project-cover-10",
       "url": "https://images.pexels.com/photos/4393426/pexels-photo-4393426.jpeg?auto=compress&cs=tinysrgb&w=1200",
       "alt": "Food delivery mobile app interface",
-      "attribution": {
-        "author": "Norma Mortenson",
-        "source": "pexels",
-        "url": "https://www.pexels.com/photo/4393426/"
-      },
+      "attribution": { "author": "Norma Mortenson", "source": "pexels", "url": "https://www.pexels.com/photo/4393426/" },
       "category": "project-cover",
       "tags": ["food-delivery", "mobile", "real-time"]
     },
@@ -136,11 +92,7 @@
       "id": "project-cover-11",
       "url": "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1200",
       "alt": "B2B CRM platform interface on desktop",
-      "attribution": {
-        "author": "Tima Miroshnichenko",
-        "source": "pexels",
-        "url": "https://www.pexels.com/photo/7688336/"
-      },
+      "attribution": { "author": "Tima Miroshnichenko", "source": "pexels", "url": "https://www.pexels.com/photo/7688336/" },
       "category": "project-cover",
       "tags": ["crm", "b2b", "enterprise"]
     },
@@ -148,35 +100,455 @@
       "id": "project-cover-12",
       "url": "https://images.pexels.com/photos/4498362/pexels-photo-4498362.jpeg?auto=compress&cs=tinysrgb&w=1200",
       "alt": "Fitness and wellness app design on phone",
-      "attribution": {
-        "author": "Karolina Grabowska",
-        "source": "pexels",
-        "url": "https://www.pexels.com/photo/4498362/"
-      },
+      "attribution": { "author": "Karolina Grabowska", "source": "pexels", "url": "https://www.pexels.com/photo/4498362/" },
       "category": "project-cover",
       "tags": ["fitness", "wellness", "health-tracker"]
+    },
+    {
+      "id": "project-cover-13",
+      "url": "https://images.pexels.com/photos/30170004/pexels-photo-30170004.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Smart home automation with mobile phone control",
+      "attribution": { "author": "Jakub Zerdzicki", "source": "pexels", "url": "https://www.pexels.com/photo/30170004/" },
+      "category": "project-cover",
+      "tags": ["smart-home", "iot", "automation"]
+    },
+    {
+      "id": "project-cover-14",
+      "url": "https://images.pexels.com/photos/37993891/pexels-photo-37993891.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Aerial view of precision agriculture with tractor in green field",
+      "attribution": { "author": "Fuka jaz", "source": "pexels", "url": "https://www.pexels.com/photo/37993891/" },
+      "category": "project-cover",
+      "tags": ["agriculture", "agritech", "iot"]
+    },
+    {
+      "id": "project-cover-15",
+      "url": "https://images.pexels.com/photos/27788631/pexels-photo-27788631.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Smartphone capturing cozy living room interior for real estate",
+      "attribution": { "author": "Jakub Zerdzicki", "source": "pexels", "url": "https://www.pexels.com/photo/27788631/" },
+      "category": "project-cover",
+      "tags": ["real-estate", "property", "virtual-tour"]
+    },
+    {
+      "id": "gallery-1-1",
+      "url": "https://images.pexels.com/photos/106344/pexels-photo-106344.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Tablet displaying analytics charts on office desk",
+      "attribution": { "author": "AS Photography", "source": "pexels", "url": "https://www.pexels.com/photo/106344/" },
+      "category": "gallery",
+      "tags": ["analytics", "dashboard", "tablet"]
+    },
+    {
+      "id": "gallery-1-2",
+      "url": "https://images.pexels.com/photos/12969403/pexels-photo-12969403.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Laptop displaying analytics dashboard with real-time data",
+      "attribution": { "author": "Atlantic Ambience", "source": "pexels", "url": "https://www.pexels.com/photo/12969403/" },
+      "category": "gallery",
+      "tags": ["dashboard", "analytics", "enterprise"]
+    },
+    {
+      "id": "gallery-1-3",
+      "url": "https://images.pexels.com/photos/38984817/pexels-photo-38984817.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Business workflow setup with tablet and multiple screens",
+      "attribution": { "author": "Jakub Zerdzicki", "source": "pexels", "url": "https://www.pexels.com/photo/38984817/" },
+      "category": "gallery",
+      "tags": ["workflow", "enterprise", "multi-screen"]
+    },
+    {
+      "id": "gallery-1-4",
+      "url": "https://images.pexels.com/photos/36950633/pexels-photo-36950633.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Professional analyzing data chart on tablet with stylus",
+      "attribution": { "author": "Jakub Zerdzicki", "source": "pexels", "url": "https://www.pexels.com/photo/36950633/" },
+      "category": "gallery",
+      "tags": ["data-analysis", "tablet", "professional"]
+    },
+    {
+      "id": "gallery-2-1",
+      "url": "https://images.pexels.com/photos/6406691/pexels-photo-6406691.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Hand holding smartphone with digital wallet app interface",
+      "attribution": { "author": "Tranmautritam", "source": "pexels", "url": "https://www.pexels.com/photo/6406691/" },
+      "category": "gallery",
+      "tags": ["fintech", "mobile", "wallet"]
+    },
+    {
+      "id": "gallery-2-2",
+      "url": "https://images.pexels.com/photos/163069/pexels-photo-163069.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Hand holding US dollar bills and smartphone outdoors",
+      "attribution": { "author": "Pixabay", "source": "pexels", "url": "https://www.pexels.com/photo/163069/" },
+      "category": "gallery",
+      "tags": ["finance", "mobile", "banking"]
+    },
+    {
+      "id": "gallery-2-3",
+      "url": "https://images.pexels.com/photos/29502369/pexels-photo-29502369.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Smartphone displaying payment app on laptop",
+      "attribution": { "author": "Julio Lopez", "source": "pexels", "url": "https://www.pexels.com/photo/29502369/" },
+      "category": "gallery",
+      "tags": ["payment", "fintech", "app"]
+    },
+    {
+      "id": "gallery-2-4",
+      "url": "https://images.pexels.com/photos/34067360/pexels-photo-34067360.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Bitcoin coin with financial data and credit cards",
+      "attribution": { "author": "DΛVΞ GΛRCIΛ", "source": "pexels", "url": "https://www.pexels.com/photo/34067360/" },
+      "category": "gallery",
+      "tags": ["crypto", "finance", "investment"]
+    },
+    {
+      "id": "gallery-3-1",
+      "url": "https://images.pexels.com/photos/8376171/pexels-photo-8376171.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Senior adult having virtual doctor consultation on tablet",
+      "attribution": { "author": "Tima Miroshnichenko", "source": "pexels", "url": "https://www.pexels.com/photo/8376171/" },
+      "category": "gallery",
+      "tags": ["healthcare", "telehealth", "tablet"]
+    },
+    {
+      "id": "gallery-3-2",
+      "url": "https://images.pexels.com/photos/5407212/pexels-photo-5407212.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Healthcare professional examines X-ray on tablet",
+      "attribution": { "author": "Tima Miroshnichenko", "source": "pexels", "url": "https://www.pexels.com/photo/5407212/" },
+      "category": "gallery",
+      "tags": ["medical", "healthcare", "tablet"]
+    },
+    {
+      "id": "gallery-3-3",
+      "url": "https://images.pexels.com/photos/19963125/pexels-photo-19963125.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Female doctor with tablet and stethoscope in office",
+      "attribution": { "author": "Tessy Agbonome", "source": "pexels", "url": "https://www.pexels.com/photo/19963125/" },
+      "category": "gallery",
+      "tags": ["doctor", "healthcare", "professional"]
+    },
+    {
+      "id": "gallery-3-4",
+      "url": "https://images.pexels.com/photos/5355869/pexels-photo-5355869.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Dentist examining dental X-ray on tablet",
+      "attribution": { "author": "Tima Miroshnichenko", "source": "pexels", "url": "https://www.pexels.com/photo/5355869/" },
+      "category": "gallery",
+      "tags": ["dental", "healthcare", "tablet"]
+    },
+    {
+      "id": "gallery-4-1",
+      "url": "https://images.pexels.com/photos/34577/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Person holding credit card while shopping online on laptop",
+      "attribution": { "author": "Negative Space", "source": "pexels", "url": "https://www.pexels.com/photo/34577/" },
+      "category": "gallery",
+      "tags": ["ecommerce", "shopping", "online"]
+    },
+    {
+      "id": "gallery-4-2",
+      "url": "https://images.pexels.com/photos/6214474/pexels-photo-6214474.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Laptop displaying online shopping with boxes and cart",
+      "attribution": { "author": "Nataliya Vaitkevich", "source": "pexels", "url": "https://www.pexels.com/photo/6214474/" },
+      "category": "gallery",
+      "tags": ["ecommerce", "laptop", "shopping"]
+    },
+    {
+      "id": "gallery-4-3",
+      "url": "https://images.pexels.com/photos/7620619/pexels-photo-7620619.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Man shopping for clothes online using laptop",
+      "attribution": { "author": "Ivan S", "source": "pexels", "url": "https://www.pexels.com/photo/7620619/" },
+      "category": "gallery",
+      "tags": ["ecommerce", "fashion", "online"]
+    },
+    {
+      "id": "gallery-4-4",
+      "url": "https://images.pexels.com/photos/5632391/pexels-photo-5632391.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Hand on mouse with miniature shopping cart concept",
+      "attribution": { "author": "kaboompics.com", "source": "pexels", "url": "https://www.pexels.com/photo/5632391/" },
+      "category": "gallery",
+      "tags": ["ecommerce", "concept", "shopping"]
+    },
+    {
+      "id": "gallery-5-1",
+      "url": "https://images.pexels.com/photos/3861957/pexels-photo-3861957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Laptop displaying data analytics graph in office",
+      "attribution": { "author": "ThisIsEngineering", "source": "pexels", "url": "https://www.pexels.com/photo/3861957/" },
+      "category": "gallery",
+      "tags": ["analytics", "data", "dashboard"]
+    },
+    {
+      "id": "gallery-5-2",
+      "url": "https://images.pexels.com/photos/38808473/pexels-photo-38808473.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Colorful data visualization of stock market trends",
+      "attribution": { "author": "Rafael Minguet Delgado", "source": "pexels", "url": "https://www.pexels.com/photo/38808473/" },
+      "category": "gallery",
+      "tags": ["data-viz", "charts", "finance"]
+    },
+    {
+      "id": "gallery-5-3",
+      "url": "https://images.pexels.com/photos/186461/pexels-photo-186461.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Tablet displaying stock market analysis with graphs",
+      "attribution": { "author": "Burak The Weekender", "source": "pexels", "url": "https://www.pexels.com/photo/186461/" },
+      "category": "gallery",
+      "tags": ["analytics", "tablet", "stocks"]
+    },
+    {
+      "id": "gallery-6-1",
+      "url": "https://images.pexels.com/photos/7495291/pexels-photo-7495291.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Diverse professionals in collaborative meeting",
+      "attribution": { "author": "Moe Magners", "source": "pexels", "url": "https://www.pexels.com/photo/7495291/" },
+      "category": "gallery",
+      "tags": ["team", "meeting", "collaboration"]
+    },
+    {
+      "id": "gallery-6-2",
+      "url": "https://images.pexels.com/photos/7065/space-desk-office-hero-7065.jpg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Contemporary open office space with people collaborating",
+      "attribution": { "author": "Startup Stock Photos", "source": "pexels", "url": "https://www.pexels.com/photo/7065/" },
+      "category": "gallery",
+      "tags": ["office", "workspace", "startup"]
+    },
+    {
+      "id": "gallery-6-3",
+      "url": "https://images.pexels.com/photos/6804068/pexels-photo-6804068.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Team of developers working together in tech office",
+      "attribution": { "author": "cottonbro studio", "source": "pexels", "url": "https://www.pexels.com/photo/6804068/" },
+      "category": "gallery",
+      "tags": ["team", "developers", "office"]
+    },
+    {
+      "id": "gallery-7-1",
+      "url": "https://images.pexels.com/photos/6326370/pexels-photo-6326370.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Professional instructor teaching math concepts online",
+      "attribution": { "author": "Vanessa Garcia", "source": "pexels", "url": "https://www.pexels.com/photo/6326370/" },
+      "category": "gallery",
+      "tags": ["education", "teaching", "online"]
+    },
+    {
+      "id": "gallery-7-2",
+      "url": "https://images.pexels.com/photos/4443160/pexels-photo-4443160.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Person studying online courses using digital tablet",
+      "attribution": { "author": "Polina Tankilevitch", "source": "pexels", "url": "https://www.pexels.com/photo/4443160/" },
+      "category": "gallery",
+      "tags": ["education", "learning", "tablet"]
+    },
+    {
+      "id": "gallery-7-3",
+      "url": "https://images.pexels.com/photos/5912280/pexels-photo-5912280.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Person writing notes while researching online courses",
+      "attribution": { "author": "ROMAN ODINTSOV", "source": "pexels", "url": "https://www.pexels.com/photo/5912280/" },
+      "category": "gallery",
+      "tags": ["education", "research", "laptop"]
+    },
+    {
+      "id": "gallery-8-1",
+      "url": "https://images.pexels.com/photos/34239/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Hand holding smartphone with ride booking app",
+      "attribution": { "author": "freestocks.org", "source": "pexels", "url": "https://www.pexels.com/photo/34239/" },
+      "category": "gallery",
+      "tags": ["travel", "booking", "mobile"]
+    },
+    {
+      "id": "gallery-8-2",
+      "url": "https://images.pexels.com/photos/5835455/pexels-photo-5835455.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Woman watching map application on phone while travelling",
+      "attribution": { "author": "Tim Samuel", "source": "pexels", "url": "https://www.pexels.com/photo/5835455/" },
+      "category": "gallery",
+      "tags": ["travel", "map", "navigation"]
+    },
+    {
+      "id": "gallery-8-3",
+      "url": "https://images.pexels.com/photos/3850263/pexels-photo-3850263.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Smartphone displaying multiple travel app icons",
+      "attribution": { "author": "ready made", "source": "pexels", "url": "https://www.pexels.com/photo/3850263/" },
+      "category": "gallery",
+      "tags": ["travel", "apps", "mobile"]
+    },
+    {
+      "id": "gallery-9-1",
+      "url": "https://images.pexels.com/photos/5077068/pexels-photo-5077068.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Hands using smartphone to order food through app",
+      "attribution": { "author": "cottonbro studio", "source": "pexels", "url": "https://www.pexels.com/photo/5077068/" },
+      "category": "gallery",
+      "tags": ["nonprofit", "donation", "mobile"]
+    },
+    {
+      "id": "gallery-9-2",
+      "url": "https://images.pexels.com/photos/4392044/pexels-photo-4392044.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Food delivery cyclist checking smartphone",
+      "attribution": { "author": "Norma Mortenson", "source": "pexels", "url": "https://www.pexels.com/photo/4392044/" },
+      "category": "gallery",
+      "tags": ["delivery", "mobile", "real-time"]
+    },
+    {
+      "id": "gallery-9-3",
+      "url": "https://images.pexels.com/photos/16052344/pexels-photo-16052344.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Smartphone with delivery app interface in hand",
+      "attribution": { "author": "Erik Mclean", "source": "pexels", "url": "https://www.pexels.com/photo/16052344/" },
+      "category": "gallery",
+      "tags": ["delivery", "app", "mobile"]
+    },
+    {
+      "id": "gallery-10-1",
+      "url": "https://images.pexels.com/photos/16052346/pexels-photo-16052346.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Hand holding smartphone with food delivery app",
+      "attribution": { "author": "Erik Mclean", "source": "pexels", "url": "https://www.pexels.com/photo/16052346/" },
+      "category": "gallery",
+      "tags": ["food-delivery", "app", "mobile"]
+    },
+    {
+      "id": "gallery-10-2",
+      "url": "https://images.pexels.com/photos/4392044/pexels-photo-4392044.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Food delivery cyclist checking smartphone while working",
+      "attribution": { "author": "Norma Mortenson", "source": "pexels", "url": "https://www.pexels.com/photo/4392044/" },
+      "category": "gallery",
+      "tags": ["delivery", "cyclist", "urban"]
+    },
+    {
+      "id": "gallery-10-3",
+      "url": "https://images.pexels.com/photos/5077068/pexels-photo-5077068.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Hands using smartphone to order food online",
+      "attribution": { "author": "cottonbro studio", "source": "pexels", "url": "https://www.pexels.com/photo/5077068/" },
+      "category": "gallery",
+      "tags": ["food-order", "app", "smartphone"]
+    },
+    {
+      "id": "gallery-11-1",
+      "url": "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "B2B CRM platform interface on desktop computer",
+      "attribution": { "author": "Tima Miroshnichenko", "source": "pexels", "url": "https://www.pexels.com/photo/7688336/" },
+      "category": "gallery",
+      "tags": ["crm", "enterprise", "desktop"]
+    },
+    {
+      "id": "gallery-11-2",
+      "url": "https://images.pexels.com/photos/6804589/pexels-photo-6804589.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Office workers collaborating in modern startup environment",
+      "attribution": { "author": "cottonbro studio", "source": "pexels", "url": "https://www.pexels.com/photo/6804589/" },
+      "category": "gallery",
+      "tags": ["office", "collaboration", "startup"]
+    },
+    {
+      "id": "gallery-11-3",
+      "url": "https://images.pexels.com/photos/7495291/pexels-photo-7495291.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Group of professionals in collaborative meeting",
+      "attribution": { "author": "Moe Magners", "source": "pexels", "url": "https://www.pexels.com/photo/7495291/" },
+      "category": "gallery",
+      "tags": ["meeting", "business", "collaboration"]
+    },
+    {
+      "id": "gallery-12-1",
+      "url": "https://images.pexels.com/photos/4498362/pexels-photo-4498362.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Fitness and wellness app design on phone",
+      "attribution": { "author": "Karolina Grabowska", "source": "pexels", "url": "https://www.pexels.com/photo/4498362/" },
+      "category": "gallery",
+      "tags": ["fitness", "wellness", "mobile"]
+    },
+    {
+      "id": "gallery-12-2",
+      "url": "https://images.pexels.com/photos/8376171/pexels-photo-8376171.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Person using tablet for health monitoring",
+      "attribution": { "author": "Tima Miroshnichenko", "source": "pexels", "url": "https://www.pexels.com/photo/8376171/" },
+      "category": "gallery",
+      "tags": ["health", "tablet", "wellness"]
+    },
+    {
+      "id": "gallery-12-3",
+      "url": "https://images.pexels.com/photos/19963125/pexels-photo-19963125.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Doctor with tablet showing health tracking",
+      "attribution": { "author": "Tessy Agbonome", "source": "pexels", "url": "https://www.pexels.com/photo/19963125/" },
+      "category": "gallery",
+      "tags": ["health", "doctor", "tablet"]
+    },
+    {
+      "id": "gallery-13-1",
+      "url": "https://images.pexels.com/photos/30156624/pexels-photo-30156624.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Smart home essentials with smart camera and light bulb",
+      "attribution": { "author": "Jakub Zerdzicki", "source": "pexels", "url": "https://www.pexels.com/photo/30156624/" },
+      "category": "gallery",
+      "tags": ["smart-home", "iot", "devices"]
+    },
+    {
+      "id": "gallery-13-2",
+      "url": "https://images.pexels.com/photos/23459391/pexels-photo-23459391.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Collection of smart home devices with smartphone",
+      "attribution": { "author": "Jakub Zerdzicki", "source": "pexels", "url": "https://www.pexels.com/photo/23459391/" },
+      "category": "gallery",
+      "tags": ["smart-home", "automation", "mobile"]
+    },
+    {
+      "id": "gallery-13-3",
+      "url": "https://images.pexels.com/photos/38337706/pexels-photo-38337706.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Woman using smartphone app to control home settings",
+      "attribution": { "author": "HUUM", "source": "pexels", "url": "https://www.pexels.com/photo/38337706/" },
+      "category": "gallery",
+      "tags": ["smart-home", "app", "control"]
+    },
+    {
+      "id": "gallery-14-1",
+      "url": "https://images.pexels.com/photos/27135475/pexels-photo-27135475.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Combine harvesters working in golden wheat field",
+      "attribution": { "author": "Péter Borkó", "source": "pexels", "url": "https://www.pexels.com/photo/27135475/" },
+      "category": "gallery",
+      "tags": ["agriculture", "harvest", "farming"]
+    },
+    {
+      "id": "gallery-14-2",
+      "url": "https://images.pexels.com/photos/31231189/pexels-photo-31231189.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Automated sprinkler irrigation watering green farm",
+      "attribution": { "author": "Việt Anh Nguyễn", "source": "pexels", "url": "https://www.pexels.com/photo/31231189/" },
+      "category": "gallery",
+      "tags": ["irrigation", "agriculture", "automation"]
+    },
+    {
+      "id": "gallery-14-3",
+      "url": "https://images.pexels.com/photos/37993891/pexels-photo-37993891.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Aerial view of tractor spraying green field",
+      "attribution": { "author": "Fuka jaz", "source": "pexels", "url": "https://www.pexels.com/photo/37993891/" },
+      "category": "gallery",
+      "tags": ["agriculture", "tractor", "aerial"]
+    },
+    {
+      "id": "gallery-15-1",
+      "url": "https://images.pexels.com/photos/28618498/pexels-photo-28618498.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Exploring stylish living room using smartphone for virtual tour",
+      "attribution": { "author": "Jakub Zerdzicki", "source": "pexels", "url": "https://www.pexels.com/photo/28618498/" },
+      "category": "gallery",
+      "tags": ["real-estate", "virtual-tour", "mobile"]
+    },
+    {
+      "id": "gallery-15-2",
+      "url": "https://images.pexels.com/photos/8730024/pexels-photo-8730024.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Couple using VR headsets for house tour with real estate agent",
+      "attribution": { "author": "Kampus Production", "source": "pexels", "url": "https://www.pexels.com/photo/8730024/" },
+      "category": "gallery",
+      "tags": ["real-estate", "vr", "virtual-tour"]
+    },
+    {
+      "id": "gallery-15-3",
+      "url": "https://images.pexels.com/photos/38271/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Hands using digital map on tablet in urban setting",
+      "attribution": { "author": "Pixabay", "source": "pexels", "url": "https://www.pexels.com/photo/38271/" },
+      "category": "gallery",
+      "tags": ["map", "navigation", "tablet"]
     },
     {
       "id": "case-study-hero",
       "url": "https://images.pexels.com/photos/7599735/pexels-photo-7599735.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "alt": "SATH incident management platform interface",
-      "attribution": {
-        "author": "MART PRODUCTION",
-        "source": "pexels",
-        "url": "https://www.pexels.com/photo/7599735/"
-      },
+      "attribution": { "author": "MART PRODUCTION", "source": "pexels", "url": "https://www.pexels.com/photo/7599735/" },
       "category": "case-study",
       "tags": ["enterprise", "incident-management", "dashboard"]
+    },
+    {
+      "id": "case-study-hero-2",
+      "url": "https://images.pexels.com/photos/6406691/pexels-photo-6406691.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "alt": "Fintech mobile banking app interface",
+      "attribution": { "author": "Tranmautritam", "source": "pexels", "url": "https://www.pexels.com/photo/6406691/" },
+      "category": "case-study",
+      "tags": ["fintech", "mobile", "banking"]
+    },
+    {
+      "id": "case-study-hero-3",
+      "url": "https://images.pexels.com/photos/8376171/pexels-photo-8376171.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "alt": "Healthcare patient portal telehealth interface",
+      "attribution": { "author": "Tima Miroshnichenko", "source": "pexels", "url": "https://www.pexels.com/photo/8376171/" },
+      "category": "case-study",
+      "tags": ["healthcare", "telehealth", "portal"]
     },
     {
       "id": "about-hero",
       "url": "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "alt": "Professional workspace with design tools",
-      "attribution": {
-        "author": "ThisIsEngineering",
-        "source": "pexels",
-        "url": "https://www.pexels.com/photo/3861969/"
-      },
+      "attribution": { "author": "ThisIsEngineering", "source": "pexels", "url": "https://www.pexels.com/photo/3861969/" },
       "category": "about",
       "tags": ["workspace", "professional", "design"]
     },
@@ -184,11 +556,7 @@
       "id": "carousel-1",
       "url": "https://images.pexels.com/photos/6802049/pexels-photo-6802049.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "alt": "Modern mobile app UI design showcase",
-      "attribution": {
-        "author": "Tima Miroshnichenko",
-        "source": "pexels",
-        "url": "https://www.pexels.com/photo/6802049/"
-      },
+      "attribution": { "author": "Tima Miroshnichenko", "source": "pexels", "url": "https://www.pexels.com/photo/6802049/" },
       "category": "carousel",
       "tags": ["mobile-ui", "app-design", "modern"]
     },
@@ -196,11 +564,7 @@
       "id": "carousel-2",
       "url": "https://images.pexels.com/photos/7688465/pexels-photo-7688465.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "alt": "Website design on multiple devices",
-      "attribution": {
-        "author": "Tima Miroshnichenko",
-        "source": "pexels",
-        "url": "https://www.pexels.com/photo/7688465/"
-      },
+      "attribution": { "author": "Tima Miroshnichenko", "source": "pexels", "url": "https://www.pexels.com/photo/7688465/" },
       "category": "carousel",
       "tags": ["responsive", "web-design", "multi-device"]
     },
@@ -208,11 +572,7 @@
       "id": "carousel-3",
       "url": "https://images.pexels.com/photos/7599826/pexels-photo-7599826.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "alt": "Creative UI design process and wireframes",
-      "attribution": {
-        "author": "MART PRODUCTION",
-        "source": "pexels",
-        "url": "https://www.pexels.com/photo/7599826/"
-      },
+      "attribution": { "author": "MART PRODUCTION", "source": "pexels", "url": "https://www.pexels.com/photo/7599826/" },
       "category": "carousel",
       "tags": ["wireframes", "design-process", "ux"]
     },
@@ -220,11 +580,7 @@
       "id": "carousel-4",
       "url": "https://images.pexels.com/photos/4508751/pexels-photo-4508751.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "alt": "Dashboard analytics and data visualization",
-      "attribution": {
-        "author": "cottonbro studio",
-        "source": "pexels",
-        "url": "https://www.pexels.com/photo/4508751/"
-      },
+      "attribution": { "author": "cottonbro studio", "source": "pexels", "url": "https://www.pexels.com/photo/4508751/" },
       "category": "carousel",
       "tags": ["dashboard", "analytics", "data-viz"]
     }

@@ -18,7 +18,8 @@
         "timeline": "January 2024 - August 2024 (8 months)",
         "team": "2 Designers, 6 Engineers, 1 Product Manager",
         "platform": ["Web Application", "Mobile Responsive"],
-        "tools": ["Figma", "Angular", "NgRx", "RxJS", "TypeScript", "Jest", "Cypress"]
+        "tools": ["Figma", "Angular", "NgRx", "RxJS", "TypeScript", "Jest", "Cypress"],
+        "industry": "Enterprise SaaS"
       },
       "sections": {
         "problem": "The existing SATH notification system was struggling to handle the exponential growth in incident alerts. Users spent 40+ minutes configuring complex notification rules, and the rigid interface led to frequent misconfigurations causing alert fatigue. The technical debt from a 5-year-old codebase made it impossible to scale features without breaking existing functionality.\n\nKey pain points included: overwhelming cognitive load from poorly structured rule builder, lack of real-time validation causing configuration errors discovered only after deployment, no visibility into rule effectiveness or alert patterns, and 47% of support tickets related to notification misconfiguration.",
@@ -92,6 +93,198 @@
           "Mobile-responsive design was table stakes: 35% of incident responses initiated from mobile devices",
           "Strong component architecture pays dividends: reusable components reduced development time by 40% for new features",
           "Accessibility creates better UX for everyone: keyboard shortcuts and clear focus states improved efficiency for all users"
+        ]
+      }
+    },
+    {
+      "slug": "fintech-mobile-app",
+      "title": "Investment Banking Mobile Experience",
+      "hero": {
+        "image": "case-study-hero-2",
+        "tagline": "Democratizing complex investment workflows through a mobile-first design approach",
+        "metrics": [
+          { "label": "Daily Active Users", "value": "↑28%" },
+          { "label": "App Store Rating", "value": "4.8★" },
+          { "label": "Assets Managed", "value": "$2B+" },
+          { "label": "Avg Load Time", "value": "2.1s" }
+        ]
+      },
+      "metadata": {
+        "role": ["Product Designer", "UX Lead"],
+        "timeline": "March 2023 - August 2023 (6 months)",
+        "team": "3 Designers, 8 Engineers, 2 Product Managers",
+        "platform": ["iOS", "Android"],
+        "tools": ["Figma", "React Native", "TypeScript", "Reanimated", "Firebase"],
+        "industry": "FinTech"
+      },
+      "sections": {
+        "problem": "A legacy investment platform with a desktop-first mentality was losing younger users who expected a mobile-native experience. The existing app had a 3.2-star rating, 4.8s load times, and a 31% drop-off rate during the account opening flow. Users found it difficult to track portfolio performance, execute trades, and understand risk exposure on small screens.\n\nThe core challenge was translating dense financial data and complex trading workflows into a mobile experience that felt fast, trustworthy, and intuitive - without dumbing down the functionality that professional users relied on.",
+        "research": {
+          "methods": [
+            "Diary study with 18 users across 2 weeks tracking mobile banking habits",
+            "Usability testing of existing app with 24 participants (12 novice, 12 experienced investors)",
+            "Competitive analysis of 12 mobile banking and investment apps",
+            "Analytics review: funnel analysis of 500K+ sessions identifying 7 critical drop-off points",
+            "Stakeholder interviews with 6 product managers and compliance officers"
+          ],
+          "insights": [
+            "Novice investors needed confidence-building cues - they hesitated without clear risk indicators",
+            "Experienced users wanted power features accessible but not in the way of quick actions",
+            "Trust signals (FDIC badges, encryption icons, biometric auth) increased comfort by 45% in testing",
+            "Gestural navigation felt faster but users wanted visible buttons for financial actions",
+            "Dark mode was requested by 62% of users who checked portfolios before bed"
+          ]
+        },
+        "solution": {
+          "approach": "We adopted a dual-layer design strategy: a clean, confidence-inspiring primary interface for common tasks (viewing portfolio, executing simple trades), and a progressive disclosure pattern for advanced features (options trading, margin accounts, risk analytics).\n\nThe design system was built mobile-first with a focus on speed: skeleton loading, optimistic UI updates, and cached data for instant rendering. We created a modular card system that could display varying levels of financial data density depending on user preference and device context.",
+          "keyFeatures": [
+            "Adaptive Dashboard with customizable widgets for portfolio performance, watchlists, and market news",
+            "One-Swipe Trade Execution with biometric confirmation and clear risk disclosure modals",
+            "Interactive Risk Visualization showing portfolio exposure through intuitive heat maps",
+            "Smart Alerts with ML-powered price movement notifications and portfolio rebalancing suggestions",
+            "Onboarding Flow reduced from 12 steps to 4 with progressive profile completion",
+            "Dark Mode with optimized contrast ratios for financial data readability",
+            "Accessibility: VoiceOver and TalkBack support with financial data readout optimization"
+          ]
+        },
+        "design": {
+          "wireframes": "Created 22 screen wireframes across 3 user journey maps. Conducted 5 rounds of rapid prototyping with clickable Figma prototypes tested on actual mobile devices. Validated gesture patterns with 30 users.",
+          "system": "Built a 60-component mobile design system with light/dark themes, 8 typography styles, motion specifications for 12 interaction patterns, and platform-specific adaptations for iOS and Android."
+        },
+        "results": {
+          "metrics": [
+            {
+              "label": "28% DAU Increase",
+              "value": "From 180K to 230K daily active users",
+              "context": "Measured 90 days post-launch vs. pre-launch baseline"
+            },
+            {
+              "label": "4.8★ App Store",
+              "value": "Up from 3.2★ pre-redesign",
+              "context": "Based on 12,000+ ratings across iOS App Store and Google Play"
+            },
+            {
+              "label": "67% Onboarding Completion",
+              "value": "Up from 31% in legacy app",
+              "context": "Measured across 50K+ new account openings"
+            },
+            {
+              "label": "$2B+ Assets Managed",
+              "value": "Through the mobile platform",
+              "context": "Within 6 months of launch, representing 40% of total platform AUM"
+            }
+          ],
+          "testimonial": {
+            "quote": "Rajesh understood that investment apps need to balance power with simplicity. The new design makes me feel in control of my portfolio without being overwhelmed. The risk visualizations alone changed how I think about my investments.",
+            "author": "Michael Rodriguez",
+            "role": "Retail Investor",
+            "company": "Beta User"
+          }
+        },
+        "learnings": [
+          "Trust is a design element: visible security cues and clear risk disclosure increased user confidence measurably",
+          "Progressive disclosure works for financial apps: novice users engaged deeper when advanced features were tucked away",
+          "Performance is UX: reducing load time from 4.8s to 2.1s directly correlated with a 28% DAU increase",
+          "Dark mode is not optional for finance apps: 62% of users checked portfolios in low-light conditions",
+          "Gestural navigation needs visible escape hatches: users wanted buttons for high-stakes financial actions",
+          "Onboarding is a journey not a gate: progressive profile completion increased onboarding completion by 36%",
+          "Platform-specific adaptation matters: iOS and Android users had different mental models for navigation"
+        ]
+      }
+    },
+    {
+      "slug": "healthcare-patient-portal",
+      "title": "Patient-Centered Healthcare Portal",
+      "hero": {
+        "image": "case-study-hero-3",
+        "tagline": "Making healthcare accessible through inclusive design and patient-first technology",
+        "metrics": [
+          { "label": "Support Calls", "value": "↓40%" },
+          { "label": "Task Completion", "value": "89%" },
+          { "label": "Patients Served", "value": "2M+" },
+          { "label": "WCAG Compliance", "value": "AA" }
+        ]
+      },
+      "metadata": {
+        "role": ["Senior UX/UI Designer", "Frontend Consultant"],
+        "timeline": "September 2022 - June 2023 (10 months)",
+        "team": "4 Designers, 12 Engineers, 3 Product Managers",
+        "platform": ["Web", "Mobile Web"],
+        "tools": ["Figma", "React", "TypeScript", "axe DevTools", "Storybook", "Cypress"],
+        "industry": "Healthcare"
+      },
+      "sections": {
+        "problem": "A healthcare network's patient portal had not been updated in 7 years. The portal served 2M+ patients but had a 52% task abandonment rate, generated 3,000+ support calls per week, and failed WCAG 2.1 accessibility audits. Patients struggled to book appointments, access test results, and communicate with providers.\n\nThe patient population spanned 18-90+ years old with varying tech literacy, visual impairments, and language needs. The portal needed to work for everyone - from a tech-savvy 25-year-old checking lab results to an 85-year-old scheduling a specialist visit.",
+        "research": {
+          "methods": [
+            "Accessibility audit of existing portal against WCAG 2.1 AA criteria - identified 47 critical violations",
+            "User interviews with 30 patients spanning ages 22-89 including 8 with visual impairments",
+            "Shadowing study with 6 patient support representatives logging call reasons for 2 weeks",
+            "Usability testing with 20 patients using screen readers, magnification, and voice control",
+            "Analytics analysis of 1.2M sessions identifying top 10 abandoned task flows"
+          ],
+          "insights": [
+            "Medical jargon was the #1 barrier: 73% of patients did not understand their test results",
+            "Older users preferred phone but were forced to use portal due to call wait times of 45+ minutes",
+            "Appointment booking required navigating 8 screens - users gave up at screen 4 on average",
+            "Test results presentation caused anxiety: patients needed context, not just numbers",
+            "Language support was critical: 23% of patients preferred a language other than English"
+          ]
+        },
+        "solution": {
+          "approach": "We designed the portal around the principle of 'Universal Usability' - every screen had to work for the least tech-savquent user while not slowing down power users. We implemented plain language guidelines, replacing medical jargon with patient-friendly descriptions, and added contextual help throughout.\n\nThe information architecture was restructured around patient goals (book appointment, see results, message doctor, pay bill) rather than organizational structure. Every interaction was designed to be completable in 3 steps or fewer.",
+          "keyFeatures": [
+            "Plain Language Test Results with color-coded indicators and contextual explanations",
+            "3-Step Appointment Booking with provider preferences and insurance verification",
+            "Secure Messaging with threaded conversations and attachment support",
+            "Multilingual Support for 6 languages with culturally appropriate medical terminology",
+            "Accessibility-First Design: WCAG 2.2 AA compliant with screen reader, voice control, and keyboard navigation",
+            "Bill Pay with transparent cost breakdown and financial assistance options",
+            "Family Access Manager allowing caregivers to manage appointments for dependents"
+          ]
+        },
+        "design": {
+          "wireframes": "Created 35 screen wireframes validated through 8 rounds of usability testing with diverse patient groups. Used think-aloud protocol with 40 participants including 12 with disabilities. Iterated information architecture 5 times based on card sorting exercises.",
+          "system": "Built a 80-component accessible design system with WCAG 2.2 AA compliance baked in. Every component passed automated axe testing and manual screen reader testing. Created a plain language style guide adopted by the healthcare network."
+        },
+        "results": {
+          "metrics": [
+            {
+              "label": "40% Fewer Support Calls",
+              "value": "From 3,000 to 1,800 calls per week",
+              "context": "Measured over 6 months post-launch"
+            },
+            {
+              "label": "89% Task Completion",
+              "value": "Up from 48% pre-redesign",
+              "context": "Across all primary tasks: booking, results, messaging, billing"
+            },
+            {
+              "label": "WCAG 2.2 AA",
+              "value": "Zero critical accessibility violations",
+              "context": "Verified by third-party audit using axe and manual testing"
+            },
+            {
+              "label": "4.6/5 Patient Satisfaction",
+              "value": "Up from 2.1/5 pre-redesign",
+              "context": "Based on post-task surveys from 15,000+ patients"
+            }
+          ],
+          "testimonial": {
+            "quote": "For the first time, I can actually understand my test results without calling my doctor. The portal explains everything in plain language, and I was able to book an appointment in under 2 minutes. This is what healthcare technology should feel like.",
+            "author": "Margaret Thompson",
+            "role": "Patient, Age 78",
+            "company": "Stanford Health Network"
+          }
+        },
+        "learnings": [
+          "Plain language is the highest-ROI accessibility investment: it reduced support calls by 40%",
+          "Designing for the most vulnerable users improves the experience for everyone: all task completion rates improved",
+          "3-step rule: capping interactions at 3 steps reduced abandonment by 52% across all task flows",
+          "Context reduces anxiety: adding explanations to test results decreased 'urgent' messages to doctors by 35%",
+          "Accessibility is not a feature, it is a foundation: building WCAG compliance into the design system from day one was cheaper than retrofitting",
+          "Multilingual support requires cultural adaptation, not just translation: medical terminology needed culturally appropriate framing",
+          "Caregiver access is essential: 28% of portal sessions were from family members managing care for others"
         ]
       }
     }

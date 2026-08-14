@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { X, ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, ExternalLink, Github, Award } from 'lucide-react';
 import { useAllProjects } from '../hooks/useProjects';
 import { useImageUrl } from '../hooks/useImages';
 
@@ -16,6 +16,10 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [dragProgress, setDragProgress] = useState(0);
   const heroRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setCurrentImageIndex(0);
+  }, [projectSlug]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -51,7 +55,7 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
 
   if (!project) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-white">
+      <div className="min-h-screen flex items-center justify-center bg-white pt-20">
         <div className="text-center">
           <p className="text-xl text-gray-600 mb-6">Project not found</p>
           <button
@@ -66,18 +70,16 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
     );
   }
 
-  const images = project.gallery || [project.cover];
+  const images = project.gallery && project.gallery.length > 0 ? project.gallery : [project.cover];
   const currentImage = useImageUrl(images[currentImageIndex]);
 
   const handlePrevProject = () => {
     const prevIndex = currentIndex === 0 ? allProjects.length - 1 : currentIndex - 1;
-    setCurrentImageIndex(0);
     onNavigate('portfolio-detail', allProjects[prevIndex].slug);
   };
 
   const handleNextProject = () => {
     const nextIndex = currentIndex === allProjects.length - 1 ? 0 : currentIndex + 1;
-    setCurrentImageIndex(0);
     onNavigate('portfolio-detail', allProjects[nextIndex].slug);
   };
 
@@ -92,6 +94,10 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
   const handleClose = () => {
     onNavigate('portfolio');
   };
+
+  const relatedProjects = allProjects
+    .filter(p => p.slug !== project.slug && p.category.some(c => project.category.includes(c)))
+    .slice(0, 3);
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
@@ -121,7 +127,7 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
 
         <div className="absolute top-8 left-8 right-8 flex items-center justify-between z-10">
           <div>
-            <h1 className="text-5xl sm:text-6xl font-bold text-white drop-shadow-lg mb-2 tracking-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white drop-shadow-lg mb-2 tracking-tight">
               {project.title}
             </h1>
             <p className="text-white/70 text-lg drop-shadow-md hidden sm:block">{project.industry}</p>
@@ -165,7 +171,7 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
               <ChevronRight className="w-7 h-7 transition-transform group-hover/next:translate-x-1" />
             </button>
 
-            <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-3 px-6 py-3 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 shadow-2xl z-10 group/dots">
+            <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-3 px-6 py-3 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 shadow-2xl z-10">
               {images.map((_, index) => (
                 <button
                   key={index}
@@ -184,13 +190,38 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
         )}
       </div>
 
+      {images.length > 1 && (
+        <div className="bg-gray-900 px-6 sm:px-8 lg:px-12 py-6">
+          <div className="max-w-5xl mx-auto flex items-center gap-3 overflow-x-auto pb-2 scrollbar-hide">
+            {images.map((imgId, index) => {
+              const thumbUrl = useImageUrl(imgId);
+              return (
+                <button
+                  key={index}
+                  type="button"
+                  onClick={() => setCurrentImageIndex(index)}
+                  className={`flex-shrink-0 w-24 h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 cursor-pointer ${
+                    index === currentImageIndex
+                      ? 'border-blue-500 opacity-100 scale-105'
+                      : 'border-transparent opacity-50 hover:opacity-80'
+                  }`}
+                  aria-label={`View image ${index + 1}`}
+                >
+                  <img src={thumbUrl} alt={`Thumbnail ${index + 1}`} className="w-full h-full object-cover" />
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
       <div className="bg-white overflow-y-auto">
         <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 py-20 sm:py-28">
           <div className="space-y-16">
             <div className="space-y-8 animate-fadeIn">
               {project.featured && (
-                <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 text-amber-900 text-xs font-bold rounded-full shadow-sm">
-                  <span className="mr-2">✨</span>
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-50 border border-amber-200 text-amber-900 text-xs font-bold rounded-full shadow-sm">
+                  <Award className="w-3.5 h-3.5" />
                   Featured Project
                 </div>
               )}
@@ -221,10 +252,10 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
             {project.kpis.length > 0 && (
               <div className="space-y-6 pt-12 border-t border-gray-200">
                 <h3 className="text-3xl font-bold text-gray-900">Key Results</h3>
-                <div className="space-y-4">
+                <div className="grid sm:grid-cols-2 gap-4">
                   {project.kpis.map((kpi, idx) => (
-                    <div key={idx} className="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 hover:from-gray-100 hover:to-gray-150 transition-all duration-300 hover:shadow-md border border-gray-200 hover:border-gray-300 group cursor-default">
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0 shadow-md group-hover:shadow-lg transition-shadow">
+                    <div key={idx} className="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 hover:from-gray-100 hover:to-gray-150 transition-all duration-300 hover:shadow-md border border-gray-200 group cursor-default">
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0 shadow-md group-hover:shadow-lg transition-shadow">
                         <span className="text-sm font-bold text-white">{idx + 1}</span>
                       </div>
                       <p className="text-lg text-gray-700 leading-relaxed mt-1">{kpi}</p>
@@ -248,7 +279,7 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
               </div>
             </div>
 
-            {(project.liveUrl || project.prototype) && (
+            {(project.liveUrl || project.codeUrl) && (
               <div className="flex flex-wrap gap-4 pt-12 border-t border-gray-200">
                 {project.liveUrl && (
                   <a
@@ -261,15 +292,15 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
                     <ExternalLink className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-1" />
                   </a>
                 )}
-                {project.prototype && (
+                {project.codeUrl && (
                   <a
-                    href={project.prototype}
+                    href={project.codeUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center px-8 py-4 bg-white border-2 border-gray-900 text-gray-900 font-semibold rounded-xl hover:bg-gray-50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 shadow-md group"
                   >
-                    <span>View Prototype</span>
-                    <ExternalLink className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                    <Github className="mr-3 w-5 h-5" />
+                    <span>View on GitHub</span>
                   </a>
                 )}
               </div>
@@ -277,6 +308,40 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
           </div>
         </div>
       </div>
+
+      {relatedProjects.length > 0 && (
+        <div className="bg-gradient-to-b from-white to-gray-50 px-6 sm:px-8 lg:px-12 py-20 border-t border-gray-200">
+          <div className="max-w-5xl mx-auto">
+            <h3 className="text-3xl font-bold text-gray-900 mb-12 tracking-tight">Related Projects</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {relatedProjects.map((rp) => {
+                const rpCover = useImageUrl(rp.cover);
+                return (
+                  <button
+                    key={rp.id}
+                    type="button"
+                    onClick={() => onNavigate('portfolio-detail', rp.slug)}
+                    className="group text-left bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300 cursor-pointer"
+                  >
+                    <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                      <img
+                        src={rpCover}
+                        alt={rp.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <h4 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-1">{rp.title}</h4>
+                      <p className="text-sm text-gray-500 mt-1 line-clamp-2">{rp.summary}</p>
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className="bg-gradient-to-b from-white via-white to-gray-50 border-t border-gray-200 px-6 sm:px-8 lg:px-12 py-8 shadow-2xl">
         <div className="max-w-5xl mx-auto flex items-center justify-between gap-4">

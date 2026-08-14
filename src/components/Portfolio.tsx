@@ -1,10 +1,5 @@
-/**
- * Portfolio Component - Fully Dynamic
- * References: REQ-07 (Portfolio Grid)
- */
-
 import { useState, useMemo, useCallback } from 'react';
-import { Award, Search, Sparkles } from 'lucide-react';
+import { Award, Search, Sparkles, Github, ExternalLink, ArrowRight } from 'lucide-react';
 import { useAllProjects } from '../hooks/useProjects';
 import { usePortfolioContent } from '../hooks/useContent';
 import { useImageUrl } from '../hooks/useImages';
@@ -149,6 +144,35 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
                     </div>
                   )}
 
+                  {(project.codeUrl || project.liveUrl) && (
+                    <div className="absolute top-5 right-5 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      {project.codeUrl && (
+                        <a
+                          href={project.codeUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="w-10 h-10 bg-white/95 backdrop-blur-md rounded-full flex items-center justify-center shadow-lg hover:bg-white hover:scale-110 transition-all duration-300"
+                          aria-label="View code on GitHub"
+                        >
+                          <Github className="w-4 h-4 text-gray-900" />
+                        </a>
+                      )}
+                      {project.liveUrl && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="w-10 h-10 bg-white/95 backdrop-blur-md rounded-full flex items-center justify-center shadow-lg hover:bg-white hover:scale-110 transition-all duration-300"
+                          aria-label="View live project"
+                        >
+                          <ExternalLink className="w-4 h-4 text-gray-900" />
+                        </a>
+                      )}
+                    </div>
+                  )}
+
                   <div className="absolute bottom-5 left-5 right-5 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                     <div className="flex flex-wrap gap-2">
                       {project.tags.slice(0, 4).map((tag, idx) => (
@@ -177,8 +201,9 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
                     <span>{project.timeline}</span>
                   </div>
 
-                  <div className="mt-5 text-sm font-semibold text-gray-500 group-hover:text-gray-900 transition-colors">
-                    Click to view details →
+                  <div className="mt-5 text-sm font-semibold text-gray-500 group-hover:text-gray-900 transition-colors flex items-center gap-2">
+                    Click to view details
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
               </article>
