@@ -13,8 +13,9 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
   const currentIndex = allProjects.findIndex(p => p.slug === projectSlug);
   const project = allProjects[currentIndex];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [touchStart, setTouchStart] = useState<number | null>(null);
-  const [dragProgress, setDragProgress] = useState(0);
+  const [dragOffset, setDragOffset] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const dragStartX = useRef<number | null>(null);
   const heroRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -30,27 +31,64 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [currentImageIndex]);
 
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStart(e.touches[0].clientX);
+  const handleDragStart = (clientX: number) => {
+    dragStartX.current = clientX;
+    setIsDragging(true);
   };
 
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (touchStart === null) return;
-    const currentTouch = e.touches[0].clientX;
-    const progress = ((currentTouch - touchStart) / (heroRef.current?.offsetWidth || 1)) * 100;
-    setDragProgress(progress);
+  const handleDragMove = (clientX: number) => {
+    if (dragStartX.current === null) return;
+    setDragOffset(clientX - dragStartX.current);
   };
 
-  const handleTouchEnd = () => {
-    if (Math.abs(dragProgress) > 20) {
-      if (dragProgress > 0) {
+  const handleDragEnd = () => {
+    if (dragStartX.current === null) return;
+    const containerWidth = heroRef.current?.offsetWidth || 1;
+    const progress = dragOffset / containerWidth;
+
+    if (Math.abs(progress) > 0.15 || Math.abs(dragOffset) > 60) {
+      if (dragOffset > 0) {
         handlePrevImage();
       } else {
         handleNextImage();
       }
     }
-    setTouchStart(null);
-    setDragProgress(0);
+
+    dragStartX.current = null;
+    setDragOffset(0);
+    setIsDragging(false);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    handleDragStart(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    handleDragMove(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    handleDragEnd();
+  };
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    e.preventDefault();
+    handleDragStart(e.clientX);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (dragStartX.current === null) return;
+    handleDragMove(e.clientX);
+  };
+
+  const handleMouseUp = () => {
+    handleDragEnd();
+  };
+
+  const handleMouseLeave = () => {
+    if (dragStartX.current !== null) {
+      handleDragEnd();
+    }
   };
 
   if (!project) {
@@ -103,17 +141,21 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
     <div className="min-h-screen bg-white dark:bg-ink-950 flex flex-col transition-colors duration-500">
       <div
         ref={heroRef}
-        className="relative h-screen bg-gradient-to-br from-ink-950 via-ink-900 to-ink-800 overflow-hidden flex-1 group cursor-grab active:cursor-grabbing"
+        className={`relative h-screen bg-gradient-to-br from-ink-950 via-ink-900 to-ink-800 overflow-hidden flex-1 group select-none ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseLeave}
       >
         <img
           src={currentImage}
           alt={`${project.title} - Image ${currentImageIndex + 1}`}
-          className="w-full h-full object-cover transition-all duration-300 ease-out"
+          className={`w-full h-full object-cover ${isDragging ? '' : 'transition-transform duration-300 ease-out'}`}
           style={{
-            transform: `scale(${1 + Math.abs(dragProgress) * 0.002})`,
+            transform: `translateX(${dragOffset}px) scale(${1 + Math.abs(dragOffset) * 0.0003})`,
           }}
           draggable={false}
         />
