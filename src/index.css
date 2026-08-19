@@ -11,8 +11,7 @@
     @apply antialiased;
     font-family: 'Inter', system-ui, sans-serif;
     font-feature-settings: 'cv11', 'ss01';
-    color: #0a0a0a;
-    background-color: #ffffff;
+    @apply text-ink-900 bg-white dark:text-ink-100 dark:bg-ink-950 transition-colors duration-500;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -33,8 +32,13 @@
   }
 
   ::selection {
-    background-color: rgba(13, 148, 136, 0.15);
-    color: #0f766e;
+    background-color: rgba(249, 115, 22, 0.18);
+    color: #c2410c;
+  }
+
+  .dark ::selection {
+    background-color: rgba(249, 115, 22, 0.25);
+    color: #fdba74;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -54,34 +58,37 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center px-7 py-3.5 bg-teal-700 text-white font-semibold rounded-xl
-           shadow-soft hover:bg-teal-800 hover:shadow-card hover:-translate-y-0.5
-           transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center px-7 py-3.5 bg-brand-500 text-white font-semibold rounded-xl
+           shadow-soft hover:bg-brand-600 hover:shadow-glow hover:-translate-y-0.5
+           transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2
+           dark:focus:ring-offset-ink-950;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-7 py-3.5 bg-white text-ink-900 font-semibold rounded-xl
-           border-2 border-ink-200 hover:border-ink-300 hover:bg-ink-50
-           transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-ink-300 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center px-7 py-3.5 bg-white dark:bg-ink-900 text-ink-900 dark:text-ink-100 font-semibold rounded-xl
+           border-2 border-ink-200 dark:border-ink-700 hover:border-ink-300 dark:hover:border-ink-600 hover:bg-ink-50 dark:hover:bg-ink-800
+           transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-ink-300 dark:focus:ring-ink-600 focus:ring-offset-2
+           dark:focus:ring-offset-ink-950;
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center px-5 py-2.5 text-ink-600 font-medium rounded-lg
-           hover:text-ink-900 hover:bg-ink-50
-           transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-ink-200 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center px-5 py-2.5 text-ink-600 dark:text-ink-400 font-medium rounded-lg
+           hover:text-ink-900 dark:hover:text-white hover:bg-ink-50 dark:hover:bg-ink-900
+           transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-ink-200 dark:focus:ring-ink-700 focus:ring-offset-2
+           dark:focus:ring-offset-ink-950;
   }
 
   .card-base {
-    @apply bg-white rounded-2xl border border-ink-100 shadow-soft
+    @apply bg-white dark:bg-ink-900 rounded-2xl border border-ink-100 dark:border-ink-800 shadow-soft
            transition-all duration-500 ease-out;
   }
 
   .card-hover {
-    @apply hover:shadow-card-hover hover:border-ink-200 hover:-translate-y-1;
+    @apply hover:shadow-card-hover hover:border-ink-200 dark:hover:border-ink-700 hover:-translate-y-1;
   }
 
   .glass {
-    @apply bg-white/70 backdrop-blur-xl border border-white/40;
+    @apply bg-white/70 dark:bg-ink-900/70 backdrop-blur-xl border border-white/40 dark:border-white/10;
   }
 
   .glass-dark {
@@ -89,9 +96,9 @@
   }
 
   .input-field {
-    @apply w-full px-4 py-3 bg-white border border-ink-200 rounded-xl
-           text-ink-900 placeholder-ink-400
-           focus:outline-none focus:border-teal-500 focus:ring-4 focus:ring-teal-50
+    @apply w-full px-4 py-3 bg-white dark:bg-ink-900 border border-ink-200 dark:border-ink-700 rounded-xl
+           text-ink-900 dark:text-ink-100 placeholder-ink-400 dark:placeholder-ink-500
+           focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10
            transition-all duration-200;
   }
 
@@ -108,7 +115,7 @@
   }
 
   .gradient-text {
-    background: linear-gradient(135deg, #0d9488 0%, #0ea5e9 100%);
+    background: linear-gradient(135deg, #f97316 0%, #06b6d4 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -116,8 +123,12 @@
 
   .gradient-border {
     position: relative;
-    background: white;
+    background: theme('colors.white');
     border-radius: 1rem;
+  }
+
+  .dark .gradient-border {
+    background: theme('colors.ink.900');
   }
 
   .gradient-border::before {
@@ -126,7 +137,7 @@
     inset: 0;
     padding: 1px;
     border-radius: inherit;
-    background: linear-gradient(135deg, rgba(13, 148, 136, 0.3), rgba(14, 165, 233, 0.3));
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.3), rgba(6, 182, 212, 0.3));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -196,7 +207,7 @@
   }
 
   .text-gradient-brand {
-    background: linear-gradient(135deg, #0d9488 0%, #0ea5e9 100%);
+    background: linear-gradient(135deg, #f97316 0%, #06b6d4 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -216,9 +227,19 @@
     background-size: 48px 48px;
   }
 
+  .dark .bg-grid-pattern {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  }
+
   .bg-dot-pattern {
     background-image: radial-gradient(circle, rgba(10, 10, 10, 0.06) 1px, transparent 1px);
     background-size: 24px 24px;
+  }
+
+  .dark .bg-dot-pattern {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   }
 
   .bg-noise {
@@ -234,7 +255,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(13, 148, 136, 0.06), transparent 40%);
+    background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(249, 115, 22, 0.06), transparent 40%);
     opacity: 0;
     transition: opacity 0.4s;
     pointer-events: none;
@@ -281,8 +302,8 @@
 }
 
 @keyframes pulseGlow {
-  0%, 100% { opacity: 1; box-shadow: 0 0 20px rgba(13, 148, 136, 0.3); }
-  50% { opacity: 0.85; box-shadow: 0 0 40px rgba(13, 148, 136, 0.45); }
+  0%, 100% { opacity: 1; box-shadow: 0 0 20px rgba(249, 115, 22, 0.3); }
+  50% { opacity: 0.85; box-shadow: 0 0 40px rgba(249, 115, 22, 0.45); }
 }
 
 @keyframes gradientShift {
@@ -291,17 +312,17 @@
 }
 
 .prose {
-  @apply text-ink-600;
+  @apply text-ink-600 dark:text-ink-400;
 }
 
 .prose h2 {
-  @apply text-ink-900;
+  @apply text-ink-900 dark:text-white;
 }
 
 .prose h3 {
-  @apply text-ink-900;
+  @apply text-ink-900 dark:text-white;
 }
 
 .prose strong {
-  @apply text-ink-900;
+  @apply text-ink-900 dark:text-white;
 }

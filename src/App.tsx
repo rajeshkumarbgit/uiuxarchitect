@@ -52,7 +52,7 @@ function App() {
   const isDetailPage = currentPage === 'portfolio-detail' || currentPage === 'case-study-detail';
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-ink-950 transition-colors duration-500">
       {!isDetailPage && (
         <div className="fixed top-0 left-0 right-0 z-[60] h-1 bg-transparent pointer-events-none">
           <div

@@ -33,117 +33,117 @@ export default function Contact({ onNavigate }: ContactProps) {
   };
 
   return (
-    <section className="pt-28 sm:pt-32 pb-20 px-6 sm:px-8 lg:px-12 bg-white">
+    <section className="pt-28 sm:pt-32 pb-20 px-6 sm:px-8 lg:px-12 bg-white dark:bg-ink-950 transition-colors duration-500">
       <div className="section-container">
         <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-50 text-brand-700 rounded-full text-sm font-medium mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-50 dark:bg-brand-950/40 text-brand-700 dark:text-brand-400 rounded-full text-sm font-medium mb-4">
             <Mail className="w-4 h-4" />
             Let's Talk
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 mb-4 tracking-tight">{content.title}</h2>
-          <p className="text-lg text-ink-500 max-w-2xl mx-auto leading-relaxed">{content.description}</p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 dark:text-white mb-4 tracking-tight">{content.title}</h2>
+          <p className="text-lg text-ink-500 dark:text-ink-400 max-w-2xl mx-auto leading-relaxed">{content.description}</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
           <div className="space-y-8">
             <div className="space-y-5">
-              <h3 className="text-xl font-bold text-ink-900">Get in Touch</h3>
+              <h3 className="text-xl font-bold text-ink-900 dark:text-white">Get in Touch</h3>
               <div className="space-y-3">
-                <div className="flex items-start gap-3 p-4 bg-ink-50/60 rounded-xl border border-ink-100 hover:border-brand-200 transition-colors">
-                  <div className="p-2.5 bg-gradient-to-br from-brand-600 to-accent-500 rounded-lg flex-shrink-0">
+                <div className="flex items-start gap-3 p-4 bg-ink-50/60 dark:bg-ink-900/60 rounded-xl border border-ink-100 dark:border-ink-800 hover:border-brand-200 dark:hover:border-brand-900/50 transition-colors">
+                  <div className="p-2.5 bg-gradient-to-br from-brand-500 to-accent-500 rounded-lg flex-shrink-0">
                     <Mail className="w-4 h-4 text-white" />
                   </div>
                   <div className="min-w-0">
-                    <div className="text-xs text-ink-500 mb-0.5">Email</div>
+                    <div className="text-xs text-ink-500 dark:text-ink-400 mb-0.5">Email</div>
                     <a
                       href={`mailto:${contactInfo.email}`}
-                      className="text-sm text-ink-900 font-medium hover:text-brand-600 transition-colors truncate block"
+                      className="text-sm text-ink-900 dark:text-white font-medium hover:text-brand-600 dark:hover:text-brand-400 transition-colors truncate block"
                     >
                       {contactInfo.email}
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 p-4 bg-ink-50/60 rounded-xl border border-ink-100 hover:border-brand-200 transition-colors">
-                  <div className="p-2.5 bg-gradient-to-br from-brand-600 to-accent-500 rounded-lg flex-shrink-0">
+                <div className="flex items-start gap-3 p-4 bg-ink-50/60 dark:bg-ink-900/60 rounded-xl border border-ink-100 dark:border-ink-800 hover:border-brand-200 dark:hover:border-brand-900/50 transition-colors">
+                  <div className="p-2.5 bg-gradient-to-br from-brand-500 to-accent-500 rounded-lg flex-shrink-0">
                     <Phone className="w-4 h-4 text-white" />
                   </div>
                   <div className="min-w-0">
-                    <div className="text-xs text-ink-500 mb-0.5">Phone</div>
+                    <div className="text-xs text-ink-500 dark:text-ink-400 mb-0.5">Phone</div>
                     <a
                       href={`tel:${contactInfo.phone}`}
-                      className="text-sm text-ink-900 font-medium hover:text-brand-600 transition-colors"
+                      className="text-sm text-ink-900 dark:text-white font-medium hover:text-brand-600 dark:hover:text-brand-400 transition-colors"
                     >
                       {contactInfo.phone}
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 p-4 bg-ink-50/60 rounded-xl border border-ink-100 hover:border-brand-200 transition-colors">
-                  <div className="p-2.5 bg-gradient-to-br from-brand-600 to-accent-500 rounded-lg flex-shrink-0">
+                <div className="flex items-start gap-3 p-4 bg-ink-50/60 dark:bg-ink-900/60 rounded-xl border border-ink-100 dark:border-ink-800 hover:border-brand-200 dark:hover:border-brand-900/50 transition-colors">
+                  <div className="p-2.5 bg-gradient-to-br from-brand-500 to-accent-500 rounded-lg flex-shrink-0">
                     <MapPin className="w-4 h-4 text-white" />
                   </div>
                   <div className="min-w-0">
-                    <div className="text-xs text-ink-500 mb-0.5">Location</div>
-                    <div className="text-sm text-ink-900 font-medium">{contactInfo.location}</div>
+                    <div className="text-xs text-ink-500 dark:text-ink-400 mb-0.5">Location</div>
+                    <div className="text-sm text-ink-900 dark:text-white font-medium">{contactInfo.location}</div>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="space-y-5">
-              <h3 className="text-xl font-bold text-ink-900">{content.quickActionsTitle}</h3>
+              <h3 className="text-xl font-bold text-ink-900 dark:text-white">{content.quickActionsTitle}</h3>
               <div className="space-y-2.5">
                 <a
                   href={`mailto:${contactInfo.email}`}
-                  className="group flex items-center justify-between p-4 bg-ink-900 text-white rounded-xl hover:bg-ink-800 transition-all hover:shadow-card"
+                  className="group flex items-center justify-between p-4 bg-ink-900 dark:bg-white text-white dark:text-ink-900 rounded-xl hover:bg-ink-800 dark:hover:bg-ink-100 transition-all hover:shadow-card"
                 >
                   <span className="flex items-center gap-3">
                     <Calendar className="w-5 h-5" />
                     <span className="font-medium text-sm">{content.bookCallLabel}</span>
                   </span>
-                  <span className="text-xs text-ink-300 group-hover:text-white">{content.bookCallSubtext}</span>
+                  <span className="text-xs text-ink-300 dark:text-ink-500 group-hover:text-white dark:group-hover:text-ink-900">{content.bookCallSubtext}</span>
                 </a>
 
                 <button
                   type="button"
                   onClick={() => onNavigate('portfolio')}
-                  className="group flex items-center justify-between p-4 bg-white border border-ink-200 rounded-xl hover:border-ink-300 hover:bg-ink-50 transition-all w-full text-left"
+                  className="group flex items-center justify-between p-4 bg-white dark:bg-ink-900 border border-ink-200 dark:border-ink-700 rounded-xl hover:border-ink-300 dark:hover:border-ink-600 hover:bg-ink-50 dark:hover:bg-ink-800 transition-all w-full text-left"
                 >
-                  <span className="flex items-center gap-3 text-ink-900">
+                  <span className="flex items-center gap-3 text-ink-900 dark:text-white">
                     <Download className="w-5 h-5" />
                     <span className="font-medium text-sm">{content.downloadResumeLabel}</span>
                   </span>
-                  <span className="text-xs text-ink-500">{content.resumeSubtext}</span>
+                  <span className="text-xs text-ink-500 dark:text-ink-400">{content.resumeSubtext}</span>
                 </button>
 
                 <button
                   type="button"
                   onClick={() => onNavigate('portfolio')}
-                  className="group flex items-center justify-between p-4 bg-white border border-ink-200 rounded-xl hover:border-ink-300 hover:bg-ink-50 transition-all w-full text-left"
+                  className="group flex items-center justify-between p-4 bg-white dark:bg-ink-900 border border-ink-200 dark:border-ink-700 rounded-xl hover:border-ink-300 dark:hover:border-ink-600 hover:bg-ink-50 dark:hover:bg-ink-800 transition-all w-full text-left"
                 >
-                  <span className="flex items-center gap-3 text-ink-900">
+                  <span className="flex items-center gap-3 text-ink-900 dark:text-white">
                     <CheckCircle className="w-5 h-5" />
                     <span className="font-medium text-sm">{content.viewPortfolioLabel}</span>
                   </span>
-                  <span className="text-xs text-ink-500">{content.portfolioSubtext}</span>
+                  <span className="text-xs text-ink-500 dark:text-ink-400">{content.portfolioSubtext}</span>
                 </button>
               </div>
             </div>
 
-            <div className="p-5 bg-success-50/60 rounded-xl border border-success-100">
+            <div className="p-5 bg-success-50/60 dark:bg-success-950/30 rounded-xl border border-success-100 dark:border-success-900/50">
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-2.5 h-2.5 bg-success-500 rounded-full animate-pulse" />
-                <h4 className="font-bold text-ink-900 text-sm">{content.availabilityTitle}</h4>
+                <h4 className="font-bold text-ink-900 dark:text-white text-sm">{content.availabilityTitle}</h4>
               </div>
-              <p className="text-ink-600 text-sm leading-relaxed mb-2">
+              <p className="text-ink-600 dark:text-ink-300 text-sm leading-relaxed mb-2">
                 {content.availabilityMessage}
               </p>
-              <span className="text-xs font-medium text-success-700">{content.availabilityStatus}</span>
+              <span className="text-xs font-medium text-success-700 dark:text-success-400">{content.availabilityStatus}</span>
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-xl font-bold text-ink-900">Find Me Online</h3>
+              <h3 className="text-xl font-bold text-ink-900 dark:text-white">Find Me Online</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 {socialLinks.map((link) => {
                   const Icon = link.icon === 'Github' ? Github : link.icon === 'Linkedin' ? Linkedin : link.icon === 'Twitter' ? Twitter : Briefcase;
@@ -153,14 +153,14 @@ export default function Contact({ onNavigate }: ContactProps) {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex items-center gap-3 p-3.5 bg-white border border-ink-200 rounded-xl hover:border-brand-300 transition-all duration-300 hover:shadow-soft"
+                      className="group flex items-center gap-3 p-3.5 bg-white dark:bg-ink-900 border border-ink-200 dark:border-ink-700 rounded-xl hover:border-brand-300 dark:hover:border-brand-700 transition-all duration-300 hover:shadow-soft"
                     >
-                      <div className="p-2 bg-ink-50 group-hover:bg-gradient-to-br group-hover:from-brand-600 group-hover:to-accent-500 rounded-lg transition-all">
-                        <Icon className="w-4 h-4 text-ink-700 group-hover:text-white transition-colors" />
+                      <div className="p-2 bg-ink-50 dark:bg-ink-800 group-hover:bg-gradient-to-br group-hover:from-brand-500 group-hover:to-accent-500 rounded-lg transition-all">
+                        <Icon className="w-4 h-4 text-ink-700 dark:text-ink-300 group-hover:text-white transition-colors" />
                       </div>
                       <div className="min-w-0">
-                        <div className="font-semibold text-ink-900 text-sm">{link.platform}</div>
-                        <div className="text-xs text-ink-500 truncate">{link.username}</div>
+                        <div className="font-semibold text-ink-900 dark:text-white text-sm">{link.platform}</div>
+                        <div className="text-xs text-ink-500 dark:text-ink-400 truncate">{link.username}</div>
                       </div>
                     </a>
                   );
@@ -170,14 +170,14 @@ export default function Contact({ onNavigate }: ContactProps) {
           </div>
 
           <div>
-            <form onSubmit={handleSubmit} className="space-y-5 p-6 sm:p-8 bg-ink-50/60 rounded-2xl border border-ink-100">
+            <form onSubmit={handleSubmit} className="space-y-5 p-6 sm:p-8 bg-ink-50/60 dark:bg-ink-900/60 rounded-2xl border border-ink-100 dark:border-ink-800">
               <div>
-                <h3 className="text-xl font-bold text-ink-900 mb-1">{content.formTitle}</h3>
-                <p className="text-ink-500 text-sm">{content.formDescription}</p>
+                <h3 className="text-xl font-bold text-ink-900 dark:text-white mb-1">{content.formTitle}</h3>
+                <p className="text-ink-500 dark:text-ink-400 text-sm">{content.formDescription}</p>
               </div>
 
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-ink-900 mb-1.5">Your Name *</label>
+                <label htmlFor="name" className="block text-sm font-medium text-ink-900 dark:text-white mb-1.5">Your Name *</label>
                 <input
                   type="text"
                   id="name"
@@ -191,7 +191,7 @@ export default function Contact({ onNavigate }: ContactProps) {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-ink-900 mb-1.5">Email Address *</label>
+                <label htmlFor="email" className="block text-sm font-medium text-ink-900 dark:text-white mb-1.5">Email Address *</label>
                 <input
                   type="email"
                   id="email"
@@ -205,7 +205,7 @@ export default function Contact({ onNavigate }: ContactProps) {
               </div>
 
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-ink-900 mb-1.5">Company</label>
+                <label htmlFor="company" className="block text-sm font-medium text-ink-900 dark:text-white mb-1.5">Company</label>
                 <input
                   type="text"
                   id="company"
@@ -218,7 +218,7 @@ export default function Contact({ onNavigate }: ContactProps) {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-ink-900 mb-1.5">Message *</label>
+                <label htmlFor="message" className="block text-sm font-medium text-ink-900 dark:text-white mb-1.5">Message *</label>
                 <textarea
                   id="message"
                   name="message"
@@ -234,7 +234,7 @@ export default function Contact({ onNavigate }: ContactProps) {
               <button
                 type="submit"
                 disabled={submitted}
-                className="w-full flex items-center justify-center gap-2.5 px-6 py-3.5 bg-gradient-to-r from-brand-600 to-brand-500 text-white font-semibold rounded-xl hover:shadow-glow transition-all disabled:bg-success-600 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
+                className="w-full flex items-center justify-center gap-2.5 px-6 py-3.5 bg-gradient-to-r from-brand-500 to-brand-600 text-white font-semibold rounded-xl hover:shadow-glow transition-all disabled:bg-success-600 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-ink-950"
               >
                 {submitted ? (
                   <>

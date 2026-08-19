@@ -52,22 +52,22 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
   }, []);
 
   return (
-    <section className="min-h-screen pt-28 sm:pt-32 pb-20 px-6 sm:px-8 lg:px-12 bg-gradient-to-b from-ink-50/40 via-white to-white">
+    <section className="min-h-screen pt-28 sm:pt-32 pb-20 px-6 sm:px-8 lg:px-12 bg-gradient-to-b from-ink-50/40 via-white to-white dark:from-ink-900/30 dark:via-ink-950 dark:to-ink-950 transition-colors duration-500">
       <div className="section-container">
         <div className="text-center mb-14 animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-50 text-brand-700 rounded-full text-sm font-medium mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-50 dark:bg-brand-950/40 text-brand-700 dark:text-brand-400 rounded-full text-sm font-medium mb-4">
             <Sparkles className="w-4 h-4" />
             Explore My Work
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-ink-900 mb-4 tracking-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-ink-900 dark:text-white mb-4 tracking-tight">
             {content.title}
           </h1>
-          <p className="text-lg text-ink-500 max-w-2xl mx-auto leading-relaxed">{content.description}</p>
+          <p className="text-lg text-ink-500 dark:text-ink-400 max-w-2xl mx-auto leading-relaxed">{content.description}</p>
         </div>
 
         <div className="mb-8">
           <div className="relative max-w-xl mx-auto">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-ink-400" />
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-ink-400 dark:text-ink-500" />
             <input
               type="text"
               value={searchQuery}
@@ -85,10 +85,10 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
                 key={cat}
                 type="button"
                 onClick={() => handleCategoryClick(cat)}
-                className={`px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 ${
+                className={`px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-ink-950 ${
                   selectedCategory === cat
-                    ? 'bg-ink-900 text-white shadow-soft'
-                    : 'bg-white text-ink-600 hover:text-ink-900 hover:bg-ink-50 border border-ink-200'
+                    ? 'bg-ink-900 dark:bg-white text-white dark:text-ink-900 shadow-soft'
+                    : 'bg-white dark:bg-ink-900 text-ink-600 dark:text-ink-300 hover:text-ink-900 dark:hover:text-white hover:bg-ink-50 dark:hover:bg-ink-800 border border-ink-200 dark:border-ink-700'
                 }`}
                 aria-pressed={selectedCategory === cat}
                 aria-label={`Filter by ${cat}`}
@@ -98,15 +98,15 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
             ))}
           </div>
 
-          <div className="flex items-center gap-4 text-sm text-ink-500">
+          <div className="flex items-center gap-4 text-sm text-ink-500 dark:text-ink-400">
             <span>
-              <span className="font-semibold text-ink-900">{projects.length}</span> {projects.length === 1 ? 'project' : 'projects'}
+              <span className="font-semibold text-ink-900 dark:text-white">{projects.length}</span> {projects.length === 1 ? 'project' : 'projects'}
             </span>
             {hasActiveFilters && (
               <button
                 type="button"
                 onClick={clearAll}
-                className="text-ink-600 hover:text-ink-900 font-medium focus:outline-none focus:ring-2 focus:ring-ink-300 focus:ring-offset-2 rounded-lg px-3 py-1 hover:bg-ink-50 transition-colors"
+                className="text-ink-600 dark:text-ink-300 hover:text-ink-900 dark:hover:text-white font-medium focus:outline-none focus:ring-2 focus:ring-ink-300 dark:focus:ring-ink-600 focus:ring-offset-2 dark:focus:ring-offset-ink-950 rounded-lg px-3 py-1 hover:bg-ink-50 dark:hover:bg-ink-900 transition-colors"
                 aria-label="Clear all filters"
               >
                 Clear All
@@ -128,7 +128,7 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
                   animation: `fadeInUp 0.6s ease-out ${index * 0.06}s both`
                 }}
               >
-                <div className="relative aspect-[4/3] overflow-hidden bg-ink-100">
+                <div className="relative aspect-[4/3] overflow-hidden bg-ink-100 dark:bg-ink-800">
                   <img
                     src={coverUrl}
                     alt={project.title}
@@ -186,13 +186,13 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
 
                 <div className="p-6 space-y-4">
                   <div className="space-y-2">
-                    <h3 className="text-xl font-bold text-ink-900 tracking-tight line-clamp-2">
+                    <h3 className="text-xl font-bold text-ink-900 dark:text-white tracking-tight line-clamp-2">
                       {project.title}
                     </h3>
-                    <p className="text-sm text-ink-500 leading-relaxed line-clamp-2">{project.summary}</p>
+                    <p className="text-sm text-ink-500 dark:text-ink-400 leading-relaxed line-clamp-2">{project.summary}</p>
                   </div>
 
-                  <div className="flex items-center gap-2 text-xs text-ink-400 pt-3 border-t border-ink-100">
+                  <div className="flex items-center gap-2 text-xs text-ink-400 dark:text-ink-500 pt-3 border-t border-ink-100 dark:border-ink-800">
                     <span className="flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 bg-brand-500 rounded-full"></span>
                       {project.industry}
@@ -201,7 +201,7 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
                     <span>{project.timeline}</span>
                   </div>
 
-                  <div className="text-sm font-medium text-ink-500 group-hover:text-brand-600 transition-colors flex items-center gap-1.5">
+                  <div className="text-sm font-medium text-ink-500 dark:text-ink-400 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors flex items-center gap-1.5">
                     View details
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -213,11 +213,11 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
 
         {projects.length === 0 && (
           <div className="text-center py-16">
-            <p className="text-lg text-ink-600 mb-4">{content.nothingFoundTitle}</p>
+            <p className="text-lg text-ink-600 dark:text-ink-400 mb-4">{content.nothingFoundTitle}</p>
             <button
               type="button"
               onClick={clearAll}
-              className="text-ink-900 hover:underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-ink-300 focus:ring-offset-2 rounded"
+              className="text-ink-900 dark:text-white hover:underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-ink-300 dark:focus:ring-ink-600 focus:ring-offset-2 dark:focus:ring-offset-ink-950 rounded"
             >
               {content.nothingFoundAction}
             </button>
