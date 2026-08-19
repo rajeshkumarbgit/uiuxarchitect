@@ -20,6 +20,9 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
   const socialLinks = useSocialLinks();
   const githubLink = socialLinks.find(s => s.platform === 'GitHub');
 
+  const isDetailPage = currentPage === 'portfolio-detail' || currentPage === 'case-study-detail';
+  const showSolidHeader = isScrolled || isDetailPage;
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -49,7 +52,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
-        isScrolled
+        showSolidHeader
           ? 'glass shadow-soft border-b border-ink-100 dark:border-ink-800'
           : 'bg-transparent'
       } ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}
@@ -65,7 +68,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
             <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 text-white font-bold text-lg shadow-soft group-hover:shadow-glow transition-all duration-300">
               RK
             </span>
-            <span className={`hidden sm:block text-sm font-semibold transition-colors ${isScrolled ? 'text-ink-700 dark:text-ink-200 group-hover:text-ink-900 dark:group-hover:text-white' : 'text-ink-300 group-hover:text-white'}`}>
+            <span className={`hidden sm:block text-sm font-semibold transition-colors ${showSolidHeader ? 'text-ink-700 dark:text-ink-200 group-hover:text-ink-900 dark:group-hover:text-white' : 'text-ink-300 group-hover:text-white'}`}>
               Rajesh Kumar
             </span>
           </button>
@@ -79,7 +82,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                 className={`relative px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 ${
                   currentPage === item.id
                     ? 'text-brand-600 dark:text-brand-400'
-                    : isScrolled
+                    : showSolidHeader
                     ? 'text-ink-600 dark:text-ink-300 hover:text-ink-900 dark:hover:text-white hover:bg-ink-50 dark:hover:bg-ink-900'
                     : 'text-ink-400 hover:text-white hover:bg-white/5'
                 }`}
@@ -97,7 +100,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                 type="button"
                 onClick={toggleTheme}
                 className={`inline-flex items-center justify-center w-10 h-10 rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 ${
-                  isScrolled
+                  showSolidHeader
                     ? 'text-ink-600 dark:text-ink-300 hover:text-brand-600 dark:hover:text-brand-400 hover:bg-ink-50 dark:hover:bg-ink-900'
                     : 'text-ink-400 hover:text-white hover:bg-white/5'
                 }`}
@@ -111,7 +114,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`inline-flex items-center justify-center w-10 h-10 rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 ${
-                    isScrolled
+                    showSolidHeader
                       ? 'text-ink-600 dark:text-ink-300 hover:text-brand-600 dark:hover:text-brand-400 hover:bg-ink-50 dark:hover:bg-ink-900'
                       : 'text-ink-400 hover:text-white hover:bg-white/5'
                   }`}
@@ -124,7 +127,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                 type="button"
                 onClick={() => handleNavClick('contact')}
                 className={`inline-flex items-center px-3.5 py-2.5 text-sm font-medium transition-all focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 rounded-lg ${
-                  isScrolled
+                  showSolidHeader
                     ? 'text-ink-600 dark:text-ink-300 hover:text-ink-900 dark:hover:text-white hover:bg-ink-50 dark:hover:bg-ink-900'
                     : 'text-ink-400 hover:text-white hover:bg-white/5'
                 }`}
@@ -147,7 +150,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
               type="button"
               onClick={toggleTheme}
               className={`p-2.5 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 ${
-                isScrolled
+                showSolidHeader
                   ? 'text-ink-700 dark:text-ink-200 hover:bg-ink-50 dark:hover:bg-ink-900'
                   : 'text-white hover:bg-white/10'
               }`}
@@ -159,7 +162,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
               type="button"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={`p-2.5 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 ${
-                isScrolled
+                showSolidHeader
                   ? 'text-ink-700 dark:text-ink-200 hover:bg-ink-50 dark:hover:bg-ink-900'
                   : 'text-white hover:bg-white/10'
               }`}
