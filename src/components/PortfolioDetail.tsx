@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { X, ChevronLeft, ChevronRight, ExternalLink, Github, Award } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, ExternalLink, Github, Award, ArrowLeft } from 'lucide-react';
 import { useAllProjects } from '../hooks/useProjects';
 import { useImageUrl } from '../hooks/useImages';
 
@@ -125,7 +125,7 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
           <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-brand-500/10 rounded-full blur-3xl" />
         </div>
 
-        <div className="absolute top-6 left-6 right-6 flex items-start justify-between gap-4 z-10">
+        <div className="absolute top-24 left-6 right-6 flex items-start justify-between gap-4 z-10">
           <div className="min-w-0">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white drop-shadow-lg mb-1 tracking-tight">
               {project.title}
@@ -140,6 +140,15 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
                 <span className="text-white/60"> / {images.length}</span>
               </div>
             )}
+            <button
+              type="button"
+              onClick={handleClose}
+              className="inline-flex items-center gap-2 px-4 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-md transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent border border-white/20 shadow-card group/close"
+              aria-label="Back to portfolio"
+            >
+              <ArrowLeft className="w-4 h-4 transition-transform group-hover/close:-translate-x-0.5" />
+              <span className="text-sm font-medium hidden sm:inline">Back</span>
+            </button>
             <button
               type="button"
               onClick={handleClose}

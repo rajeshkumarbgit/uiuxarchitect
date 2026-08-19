@@ -53,18 +53,14 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-ink-950 transition-colors duration-500">
-      {!isDetailPage && (
-        <div className="fixed top-0 left-0 right-0 z-[60] h-1 bg-transparent pointer-events-none">
-          <div
-            className="h-full bg-gradient-to-r from-brand-500 to-accent-500 transition-all duration-150"
-            style={{ width: `${scrollProgress}%` }}
-          />
-        </div>
-      )}
+      <div className="fixed top-0 left-0 right-0 z-[60] h-1 bg-transparent pointer-events-none">
+        <div
+          className="h-full bg-gradient-to-r from-brand-500 to-accent-500 transition-all duration-150"
+          style={{ width: `${scrollProgress}%` }}
+        />
+      </div>
 
-      {!isDetailPage && (
-        <Header currentPage={currentPage} onNavigate={handleNavigate} />
-      )}
+      <Header currentPage={currentPage} onNavigate={handleNavigate} />
 
       <main>
         {currentPage === 'home' && (

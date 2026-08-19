@@ -52,7 +52,7 @@ export default function CaseStudyDetail({ caseStudySlug, onNavigate }: CaseStudy
           <div className="absolute inset-0 bg-gradient-to-t from-brand-700 via-brand-700/50 to-transparent" />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 text-center text-white pt-20 pb-20">
+        <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 text-center text-white pt-28 pb-20">
           <button
             type="button"
             onClick={() => onNavigate('case-studies')}
