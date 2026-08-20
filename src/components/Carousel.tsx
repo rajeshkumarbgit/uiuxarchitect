@@ -135,7 +135,7 @@ export default function Carousel({ items, autoPlay = false, interval = 5000, cla
     <div className={`relative w-full ${className}`}>
       <div
         ref={containerRef}
-        className={`relative h-[420px] sm:h-[520px] lg:h-[600px] overflow-hidden rounded-3xl bg-ink-100 dark:bg-ink-800 shadow-card select-none ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
+        className={`relative h-[380px] sm:h-[480px] lg:h-[560px] overflow-hidden rounded-3xl bg-ink-100 dark:bg-ink-800 shadow-card select-none ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
@@ -174,9 +174,9 @@ export default function Carousel({ items, autoPlay = false, interval = 5000, cla
                   loading={index === 0 ? 'eager' : 'lazy'}
                   draggable={false}
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-ink-950/90 via-ink-900/50 to-transparent p-8 sm:p-10">
-                  <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 tracking-tight">{item.title}</h3>
-                  <p className="text-ink-100 text-sm sm:text-base leading-relaxed max-w-3xl line-clamp-2">{item.description}</p>
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-ink-950/90 via-ink-900/50 to-transparent p-6 sm:p-8">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-1.5 tracking-tight">{item.title}</h3>
+                  <p className="text-ink-100 text-xs sm:text-sm leading-relaxed max-w-3xl line-clamp-2">{item.description}</p>
                 </div>
               </div>
             );

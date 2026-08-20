@@ -62,17 +62,17 @@ export default function CaseStudyDetail({ caseStudySlug, onNavigate }: CaseStudy
             Back to Case Studies
           </button>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-5 animate-slide-up tracking-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 animate-slide-up tracking-tight">
             {caseStudy.title}
           </h1>
-          <p className="text-lg sm:text-xl text-white/90 mb-10 max-w-3xl mx-auto animate-slide-up leading-relaxed" style={{ animationDelay: '0.1s' }}>
+          <p className="text-base sm:text-lg text-white/90 mb-8 max-w-3xl mx-auto animate-slide-up leading-relaxed" style={{ animationDelay: '0.1s' }}>
             {caseStudy.hero.tagline}
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 animate-slide-up" style={{ animationDelay: '0.2s' }}>
             {caseStudy.hero.metrics.map((metric, idx) => (
-              <div key={idx} className="p-5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl">
-                <div className="text-3xl font-bold mb-1">{metric.value}</div>
+              <div key={idx} className="p-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl transition-all duration-300 hover:bg-white/15 hover:-translate-y-0.5">
+                <div className="text-2xl font-bold mb-1">{metric.value}</div>
                 <div className="text-xs text-white/80">{metric.label}</div>
               </div>
             ))}
@@ -87,7 +87,7 @@ export default function CaseStudyDetail({ caseStudySlug, onNavigate }: CaseStudy
       </div>
 
       <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 py-16">
-        <div className="grid md:grid-cols-4 gap-3 mb-14 -mt-24 relative z-10">
+        <div className="grid md:grid-cols-4 gap-3 mb-12 -mt-24 relative z-10">
           <div className="p-5 bg-white dark:bg-ink-900 rounded-2xl shadow-card border border-ink-100 dark:border-ink-800 transition-colors duration-500">
             <p className="text-xs font-semibold text-ink-400 dark:text-ink-500 uppercase tracking-wide mb-1.5">Role</p>
             <p className="text-sm text-ink-900 dark:text-ink-100 font-medium">{caseStudy.metadata.role.join(', ')}</p>
@@ -106,7 +106,7 @@ export default function CaseStudyDetail({ caseStudySlug, onNavigate }: CaseStudy
           </div>
         </div>
 
-        <div className="space-y-20">
+        <div className="space-y-16">
           <section className="relative">
             <div className="flex items-center gap-3.5 mb-6">
               <div className="p-2.5 bg-gradient-to-br from-danger-500 to-danger-600 rounded-xl">
@@ -114,7 +114,7 @@ export default function CaseStudyDetail({ caseStudySlug, onNavigate }: CaseStudy
               </div>
               <div>
                 <span className="text-xs font-semibold text-danger-600 dark:text-danger-400 uppercase tracking-wide">01 / Problem</span>
-                <h2 className="text-2xl font-bold text-ink-900 dark:text-white">The Challenge</h2>
+                <h2 className="text-xl font-bold text-ink-900 dark:text-white">The Challenge</h2>
               </div>
             </div>
             <div className="pl-14">
@@ -131,12 +131,12 @@ export default function CaseStudyDetail({ caseStudySlug, onNavigate }: CaseStudy
               </div>
               <div>
                 <span className="text-xs font-semibold text-warning-600 dark:text-warning-400 uppercase tracking-wide">02 / Research</span>
-                <h2 className="text-2xl font-bold text-ink-900 dark:text-white">Discovery & Insights</h2>
+                <h2 className="text-xl font-bold text-ink-900 dark:text-white">Discovery & Insights</h2>
               </div>
             </div>
             <div className="pl-14 space-y-6">
               <div>
-                <h3 className="text-lg font-bold text-ink-900 dark:text-white mb-3">Research Methods</h3>
+                <h3 className="text-base font-bold text-ink-900 dark:text-white mb-3">Research Methods</h3>
                 <div className="grid md:grid-cols-2 gap-3">
                   {caseStudy.sections.research.methods.map((method, idx) => (
                     <div key={idx} className="flex items-start gap-2.5 p-3.5 bg-warning-50/60 dark:bg-warning-950/40 rounded-xl border border-warning-100 dark:border-warning-900/50">
@@ -149,7 +149,7 @@ export default function CaseStudyDetail({ caseStudySlug, onNavigate }: CaseStudy
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-bold text-ink-900 dark:text-white mb-3">Key Insights</h3>
+                <h3 className="text-base font-bold text-ink-900 dark:text-white mb-3">Key Insights</h3>
                 <div className="space-y-2.5">
                   {caseStudy.sections.research.insights.map((insight, idx) => (
                     <div key={idx} className="flex items-start gap-3 p-4 bg-white dark:bg-ink-900 rounded-xl border-l-4 border-warning-500 shadow-soft transition-colors duration-500">
@@ -169,13 +169,13 @@ export default function CaseStudyDetail({ caseStudySlug, onNavigate }: CaseStudy
               </div>
               <div>
                 <span className="text-xs font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-wide">03 / Solution</span>
-                <h2 className="text-2xl font-bold text-ink-900 dark:text-white">Design Approach</h2>
+                <h2 className="text-xl font-bold text-ink-900 dark:text-white">Design Approach</h2>
               </div>
             </div>
             <div className="pl-14 space-y-5">
               <p className="text-base text-ink-700 dark:text-ink-300 leading-relaxed">{caseStudy.sections.solution.approach}</p>
               <div>
-                <h3 className="text-lg font-bold text-ink-900 dark:text-white mb-3">Key Features</h3>
+                <h3 className="text-base font-bold text-ink-900 dark:text-white mb-3">Key Features</h3>
                 <div className="grid gap-2.5">
                   {caseStudy.sections.solution.keyFeatures.map((feature, idx) => (
                     <div key={idx} className="flex items-center gap-3 p-3.5 bg-brand-50/60 dark:bg-brand-950/40 rounded-xl border border-brand-100 dark:border-brand-900/50">
@@ -195,14 +195,14 @@ export default function CaseStudyDetail({ caseStudySlug, onNavigate }: CaseStudy
               </div>
               <div>
                 <span className="text-xs font-semibold text-success-600 dark:text-success-400 uppercase tracking-wide">04 / Impact</span>
-                <h2 className="text-2xl font-bold text-ink-900 dark:text-white">Results & Outcomes</h2>
+                <h2 className="text-xl font-bold text-ink-900 dark:text-white">Results & Outcomes</h2>
               </div>
             </div>
             <div className="pl-14 space-y-6">
               <div className="grid md:grid-cols-3 gap-4">
                 {caseStudy.sections.results.metrics.map((metric, idx) => (
                   <div key={idx} className="p-5 bg-gradient-to-br from-success-50 to-success-100/60 dark:from-success-950/40 dark:to-success-900/20 rounded-2xl border border-success-200 dark:border-success-900/50">
-                    <div className="text-3xl font-bold text-success-700 dark:text-success-400 mb-1">{metric.value}</div>
+                    <div className="text-2xl font-bold text-success-700 dark:text-success-400 mb-1">{metric.value}</div>
                     <div className="text-sm font-medium text-ink-900 dark:text-ink-100 mb-0.5">{metric.label}</div>
                     {metric.context && (
                       <div className="text-xs text-ink-500 dark:text-ink-400">{metric.context}</div>
@@ -240,7 +240,7 @@ export default function CaseStudyDetail({ caseStudySlug, onNavigate }: CaseStudy
               </div>
               <div>
                 <span className="text-xs font-semibold text-accent-600 dark:text-accent-400 uppercase tracking-wide">05 / Learnings</span>
-                <h2 className="text-2xl font-bold text-ink-900 dark:text-white">Key Takeaways</h2>
+                <h2 className="text-xl font-bold text-ink-900 dark:text-white">Key Takeaways</h2>
               </div>
             </div>
             <div className="pl-14">
@@ -288,9 +288,9 @@ export default function CaseStudyDetail({ caseStudySlug, onNavigate }: CaseStudy
           </button>
         </div>
 
-        <div className="mt-10 p-8 sm:p-10 bg-gradient-to-br from-brand-600 to-accent-500 rounded-2xl text-white text-center">
-          <h3 className="text-2xl font-bold mb-3">Want results like this?</h3>
-          <p className="text-base text-white/90 mb-6 max-w-xl mx-auto leading-relaxed">
+        <div className="mt-10 p-7 sm:p-8 bg-gradient-to-br from-brand-600 to-accent-500 rounded-2xl text-white text-center">
+          <h3 className="text-xl font-bold mb-3">Want results like this?</h3>
+          <p className="text-sm text-white/90 mb-6 max-w-xl mx-auto leading-relaxed">
             Let's discuss how I can help transform your product with strategic design and technical expertise.
           </p>
           <button

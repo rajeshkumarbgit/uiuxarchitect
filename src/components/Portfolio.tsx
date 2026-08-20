@@ -54,15 +54,15 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
   return (
     <section className="min-h-screen pt-28 sm:pt-32 pb-20 px-6 sm:px-8 lg:px-12 bg-gradient-to-b from-ink-50/40 via-white to-white dark:from-ink-900/30 dark:via-ink-950 dark:to-ink-950 transition-colors duration-500">
       <div className="section-container">
-        <div className="text-center mb-14 animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-50 dark:bg-brand-950/40 text-brand-700 dark:text-brand-400 rounded-full text-sm font-medium mb-4">
-            <Sparkles className="w-4 h-4" />
+        <div className="text-center mb-12 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-brand-50 dark:bg-brand-950/40 text-brand-700 dark:text-brand-400 rounded-full text-xs font-medium mb-3">
+            <Sparkles className="w-3.5 h-3.5" />
             Explore My Work
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-ink-900 dark:text-white mb-4 tracking-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 dark:text-white mb-3 tracking-tight">
             {content.title}
           </h1>
-          <p className="text-lg text-ink-500 dark:text-ink-400 max-w-2xl mx-auto leading-relaxed">{content.description}</p>
+          <p className="text-base text-ink-500 dark:text-ink-400 max-w-2xl mx-auto leading-relaxed">{content.description}</p>
         </div>
 
         <div className="mb-8">
@@ -184,9 +184,9 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
                   </div>
                 </div>
 
-                <div className="p-6 space-y-4">
+                <div className="p-5 space-y-3">
                   <div className="space-y-2">
-                    <h3 className="text-xl font-bold text-ink-900 dark:text-white tracking-tight line-clamp-2">
+                    <h3 className="text-lg font-bold text-ink-900 dark:text-white tracking-tight line-clamp-2">
                       {project.title}
                     </h3>
                     <p className="text-sm text-ink-500 dark:text-ink-400 leading-relaxed line-clamp-2">{project.summary}</p>
@@ -213,7 +213,7 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
 
         {projects.length === 0 && (
           <div className="text-center py-16">
-            <p className="text-lg text-ink-600 dark:text-ink-400 mb-4">{content.nothingFoundTitle}</p>
+            <p className="text-base text-ink-600 dark:text-ink-400 mb-4">{content.nothingFoundTitle}</p>
             <button
               type="button"
               onClick={clearAll}

@@ -24,14 +24,14 @@ export default function Footer({ onNavigate }: FooterProps) {
     <footer className="bg-ink-950 text-white relative overflow-hidden">
       <div className="absolute top-0 left-1/3 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl" />
-      <div className="relative section-container py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-8">
+      <div className="relative section-container py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-7">
           <div className="space-y-4">
             <div className="flex items-center gap-2.5">
-              <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 text-white font-bold text-lg">
+              <span className="flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 text-white font-bold text-base">
                 RK
               </span>
-              <h3 className="text-lg font-bold">Rajesh Kumar</h3>
+              <h3 className="text-base font-bold">Rajesh Kumar</h3>
             </div>
             <p className="text-ink-400 text-sm leading-relaxed max-w-xs">
               UI/UX Architect & Senior Product Designer with 18+ years of experience creating impactful digital experiences.

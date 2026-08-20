@@ -12,15 +12,15 @@ export default function CaseStudies({ onNavigate }: CaseStudiesProps) {
   return (
     <section className="min-h-screen pt-28 sm:pt-32 pb-20 px-6 sm:px-8 lg:px-12 bg-gradient-to-b from-ink-50/40 via-white to-white dark:from-ink-900/30 dark:via-ink-950 dark:to-ink-950 transition-colors duration-500">
       <div className="section-container">
-        <div className="max-w-2xl mb-16 animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-50 dark:bg-brand-950/40 text-brand-700 dark:text-brand-400 rounded-full text-sm font-medium mb-5">
-            <Sparkles className="w-4 h-4" />
+        <div className="max-w-2xl mb-14 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-brand-50 dark:bg-brand-950/40 text-brand-700 dark:text-brand-400 rounded-full text-xs font-medium mb-4">
+            <Sparkles className="w-3.5 h-3.5" />
             In-Depth Stories
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-ink-900 dark:text-white mb-5 tracking-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 dark:text-white mb-4 tracking-tight">
             Case Studies
           </h1>
-          <p className="text-lg text-ink-500 dark:text-ink-400 leading-relaxed">
+          <p className="text-base text-ink-500 dark:text-ink-400 leading-relaxed">
             Deep dives into complex product challenges and the strategic solutions that delivered measurable impact
           </p>
         </div>
@@ -30,7 +30,7 @@ export default function CaseStudies({ onNavigate }: CaseStudiesProps) {
             <p className="text-lg text-ink-600 dark:text-ink-400">No case studies available yet.</p>
           </div>
         ) : (
-          <div className="space-y-20 sm:space-y-24">
+          <div className="space-y-16 sm:space-y-20">
             {caseStudies.map((caseStudy, index) => {
               const heroImageUrl = useImageUrl(caseStudy.hero.image);
               const isReversed = index % 2 === 1;
@@ -58,10 +58,10 @@ export default function CaseStudies({ onNavigate }: CaseStudiesProps) {
                       </div>
                     </div>
 
-                    <div className="lg:col-span-7 lg:[direction:ltr] space-y-6">
+                    <div className="lg:col-span-7 lg:[direction:ltr] space-y-5">
                       <div className="space-y-3">
                         <div className="flex items-center gap-3 text-sm">
-                          <span className="font-bold text-brand-600 dark:text-brand-400">
+                          <span className="font-bold text-brand-600 dark:text-brand-400 text-sm">
                             {String(index + 1).padStart(2, '0')}
                           </span>
                           <span className="w-8 h-px bg-ink-300 dark:bg-ink-700" />
@@ -69,18 +69,18 @@ export default function CaseStudies({ onNavigate }: CaseStudiesProps) {
                             Case Study
                           </span>
                         </div>
-                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-ink-900 dark:text-white tracking-tight group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors leading-tight">
+                        <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-ink-900 dark:text-white tracking-tight group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors leading-tight">
                           {caseStudy.title}
                         </h2>
-                        <p className="text-base sm:text-lg text-ink-500 dark:text-ink-400 leading-relaxed max-w-xl">
+                        <p className="text-sm sm:text-base text-ink-500 dark:text-ink-400 leading-relaxed max-w-xl">
                           {caseStudy.hero.tagline}
                         </p>
                       </div>
 
                       <div className="flex flex-wrap gap-2.5">
                         {caseStudy.hero.metrics.slice(0, 3).map((metric, idx) => (
-                          <div key={idx} className="px-4 py-2.5 bg-ink-50 dark:bg-ink-900 rounded-xl border border-ink-100 dark:border-ink-800">
-                            <div className="text-lg font-bold text-ink-900 dark:text-white">{metric.value}</div>
+                          <div key={idx} className="px-3.5 py-2 bg-ink-50 dark:bg-ink-900 rounded-xl border border-ink-100 dark:border-ink-800 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-soft">
+                            <div className="text-base font-bold text-ink-900 dark:text-white">{metric.value}</div>
                             <div className="text-xs text-ink-500 dark:text-ink-400 mt-0.5">{metric.label}</div>
                           </div>
                         ))}

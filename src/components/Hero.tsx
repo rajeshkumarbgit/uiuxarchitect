@@ -21,8 +21,8 @@ export default function Hero({ onNavigate }: HeroProps) {
       </div>
 
       <div className="relative section-container w-full">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-          <div className="lg:col-span-7 space-y-8">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <div className="lg:col-span-7 space-y-6">
             <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium animate-slide-up ${isDark ? 'glass-dark text-ink-300' : 'bg-white/80 backdrop-blur-xl border border-ink-200 text-ink-600 shadow-soft'}`}>
               <span className="flex items-center justify-center w-5 h-5 rounded-full bg-brand-500/20">
                 <Sparkles className="w-3 h-3 text-brand-500" />
@@ -30,14 +30,14 @@ export default function Hero({ onNavigate }: HeroProps) {
               <span>{content.subtext.split('—')[0].trim()}</span>
             </div>
 
-            <h1 className={`text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] font-bold leading-[1.05] tracking-tight animate-slide-up ${isDark ? 'text-white' : 'text-ink-900'}`} style={{ animationDelay: '0.08s' }}>
+            <h1 className={`text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.08] tracking-tight animate-slide-up ${isDark ? 'text-white' : 'text-ink-900'}`} style={{ animationDelay: '0.08s' }}>
               <span className="block mb-2">Designing Systems.</span>
               <span className="block gradient-text">
                 Shipping Experiences.
               </span>
             </h1>
 
-            <p className={`text-lg sm:text-xl max-w-2xl mx-auto lg:mx-0 leading-relaxed animate-slide-up ${isDark ? 'text-ink-400' : 'text-ink-500'}`} style={{ animationDelay: '0.16s' }}>
+            <p className={`text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed animate-slide-up ${isDark ? 'text-ink-400' : 'text-ink-500'}`} style={{ animationDelay: '0.16s' }}>
               {content.description}
             </p>
 
@@ -67,13 +67,13 @@ export default function Hero({ onNavigate }: HeroProps) {
               ))}
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-12 max-w-4xl animate-slide-up" style={{ animationDelay: '0.32s' }}>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-10 max-w-4xl animate-slide-up" style={{ animationDelay: '0.32s' }}>
               {content.stats.map((stat, idx) => (
                 <div
                   key={idx}
-                  className={`group relative p-5 sm:p-6 rounded-2xl transition-all duration-500 ${isDark ? 'glass-dark hover:border-white/20' : 'bg-white/80 backdrop-blur-xl border border-ink-200 shadow-soft hover:shadow-card-hover hover:border-ink-300'}`}
+                  className={`group relative p-4 sm:p-5 rounded-2xl transition-all duration-500 hover:-translate-y-0.5 ${isDark ? 'glass-dark hover:border-white/20' : 'bg-white/80 backdrop-blur-xl border border-ink-200 shadow-soft hover:shadow-card-hover hover:border-ink-300'}`}
                 >
-                  <div className={`text-3xl sm:text-4xl font-bold mb-1 tracking-tight ${isDark ? 'text-white' : 'text-ink-900'}`}>
+                  <div className={`text-2xl sm:text-3xl font-bold mb-1 tracking-tight ${isDark ? 'text-white' : 'text-ink-900'}`}>
                     {stat.value}
                   </div>
                   <div className={`text-xs sm:text-sm font-medium ${isDark ? 'text-ink-500' : 'text-ink-500'}`}>{stat.label}</div>
@@ -99,13 +99,13 @@ export default function Hero({ onNavigate }: HeroProps) {
           </div>
         </div>
 
-        <div className="pt-14 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+        <div className="pt-10 animate-slide-up" style={{ animationDelay: '0.4s' }}>
           <p className={`text-xs mb-5 font-medium uppercase tracking-wider ${isDark ? 'text-ink-600' : 'text-ink-400'}`}>{content.trustBar.title}</p>
           <div className="flex flex-wrap items-center gap-8 sm:gap-10">
             {content.trustBar.clients.map((client, idx) => (
               <div
                 key={idx}
-                className={`text-base sm:text-lg font-semibold transition-colors duration-300 ${isDark ? 'text-ink-600 hover:text-ink-400' : 'text-ink-400 hover:text-ink-700'}`}
+                className={`text-sm sm:text-base font-semibold transition-colors duration-300 ${isDark ? 'text-ink-600 hover:text-ink-400' : 'text-ink-400 hover:text-ink-700'}`}
               >
                 {client}
               </div>

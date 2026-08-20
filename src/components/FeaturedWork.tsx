@@ -25,17 +25,17 @@ export default function FeaturedWork({ onNavigate }: FeaturedWorkProps) {
   return (
     <section className="section-padding px-6 sm:px-8 lg:px-12 bg-ink-50/40 dark:bg-ink-900/30 transition-colors duration-500">
       <div className="section-container">
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-10">
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-50 dark:bg-brand-950/40 text-brand-700 dark:text-brand-400 rounded-full text-sm font-medium mb-4">
-              <Sparkles className="w-4 h-4" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-brand-50 dark:bg-brand-950/40 text-brand-700 dark:text-brand-400 rounded-full text-xs font-medium mb-3">
+              <Sparkles className="w-3.5 h-3.5" />
               Selected Work
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 dark:text-white tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-ink-900 dark:text-white tracking-tight">
               Featured Work
             </h2>
           </div>
-          <p className="text-base sm:text-lg text-ink-500 dark:text-ink-400 max-w-md leading-relaxed">
+          <p className="text-sm sm:text-base text-ink-500 dark:text-ink-400 max-w-md leading-relaxed">
             A selection of recent projects showcasing design systems, mobile experiences, and enterprise platforms
           </p>
         </div>
@@ -43,7 +43,7 @@ export default function FeaturedWork({ onNavigate }: FeaturedWorkProps) {
         <Carousel items={carouselItems} autoPlay={true} interval={6000} />
 
         {onNavigate && (
-          <div className="flex justify-center mt-10">
+          <div className="flex justify-center mt-8">
             <button
               type="button"
               onClick={() => onNavigate('portfolio')}

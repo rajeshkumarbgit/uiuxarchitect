@@ -35,20 +35,20 @@ export default function Contact({ onNavigate }: ContactProps) {
   return (
     <section className="pt-28 sm:pt-32 pb-20 px-6 sm:px-8 lg:px-12 bg-white dark:bg-ink-950 transition-colors duration-500">
       <div className="section-container">
-        <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-50 dark:bg-brand-950/40 text-brand-700 dark:text-brand-400 rounded-full text-sm font-medium mb-4">
-            <Mail className="w-4 h-4" />
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-brand-50 dark:bg-brand-950/40 text-brand-700 dark:text-brand-400 rounded-full text-xs font-medium mb-3">
+            <Mail className="w-3.5 h-3.5" />
             Let's Talk
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 dark:text-white mb-4 tracking-tight">{content.title}</h2>
-          <p className="text-lg text-ink-500 dark:text-ink-400 max-w-2xl mx-auto leading-relaxed">{content.description}</p>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-ink-900 dark:text-white mb-3 tracking-tight">{content.title}</h2>
+          <p className="text-base text-ink-500 dark:text-ink-400 max-w-2xl mx-auto leading-relaxed">{content.description}</p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
-          <div className="space-y-8">
-            <div className="space-y-5">
-              <h3 className="text-xl font-bold text-ink-900 dark:text-white">Get in Touch</h3>
-              <div className="space-y-3">
+        <div className="grid lg:grid-cols-2 gap-8 mb-10">
+          <div className="space-y-6">
+            <div className="space-y-4">
+              <h3 className="text-lg font-bold text-ink-900 dark:text-white">Get in Touch</h3>
+              <div className="space-y-2.5">
                 <div className="flex items-start gap-3 p-4 bg-ink-50/60 dark:bg-ink-900/60 rounded-xl border border-ink-100 dark:border-ink-800 hover:border-brand-200 dark:hover:border-brand-900/50 transition-colors">
                   <div className="p-2.5 bg-gradient-to-br from-brand-500 to-accent-500 rounded-lg flex-shrink-0">
                     <Mail className="w-4 h-4 text-white" />
@@ -91,8 +91,8 @@ export default function Contact({ onNavigate }: ContactProps) {
               </div>
             </div>
 
-            <div className="space-y-5">
-              <h3 className="text-xl font-bold text-ink-900 dark:text-white">{content.quickActionsTitle}</h3>
+            <div className="space-y-4">
+              <h3 className="text-lg font-bold text-ink-900 dark:text-white">{content.quickActionsTitle}</h3>
               <div className="space-y-2.5">
                 <a
                   href={`mailto:${contactInfo.email}`}
@@ -142,8 +142,8 @@ export default function Contact({ onNavigate }: ContactProps) {
               <span className="text-xs font-medium text-success-700 dark:text-success-400">{content.availabilityStatus}</span>
             </div>
 
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-ink-900 dark:text-white">Find Me Online</h3>
+            <div className="space-y-3">
+              <h3 className="text-lg font-bold text-ink-900 dark:text-white">Find Me Online</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 {socialLinks.map((link) => {
                   const Icon = link.icon === 'Github' ? Github : link.icon === 'Linkedin' ? Linkedin : link.icon === 'Twitter' ? Twitter : Briefcase;
@@ -170,9 +170,9 @@ export default function Contact({ onNavigate }: ContactProps) {
           </div>
 
           <div>
-            <form onSubmit={handleSubmit} className="space-y-5 p-6 sm:p-8 bg-ink-50/60 dark:bg-ink-900/60 rounded-2xl border border-ink-100 dark:border-ink-800">
+            <form onSubmit={handleSubmit} className="space-y-5 p-5 sm:p-6 bg-ink-50/60 dark:bg-ink-900/60 rounded-2xl border border-ink-100 dark:border-ink-800">
               <div>
-                <h3 className="text-xl font-bold text-ink-900 dark:text-white mb-1">{content.formTitle}</h3>
+                <h3 className="text-lg font-bold text-ink-900 dark:text-white mb-1">{content.formTitle}</h3>
                 <p className="text-ink-500 dark:text-ink-400 text-sm">{content.formDescription}</p>
               </div>
 
@@ -252,11 +252,11 @@ export default function Contact({ onNavigate }: ContactProps) {
           </div>
         </div>
 
-        <div className="p-8 sm:p-10 bg-gradient-to-br from-ink-950 to-ink-900 text-white rounded-3xl text-center relative overflow-hidden">
+        <div className="p-7 sm:p-8 bg-gradient-to-br from-ink-950 to-ink-900 text-white rounded-3xl text-center relative overflow-hidden">
           <div className="absolute top-0 left-1/4 w-72 h-72 bg-brand-500/10 rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-accent-500/10 rounded-full blur-3xl" />
           <div className="relative">
-            <h3 className="text-2xl font-bold mb-3">{content.ctaTitle}</h3>
+            <h3 className="text-xl font-bold mb-3">{content.ctaTitle}</h3>
             <p className="text-ink-400 mb-6 max-w-xl mx-auto leading-relaxed">{content.ctaDescription}</p>
             <div className="flex flex-wrap items-center justify-center gap-3">
               <a

@@ -84,7 +84,7 @@
   }
 
   .card-hover {
-    @apply hover:shadow-card-hover hover:border-ink-200 dark:hover:border-ink-700 hover:-translate-y-1;
+    @apply hover:shadow-card-hover hover:border-ink-200 dark:hover:border-ink-700 hover:-translate-y-0.5;
   }
 
   .glass {
@@ -111,7 +111,7 @@
   }
 
   .section-padding {
-    @apply py-20 sm:py-28;
+    @apply py-16 sm:py-24;
   }
 
   .gradient-text {
@@ -172,11 +172,11 @@
   }
 
   .animate-fade-in {
-    animation: fadeIn 0.8s ease-out;
+    animation: fadeIn 0.6s ease-out both;
   }
 
   .animate-slide-up {
-    animation: slideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
   }
 
   .animate-float {
@@ -184,11 +184,11 @@
   }
 
   .animate-fadeIn {
-    animation: fadeIn 0.8s ease-out;
+    animation: fadeIn 0.6s ease-out both;
   }
 
   .animate-scale-in {
-    animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: scaleIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
   }
 
   .animate-shimmer {

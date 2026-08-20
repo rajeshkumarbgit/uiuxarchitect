@@ -199,10 +199,10 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
                 Featured Project
               </span>
             )}
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white drop-shadow-lg mb-1 tracking-tight">
+            <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white drop-shadow-lg mb-1 tracking-tight">
               {project.title}
             </h1>
-            <p className="text-white/70 text-sm sm:text-base drop-shadow-md">{project.industry}</p>
+            <p className="text-white/70 text-xs sm:text-sm drop-shadow-md">{project.industry}</p>
           </div>
 
           {/* Gallery nav arrows */}
@@ -274,14 +274,14 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
       <div className="flex-1 bg-white dark:bg-ink-950 transition-colors duration-500">
         <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 py-12 sm:py-16">
           {/* Summary */}
-          <div className="mb-10 animate-fadeIn">
-            <p className="text-lg sm:text-xl text-ink-700 dark:text-ink-300 leading-relaxed font-light">
+          <div className="mb-8 animate-fadeIn">
+            <p className="text-base sm:text-lg text-ink-700 dark:text-ink-300 leading-relaxed font-light">
               {project.summary}
             </p>
           </div>
 
           {/* Meta grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-10">
             {metaItems.map((item, idx) => {
               const Icon = item.icon;
               return (
@@ -300,8 +300,8 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
 
           {/* KPIs */}
           {project.kpis.length > 0 && (
-            <div className="mb-12">
-              <h3 className="text-xl font-bold text-ink-900 dark:text-white mb-5 tracking-tight">Key Results</h3>
+            <div className="mb-10">
+              <h3 className="text-lg font-bold text-ink-900 dark:text-white mb-4 tracking-tight">Key Results</h3>
               <div className="grid sm:grid-cols-2 gap-3">
                 {project.kpis.map((kpi, idx) => (
                   <div key={idx} className="flex items-start gap-3 p-4 rounded-xl bg-ink-50/60 dark:bg-ink-900/60 border border-ink-100 dark:border-ink-800 hover:shadow-soft transition-all duration-300">
@@ -316,8 +316,8 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
           )}
 
           {/* Technologies */}
-          <div className="mb-12">
-            <h3 className="text-xl font-bold text-ink-900 dark:text-white mb-5 tracking-tight">Technologies</h3>
+          <div className="mb-10">
+            <h3 className="text-lg font-bold text-ink-900 dark:text-white mb-4 tracking-tight">Technologies</h3>
             <div className="flex flex-wrap gap-2">
               {project.tags.map((tag, idx) => (
                 <span
@@ -364,7 +364,7 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
       {relatedProjects.length > 0 && (
         <div className="bg-gradient-to-b from-white to-ink-50/40 dark:from-ink-950 dark:to-ink-900/30 px-6 sm:px-8 lg:px-12 py-14 border-t border-ink-100 dark:border-ink-800 transition-colors duration-500">
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-xl font-bold text-ink-900 dark:text-white mb-6 tracking-tight">Related Projects</h3>
+            <h3 className="text-lg font-bold text-ink-900 dark:text-white mb-5 tracking-tight">Related Projects</h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {relatedProjects.map((rp) => {
                 const rpCover = useImageUrl(rp.cover);
