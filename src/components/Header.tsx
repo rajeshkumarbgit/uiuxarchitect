@@ -62,13 +62,13 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
           <button
             type="button"
             onClick={() => handleNavClick('home')}
-            className="flex items-center gap-2.5 group focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 rounded-lg p-1"
+            className="flex items-center gap-2.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 rounded-lg p-1"
             aria-label="Go to home page"
           >
             <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 text-white font-bold text-lg shadow-soft group-hover:shadow-glow transition-all duration-300">
               RK
             </span>
-            <span className={`hidden sm:block text-sm font-semibold transition-colors ${showSolidHeader ? 'text-ink-700 dark:text-ink-200 group-hover:text-ink-900 dark:group-hover:text-white' : 'text-ink-300 group-hover:text-white'}`}>
+            <span className={`hidden sm:block text-sm font-semibold transition-colors ${showSolidHeader ? 'text-ink-700 dark:text-ink-200 group-hover:text-ink-900 dark:group-hover:text-white' : isDark ? 'text-ink-300 group-hover:text-white' : 'text-ink-700 group-hover:text-ink-950'}`}>
               Rajesh Kumar
             </span>
           </button>
@@ -79,12 +79,12 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                 key={item.id}
                 type="button"
                 onClick={() => handleNavClick(item.id)}
-                className={`relative px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 ${
+                className={`relative px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 ${
                   currentPage === item.id
                     ? 'text-brand-600 dark:text-brand-400'
                     : showSolidHeader
                     ? 'text-ink-600 dark:text-ink-300 hover:text-ink-900 dark:hover:text-white hover:bg-ink-50 dark:hover:bg-ink-900'
-                    : 'text-ink-400 hover:text-white hover:bg-white/5'
+                    : isDark ? 'text-ink-400 hover:text-white hover:bg-white/5' : 'text-ink-700 hover:text-ink-950 hover:bg-ink-900/5'
                 }`}
                 aria-current={currentPage === item.id ? 'page' : undefined}
               >
@@ -99,10 +99,10 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
               <button
                 type="button"
                 onClick={toggleTheme}
-                className={`inline-flex items-center justify-center w-10 h-10 rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 ${
+                className={`inline-flex items-center justify-center w-10 h-10 rounded-lg transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 ${
                   showSolidHeader
                     ? 'text-ink-600 dark:text-ink-300 hover:text-brand-600 dark:hover:text-brand-400 hover:bg-ink-50 dark:hover:bg-ink-900'
-                    : 'text-ink-400 hover:text-white hover:bg-white/5'
+                    : isDark ? 'text-ink-400 hover:text-white hover:bg-white/5' : 'text-ink-700 hover:text-ink-950 hover:bg-ink-900/5'
                 }`}
                 aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
               >
@@ -113,10 +113,10 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                   href={githubLink.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`inline-flex items-center justify-center w-10 h-10 rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 ${
+                  className={`inline-flex items-center justify-center w-10 h-10 rounded-lg transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 ${
                     showSolidHeader
                       ? 'text-ink-600 dark:text-ink-300 hover:text-brand-600 dark:hover:text-brand-400 hover:bg-ink-50 dark:hover:bg-ink-900'
-                      : 'text-ink-400 hover:text-white hover:bg-white/5'
+                      : isDark ? 'text-ink-400 hover:text-white hover:bg-white/5' : 'text-ink-700 hover:text-ink-950 hover:bg-ink-900/5'
                   }`}
                   aria-label="Visit GitHub profile"
                 >
@@ -126,10 +126,10 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
               <button
                 type="button"
                 onClick={() => handleNavClick('contact')}
-                className={`inline-flex items-center px-3.5 py-2.5 text-sm font-medium transition-all focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 rounded-lg ${
+                className={`inline-flex items-center px-3.5 py-2.5 text-sm font-medium transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 rounded-lg ${
                   showSolidHeader
                     ? 'text-ink-600 dark:text-ink-300 hover:text-ink-900 dark:hover:text-white hover:bg-ink-50 dark:hover:bg-ink-900'
-                    : 'text-ink-400 hover:text-white hover:bg-white/5'
+                    : isDark ? 'text-ink-400 hover:text-white hover:bg-white/5' : 'text-ink-700 hover:text-ink-950 hover:bg-ink-900/5'
                 }`}
               >
                 <Download className="w-4 h-4 mr-1.5" />
@@ -137,7 +137,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
               </button>
               <a
                 href={`mailto:${email}`}
-                className="inline-flex items-center px-4 py-2.5 bg-gradient-to-r from-brand-500 to-brand-600 text-white text-sm font-semibold rounded-xl hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-ink-950"
+                className="inline-flex items-center px-4 py-2.5 bg-gradient-to-r from-brand-500 to-brand-600 text-white text-sm font-semibold rounded-xl hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-ink-950"
               >
                 <Calendar className="w-4 h-4 mr-1.5" />
                 Book Call
@@ -149,10 +149,10 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
             <button
               type="button"
               onClick={toggleTheme}
-              className={`p-2.5 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 ${
+              className={`p-2.5 rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 ${
                 showSolidHeader
                   ? 'text-ink-700 dark:text-ink-200 hover:bg-ink-50 dark:hover:bg-ink-900'
-                  : 'text-white hover:bg-white/10'
+                  : isDark ? 'text-white hover:bg-white/10' : 'text-ink-700 hover:bg-ink-900/5'
               }`}
               aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
             >
@@ -161,10 +161,10 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
             <button
               type="button"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`p-2.5 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 ${
+              className={`p-2.5 rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 ${
                 showSolidHeader
                   ? 'text-ink-700 dark:text-ink-200 hover:bg-ink-50 dark:hover:bg-ink-900'
-                  : 'text-white hover:bg-white/10'
+                  : isDark ? 'text-white hover:bg-white/10' : 'text-ink-700 hover:bg-ink-900/5'
               }`}
               aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={isMenuOpen}
@@ -182,7 +182,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                   key={item.id}
                   type="button"
                   onClick={() => handleNavClick(item.id)}
-                  className={`px-4 py-3 rounded-xl text-sm font-medium text-left transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 ${
+                  className={`px-4 py-3 rounded-xl text-sm font-medium text-left transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 ${
                     currentPage === item.id
                       ? 'bg-brand-50 dark:bg-brand-950/40 text-brand-700 dark:text-brand-400'
                       : 'text-ink-600 dark:text-ink-300 hover:bg-ink-50 dark:hover:bg-ink-900'
