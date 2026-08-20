@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Calendar, Download, Send, CheckCircle, Github, Linkedin, Twitter, Briefcase } from 'lucide-react';
+import { Mail, Phone, MapPin, Calendar, Download, Send, CheckCircle, Github, Linkedin, Twitter, Briefcase, AlertCircle } from 'lucide-react';
 import { useContactContent } from '../hooks/useContent';
 import { useContactInfo, useSocialLinks } from '../hooks/useConfig';
 
@@ -18,14 +18,37 @@ export default function Contact({ onNavigate }: ContactProps) {
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', email: '', company: '', message: '' });
-    }, 3000);
+    setSubmitting(true);
+    setError(null);
+    try {
+      const apiUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`;
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+        },
+        body: JSON.stringify(formData),
+      });
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.error || 'Could not send your message.');
+      }
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({ name: '', email: '', company: '', message: '' });
+      }, 3000);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -231,15 +254,27 @@ export default function Contact({ onNavigate }: ContactProps) {
                 />
               </div>
 
+              {error && (
+                <div className="flex items-start gap-2 p-3 bg-danger-50 dark:bg-danger-950/40 border border-danger-200 dark:border-danger-900/50 rounded-xl text-sm text-danger-700 dark:text-danger-400">
+                  <AlertCircle className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                  <span>{error}</span>
+                </div>
+              )}
+
               <button
                 type="submit"
-                disabled={submitted}
-                className="w-full flex items-center justify-center gap-2 px-5 py-2.5 text-sm bg-gradient-to-r from-brand-500 to-brand-600 text-white font-semibold rounded-xl hover:shadow-glow transition-all disabled:bg-success-600 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-ink-950"
+                disabled={submitting || submitted}
+                className="w-full flex items-center justify-center gap-2 px-5 py-2.5 text-sm bg-gradient-to-r from-brand-500 to-brand-600 text-white font-semibold rounded-xl hover:shadow-glow transition-all disabled:opacity-70 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-ink-950"
               >
                 {submitted ? (
                   <>
                     <CheckCircle className="w-5 h-5" />
                     Message Sent Successfully!
+                  </>
+                ) : submitting ? (
+                  <>
+                    <Send className="w-4 h-4 animate-pulse" />
+                    Sending...
                   </>
                 ) : (
                   <>
