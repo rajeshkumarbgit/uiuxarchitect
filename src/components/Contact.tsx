@@ -1,14 +1,11 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Calendar, Download, Send, CheckCircle, Github, Linkedin, Twitter, Briefcase, AlertCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Calendar, Download, Send, CheckCircle, Github, Linkedin, Twitter, Briefcase } from 'lucide-react';
 import { useContactContent } from '../hooks/useContent';
 import { useContactInfo, useSocialLinks } from '../hooks/useConfig';
-import { supabase } from '../lib/supabase';
 
 interface ContactProps {
   onNavigate: (page: string, slug?: string) => void;
 }
-
-type SubmitState = 'idle' | 'submitting' | 'success' | 'error';
 
 export default function Contact({ onNavigate }: ContactProps) {
   const content = useContactContent();
@@ -20,28 +17,15 @@ export default function Contact({ onNavigate }: ContactProps) {
     company: '',
     message: ''
   });
-  const [submitState, setSubmitState] = useState<SubmitState>('idle');
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitState('submitting');
-
-    const { error } = await supabase.from('contact_messages').insert({
-      name: formData.name,
-      email: formData.email,
-      company: formData.company || null,
-      message: formData.message
-    });
-
-    if (error) {
-      setSubmitState('error');
-      setTimeout(() => setSubmitState('idle'), 4000);
-      return;
-    }
-
-    setSubmitState('success');
-    setFormData({ name: '', email: '', company: '', message: '' });
-    setTimeout(() => setSubmitState('idle'), 4000);
+    setSubmitted(true);
+    setTimeout(() => {
+      setSubmitted(false);
+      setFormData({ name: '', email: '', company: '', message: '' });
+    }, 3000);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -249,28 +233,15 @@ export default function Contact({ onNavigate }: ContactProps) {
 
               <button
                 type="submit"
-                disabled={submitState === 'submitting' || submitState === 'success'}
-                className="w-full flex items-center justify-center gap-2 px-5 py-2.5 text-sm bg-gradient-to-r from-brand-500 to-brand-600 text-white font-semibold rounded-xl hover:shadow-glow transition-all disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-ink-950"
+                disabled={submitted}
+                className="w-full flex items-center justify-center gap-2 px-5 py-2.5 text-sm bg-gradient-to-r from-brand-500 to-brand-600 text-white font-semibold rounded-xl hover:shadow-glow transition-all disabled:bg-success-600 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-ink-950"
               >
-                {submitState === 'submitting' && (
-                  <>
-                    <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                    Sending...
-                  </>
-                )}
-                {submitState === 'success' && (
+                {submitted ? (
                   <>
                     <CheckCircle className="w-5 h-5" />
                     Message Sent Successfully!
                   </>
-                )}
-                {submitState === 'error' && (
-                  <>
-                    <AlertCircle className="w-5 h-5" />
-                    Something went wrong. Try again.
-                  </>
-                )}
-                {submitState === 'idle' && (
+                ) : (
                   <>
                     <Send className="w-4 h-4" />
                     Send Message
