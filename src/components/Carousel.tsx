@@ -162,7 +162,7 @@ export default function Carousel({ items, autoPlay = false, interval = 5000, cla
             return (
               <div
                 key={index}
-                className={`absolute inset-0 ${isDragging ? '' : 'transition-transform duration-500 ease-out'} ${isVisible ? '' : 'pointer-events-none'}`}
+                className={`absolute inset-0 ${isDragging ? '' : 'transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]'} ${isVisible ? '' : 'pointer-events-none'}`}
                 style={{
                   transform: `translateX(${offset}%)`,
                 }}

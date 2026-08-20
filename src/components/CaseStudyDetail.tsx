@@ -290,7 +290,7 @@ export default function CaseStudyDetail({ caseStudySlug, onNavigate }: CaseStudy
           <button
             type="button"
             onClick={() => onNavigate('contact')}
-            className="inline-flex items-center px-5 py-2.5 text-sm bg-white text-brand-600 font-semibold rounded-xl hover:shadow-card hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-brand-600"
+            className="inline-flex items-center px-5 py-2.5 text-sm bg-white text-brand-600 font-semibold rounded-xl hover:shadow-card transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-brand-600"
           >
             Get in Touch
             <ExternalLink className="ml-2 w-4 h-4" />

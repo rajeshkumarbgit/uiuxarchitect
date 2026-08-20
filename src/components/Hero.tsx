@@ -51,7 +51,7 @@ export default function Hero({ onNavigate }: HeroProps) {
                   onClick={() => onNavigate(cta.action)}
                   className={`group inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ${isDark ? 'focus:ring-offset-ink-950' : 'focus:ring-offset-ink-50'} ${
                     cta.variant === 'primary'
-                      ? 'bg-gradient-to-r from-brand-500 to-brand-600 text-white shadow-soft hover:shadow-glow hover:-translate-y-0.5 focus:ring-brand-500'
+                      ? 'bg-gradient-to-r from-brand-500 to-brand-600 text-white shadow-soft hover:shadow-glow focus:ring-brand-500'
                       : cta.variant === 'secondary'
                       ? isDark
                         ? 'bg-white/5 text-white border-2 border-white/10 hover:border-white/20 hover:bg-white/10 focus:ring-white/20'

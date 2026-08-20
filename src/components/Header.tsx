@@ -137,7 +137,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
               </button>
               <a
                 href={`mailto:${email}`}
-                className="inline-flex items-center px-3.5 py-2 bg-gradient-to-r from-brand-500 to-brand-600 text-white text-xs font-semibold rounded-xl hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-ink-950"
+                className="inline-flex items-center px-3.5 py-2 bg-gradient-to-r from-brand-500 to-brand-600 text-white text-xs font-semibold rounded-xl hover:shadow-glow transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-ink-950"
               >
                 <Calendar className="w-3.5 h-3.5 mr-1.5" />
                 Book Call
