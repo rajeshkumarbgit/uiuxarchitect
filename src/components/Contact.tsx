@@ -41,7 +41,7 @@ export default function Contact({ onNavigate }: ContactProps) {
             Let's Talk
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-ink-900 dark:text-white mb-3 tracking-tight">{content.title}</h2>
-          <p className="text-base text-ink-500 dark:text-ink-400 max-w-2xl mx-auto leading-relaxed">{content.description}</p>
+          <p className="text-base text-ink-500 dark:text-ink-400 max-w-2xl mx-auto leading-[1.7]">{content.description}</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 mb-10">
@@ -136,7 +136,7 @@ export default function Contact({ onNavigate }: ContactProps) {
                 <div className="w-2.5 h-2.5 bg-success-500 rounded-full animate-pulse" />
                 <h4 className="font-bold text-ink-900 dark:text-white text-sm">{content.availabilityTitle}</h4>
               </div>
-              <p className="text-ink-600 dark:text-ink-300 text-sm leading-relaxed mb-2">
+              <p className="text-ink-600 dark:text-ink-300 text-sm leading-[1.7] mb-2">
                 {content.availabilityMessage}
               </p>
               <span className="text-xs font-medium text-success-700 dark:text-success-400">{content.availabilityStatus}</span>
@@ -234,7 +234,7 @@ export default function Contact({ onNavigate }: ContactProps) {
               <button
                 type="submit"
                 disabled={submitted}
-                className="w-full flex items-center justify-center gap-2.5 px-6 py-3.5 bg-gradient-to-r from-brand-500 to-brand-600 text-white font-semibold rounded-xl hover:shadow-glow transition-all disabled:bg-success-600 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-ink-950"
+                className="w-full flex items-center justify-center gap-2 px-5 py-2.5 text-sm bg-gradient-to-r from-brand-500 to-brand-600 text-white font-semibold rounded-xl hover:shadow-glow transition-all disabled:bg-success-600 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-ink-950"
               >
                 {submitted ? (
                   <>
@@ -257,11 +257,11 @@ export default function Contact({ onNavigate }: ContactProps) {
           <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-accent-500/10 rounded-full blur-3xl" />
           <div className="relative">
             <h3 className="text-xl font-bold mb-3">{content.ctaTitle}</h3>
-            <p className="text-ink-400 mb-6 max-w-xl mx-auto leading-relaxed">{content.ctaDescription}</p>
-            <div className="flex flex-wrap items-center justify-center gap-3">
+            <p className="text-sm text-ink-400 mb-5 max-w-xl mx-auto leading-[1.7]">{content.ctaDescription}</p>
+            <div className="flex flex-wrap items-center justify-center gap-2.5">
               <a
                 href={`mailto:${contactInfo.email}`}
-                className="inline-flex items-center px-6 py-3 bg-white text-ink-900 font-semibold rounded-xl hover:bg-ink-50 transition-all hover:shadow-card focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-ink-950"
+                className="inline-flex items-center px-5 py-2.5 text-sm bg-white text-ink-900 font-semibold rounded-xl hover:bg-ink-50 transition-all hover:shadow-card focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-ink-950"
               >
                 <Calendar className="w-4 h-4 mr-2" />
                 Schedule a Call
@@ -269,7 +269,7 @@ export default function Contact({ onNavigate }: ContactProps) {
               <button
                 type="button"
                 onClick={() => onNavigate('portfolio')}
-                className="inline-flex items-center px-6 py-3 bg-transparent border-2 border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 hover:border-white/40 transition-all focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-ink-950"
+                className="inline-flex items-center px-5 py-2.5 text-sm bg-transparent border-2 border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 hover:border-white/40 transition-all focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-ink-950"
               >
                 View My Work
               </button>

@@ -275,7 +275,7 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
         <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 py-12 sm:py-16">
           {/* Summary */}
           <div className="mb-8 animate-fadeIn">
-            <p className="text-base sm:text-lg text-ink-700 dark:text-ink-300 leading-relaxed font-light">
+            <p className="text-base sm:text-lg text-ink-700 dark:text-ink-300 leading-[1.7] font-light">
               {project.summary}
             </p>
           </div>
@@ -308,7 +308,7 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
                     <div className="w-8 h-8 rounded-full bg-gradient-to-br from-brand-500 to-accent-500 flex items-center justify-center flex-shrink-0 shadow-soft">
                       <span className="text-xs font-bold text-white">{idx + 1}</span>
                     </div>
-                    <p className="text-sm text-ink-700 dark:text-ink-300 leading-relaxed mt-1">{kpi}</p>
+                    <p className="text-sm text-ink-700 dark:text-ink-300 leading-[1.7] mt-1">{kpi}</p>
                   </div>
                 ))}
               </div>
@@ -338,7 +338,7 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-brand-500 to-brand-600 text-white font-semibold rounded-xl hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-ink-950 group"
+                  className="inline-flex items-center px-5 py-2.5 text-sm bg-gradient-to-r from-brand-500 to-brand-600 text-white font-semibold rounded-xl hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-ink-950 group"
                 >
                   <span>View Live Project</span>
                   <ExternalLink className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-0.5" />
@@ -349,7 +349,7 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
                   href={project.codeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 bg-white dark:bg-ink-900 border-2 border-ink-200 dark:border-ink-700 text-ink-900 dark:text-ink-100 font-semibold rounded-xl hover:border-ink-300 dark:hover:border-ink-600 hover:bg-ink-50 dark:hover:bg-ink-800 hover:shadow-soft hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-ink-300 dark:focus:ring-ink-600 focus:ring-offset-2 dark:focus:ring-offset-ink-950 group"
+                  className="inline-flex items-center px-5 py-2.5 text-sm bg-white dark:bg-ink-900 border-2 border-ink-200 dark:border-ink-700 text-ink-900 dark:text-ink-100 font-semibold rounded-xl hover:border-ink-300 dark:hover:border-ink-600 hover:bg-ink-50 dark:hover:bg-ink-800 hover:shadow-soft hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-ink-300 dark:focus:ring-ink-600 focus:ring-offset-2 dark:focus:ring-offset-ink-950 group"
                 >
                   <Github className="mr-2 w-4 h-4" />
                   <span>View on GitHub</span>

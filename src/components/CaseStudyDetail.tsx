@@ -65,7 +65,7 @@ export default function CaseStudyDetail({ caseStudySlug, onNavigate }: CaseStudy
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 animate-slide-up tracking-tight">
             {caseStudy.title}
           </h1>
-          <p className="text-base sm:text-lg text-white/90 mb-8 max-w-3xl mx-auto animate-slide-up leading-relaxed" style={{ animationDelay: '0.1s' }}>
+          <p className="text-base sm:text-lg text-white/90 mb-8 max-w-3xl mx-auto animate-slide-up leading-[1.7]" style={{ animationDelay: '0.1s' }}>
             {caseStudy.hero.tagline}
           </p>
 
@@ -118,7 +118,7 @@ export default function CaseStudyDetail({ caseStudySlug, onNavigate }: CaseStudy
               </div>
             </div>
             <div className="pl-14">
-              <p className="text-base text-ink-700 dark:text-ink-300 leading-relaxed whitespace-pre-line">
+              <p className="text-base text-ink-700 dark:text-ink-300 leading-[1.7] whitespace-pre-line">
                 {caseStudy.sections.problem}
               </p>
             </div>
@@ -173,7 +173,7 @@ export default function CaseStudyDetail({ caseStudySlug, onNavigate }: CaseStudy
               </div>
             </div>
             <div className="pl-14 space-y-5">
-              <p className="text-base text-ink-700 dark:text-ink-300 leading-relaxed">{caseStudy.sections.solution.approach}</p>
+              <p className="text-base text-ink-700 dark:text-ink-300 leading-[1.7]">{caseStudy.sections.solution.approach}</p>
               <div>
                 <h3 className="text-base font-bold text-ink-900 dark:text-white mb-3">Key Features</h3>
                 <div className="grid gap-2.5">
@@ -215,7 +215,7 @@ export default function CaseStudyDetail({ caseStudySlug, onNavigate }: CaseStudy
                 <div className="relative p-7 bg-white dark:bg-ink-900 rounded-2xl border border-ink-100 dark:border-ink-800 shadow-card transition-colors duration-500">
                   <div className="text-5xl text-brand-200 dark:text-brand-900 font-serif absolute top-3 left-5 leading-none">"</div>
                   <blockquote className="relative z-10 pl-8">
-                    <p className="text-base text-ink-700 dark:text-ink-300 italic mb-4 leading-relaxed">
+                    <p className="text-base text-ink-700 dark:text-ink-300 italic mb-4 leading-[1.7]">
                       {caseStudy.sections.results.testimonial.quote}
                     </p>
                     <footer>
@@ -250,7 +250,7 @@ export default function CaseStudyDetail({ caseStudySlug, onNavigate }: CaseStudy
                     <div className="flex-shrink-0 w-7 h-7 rounded-full bg-accent-600 text-white flex items-center justify-center font-bold text-xs">
                       {idx + 1}
                     </div>
-                    <p className="text-sm text-ink-700 dark:text-ink-300 leading-relaxed">{learning}</p>
+                    <p className="text-sm text-ink-700 dark:text-ink-300 leading-[1.7]">{learning}</p>
                   </div>
                 ))}
               </div>
@@ -290,13 +290,13 @@ export default function CaseStudyDetail({ caseStudySlug, onNavigate }: CaseStudy
 
         <div className="mt-10 p-7 sm:p-8 bg-gradient-to-br from-brand-600 to-accent-500 rounded-2xl text-white text-center">
           <h3 className="text-xl font-bold mb-3">Want results like this?</h3>
-          <p className="text-sm text-white/90 mb-6 max-w-xl mx-auto leading-relaxed">
+          <p className="text-sm text-white/90 mb-5 max-w-xl mx-auto leading-[1.7]">
             Let's discuss how I can help transform your product with strategic design and technical expertise.
           </p>
           <button
             type="button"
             onClick={() => onNavigate('contact')}
-            className="inline-flex items-center px-7 py-3.5 bg-white text-brand-600 font-semibold rounded-xl hover:shadow-card hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-brand-600"
+            className="inline-flex items-center px-5 py-2.5 text-sm bg-white text-brand-600 font-semibold rounded-xl hover:shadow-card hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-brand-600"
           >
             Get in Touch
             <ExternalLink className="ml-2 w-4 h-4" />

@@ -33,7 +33,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               </span>
               <h3 className="text-base font-bold">Rajesh Kumar</h3>
             </div>
-            <p className="text-ink-400 text-sm leading-relaxed max-w-xs">
+            <p className="text-ink-400 text-sm leading-[1.7] max-w-xs">
               UI/UX Architect & Senior Product Designer with 18+ years of experience creating impactful digital experiences.
             </p>
           </div>

@@ -26,7 +26,7 @@ export default function About() {
             About
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 dark:text-white mb-6 tracking-tight">{content.title}</h1>
-          <div className="space-y-4 text-base text-ink-600 dark:text-ink-300 leading-relaxed">
+          <div className="space-y-4 text-base text-ink-600 dark:text-ink-300 leading-[1.7]">
             {content.introduction.map((paragraph, idx) => (
               <p key={idx} className="leading-[1.7]">{paragraph}</p>
             ))}
@@ -47,7 +47,7 @@ export default function About() {
                     <Icon className="w-4.5 h-4.5 text-white" />
                   </div>
                   <h3 className="text-base font-bold text-ink-900 dark:text-white mb-2">{principle.title}</h3>
-                  <p className="text-ink-600 dark:text-ink-400 text-sm leading-relaxed">{principle.description}</p>
+                  <p className="text-ink-600 dark:text-ink-400 text-sm leading-[1.7]">{principle.description}</p>
                 </div>
               );
             })}
@@ -109,13 +109,13 @@ export default function About() {
                       <Briefcase className="w-3.5 h-3.5" />
                       {entry.company}
                     </div>
-                    <p className="text-sm text-ink-600 dark:text-ink-300 leading-relaxed mb-3">{entry.description}</p>
+                    <p className="text-sm text-ink-600 dark:text-ink-300 leading-[1.7] mb-3">{entry.description}</p>
                     {entry.achievements && entry.achievements.length > 0 && (
                       <ul className="grid sm:grid-cols-2 gap-2 mt-4">
                         {entry.achievements.map((achievement, achIdx) => (
                           <li key={achIdx} className="flex items-start gap-2.5 text-ink-600 dark:text-ink-300">
                             <span className="text-brand-600 dark:text-brand-400 font-bold mt-0.5 text-sm">•</span>
-                            <span className="text-sm leading-relaxed">{achievement}</span>
+                            <span className="text-sm leading-[1.7]">{achievement}</span>
                           </li>
                         ))}
                       </ul>

@@ -20,7 +20,7 @@ export default function CaseStudies({ onNavigate }: CaseStudiesProps) {
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 dark:text-white mb-4 tracking-tight">
             Case Studies
           </h1>
-          <p className="text-base text-ink-500 dark:text-ink-400 leading-relaxed">
+          <p className="text-base text-ink-500 dark:text-ink-400 leading-[1.7]">
             Deep dives into complex product challenges and the strategic solutions that delivered measurable impact
           </p>
         </div>
@@ -72,7 +72,7 @@ export default function CaseStudies({ onNavigate }: CaseStudiesProps) {
                         <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-ink-900 dark:text-white tracking-tight group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors leading-tight">
                           {caseStudy.title}
                         </h2>
-                        <p className="text-sm sm:text-base text-ink-500 dark:text-ink-400 leading-relaxed max-w-xl">
+                        <p className="text-sm sm:text-base text-ink-500 dark:text-ink-400 leading-[1.7] max-w-xl">
                           {caseStudy.hero.tagline}
                         </p>
                       </div>

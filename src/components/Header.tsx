@@ -126,7 +126,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
               <button
                 type="button"
                 onClick={() => handleNavClick('contact')}
-                className={`inline-flex items-center px-3.5 py-2.5 text-sm font-medium transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 rounded-lg ${
+                className={`inline-flex items-center px-3 py-2 text-xs font-medium transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 rounded-lg ${
                   showSolidHeader
                     ? 'text-ink-600 dark:text-ink-300 hover:text-ink-900 dark:hover:text-white hover:bg-ink-50 dark:hover:bg-ink-900'
                     : isDark ? 'text-ink-400 hover:text-white hover:bg-white/5' : 'text-ink-700 hover:text-ink-950 hover:bg-ink-900/5'
@@ -137,9 +137,9 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
               </button>
               <a
                 href={`mailto:${email}`}
-                className="inline-flex items-center px-4 py-2.5 bg-gradient-to-r from-brand-500 to-brand-600 text-white text-sm font-semibold rounded-xl hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-ink-950"
+                className="inline-flex items-center px-3.5 py-2 bg-gradient-to-r from-brand-500 to-brand-600 text-white text-xs font-semibold rounded-xl hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-ink-950"
               >
-                <Calendar className="w-4 h-4 mr-1.5" />
+                <Calendar className="w-3.5 h-3.5 mr-1.5" />
                 Book Call
               </a>
             </div>
@@ -215,9 +215,9 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                 </button>
                 <a
                   href={`mailto:${email}`}
-                  className="inline-flex items-center px-4 py-3 bg-gradient-to-r from-brand-500 to-brand-600 text-white text-sm font-semibold rounded-xl"
+                  className="inline-flex items-center px-4 py-2.5 bg-gradient-to-r from-brand-500 to-brand-600 text-white text-sm font-semibold rounded-xl"
                 >
-                  <Calendar className="w-4 h-4 mr-2" />
+                  <Calendar className="w-3.5 h-3.5 mr-2" />
                   Book Call
                 </a>
               </div>

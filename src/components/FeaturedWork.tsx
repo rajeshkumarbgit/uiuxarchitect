@@ -35,7 +35,7 @@ export default function FeaturedWork({ onNavigate }: FeaturedWorkProps) {
               Featured Work
             </h2>
           </div>
-          <p className="text-sm sm:text-base text-ink-500 dark:text-ink-400 max-w-md leading-relaxed">
+          <p className="text-sm sm:text-base text-ink-500 dark:text-ink-400 max-w-md leading-[1.7]">
             A selection of recent projects showcasing design systems, mobile experiences, and enterprise platforms
           </p>
         </div>

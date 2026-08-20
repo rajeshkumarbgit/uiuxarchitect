@@ -62,7 +62,7 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink-900 dark:text-white mb-3 tracking-tight">
             {content.title}
           </h1>
-          <p className="text-base text-ink-500 dark:text-ink-400 max-w-2xl mx-auto leading-relaxed">{content.description}</p>
+          <p className="text-base text-ink-500 dark:text-ink-400 max-w-2xl mx-auto leading-[1.7]">{content.description}</p>
         </div>
 
         <div className="mb-8">
@@ -189,7 +189,7 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
                     <h3 className="text-lg font-bold text-ink-900 dark:text-white tracking-tight line-clamp-2">
                       {project.title}
                     </h3>
-                    <p className="text-sm text-ink-500 dark:text-ink-400 leading-relaxed line-clamp-2">{project.summary}</p>
+                    <p className="text-sm text-ink-500 dark:text-ink-400 leading-[1.7] line-clamp-2">{project.summary}</p>
                   </div>
 
                   <div className="flex items-center gap-2 text-xs text-ink-400 dark:text-ink-500 pt-3 border-t border-ink-100 dark:border-ink-800">

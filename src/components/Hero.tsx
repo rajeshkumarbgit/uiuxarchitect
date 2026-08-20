@@ -30,24 +30,24 @@ export default function Hero({ onNavigate }: HeroProps) {
               <span>{content.subtext.split('—')[0].trim()}</span>
             </div>
 
-            <h1 className={`text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.08] tracking-tight animate-slide-up ${isDark ? 'text-white' : 'text-ink-900'}`} style={{ animationDelay: '0.08s' }}>
+            <h1 className={`text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.12] tracking-tight animate-slide-up ${isDark ? 'text-white' : 'text-ink-900'}`} style={{ animationDelay: '0.08s' }}>
               <span className="block mb-2">Designing Systems.</span>
               <span className="block gradient-text">
                 Shipping Experiences.
               </span>
             </h1>
 
-            <p className={`text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed animate-slide-up ${isDark ? 'text-ink-400' : 'text-ink-500'}`} style={{ animationDelay: '0.16s' }}>
+            <p className={`text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-[1.7] animate-slide-up ${isDark ? 'text-ink-400' : 'text-ink-500'}`} style={{ animationDelay: '0.16s' }}>
               {content.description}
             </p>
 
-            <div className="flex flex-wrap items-center gap-3 pt-2 animate-slide-up" style={{ animationDelay: '0.24s' }}>
+            <div className="flex flex-wrap items-center gap-2.5 pt-2 animate-slide-up" style={{ animationDelay: '0.24s' }}>
               {content.ctas.map((cta, idx) => (
                 <button
                   key={idx}
                   type="button"
                   onClick={() => onNavigate(cta.action)}
-                  className={`group inline-flex items-center px-7 py-3.5 font-semibold rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ${isDark ? 'focus:ring-offset-ink-950' : 'focus:ring-offset-ink-50'} ${
+                  className={`group inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ${isDark ? 'focus:ring-offset-ink-950' : 'focus:ring-offset-ink-50'} ${
                     cta.variant === 'primary'
                       ? 'bg-gradient-to-r from-brand-500 to-brand-600 text-white shadow-soft hover:shadow-glow hover:-translate-y-0.5 focus:ring-brand-500'
                       : cta.variant === 'secondary'

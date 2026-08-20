@@ -58,21 +58,21 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center px-7 py-3.5 bg-brand-500 text-white font-semibold rounded-xl
+    @apply inline-flex items-center justify-center px-5 py-2.5 text-sm bg-brand-500 text-white font-semibold rounded-xl
            shadow-soft hover:bg-brand-600 hover:shadow-glow hover:-translate-y-0.5
            transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2
            dark:focus:ring-offset-ink-950;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-7 py-3.5 bg-white dark:bg-ink-900 text-ink-900 dark:text-ink-100 font-semibold rounded-xl
+    @apply inline-flex items-center justify-center px-5 py-2.5 text-sm bg-white dark:bg-ink-900 text-ink-900 dark:text-ink-100 font-semibold rounded-xl
            border-2 border-ink-200 dark:border-ink-700 hover:border-ink-300 dark:hover:border-ink-600 hover:bg-ink-50 dark:hover:bg-ink-800
            transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-ink-300 dark:focus:ring-ink-600 focus:ring-offset-2
            dark:focus:ring-offset-ink-950;
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center px-5 py-2.5 text-ink-600 dark:text-ink-400 font-medium rounded-lg
+    @apply inline-flex items-center justify-center px-4 py-2 text-sm text-ink-600 dark:text-ink-400 font-medium rounded-lg
            hover:text-ink-900 dark:hover:text-white hover:bg-ink-50 dark:hover:bg-ink-900
            transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-ink-200 dark:focus:ring-ink-700 focus:ring-offset-2
            dark:focus:ring-offset-ink-950;
@@ -96,7 +96,7 @@
   }
 
   .input-field {
-    @apply w-full px-4 py-3 bg-white dark:bg-ink-900 border border-ink-200 dark:border-ink-700 rounded-xl
+    @apply w-full px-3.5 py-2.5 text-sm bg-white dark:bg-ink-900 border border-ink-200 dark:border-ink-700 rounded-xl
            text-ink-900 dark:text-ink-100 placeholder-ink-400 dark:placeholder-ink-500
            focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10
            transition-all duration-200;
