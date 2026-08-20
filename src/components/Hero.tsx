@@ -1,5 +1,6 @@
 import { ArrowRight, Sparkles, ArrowDown } from 'lucide-react';
 import { useHeroContent } from '../hooks/useContent';
+import { useImageUrl } from '../hooks/useImages';
 import { useTheme } from '../context/ThemeContext';
 
 interface HeroProps {
@@ -8,6 +9,7 @@ interface HeroProps {
 
 export default function Hero({ onNavigate }: HeroProps) {
   const content = useHeroContent();
+  const heroPortraitUrl = useImageUrl('hero-portrait');
   const { theme } = useTheme();
   const isDark = theme === 'dark';
 
@@ -85,7 +87,7 @@ export default function Hero({ onNavigate }: HeroProps) {
           <div className="lg:col-span-5 animate-slide-up" style={{ animationDelay: '0.2s' }}>
             <div className="relative aspect-[4/5] max-w-md mx-auto lg:max-w-none rounded-3xl overflow-hidden shadow-elevated">
               <img
-                src="https://images.pexels.com/photos/6614755/pexels-photo-6614755.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                src={heroPortraitUrl}
                 alt="Rajesh Kumar — UI/UX Architect & Senior Product Designer at work"
                 className="w-full h-full object-cover"
                 loading="eager"

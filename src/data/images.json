@@ -767,6 +767,14 @@
       "attribution": { "author": "George Morina", "source": "pexels", "url": "https://www.pexels.com/photo/4960438/" },
       "category": "gallery",
       "tags": ["crypto", "finance", "trading"]
+    },
+    {
+      "id": "hero-portrait",
+      "url": "https://images.pexels.com/photos/6614755/pexels-photo-6614755.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Rajesh Kumar — UI/UX Architect & Senior Product Designer at work",
+      "attribution": { "author": "cottonbro studio", "source": "pexels", "url": "https://www.pexels.com/photo/6614755/" },
+      "category": "hero",
+      "tags": ["portrait", "designer", "workspace"]
     }
   ]
 }
