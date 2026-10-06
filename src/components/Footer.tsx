@@ -1,11 +1,11 @@
-import { Mail, Phone, MapPin, Linkedin, Github, Twitter, Briefcase } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Github, Twitter, Briefcase, type LucideIcon } from 'lucide-react';
 import { useNavigation, useSocialLinks, useContactInfo } from '../hooks/useConfig';
 
 interface FooterProps {
   onNavigate: (page: string, slug?: string) => void;
 }
 
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, LucideIcon> = {
   Linkedin,
   Github,
   Twitter,

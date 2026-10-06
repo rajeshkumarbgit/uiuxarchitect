@@ -1,6 +1,6 @@
 import { ArrowLeft, ChevronLeft, ChevronRight, Target, Lightbulb, Palette, TrendingUp, BookOpen, ExternalLink } from 'lucide-react';
 import { useAllCaseStudies } from '../hooks/useProjects';
-import { useImageUrl } from '../hooks/useImages';
+import { imageService } from '../services/imageService';
 
 interface CaseStudyDetailProps {
   caseStudySlug: string;
@@ -11,6 +11,8 @@ export default function CaseStudyDetail({ caseStudySlug, onNavigate }: CaseStudy
   const allCaseStudies = useAllCaseStudies();
   const currentIndex = allCaseStudies.findIndex(cs => cs.slug === caseStudySlug);
   const caseStudy = allCaseStudies[currentIndex];
+
+  const heroImageUrl = imageService.getImageUrl(caseStudy?.hero?.image ?? '');
 
   if (!caseStudy) {
     return (
@@ -27,8 +29,6 @@ export default function CaseStudyDetail({ caseStudySlug, onNavigate }: CaseStudy
       </div>
     );
   }
-
-  const heroImageUrl = useImageUrl(caseStudy.hero.image);
 
   const handlePrevCaseStudy = () => {
     const prevIndex = currentIndex === 0 ? allCaseStudies.length - 1 : currentIndex - 1;

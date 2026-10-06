@@ -1,6 +1,6 @@
 import { Sparkles, ArrowRight } from 'lucide-react';
 import { useAllCaseStudies } from '../hooks/useProjects';
-import { useImageUrl } from '../hooks/useImages';
+import { imageService } from '../services/imageService';
 
 interface CaseStudiesProps {
   onNavigate: (page: string, slug?: string) => void;
@@ -32,7 +32,7 @@ export default function CaseStudies({ onNavigate }: CaseStudiesProps) {
         ) : (
           <div className="space-y-16 sm:space-y-20">
             {caseStudies.map((caseStudy, index) => {
-              const heroImageUrl = useImageUrl(caseStudy.hero.image);
+              const heroImageUrl = imageService.getImageUrl(caseStudy.hero.image);
               const isReversed = index % 2 === 1;
 
               return (

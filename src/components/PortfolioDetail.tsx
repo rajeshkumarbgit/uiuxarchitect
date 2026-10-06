@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { X, ChevronLeft, ChevronRight, ExternalLink, Github, Award, ArrowLeft, Calendar, Clock, Monitor, User } from 'lucide-react';
 import { useAllProjects } from '../hooks/useProjects';
-import { useImageUrl } from '../hooks/useImages';
+import { imageService } from '../services/imageService';
 
 interface PortfolioDetailProps {
   projectSlug: string;
@@ -91,6 +91,9 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
     }
   };
 
+  const images = project ? (project.gallery && project.gallery.length > 0 ? project.gallery : [project.cover]) : [projectSlug];
+  const currentImage = imageService.getImageUrl(images[currentImageIndex] ?? images[0]);
+
   if (!project) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-white dark:bg-ink-950">
@@ -107,9 +110,6 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
       </div>
     );
   }
-
-  const images = project.gallery && project.gallery.length > 0 ? project.gallery : [project.cover];
-  const currentImage = useImageUrl(images[currentImageIndex]);
 
   const handlePrevProject = () => {
     const prevIndex = currentIndex === 0 ? allProjects.length - 1 : currentIndex - 1;
@@ -249,7 +249,7 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
         {images.length > 1 && (
           <div className="mt-4 flex items-center gap-2 overflow-x-auto pb-2 scrollbar-hide">
             {images.map((imgId, index) => {
-              const thumbUrl = useImageUrl(imgId);
+              const thumbUrl = imageService.getImageUrl(imgId);
               return (
                 <button
                   key={index}
@@ -367,7 +367,7 @@ export default function PortfolioDetail({ projectSlug, onNavigate }: PortfolioDe
             <h3 className="text-lg font-bold text-ink-900 dark:text-white mb-5 tracking-tight">Related Projects</h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {relatedProjects.map((rp) => {
-                const rpCover = useImageUrl(rp.cover);
+                const rpCover = imageService.getImageUrl(rp.cover);
                 return (
                   <button
                     key={rp.id}
