@@ -2,7 +2,7 @@ import { useState, useMemo, useCallback } from 'react';
 import { Award, Search, Sparkles, Github, ExternalLink, ArrowRight } from 'lucide-react';
 import { useAllProjects } from '../hooks/useProjects';
 import { usePortfolioContent } from '../hooks/useContent';
-import { useImageUrl } from '../hooks/useImages';
+import { imageService } from '../services/imageService';
 import { projectService } from '../services/projectService';
 
 interface PortfolioProps {
@@ -117,7 +117,7 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => {
-            const coverUrl = useImageUrl(project.cover);
+            const coverUrl = imageService.getImageUrl(project.cover);
 
             return (
               <article

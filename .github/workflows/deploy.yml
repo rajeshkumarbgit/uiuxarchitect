@@ -1,0 +1,49 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [main, dev, master]
+  pull_request:
+    branches: [main, dev, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to cPanel over FTPS
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master' && vars.CPANEL_FTP_SERVER != '' && vars.CPANEL_FTP_SERVER_DIR != ''
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ vars.CPANEL_FTP_SERVER }}
+          username: ${{ secrets.CPANEL_FTP_USERNAME }}
+          password: ${{ secrets.CPANEL_FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          local-dir: dist/
+          server-dir: ${{ vars.CPANEL_FTP_SERVER_DIR }}
+          dangerous-clean-slate: false

@@ -41,7 +41,7 @@ export function useFilteredProjects(initialFilters?: ProjectFilters) {
     return projectService.filterProjects(filters);
   }, [filters]);
 
-  const updateFilter = useCallback((key: keyof ProjectFilters, value: any) => {
+  const updateFilter = useCallback((key: keyof ProjectFilters, value: ProjectFilters[keyof ProjectFilters]) => {
     setFilters(prev => ({ ...prev, [key]: value }));
   }, []);
 

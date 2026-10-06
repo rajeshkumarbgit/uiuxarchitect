@@ -1,6 +1,6 @@
 import Carousel from './Carousel';
-import { useImageUrl } from '../hooks/useImages';
 import { useFeaturedProjects } from '../hooks/useProjects';
+import { imageService } from '../services/imageService';
 import { ArrowRight, Sparkles } from 'lucide-react';
 
 interface FeaturedWorkProps {
@@ -11,7 +11,7 @@ export default function FeaturedWork({ onNavigate }: FeaturedWorkProps) {
   const featuredProjects = useFeaturedProjects();
 
   const carouselItems = featuredProjects.slice(0, 4).map((project) => ({
-    image: useImageUrl(project.cover),
+    image: imageService.getImageUrl(project.cover),
     title: project.title,
     description: project.summary,
     alt: project.title,

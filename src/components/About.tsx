@@ -1,8 +1,8 @@
-import { Code, Palette, Users, Zap, Target, BookOpen, Briefcase } from 'lucide-react';
+import { Code, Palette, Users, Zap, Target, BookOpen, Briefcase, type LucideIcon } from 'lucide-react';
 import { useAboutContent } from '../hooks/useContent';
 import { useSkillCategories, useTimeline } from '../hooks/useSkills';
 
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, LucideIcon> = {
   Users,
   Zap,
   Target,
