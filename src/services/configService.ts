@@ -56,7 +56,7 @@ class ConfigService {
    * @returns Array of social links
    */
   getSocialLinks(): SocialLink[] {
-    return this.config.social;
+    return this.config.social.filter((link) => link.visible !== false);
   }
 
   /**

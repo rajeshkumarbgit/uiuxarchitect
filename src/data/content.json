@@ -1,8 +1,8 @@
 {
   "hero": {
     "tagline": "Designing Systems. Shipping Experiences.",
-    "subtext": "UI/UX Architect & Senior Product Designer — 18+ years — Frontend across Angular/React, Design Systems, Data-dense UIs, AI-assisted tools",
-    "description": "I'm Rajesh Kumar — a UI/UX Architect and Senior Product Designer with 18+ years bridging design strategy and production-grade frontend. From enterprise platforms serving millions to AI-assisted creative tools, I turn complex problems into experiences people love.",
+    "subtext": "Product Design Lead · UI/UX & Frontend Architect — 20+ years — Design systems, data-dense enterprise UIs, Angular/React, human-in-the-loop AI",
+    "description": "I'm Rajesh Kumar — a product design lead and UI/UX architect with 20+ years in enterprise and telecom software, 13+ of them at Nokia. I take complex operations workflows from research and prototypes to production Angular/React code, working with stakeholders across four countries.",
     "ctas": [
       {
         "label": "View Portfolio",
@@ -23,49 +23,55 @@
     "stats": [
       {
         "label": "Years Experience",
-        "value": "18+"
+        "value": "20+"
       },
       {
-        "label": "Projects Delivered",
-        "value": "150+"
+        "label": "Years at Nokia",
+        "value": "13+"
       },
       {
-        "label": "User Impact",
-        "value": "50M+"
+        "label": "Apps on One Design System",
+        "value": "5"
       },
       {
-        "label": "Client Satisfaction",
-        "value": "98%"
+        "label": "Users Served (Intranet)",
+        "value": "2,500+"
       }
     ],
     "capabilities": [
       {
         "icon": "Palette",
         "title": "UX/UI Design",
-        "description": "Research, IA, Wireframes, Prototypes, Design Systems"
+        "description": "Research, IA, user flows, prototypes, design systems & tokens, WCAG accessibility"
       },
       {
         "icon": "Code",
-        "title": "Frontend Development",
-        "description": "Angular, TypeScript, RxJS, NgRx, React, Performance"
+        "title": "Frontend Architecture",
+        "description": "Angular, React, TypeScript, RxJS, NgRx, Tailwind — design to production code"
       },
       {
         "icon": "Briefcase",
-        "title": "Product Strategy",
-        "description": "Discovery, Roadmapping, Stakeholder Alignment"
+        "title": "Product & Team Leadership",
+        "description": "Cross-region stakeholder alignment, mentoring, AI-assisted development"
       }
     ],
     "trustBar": {
-      "title": "Trusted by leading organizations",
-      "clients": ["Nokia", "Randstad", "Giant Media", "eMahatva"]
+      "title": "Where I've worked",
+      "clients": [
+        "Nokia",
+        "Randstad",
+        "Giant Media",
+        "eMahatva"
+      ]
     }
   },
   "about": {
     "title": "About Me",
     "introduction": [
-      "I'm Rajesh Kumar, a UI/UX Architect and Senior Product Designer with over 18 years of experience crafting digital experiences that users love and businesses value. I bridge the gap between design strategy and production-grade code, ensuring products are not just beautiful, but performant, accessible, and engineered to scale.",
-      "My unique dual expertise in design and frontend development allows me to think holistically about problems. I understand the constraints and possibilities of implementation, which informs smarter, more feasible design decisions. At Nokia, I've led UX architecture for complex telecom and enterprise applications serving 2,500+ users across global delivery centres, and built automation tools that reduced manual effort by up to 90%.",
-      "I specialize in complex, data-dense interfaces where clarity and usability are critical. Whether it's building design systems that unify product teams, architecting information hierarchies for enterprise platforms, or designing AI-assisted tools with human oversight, I bring systematic thinking and craft to every project."
+      "I'm Rajesh Kumar, a product design lead and UI/UX architect with over 20 years in enterprise and telecom software. For 13+ years at Nokia I have shaped how complex network operations tools look and work — and I bridge design strategy and production-grade code, so what gets designed is also performant, accessible and built to scale.",
+      "Today, as Frontend Architect, I set the UX and front-end direction for a multi-application network automation platform and its related field-operations and low-code integration products. I own the design system — design tokens, reusable components and UI standards — that brings five operations applications onto one consistent interface with light and dark themes, and I mentor designers and developers, including introducing AI coding assistants to the team.",
+      "I specialise in data-dense interfaces where clarity matters: dashboards and cockpit screens that show operators only what needs action, and human-in-the-loop AI patterns where automated, in-review and approved actions are always visible and a person can always override. Earlier, I took Nokia's intranet portal and in-house tools from concept to delivery for 2,500+ users, cutting effort booking and cost recharge work by 90%.",
+      "My path started in print and web — graphic design, web templates and brand campaigns — which still shapes how I think about visual craft, alongside formal training in usability (Certified Usability Analyst) and current certifications in UX design and AI development."
     ],
     "principlesTitle": "Design Principles",
     "principles": [
@@ -96,11 +102,61 @@
       }
     ],
     "skillsTitle": "Skills & Expertise",
-    "timelineTitle": "Career Timeline"
+    "timelineTitle": "Career Timeline",
+    "globalCollaboration": {
+      "title": "Global Collaboration",
+      "description": "Most of my work is shaped with people in other time zones. I partner with product, architecture and engineering stakeholders across four countries to turn operations use cases into shipped UI — keeping everyone looking at the same sketch, prototype and screen as the work moves forward.",
+      "regions": [
+        "Australia",
+        "Finland",
+        "USA",
+        "France"
+      ],
+      "steps": [
+        {
+          "title": "Understand the use case",
+          "description": "Workshops with product owners and domain experts to map the real operations workflow and who acts at each step."
+        },
+        {
+          "title": "Sketch & prototype",
+          "description": "Quick sketches, then clickable prototypes that remote stakeholders can try and comment on asynchronously across time zones."
+        },
+        {
+          "title": "Align & decide",
+          "description": "Reviews with product, architecture and engineering so design, feasibility and priorities are agreed before build."
+        },
+        {
+          "title": "Ship & support",
+          "description": "Production Angular/React code on the shared design system, carried through testing and customer acceptance (UAT)."
+        }
+      ]
+    },
+    "credentials": {
+      "educationTitle": "Education",
+      "education": [
+        "M.A. Communication — Hindustan College, Coimbatore (2005)",
+        "B.Sc. Computer Science — V.L.B. Janakiammal College (2003)"
+      ],
+      "certificationsTitle": "Certifications",
+      "certifications": [
+        "Certified Usability Analyst (CUA) — Human Factors International",
+        "Google UX Design Professional Certificate — Dec 2025",
+        "Generative AI for Mobile App Developers Specialization — IBM / SkillUp, Nov 2025",
+        "Microsoft UX Design Professional Certificate — Dec 2024",
+        "IBM AI Developer Professional Certificate — Dec 2024",
+        "Programming for Designers Specialization — University of Michigan, Dec 2024"
+      ],
+      "awardsTitle": "Awards & Recognition",
+      "awards": [
+        "CTO Business Excellence Award — Nokia automation project",
+        "Appreciate Excellence Award (×2) — Time Recording and Performance Management applications",
+        "Nokia Quality Award 2013 nominee (India) — Survey application"
+      ]
+    }
   },
   "portfolio": {
     "title": "Portfolio",
-    "description": "A selection of projects spanning enterprise applications, consumer products, design systems, and brand campaigns.",
+    "description": "Client work from 13+ years of enterprise and telecom design, plus concept prototypes, UX flows and websites. Each project includes an 'In simple terms' note.",
     "filterLabel": "Filter by:",
     "categoryLabel": "Category",
     "technologyLabel": "Technology",
@@ -116,23 +172,49 @@
     "featuredBadge": "Featured"
   },
   "contact": {
-    "title": "Let's Work Together",
-    "description": "Available for freelance projects, consulting, and full-time opportunities. Let's discuss how I can help bring your vision to life.",
-    "formTitle": "Send a Message",
-    "formDescription": "I typically respond within 24 hours on business days.",
+    "title": "Let's work together",
+    "description": "Hiring for a UX or frontend leadership role, planning a design system, or need a second pair of eyes on a complex enterprise UI? Send a note — it comes straight to my inbox.",
+    "formTitle": "Send a message",
+    "formDescription": "A few lines is plenty — the role, the product or the problem you're solving.",
     "quickActionsTitle": "Quick Actions",
     "socialTitle": "Connect on Social",
     "availabilityTitle": "Current Availability",
-    "availabilityStatus": "Available for work",
-    "availabilityMessage": "Open to new opportunities starting Q1 2025. Currently accepting freelance projects with flexible timelines.",
+    "availabilityStatus": "Open to conversations",
+    "availabilityMessage": "Currently Frontend Architect at Nokia. Happy to talk about design-system, UX architecture and frontend leadership opportunities.",
     "ctaTitle": "Ready to Transform Your Product?",
-    "ctaDescription": "Whether you're a startup looking to build your MVP or an enterprise modernizing your platform, I bring the strategic thinking and technical expertise to make it happen.",
+    "ctaDescription": "Whether you're modernising a complex enterprise platform or building a design system across teams and regions, I bring both the design thinking and the frontend engineering to make it happen.",
     "bookCallLabel": "Book a 20-Minute Call",
     "downloadResumeLabel": "Download Resume",
     "viewPortfolioLabel": "View Full Portfolio",
     "bookCallSubtext": "Free consultation",
     "resumeSubtext": "PDF, 245KB",
-    "portfolioSubtext": "20 projects"
+    "portfolioSubtext": "13 projects",
+    "topicsLabel": "What is this about?",
+    "topics": [
+      "Full-time role",
+      "Consulting",
+      "Design system",
+      "Frontend architecture",
+      "Something else"
+    ],
+    "nextStepsTitle": "What happens next",
+    "nextSteps": [
+      {
+        "title": "I read every message myself",
+        "description": "Your note comes straight to my inbox — no bots, no sales team."
+      },
+      {
+        "title": "A personal reply",
+        "description": "With questions, or a few times for a short call (IST, UTC+5:30)."
+      },
+      {
+        "title": "A focused first conversation",
+        "description": "30 minutes on your product, team and what success looks like."
+      }
+    ],
+    "successTitle": "Message sent",
+    "successMessage": "Thanks for reaching out — your message is in my inbox. I'll reply personally to {email}.",
+    "errorFallback": "You can also email me directly at"
   },
   "labels": {
     "common": {
@@ -182,29 +264,62 @@
   },
   "metadata": {
     "home": {
-      "title": "Rajesh Kumar - UI/UX Product Designer & UI Developer",
-      "description": "UI/UX Architect and Senior Product Designer with 18+ years of experience. Specializing in enterprise applications, design systems, and frontend development with Angular, TypeScript, and React.",
-      "keywords": ["UX Designer", "UI Developer", "Product Designer", "Frontend Developer", "Design Systems", "React", "Angular", "Portfolio"]
+      "title": "Rajesh Kumar — Product Design Lead | UI/UX & Frontend Architect",
+      "description": "Product design lead and UI/UX architect with 20+ years in enterprise and telecom software. Design systems, data-dense operations UIs, Angular/React, and human-in-the-loop AI interfaces.",
+      "keywords": [
+        "UX Designer",
+        "UI Developer",
+        "Product Designer",
+        "Frontend Developer",
+        "Design Systems",
+        "React",
+        "Angular",
+        "Portfolio"
+      ]
     },
     "about": {
       "title": "About | Rajesh Kumar",
-      "description": "Learn about my 18+ year journey in UI/UX design and frontend development. From early web design at eMahatva to leading UX architecture at Nokia.",
-      "keywords": ["About", "Experience", "Skills", "Career", "Designer Bio"]
+      "description": "20+ years in UI/UX design and frontend development — from web design and branding to leading UX and front-end architecture at Nokia.",
+      "keywords": [
+        "About",
+        "Experience",
+        "Skills",
+        "Career",
+        "Designer Bio"
+      ]
     },
     "portfolio": {
       "title": "Portfolio | Rajesh Kumar",
-      "description": "Explore 12+ projects across enterprise apps, consumer products, design systems, and campaigns. Each with measurable outcomes and real impact.",
-      "keywords": ["Portfolio", "Projects", "Case Studies", "Design Work", "Development Work"]
+      "description": "Six real projects across design systems, operations dashboards, low-code and AI-assisted tools, and enterprise intranet platforms.",
+      "keywords": [
+        "Portfolio",
+        "Projects",
+        "Case Studies",
+        "Design Work",
+        "Development Work"
+      ]
     },
     "caseStudy": {
       "title": "Case Study | Rajesh Kumar",
-      "description": "Deep dive into the SATH incident management platform redesign. See the full design process from research to measurable results.",
-      "keywords": ["Case Study", "STAR Methodology", "UX Process", "Design Thinking", "Results"]
+      "description": "Case studies from Nokia network operations work: design system standardisation, field-operations mobility, low-code integration and more — each explained in plain language.",
+      "keywords": [
+        "Case Study",
+        "STAR Methodology",
+        "UX Process",
+        "Design Thinking",
+        "Results"
+      ]
     },
     "contact": {
       "title": "Contact | Rajesh Kumar",
       "description": "Get in touch to discuss your project. Available for freelance, consulting, and full-time opportunities.",
-      "keywords": ["Contact", "Hire Designer", "Freelance", "Consulting", "Get in Touch"]
+      "keywords": [
+        "Contact",
+        "Hire Designer",
+        "Freelance",
+        "Consulting",
+        "Get in Touch"
+      ]
     }
   }
 }

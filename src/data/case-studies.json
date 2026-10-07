@@ -1,578 +1,577 @@
 {
   "caseStudies": [
     {
-      "slug": "sath-notification-system",
-      "title": "Enterprise Incident Management Platform",
+      "slug": "network-automation-ui-standardisation",
+      "title": "Network Automation Platform — UI Standardisation",
       "hero": {
-        "image": "case-study-hero",
-        "tagline": "Transforming enterprise incident response through intelligent automation and intuitive design",
+        "image": "ds-cover",
+        "tagline": "One design system, five operations applications, light and dark themes — so operators learn the interface once.",
         "metrics": [
-          { "label": "Resolution Time", "value": "↓35%" },
-          { "label": "User Satisfaction", "value": "92%" },
-          { "label": "Rule Accuracy", "value": "↑14%" },
-          { "label": "Daily Alerts Processed", "value": "10M+" }
+          {
+            "label": "Applications unified",
+            "value": "5"
+          },
+          {
+            "label": "Themes",
+            "value": "Light + Dark"
+          },
+          {
+            "label": "Countries of stakeholders",
+            "value": "4"
+          },
+          {
+            "label": "Status",
+            "value": "Live"
+          }
         ]
       },
       "metadata": {
-        "role": ["Lead UX Designer", "Senior Frontend Developer"],
-        "timeline": "January 2024 - August 2024 (8 months)",
-        "team": "2 Designers, 6 Engineers, 1 Product Manager",
-        "platform": ["Web Application", "Mobile Responsive"],
-        "tools": ["Figma", "Angular", "NgRx", "RxJS", "TypeScript", "Jest", "Cypress"],
-        "industry": "Enterprise SaaS"
+        "role": [
+          "Frontend Architect",
+          "Design System Owner"
+        ],
+        "timeline": "2024 – Present",
+        "team": "Product, architecture and engineering stakeholders across Australia, Finland, USA and France",
+        "platform": [
+          "Web Application"
+        ],
+        "tools": [
+          "Figma",
+          "Angular",
+          "TypeScript",
+          "RxJS",
+          "NgRx",
+          "Design Tokens"
+        ],
+        "industry": "Telecom Network Operations"
       },
       "sections": {
-        "problem": "The existing SATH notification system was struggling to handle the exponential growth in incident alerts. Users spent 40+ minutes configuring complex notification rules, and the rigid interface led to frequent misconfigurations causing alert fatigue. The technical debt from a 5-year-old codebase made it impossible to scale features without breaking existing functionality.\n\nKey pain points included: overwhelming cognitive load from poorly structured rule builder, lack of real-time validation causing configuration errors discovered only after deployment, no visibility into rule effectiveness or alert patterns, and 47% of support tickets related to notification misconfiguration.",
+        "plainTerms": "Telecom companies run their networks using several separate software tools — one to plan changes, one to schedule them, one to launch step-by-step procedures, one to watch them run, and so on. Over time each tool had grown its own colours, buttons and layouts, so people moving between them kept having to relearn the screens. I built a shared 'kit of parts' — a design system — and moved all five tools onto it. Now they look and behave the same, and one setting switches every tool between light and dark mode.",
+        "problem": "The network automation platform is a multi-application product covering assurance, performance and security. Its operations applications — including workflow management, scheduling, and MOP (Method of Procedure) launch and monitoring — had been built by different teams at different times, and each had drifted into its own visual style and interaction patterns.\n\nFor operators who move between these tools during a single network change, that inconsistency meant extra learning, extra hesitation, and more room for mistakes. For engineering, every new screen was designed and coded from scratch.",
         "research": {
           "methods": [
-            "In-depth interviews with 24 DevOps engineers and site reliability engineers",
-            "Contextual inquiry observing live incident response across 6 organizations",
-            "Competitive analysis of 8 incident management platforms",
-            "Analytics deep-dive: 6 months of usage data, error patterns, and support tickets",
-            "Heuristic evaluation of existing system identifying 32 critical usability issues"
+            "Heuristic review of each application against a common set of usability principles",
+            "UI inventory: collecting every button, table, form and colour in use across the five apps",
+            "Working sessions with product, architecture and engineering stakeholders in four countries",
+            "Review of accessibility needs against WCAG guidelines"
           ],
           "insights": [
-            "Users think in \"scenarios\" not individual rules - they need templates for common patterns",
-            "80% of rules followed 3 standard patterns but system forced building from scratch",
-            "Real-time feedback was critical - users wanted to test rules before going live",
-            "Visual representation of rule logic reduced cognitive load by 60% in testing",
-            "Mobile access was essential for 35% of users responding to incidents outside office"
+            "The same task (filter, select, act) was presented differently in each app",
+            "Most visual differences came from hard-coded values that a shared token set could replace",
+            "Operators in control rooms need a dark theme; office users often prefer light — both had to be first-class",
+            "A shared component library would let teams ship new screens without redesigning basics"
           ]
         },
         "solution": {
-          "approach": "We redesigned the system around three core principles: Progressive Disclosure (showing complexity only when needed), Intelligent Defaults (starting with smart templates), and Continuous Feedback (real-time validation at every step).\n\nThe new architecture separated concerns: a visual rule builder for non-technical users, an advanced editor for power users, and a unified testing environment. We implemented a component-based design system enabling consistent patterns across 50+ screens while maintaining flexibility for edge cases.",
+          "approach": "I defined the design system in three layers. Design tokens hold the base decisions — colours, type sizes, spacing — as named values. Reusable components (tables, forms, dialogs, status chips) are built only from those tokens. UI standards document how components combine into common page patterns.\n\nBecause every colour comes from a token, light and dark themes are two token sets rather than two designs. Each application was then moved onto the shared system, with stakeholders reviewing each step from sketch to prototype to shipped UI.",
           "keyFeatures": [
-            "Visual Rule Builder with drag-and-drop logic blocks and natural language summaries",
-            "Smart Templates library with 15 pre-configured patterns covering 85% of use cases",
-            "Real-time Rule Testing allowing users to simulate scenarios before deployment",
-            "Intelligent Suggestions using ML to recommend optimal configurations based on patterns",
-            "Unified Dashboard providing analytics on rule effectiveness and alert patterns",
-            "Mobile-responsive interface for on-the-go incident management",
-            "Comprehensive Activity Log with rollback capabilities for compliance"
+            "Design tokens for colour, typography and spacing, with light and dark sets",
+            "Reusable Angular component library built on the tokens",
+            "Documented UI standards and page patterns for all five applications",
+            "Accessibility built into components rather than added per screen",
+            "Mentoring for designers and developers adopting the system"
           ]
         },
         "design": {
-          "wireframes": "Created low-fidelity wireframes for 15 core screens, iterating through 4 major versions based on user testing. Validated information architecture through card sorting with 18 users. High-fidelity prototypes built in Figma with complete interaction flows.",
-          "system": "Built comprehensive design system with 45 reusable components, 8-point grid system, accessible color palette (WCAG 2.2 AA), typography scale, and documented interaction patterns. Established governance process ensuring consistency across team."
+          "system": "Token-based design system shared across five operations applications, with light and dark themes."
         },
         "results": {
           "metrics": [
             {
-              "label": "35% Faster Resolution",
-              "value": "Avg incident resolution dropped from 42min to 27min",
-              "context": "Measured across 10,000+ incidents over 3-month period post-launch"
+              "label": "Applications on one UI",
+              "value": "5"
             },
             {
-              "label": "92% Satisfaction",
-              "value": "Up from 61% pre-redesign",
-              "context": "Based on quarterly user survey (n=147) and NPS increase from 28 to 67"
+              "label": "Theme support",
+              "value": "Light + Dark"
             },
             {
-              "label": "14% Rule Accuracy",
-              "value": "Misconfiguration rate dropped from 23% to 9%",
-              "context": "Tracking first-time-right configurations and required support interventions"
+              "label": "Shared component library",
+              "value": "Yes"
             },
             {
-              "label": "78% Adoption",
-              "value": "Of new visual rule builder vs. legacy editor",
-              "context": "Within 60 days of launch, indicating strong product-market fit"
+              "label": "Status",
+              "value": "Live"
             }
-          ],
-          "testimonial": {
-            "quote": "The new notification system has transformed how our team responds to incidents. What used to take 30+ minutes of configuration now takes under 5 minutes. The visual rule builder is intuitive, and the real-time testing gives us confidence we won't miss critical alerts.",
-            "author": "Sarah Chen",
-            "role": "Senior SRE",
-            "company": "Fortune 500 Financial Services Company"
-          }
+          ]
         },
         "learnings": [
-          "Progressive disclosure works: hiding advanced features initially increased successful first-time configurations by 42%",
-          "Visual representation matters: users understood complex logic 3x faster with visual blocks vs. text-based rules",
-          "Templates accelerate adoption: 68% of users started with templates vs. building from scratch",
-          "Real-time validation prevents errors: inline feedback reduced configuration errors by 61%",
-          "Mobile-responsive design was table stakes: 35% of incident responses initiated from mobile devices",
-          "Strong component architecture pays dividends: reusable components reduced development time by 40% for new features",
-          "Accessibility creates better UX for everyone: keyboard shortcuts and clear focus states improved efficiency for all users"
+          "Tokens first: once colours and spacing are named values, theming and consistency follow almost for free",
+          "Standardisation is a people project as much as a design one — regular reviews with every team kept adoption moving",
+          "Building accessibility into shared components fixes it once for every screen"
         ]
       }
     },
     {
-      "slug": "fintech-mobile-app",
-      "title": "Investment Banking Mobile Experience",
+      "slug": "field-operations-mobility-app",
+      "title": "Field Operations Mobility App",
       "hero": {
-        "image": "case-study-hero-2",
-        "tagline": "Democratizing complex investment workflows through a mobile-first design approach",
+        "image": "mob-cover",
+        "tagline": "Cockpit screens that show field and change teams only what needs action — delivered through to customer sign-off.",
         "metrics": [
-          { "label": "Daily Active Users", "value": "↑28%" },
-          { "label": "App Store Rating", "value": "4.8★" },
-          { "label": "Assets Managed", "value": "$2B+" },
-          { "label": "Avg Load Time", "value": "2.1s" }
+          {
+            "label": "Delivery milestone",
+            "value": "UAT closed"
+          },
+          {
+            "label": "Focus",
+            "value": "Action-first"
+          },
+          {
+            "label": "Users",
+            "value": "Field + Office"
+          },
+          {
+            "label": "Platform",
+            "value": "Web + Mobile"
+          }
         ]
       },
       "metadata": {
-        "role": ["Product Designer", "UX Lead"],
-        "timeline": "March 2023 - August 2023 (6 months)",
-        "team": "3 Designers, 8 Engineers, 2 Product Managers",
-        "platform": ["iOS", "Android"],
-        "tools": ["Figma", "React Native", "TypeScript", "Reanimated", "Firebase"],
-        "industry": "FinTech"
+        "role": [
+          "Frontend Architect",
+          "UX Lead"
+        ],
+        "timeline": "2024 onward",
+        "team": "Product, engineering and QA teams with global stakeholders",
+        "platform": [
+          "Web Application",
+          "Mobile Web"
+        ],
+        "tools": [
+          "Figma",
+          "Angular",
+          "TypeScript",
+          "RxJS"
+        ],
+        "industry": "Telecom Network Operations"
       },
       "sections": {
-        "problem": "A legacy investment platform with a desktop-first mentality was losing younger users who expected a mobile-native experience. The existing app had a 3.2-star rating, 4.8s load times, and a 31% drop-off rate during the account opening flow. Users found it difficult to track portfolio performance, execute trades, and understand risk exposure on small screens.\n\nThe core challenge was translating dense financial data and complex trading workflows into a mobile experience that felt fast, trustworthy, and intuitive - without dumbing down the functionality that professional users relied on.",
+        "plainTerms": "When a telecom network is being changed, engineers on site and coordinators in the office need to know what is planned, what is running, and what is stuck. I designed 'cockpit' screens — like a car dashboard, they show only the things that need attention right now instead of long lists of everything. The app was taken all the way through UAT (User Acceptance Testing), the final stage where the customer's own users try it and formally sign it off.",
+        "problem": "Change coordination and field-operations work involves many parallel activities, each with its own status. Showing all of them at once buries the few items that actually need someone to act — and people working on site have little time and small screens.",
         "research": {
           "methods": [
-            "Diary study with 18 users across 2 weeks tracking mobile banking habits",
-            "Usability testing of existing app with 24 participants (12 novice, 12 experienced investors)",
-            "Competitive analysis of 12 mobile banking and investment apps",
-            "Analytics review: funnel analysis of 500K+ sessions identifying 7 critical drop-off points",
-            "Stakeholder interviews with 6 product managers and compliance officers"
+            "Workflow mapping of change coordination and field-operations tasks with product owners",
+            "Review of existing screens to separate 'needs action' from 'for information'",
+            "Iterative prototypes reviewed with stakeholders"
           ],
           "insights": [
-            "Novice investors needed confidence-building cues - they hesitated without clear risk indicators",
-            "Experienced users wanted power features accessible but not in the way of quick actions",
-            "Trust signals (FDIC badges, encryption icons, biometric auth) increased comfort by 45% in testing",
-            "Gestural navigation felt faster but users wanted visible buttons for financial actions",
-            "Dark mode was requested by 62% of users who checked portfolios before bed"
+            "Users' first question is 'what needs me now?' — not 'what is the full list?'",
+            "Status must be readable at a glance, on both desktop and mobile",
+            "Coordinators and field engineers need different views of the same data"
           ]
         },
         "solution": {
-          "approach": "We adopted a dual-layer design strategy: a clean, confidence-inspiring primary interface for common tasks (viewing portfolio, executing simple trades), and a progressive disclosure pattern for advanced features (options trading, margin accounts, risk analytics).\n\nThe design system was built mobile-first with a focus on speed: skeleton loading, optimistic UI updates, and cached data for instant rendering. We created a modular card system that could display varying levels of financial data density depending on user preference and device context.",
+          "approach": "I designed dashboards and cockpit screens around actionable items: anything that needs a decision or a response rises to the top, while routine progress stays one step away. Layouts are responsive so the same information works on a laptop in the office and a phone in the field. I then led the front-end delivery through testing to UAT closure.",
           "keyFeatures": [
-            "Adaptive Dashboard with customizable widgets for portfolio performance, watchlists, and market news",
-            "One-Swipe Trade Execution with biometric confirmation and clear risk disclosure modals",
-            "Interactive Risk Visualization showing portfolio exposure through intuitive heat maps",
-            "Smart Alerts with ML-powered price movement notifications and portfolio rebalancing suggestions",
-            "Onboarding Flow reduced from 12 steps to 4 with progressive profile completion",
-            "Dark Mode with optimized contrast ratios for financial data readability",
-            "Accessibility: VoiceOver and TalkBack support with financial data readout optimization"
+            "Cockpit view that surfaces only items needing action",
+            "Dashboards for change coordination",
+            "Responsive layouts for field use on mobile",
+            "Clear, consistent status indicators built on the shared design system"
           ]
         },
         "design": {
-          "wireframes": "Created 22 screen wireframes across 3 user journey maps. Conducted 5 rounds of rapid prototyping with clickable Figma prototypes tested on actual mobile devices. Validated gesture patterns with 30 users.",
-          "system": "Built a 60-component mobile design system with light/dark themes, 8 typography styles, motion specifications for 12 interaction patterns, and platform-specific adaptations for iOS and Android."
+          "process": "Workflow mapping → cockpit concept → prototypes → stakeholder review → front-end build → UAT."
         },
         "results": {
           "metrics": [
             {
-              "label": "28% DAU Increase",
-              "value": "From 180K to 230K daily active users",
-              "context": "Measured 90 days post-launch vs. pre-launch baseline"
+              "label": "Delivery milestone",
+              "value": "UAT closed"
             },
             {
-              "label": "4.8★ App Store",
-              "value": "Up from 3.2★ pre-redesign",
-              "context": "Based on 12,000+ ratings across iOS App Store and Google Play"
+              "label": "Screens",
+              "value": "Dashboards + Cockpit"
             },
             {
-              "label": "67% Onboarding Completion",
-              "value": "Up from 31% in legacy app",
-              "context": "Measured across 50K+ new account openings"
+              "label": "Platforms",
+              "value": "Desktop + Mobile"
             },
             {
-              "label": "$2B+ Assets Managed",
-              "value": "Through the mobile platform",
-              "context": "Within 6 months of launch, representing 40% of total platform AUM"
+              "label": "Design system",
+              "value": "Shared"
             }
-          ],
-          "testimonial": {
-            "quote": "Rajesh understood that investment apps need to balance power with simplicity. The new design makes me feel in control of my portfolio without being overwhelmed. The risk visualizations alone changed how I think about my investments.",
-            "author": "Michael Rodriguez",
-            "role": "Retail Investor",
-            "company": "Beta User"
-          }
+          ]
         },
         "learnings": [
-          "Trust is a design element: visible security cues and clear risk disclosure increased user confidence measurably",
-          "Progressive disclosure works for financial apps: novice users engaged deeper when advanced features were tucked away",
-          "Performance is UX: reducing load time from 4.8s to 2.1s directly correlated with a 28% DAU increase",
-          "Dark mode is not optional for finance apps: 62% of users checked portfolios in low-light conditions",
-          "Gestural navigation needs visible escape hatches: users wanted buttons for high-stakes financial actions",
-          "Onboarding is a journey not a gate: progressive profile completion increased onboarding completion by 36%",
-          "Platform-specific adaptation matters: iOS and Android users had different mental models for navigation"
+          "Designing for 'what needs action' cuts noise more than any visual polish",
+          "Field users set the bar: if it works on a phone mid-task, it works everywhere",
+          "Owning delivery through UAT keeps design intent intact in the shipped product"
         ]
       }
     },
     {
-      "slug": "healthcare-patient-portal",
-      "title": "Patient-Centered Healthcare Portal",
+      "slug": "low-code-integration-platform",
+      "title": "Low-Code Integration Platform",
       "hero": {
-        "image": "case-study-hero-3",
-        "tagline": "Making healthcare accessible through inclusive design and patient-first technology",
+        "image": "lc-cover",
+        "tagline": "AI and automation do the routine work; people always see what happened and can step in.",
         "metrics": [
-          { "label": "Support Calls", "value": "↓40%" },
-          { "label": "Task Completion", "value": "89%" },
-          { "label": "Patients Served", "value": "2M+" },
-          { "label": "WCAG Compliance", "value": "AA" }
+          {
+            "label": "Phase I",
+            "value": "Live"
+          },
+          {
+            "label": "Phase II",
+            "value": "Low-code"
+          },
+          {
+            "label": "Action states",
+            "value": "3"
+          },
+          {
+            "label": "Human override",
+            "value": "Always"
+          }
         ]
       },
       "metadata": {
-        "role": ["Senior UX/UI Designer", "Frontend Consultant"],
-        "timeline": "September 2022 - June 2023 (10 months)",
-        "team": "4 Designers, 12 Engineers, 3 Product Managers",
-        "platform": ["Web", "Mobile Web"],
-        "tools": ["Figma", "React", "TypeScript", "axe DevTools", "Storybook", "Cypress"],
-        "industry": "Healthcare"
+        "role": [
+          "Frontend Architect",
+          "UX Lead"
+        ],
+        "timeline": "2024 – Present",
+        "team": "Product, architecture and engineering stakeholders across four countries",
+        "platform": [
+          "Web Application"
+        ],
+        "tools": [
+          "Figma",
+          "Angular",
+          "TypeScript",
+          "RxJS",
+          "NgRx"
+        ],
+        "industry": "Telecom Network Operations"
       },
       "sections": {
-        "problem": "A healthcare network's patient portal had not been updated in 7 years. The portal served 2M+ patients but had a 52% task abandonment rate, generated 3,000+ support calls per week, and failed WCAG 2.1 accessibility audits. Patients struggled to book appointments, access test results, and communicate with providers.\n\nThe patient population spanned 18-90+ years old with varying tech literacy, visual impairments, and language needs. The portal needed to work for everyone - from a tech-savvy 25-year-old checking lab results to an 85-year-old scheduling a specialist visit.",
+        "plainTerms": "This platform connects different network tools so work can flow between them automatically. 'Low-code' means users build or change those flows by arranging ready-made blocks on screen rather than writing program code. Some steps are suggested or done by AI and automation, so every action shows one of three states — done automatically, waiting for a person to review, or approved — and a person can override it at any point. That is 'human-in-the-loop': the machine helps, but a human stays in charge.",
+        "problem": "As more operations work becomes automated and AI-assisted, operators need to trust what the system is doing. If it is unclear whether an action ran automatically or was approved by someone, people either stop trusting the automation or stop checking it — both are risky on a live network.",
         "research": {
           "methods": [
-            "Accessibility audit of existing portal against WCAG 2.1 AA criteria - identified 47 critical violations",
-            "User interviews with 30 patients spanning ages 22-89 including 8 with visual impairments",
-            "Shadowing study with 6 patient support representatives logging call reasons for 2 weeks",
-            "Usability testing with 20 patients using screen readers, magnification, and voice control",
-            "Analytics analysis of 1.2M sessions identifying top 10 abandoned task flows"
+            "Use-case workshops with product and architecture stakeholders",
+            "Mapping each automated step to who is accountable for it",
+            "Prototype reviews of action states and override flows"
           ],
           "insights": [
-            "Medical jargon was the #1 barrier: 73% of patients did not understand their test results",
-            "Older users preferred phone but were forced to use portal due to call wait times of 45+ minutes",
-            "Appointment booking required navigating 8 screens - users gave up at screen 4 on average",
-            "Test results presentation caused anxiety: patients needed context, not just numbers",
-            "Language support was critical: 23% of patients preferred a language other than English"
+            "Operators need to see who or what took an action, and when",
+            "Every automated step needs a visible way for a person to stop or change it",
+            "Non-developers should be able to adjust flows without code"
           ]
         },
         "solution": {
-          "approach": "We designed the portal around the principle of 'Universal Usability' - every screen had to work for the least tech-savquent user while not slowing down power users. We implemented plain language guidelines, replacing medical jargon with patient-friendly descriptions, and added contextual help throughout.\n\nThe information architecture was restructured around patient goals (book appointment, see results, message doctor, pay bill) rather than organizational structure. Every interaction was designed to be completable in 3 steps or fewer.",
+          "approach": "Phase I delivered the integration platform's core screens. For AI-assisted operations I defined a small, consistent set of interaction patterns: three clear states — automated, in review, approved — shown the same way everywhere, with a human override always available. Phase II, which I now lead, turns the platform into a modular low-code application where flows are assembled from building blocks.",
           "keyFeatures": [
-            "Plain Language Test Results with color-coded indicators and contextual explanations",
-            "3-Step Appointment Booking with provider preferences and insurance verification",
-            "Secure Messaging with threaded conversations and attachment support",
-            "Multilingual Support for 6 languages with culturally appropriate medical terminology",
-            "Accessibility-First Design: WCAG 2.2 AA compliant with screen reader, voice control, and keyboard navigation",
-            "Bill Pay with transparent cost breakdown and financial assistance options",
-            "Family Access Manager allowing caregivers to manage appointments for dependents"
+            "Consistent states for automated, in-review and approved actions",
+            "Human override available at every step",
+            "Modular, block-based low-code flow building (Phase II)",
+            "Built on the shared design system"
           ]
         },
         "design": {
-          "wireframes": "Created 35 screen wireframes validated through 8 rounds of usability testing with diverse patient groups. Used think-aloud protocol with 40 participants including 12 with disabilities. Iterated information architecture 5 times based on card sorting exercises.",
-          "system": "Built a 80-component accessible design system with WCAG 2.2 AA compliance baked in. Every component passed automated axe testing and manual screen reader testing. Created a plain language style guide adopted by the healthcare network."
+          "process": "Phase I live; Phase II low-code application in progress."
         },
         "results": {
           "metrics": [
             {
-              "label": "40% Fewer Support Calls",
-              "value": "From 3,000 to 1,800 calls per week",
-              "context": "Measured over 6 months post-launch"
+              "label": "Phase I",
+              "value": "Live"
             },
             {
-              "label": "89% Task Completion",
-              "value": "Up from 48% pre-redesign",
-              "context": "Across all primary tasks: booking, results, messaging, billing"
+              "label": "Phase II",
+              "value": "In progress"
             },
             {
-              "label": "WCAG 2.2 AA",
-              "value": "Zero critical accessibility violations",
-              "context": "Verified by third-party audit using axe and manual testing"
+              "label": "AI action states",
+              "value": "3"
             },
             {
-              "label": "4.6/5 Patient Satisfaction",
-              "value": "Up from 2.1/5 pre-redesign",
-              "context": "Based on post-task surveys from 15,000+ patients"
+              "label": "Human override",
+              "value": "Every step"
             }
-          ],
-          "testimonial": {
-            "quote": "For the first time, I can actually understand my test results without calling my doctor. The portal explains everything in plain language, and I was able to book an appointment in under 2 minutes. This is what healthcare technology should feel like.",
-            "author": "Margaret Thompson",
-            "role": "Patient, Age 78",
-            "company": "Stanford Health Network"
-          }
+          ]
         },
         "learnings": [
-          "Plain language is the highest-ROI accessibility investment: it reduced support calls by 40%",
-          "Designing for the most vulnerable users improves the experience for everyone: all task completion rates improved",
-          "3-step rule: capping interactions at 3 steps reduced abandonment by 52% across all task flows",
-          "Context reduces anxiety: adding explanations to test results decreased 'urgent' messages to doctors by 35%",
-          "Accessibility is not a feature, it is a foundation: building WCAG compliance into the design system from day one was cheaper than retrofitting",
-          "Multilingual support requires cultural adaptation, not just translation: medical terminology needed culturally appropriate framing",
-          "Caregiver access is essential: 28% of portal sessions were from family members managing care for others"
+          "Trust in automation comes from visibility: show what happened and let people undo it",
+          "A few action states used consistently beat many states used loosely",
+          "Low-code only works if the building blocks match how operators already think about their tasks"
         ]
       }
     },
     {
-      "slug": "smart-home-automation",
-      "title": "Smart Home Automation Dashboard",
+      "slug": "operations-portal-framework-upgrade",
+      "title": "Operations Portal Framework Upgrade",
       "hero": {
-        "image": "case-study-hero-4",
-        "tagline": "Unifying 50+ IoT device types into a single, intuitive control experience",
+        "image": "up-cover",
+        "tagline": "Bringing a production portal up to a current, supported framework and closing its security gaps.",
         "metrics": [
-          { "label": "Device Response", "value": "3.2s" },
-          { "label": "Setup Completion", "value": "94%" },
-          { "label": "App Store Rating", "value": "4.7★" },
-          { "label": "Device Types", "value": "50+" }
+          {
+            "label": "Framework",
+            "value": "Angular"
+          },
+          {
+            "label": "Security",
+            "value": "Remediated"
+          },
+          {
+            "label": "Scope",
+            "value": "Code + libraries"
+          },
+          {
+            "label": "Status",
+            "value": "Delivered"
+          }
         ]
       },
       "metadata": {
-        "role": ["Lead Product Designer", "Frontend Developer"],
-        "timeline": "January 2024 - May 2024 (4 months)",
-        "team": "3 Designers, 6 Engineers, 1 Product Manager",
-        "platform": ["Web", "iOS", "Android"],
-        "tools": ["Figma", "React", "TypeScript", "WebSocket", "Storybook", "Jest"],
-        "industry": "IoT & Smart Home"
+        "role": [
+          "Frontend Architect",
+          "Technical Lead"
+        ],
+        "timeline": "2024 onward",
+        "team": "Engineering team with product and security stakeholders",
+        "platform": [
+          "Web Application"
+        ],
+        "tools": [
+          "Angular",
+          "TypeScript",
+          "npm"
+        ],
+        "industry": "Telecom Network Operations"
       },
       "sections": {
-        "problem": "A leading smart home manufacturer had grown through acquisitions, resulting in 5 disconnected apps controlling different device categories. Users managed lights, thermostats, cameras, and locks across separate interfaces with inconsistent patterns. The fragmentation caused 38% of new users to abandon setup before completing their first device, and support costs were rising 15% quarter-over-quarter.\n\nThe challenge was creating a unified control surface that accommodated 50+ device types -- from simple on/off switches to complex multi-sensor devices -- while maintaining the simplicity that smart home users expect. The app needed to work across web, iOS, and Android with real-time state synchronization.",
+        "plainTerms": "Angular is the toolkit the portal's screens are built with. Like the software on your phone, it needs regular updates — older versions stop receiving security fixes. I led the move to a current version and fixed the security weaknesses ('vulnerabilities') found in the portal's own code and in the third-party building blocks ('libraries') it depends on.",
+        "problem": "The operations portal was running on an older Angular version. Staying on it meant fewer security updates and a growing list of known vulnerabilities in the portal's dependencies.",
         "research": {
           "methods": [
-            "Contextual inquiry with 22 users in their homes observing device management routines",
-            "Competitive analysis of 10 smart home apps including Google Home, Apple Home, and Samsung SmartThings",
-            "Analytics review of 3 months of onboarding funnels and support ticket categorization",
-            "Usability testing of prototype with 18 participants across 3 device complexity levels",
-            "Stakeholder interviews with 5 support representatives and 3 engineering leads"
+            "Dependency and vulnerability audit of the front-end",
+            "Review of breaking changes between Angular versions",
+            "Planning the upgrade path with engineering and product"
           ],
           "insights": [
-            "Users think in rooms and routines, not device categories -- they wanted to control 'living room' not 'Type-7 smart bulb'",
-            "Setup was the #1 friction point: 38% abandonment was concentrated at the Wi-Fi pairing stage",
-            "Real-time feedback was essential -- users needed to see device state change within 2 seconds to trust the system",
-            "Power users wanted automation rules but 80% of users never advanced beyond basic on/off control",
-            "Energy analytics were requested by 45% of users who wanted to understand consumption patterns"
+            "Most vulnerabilities came from outdated third-party libraries, not the portal's own code",
+            "Upgrading the framework and fixing vulnerabilities together avoided doing the work twice"
           ]
         },
         "solution": {
-          "approach": "We designed the platform around a room-first information architecture with progressive disclosure for advanced features. The core experience was a real-time device grid organized by room, with one-tap controls for common actions and expandable cards for detailed settings.\n\nThe automation rule builder used a visual block-based interface inspired by the SATH notification system, allowing users to chain triggers and actions without programming. We built a unified WebSocket layer enabling sub-second state updates across all platforms, and a responsive design system with 65 components that adapted from mobile to web.",
+          "approach": "I planned and led the upgrade step by step through Angular versions, updating or replacing vulnerable dependencies along the way and fixing code affected by framework changes.",
           "keyFeatures": [
-            "Room-First Dashboard with real-time device grid and contextual quick actions",
-            "Guided Device Setup with animated pairing flow reducing abandonment from 38% to 6%",
-            "Visual Automation Builder with drag-and-drop triggers, conditions, and actions",
-            "Energy Analytics dashboard with consumption trends, cost projections, and efficiency recommendations",
-            "Cross-Platform Sync with sub-second state updates via WebSocket",
-            "Scene Management for one-tap multi-device routines like 'Movie Night' or 'Away Mode'",
-            "Voice Control integration with Alexa, Google Assistant, and Siri Shortcuts"
+            "Angular framework upgrade",
+            "Vulnerable dependencies updated or replaced",
+            "Code updated for framework changes"
           ]
         },
-        "design": {
-          "wireframes": "Created 28 screen wireframes across 4 user journey maps. Conducted 4 rounds of usability testing with clickable prototypes on actual devices. Validated room-based information architecture through card sorting with 15 users.",
-          "system": "Built a 65-component cross-platform design system with responsive variants for web, iOS, and Android. Established real-time interaction patterns for device state, offline handling, and conflict resolution. Created a motion specification for 8 device-state transitions."
-        },
+        "design": {},
         "results": {
           "metrics": [
             {
-              "label": "94% Setup Completion",
-              "value": "Up from 62% pre-redesign",
-              "context": "Measured across 50K+ new device pairings in first 3 months"
+              "label": "Framework",
+              "value": "Upgraded"
             },
             {
-              "label": "3.2s Response Time",
-              "value": "Average device command-to-action latency",
-              "context": "Measured across 10M+ commands via WebSocket infrastructure"
+              "label": "Vulnerabilities",
+              "value": "Remediated"
             },
             {
-              "label": "4.7★ App Store",
-              "value": "Up from 3.1★ across iOS and Android",
-              "context": "Based on 8,500+ ratings in first 6 months post-launch"
+              "label": "Status",
+              "value": "Delivered"
             },
             {
-              "label": "72% Automation Adoption",
-              "value": "Of active users created at least one automation rule",
-              "context": "Compared to 12% in the legacy app, measured 90 days post-launch"
+              "label": "Ownership",
+              "value": "Led"
             }
-          ],
-          "testimonial": {
-            "quote": "The new app finally makes my smart home feel smart. I set up a 'Goodnight' routine in under 2 minutes that locks the doors, dims the lights, and adjusts the thermostat. The real-time feedback gives me confidence everything actually happened.",
-            "author": "David Park",
-            "role": "Smart Home Enthusiast",
-            "company": "Early Access User"
-          }
+          ]
         },
         "learnings": [
-          "Room-first IA beats device-first: organizing by room reduced time-to-action by 45%",
-          "Guided onboarding is critical for IoT: animated pairing flow cut setup abandonment from 38% to 6%",
-          "Real-time feedback builds trust: sub-second state updates increased user confidence and reduced support tickets",
-          "Progressive disclosure works for IoT: 80% of users stayed in simple mode while power users discovered automations naturally",
-          "Cross-platform consistency matters: a unified design system reduced maintenance by 35% across web and mobile",
-          "Energy analytics drive engagement: 45% of users who saw consumption data engaged more frequently with the app",
-          "Visual automation builders democratize smart homes: 72% adoption vs. 12% in the legacy text-based rule system"
+          "Regular, smaller upgrades are far cheaper than rare, large ones",
+          "Pairing a framework upgrade with a security audit gives one clear, defensible plan"
         ]
       }
     },
     {
-      "slug": "music-streaming-social",
-      "title": "Social Music Streaming Experience",
+      "slug": "ai-assisted-development",
+      "title": "AI-Assisted Development Adoption",
       "hero": {
-        "image": "case-study-hero-5",
-        "tagline": "Transforming passive listening into shared social experiences with collaborative playlists and live listening rooms",
+        "image": "ai-cover",
+        "tagline": "Bringing AI coding assistants into a design and front-end team — with mentoring, not just licences.",
         "metrics": [
-          { "label": "Listening Sessions", "value": "+42%" },
-          { "label": "Monthly Active Users", "value": "3.5M" },
-          { "label": "App Store Rating", "value": "4.7★" },
-          { "label": "Social Features Used", "value": "68%" }
+          {
+            "label": "Tools introduced",
+            "value": "4"
+          },
+          {
+            "label": "Audience",
+            "value": "Designers + Devs"
+          },
+          {
+            "label": "Approach",
+            "value": "Mentoring"
+          },
+          {
+            "label": "Status",
+            "value": "Ongoing"
+          }
         ]
       },
       "metadata": {
-        "role": ["Lead Product Designer", "Interaction Designer"],
-        "timeline": "January 2024 - May 2024 (5 months)",
-        "team": "3 Designers, 7 Engineers, 2 Product Managers",
-        "platform": ["iOS", "Android"],
-        "tools": ["Figma", "React Native", "TypeScript", "WebSocket", "Storybook", "Jest"],
-        "industry": "Music & Entertainment"
+        "role": [
+          "Frontend Architect",
+          "Mentor"
+        ],
+        "timeline": "2024 – Present",
+        "team": "Designers and front-end developers",
+        "platform": [
+          "Web"
+        ],
+        "tools": [
+          "GitHub Copilot",
+          "Cursor",
+          "v0",
+          "Bolt"
+        ],
+        "industry": "Engineering Enablement"
       },
       "sections": {
-        "problem": "A mid-tier music streaming service was losing market share to platforms with social features. Their app had 2.8M monthly active users but session duration was declining 8% quarter-over-quarter. Users treated the app as a background utility, not a destination. The challenge was adding social engagement layers without disrupting the core listening experience that users valued.\n\nThe product needed collaborative playlists, live listening rooms, and AI-powered discovery that felt native to music consumption, not bolted-on social features. The app had to maintain sub-2-second playback latency while adding real-time social interactions across iOS and Android.",
+        "plainTerms": "These are AI tools that help write software. GitHub Copilot and Cursor suggest code while a developer types, a bit like autocomplete for programming. v0 and Bolt can turn a written description or a rough sketch into a first working screen. I introduced them to the team and coached designers and developers on using them well — with a person still reviewing what ships.",
+        "problem": "AI coding assistants were becoming widely available, but without guidance people either avoided them or used them without the review habits that keep quality high.",
         "research": {
           "methods": [
-            "Diary study with 18 users tracking listening habits and social sharing behaviors over 2 weeks",
-            "Competitive analysis of 8 music apps including Spotify, Apple Music, and SoundCloud",
-            "Analytics review of 6 months of session data and feature usage patterns",
-            "Usability testing of 3 prototype variants with 24 participants",
-            "A/B testing of social feature placements with 50K users over 4 weeks"
+            "Hands-on trials of each tool on real UI tasks",
+            "Pairing sessions with designers and developers"
           ],
           "insights": [
-            "68% of users wanted to share music with friends but found existing sharing too friction-heavy",
-            "Collaborative playlists were the #1 requested feature, cited by 52% of survey respondents",
-            "Live listening rooms had viral potential: 73% of testers invited friends within 24 hours",
-            "AI discovery needed to feel personal, not algorithmic -- users rejected recommendations that felt automated",
-            "Social features had to be opt-in: 31% of users wanted a purely solo listening experience"
+            "Different tools suit different jobs: in-editor help vs. generating a first screen",
+            "Designers benefit as much as developers, especially for quick prototypes"
           ]
         },
         "solution": {
-          "approach": "We designed a dual-layer experience: a pristine solo listening mode by default, with progressive social features that users could opt into. The core innovation was 'Listening Rooms' -- live audio spaces where friends could listen together in real-time with chat and reactions.\n\nCollaborative playlists used a drag-and-drop interface inspired by the SATH notification system, allowing multiple users to add, reorder, and vote on tracks. The AI discovery engine used listening context (time of day, mood, activity) to serve personalized recommendations that felt curated rather than algorithmic. We built a custom WebSocket layer enabling sub-500ms social interactions without affecting playback latency.",
+          "approach": "I introduced GitHub Copilot, Cursor, v0 and Bolt to the team and mentored people on where each one fits, how to prompt it, and how to review its output before it ships.",
           "keyFeatures": [
-            "Live Listening Rooms with real-time audio sync, chat, and emoji reactions",
-            "Collaborative Playlists with drag-and-drop track management and friend voting",
-            "Context-Aware AI Discovery that adapts to time of day, mood, and activity",
-            "Social Listening Feed showing what friends are currently playing",
-            "Opt-In Social Mode preserving solo listening for 31% of users who prefer it",
-            "Cross-Platform Real-time Sync with sub-500ms social interaction latency",
-            "Music Stories -- ephemeral 15-second clips shareable to social feeds"
+            "GitHub Copilot and Cursor for in-editor coding help",
+            "v0 and Bolt for generating first-draft UI",
+            "Mentoring on prompting and reviewing AI-generated code"
           ]
         },
-        "design": {
-          "wireframes": "Created 32 screen wireframes across 5 user journey maps. Conducted 5 rounds of usability testing with clickable prototypes. Validated social feature placement through A/B testing with 50K users.",
-          "system": "Built a 58-component cross-platform design system with audio-specific patterns for waveform visualization, equalizer controls, and social reaction animations. Created a motion specification for 12 audio-state transitions including play, pause, buffer, and live-room join."
-        },
+        "design": {},
         "results": {
           "metrics": [
             {
-              "label": "42% More Sessions",
-              "value": "Average daily listening sessions per user",
-              "context": "Measured across 3.5M monthly active users 90 days post-launch"
+              "label": "Tools adopted",
+              "value": "4"
             },
             {
-              "label": "3.5M Monthly Users",
-              "value": "Up from 2.8M pre-social features",
-              "context": "25% user growth attributed to social feature virality"
+              "label": "Mentoring",
+              "value": "Ongoing"
             },
             {
-              "label": "4.7★ App Store",
-              "value": "Up from 4.1★ across iOS and Android",
-              "context": "Based on 12K+ ratings in first 3 months post-launch"
+              "label": "Audience",
+              "value": "Design + Dev"
             },
             {
-              "label": "68% Social Adoption",
-              "value": "Of users engaged with at least one social feature weekly",
-              "context": "Exceeding 45% target, measured 60 days post-launch"
+              "label": "Review",
+              "value": "Human-led"
             }
-          ],
-          "testimonial": {
-            "quote": "The listening rooms changed how my friend group discovers music. We have a Friday night room where we take turns DJing. It feels like we're hanging out even when we're miles apart. The collaborative playlists have completely replaced our old group chat link-sharing.",
-            "author": "Sarah Chen",
-            "role": "Power User",
-            "company": "Beta Tester"
-          }
+          ]
         },
         "learnings": [
-          "Social features must be opt-in, not opt-out: 31% of users never enabled social mode and retention stayed equal",
-          "Real-time sync is the hardest engineering challenge: sub-500ms social latency required a custom WebSocket layer",
-          "AI discovery needs to feel human: contextual recommendations outperformed algorithmic ones by 34%",
-          "Collaborative playlists have network effects: each new collaborator increased playlist engagement by 22%",
-          "Listening rooms need moderation: adding host controls reduced negative experiences by 85%",
-          "Music is inherently social: 68% social adoption exceeded our 45% target by 23 percentage points",
-          "Dual-layer design preserves core experience: solo listeners showed zero satisfaction decline"
+          "Adoption follows mentoring, not licences",
+          "AI output is a first draft — review habits matter more than the tool"
         ]
       }
     },
     {
-      "slug": "crypto-trading-terminal",
-      "title": "Real-Time Crypto Trading Terminal",
+      "slug": "enterprise-intranet-portal",
+      "title": "Enterprise Intranet Portal & In-house Tools",
       "hero": {
-        "image": "case-study-hero-6",
-        "tagline": "Building a professional-grade trading terminal with sub-second execution for 250K+ active traders",
+        "image": "in-cover",
+        "tagline": "From concept to delivery for 2,500+ users — and in-house tools that won three company awards.",
         "metrics": [
-          { "label": "Trade Latency", "value": "1.2s" },
-          { "label": "Active Traders", "value": "250K+" },
-          { "label": "Uptime", "value": "99.98%" },
-          { "label": "Daily Volume", "value": "$8B+" }
+          {
+            "label": "Users",
+            "value": "2,500+"
+          },
+          {
+            "label": "Effort cut (time tracking)",
+            "value": "↓90%"
+          },
+          {
+            "label": "Delivery",
+            "value": "On schedule"
+          },
+          {
+            "label": "Awards",
+            "value": "3 + nominee"
+          }
         ]
       },
       "metadata": {
-        "role": ["Senior UX/UI Designer", "Frontend Developer"],
-        "timeline": "January 2024 - May 2024 (5 months)",
-        "team": "3 Designers, 8 Engineers, 2 Product Managers",
-        "platform": ["Web", "Mobile Web"],
-        "tools": ["Figma", "React", "TypeScript", "WebSocket", "D3.js", "Storybook"],
-        "industry": "FinTech & Crypto"
+        "role": [
+          "Usability Specialist",
+          "UI Designer & Developer"
+        ],
+        "timeline": "2011 – 2022",
+        "team": "Global delivery centre teams",
+        "platform": [
+          "Web Application"
+        ],
+        "tools": [
+          "Photoshop",
+          "Illustrator",
+          "HTML5",
+          "CSS3",
+          "JavaScript"
+        ],
+        "industry": "Enterprise Internal Tools"
       },
       "sections": {
-        "problem": "A growing crypto exchange needed a professional trading terminal to compete with established platforms like Binance and Coinbase Pro. Their existing interface was beginner-friendly but lacked the advanced charting, real-time order books, and one-tap trade execution that professional traders demanded. The platform had 80K traders but was losing high-volume users to competitors with better tools.\n\nThe challenge was designing a terminal that served both professional traders needing sub-second execution and advanced order types, and intermediate users who needed guided access to complex features. The interface had to handle real-time WebSocket data streams updating 50+ times per second without UI freezing or data lag.",
+        "plainTerms": "An intranet is a company's private website for its own staff. I designed and built it, along with everyday in-house tools — for logging work hours, running performance reviews and running surveys. The time tracking tool cut the effort of recording hours and charging them to the right budget ('cost recharge') by 90%. I also designed a 'GUI-based' automation tool, which lets people automate repetitive tasks by clicking through screens instead of writing scripts.",
+        "problem": "Staff across Nokia's global delivery centres relied on a mix of disconnected internal tools and manual processes for everyday work like booking effort, recharging costs and performance reviews.",
         "research": {
           "methods": [
-            "Contextual inquiry with 16 professional traders observing their trading setups and workflows",
-            "Competitive analysis of 6 trading terminals including Binance, Coinbase Pro, Kraken Pro, and TradingView",
-            "Analytics review of 4 months of trading patterns, feature usage, and user drop-off points",
-            "Usability testing with 20 participants across beginner, intermediate, and expert skill levels",
-            "Stakeholder interviews with 4 market makers and 2 institutional traders"
+            "Usability reviews of existing internal tools",
+            "Requirements sessions with delivery-centre teams",
+            "Rollout planning for the India global delivery centre"
           ],
           "insights": [
-            "Professional traders used 3-4 monitors and needed dense information layouts, not spacious designs",
-            "One-tap trade execution was the #1 priority: every extra click cost traders money in volatile markets",
-            "Order book depth was the most-watched data: 89% of pros checked it before every trade",
-            "Customizable layouts were essential: 76% of pros arranged their workspace differently",
-            "Beginners needed guardrails: 34% of intermediate users had made costly trading errors on other platforms"
+            "Manual effort booking and cost recharge consumed significant time every cycle",
+            "A single portal entry point made niche tools easier to find and use"
           ]
         },
         "solution": {
-          "approach": "We designed a modular terminal with a default professional layout and a guided 'Simple Mode' for intermediate users. The core was a real-time order book with depth visualization, advanced candlestick charting with 40+ indicators, and a one-tap trade execution panel that supported limit, market, stop-loss, and OCO orders.\n\nThe terminal used a dark-first design with high-contrast data visualization optimized for prolonged trading sessions. We built a WebSocket-based real-time engine updating order books and charts 50+ times per second with virtualized rendering to prevent UI lag. The layout was fully customizable with drag-and-drop panels that persisted per user.",
+          "approach": "As usability specialist and UI designer-developer, I took the intranet portal and a pack of niche applications from concept to creation, planned the India GDC rollout, and extended delivery to other global centres. Alongside it I designed the time tracking, performance management and survey applications, a GUI-based automation tool, a tools gallery and a monthly flipbook newsletter.",
           "keyFeatures": [
-            "Real-time Order Book with depth visualization and cumulative volume bars",
-            "Advanced Charting with 40+ technical indicators and custom drawing tools",
-            "One-tap Trade Execution supporting limit, market, stop-loss, and OCO orders",
-            "Customizable Workspace with drag-and-drop panels and per-user layout persistence",
-            "Simple Mode for intermediate users with guided trade flow and risk warnings",
-            "Price Alert System with push notifications and conditional triggers",
-            "Portfolio Dashboard with real-time P&L tracking and position management"
+            "Intranet portal and niche applications for 2,500+ users",
+            "Time Tracking Tool for effort booking and cost recharge",
+            "Performance management and survey applications",
+            "GUI-based automation tool",
+            "Tools gallery and monthly flipbook newsletter"
           ]
         },
-        "design": {
-          "wireframes": "Created 24 screen wireframes across 3 user journey maps for pro, intermediate, and mobile web users. Conducted 6 rounds of usability testing with professional traders using real market data. Validated layout density through eye-tracking with 12 participants.",
-          "system": "Built a 72-component trading-specific design system with data visualization patterns for order books, candlestick charts, and trade execution forms. Created a dark-first color system optimized for prolonged screen time with WCAG AA contrast on all data elements."
-        },
+        "design": {},
         "results": {
           "metrics": [
             {
-              "label": "1.2s Execution",
-              "value": "Average trade execution latency end-to-end",
-              "context": "Measured across 10M+ trades via WebSocket infrastructure"
+              "label": "Users served",
+              "value": "2,500+"
             },
             {
-              "label": "250K+ Traders",
-              "value": "Up from 80K pre-terminal launch",
-              "context": "212% growth in 6 months, 45% attributed to pro features"
+              "label": "Effort booking & recharge",
+              "value": "↓90%"
             },
             {
-              "label": "99.98% Uptime",
-              "value": "Platform availability during market hours",
-              "context": "Achieved via redundant WebSocket infrastructure and failover systems"
+              "label": "CTO Business Excellence Award",
+              "value": "Won"
             },
             {
-              "label": "$8B+ Daily Volume",
-              "value": "Average daily trading volume",
-              "context": "Up from $1.2B pre-terminal, driven by professional trader retention"
+              "label": "Appreciate Excellence Award",
+              "value": "×2"
             }
-          ],
-          "testimonial": {
-            "quote": "Finally a terminal that doesn't make me choose between power and speed. The order book updates are instant, the charting is professional-grade, and one-tap execution means I never miss a move. I moved my entire trading operation here within a week.",
-            "author": "Michael Torres",
-            "role": "Day Trader",
-            "company": "Professional User"
-          }
+          ]
         },
         "learnings": [
-          "Professional traders need density over whitespace: compact layouts increased trading efficiency by 31%",
-          "One-tap execution is non-negotiable: reducing trade flow from 3 taps to 1 increased volume by 45%",
-          "Real-time data requires virtualized rendering: without it, 50fps updates froze the UI on lower-end devices",
-          "Dark-first design reduces eye strain: 92% of pro traders preferred dark mode for 6+ hour sessions",
-          "Simple Mode saves intermediate users: guided trade flow reduced error rates by 67%",
-          "Customizable layouts drive retention: 76% of pros customized their workspace within first session",
-          "Mobile web is for monitoring, not trading: 89% of mobile users only checked positions, not executed trades"
+          "Internal tools deserve the same usability care as customer products — the time savings compound",
+          "Planning the rollout is part of the design: adoption across centres depended on it"
         ]
       }
     }

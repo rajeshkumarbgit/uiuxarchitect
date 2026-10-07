@@ -135,7 +135,7 @@ export default function Carousel({ items, autoPlay = false, interval = 5000, cla
     <div className={`relative w-full ${className}`}>
       <div
         ref={containerRef}
-        className={`relative h-[380px] sm:h-[480px] lg:h-[560px] overflow-hidden rounded-3xl bg-ink-100 dark:bg-ink-800 shadow-card select-none ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
+        className={`relative aspect-[16/10] max-h-[640px] w-full overflow-hidden rounded-[2rem] bg-ink-100 dark:bg-ink-800 ring-1 ring-ink-900/5 dark:ring-white/10 select-none ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
@@ -174,9 +174,9 @@ export default function Carousel({ items, autoPlay = false, interval = 5000, cla
                   loading={index === 0 ? 'eager' : 'lazy'}
                   draggable={false}
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-ink-950/90 via-ink-900/50 to-transparent p-6 sm:p-8">
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-1.5 tracking-tight">{item.title}</h3>
-                  <p className="text-ink-100 text-xs sm:text-sm leading-[1.7] max-w-3xl line-clamp-2">{item.description}</p>
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-ink-950/80 via-ink-950/30 to-transparent px-5 pt-16 pb-5 sm:px-8 sm:pb-7">
+                  <h3 className="text-base sm:text-2xl font-semibold text-white sm:mb-1.5 tracking-tight">{item.title}</h3>
+                  <p className="hidden sm:block text-ink-100 text-sm leading-[1.7] max-w-3xl line-clamp-2">{item.description}</p>
                 </div>
               </div>
             );
@@ -202,7 +202,7 @@ export default function Carousel({ items, autoPlay = false, interval = 5000, cla
               aria-label="Next slide"
               className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 p-3 sm:p-4 bg-white/90 dark:bg-ink-900/90 backdrop-blur-sm hover:bg-white dark:hover:bg-ink-800 rounded-full shadow-card transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed z-20"
             >
-              <ChevronRight className="w-5 h-5 text-white dark:text-white" />
+              <ChevronRight className="w-5 h-5 text-ink-900 dark:text-white" />
             </button>
           </>
         )}

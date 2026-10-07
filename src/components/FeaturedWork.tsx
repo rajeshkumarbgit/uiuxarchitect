@@ -31,12 +31,12 @@ export default function FeaturedWork({ onNavigate }: FeaturedWorkProps) {
               <Sparkles className="w-3.5 h-3.5" />
               Selected Work
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-ink-900 dark:text-white tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-ink-900 dark:text-white tracking-tight">
               Featured Work
             </h2>
           </div>
           <p className="text-sm sm:text-base text-ink-500 dark:text-ink-400 max-w-md leading-[1.7]">
-            A selection of recent projects showcasing design systems, mobile experiences, and enterprise platforms
+            Design systems, field-operations mobile, low-code with human-in-the-loop AI, and enterprise portals — recreated to keep product details confidential.
           </p>
         </div>
 
@@ -47,7 +47,7 @@ export default function FeaturedWork({ onNavigate }: FeaturedWorkProps) {
             <button
               type="button"
               onClick={() => onNavigate('portfolio')}
-              className="group inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-ink-600 dark:text-ink-300 hover:text-ink-900 dark:hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-ink-950 rounded-lg"
+              className="group inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-brand-600 dark:text-brand-300 border border-ink-300 dark:border-ink-700 hover:bg-brand-50 dark:hover:bg-brand-500/10 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-ink-950 rounded-full"
             >
               View all projects
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

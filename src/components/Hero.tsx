@@ -9,9 +9,9 @@ interface HeroProps {
 
 export default function Hero({ onNavigate }: HeroProps) {
   const content = useHeroContent();
-  const heroPortraitUrl = useImageUrl('hero-portrait');
   const { theme } = useTheme();
   const isDark = theme === 'dark';
+  const heroVisualUrl = useImageUrl(isDark ? 'hero-dark' : 'hero-light');
 
   return (
     <section className={`relative min-h-screen flex items-center px-6 sm:px-8 lg:px-12 overflow-hidden pt-20 transition-colors duration-500 ${isDark ? 'bg-ink-950' : 'bg-ink-50'}`}>
@@ -49,13 +49,13 @@ export default function Hero({ onNavigate }: HeroProps) {
                   key={idx}
                   type="button"
                   onClick={() => onNavigate(cta.action)}
-                  className={`group inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ${isDark ? 'focus:ring-offset-ink-950' : 'focus:ring-offset-ink-50'} ${
+                  className={`group inline-flex items-center px-6 py-3 text-sm font-medium rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ${isDark ? 'focus:ring-offset-ink-950' : 'focus:ring-offset-ink-50'} ${
                     cta.variant === 'primary'
-                      ? 'bg-gradient-to-r from-brand-500 to-brand-600 text-white shadow-soft hover:shadow-glow focus:ring-brand-500'
+                      ? 'bg-brand-500 hover:bg-brand-600 text-white shadow-soft hover:shadow-glow focus:ring-brand-500'
                       : cta.variant === 'secondary'
                       ? isDark
-                        ? 'bg-white/5 text-white border-2 border-white/10 hover:border-white/20 hover:bg-white/10 focus:ring-white/20'
-                        : 'bg-white text-ink-900 border-2 border-ink-200 hover:border-ink-300 hover:bg-ink-50 focus:ring-ink-300'
+                        ? 'text-brand-200 border border-ink-700 hover:bg-brand-500/10 focus:ring-white/20'
+                        : 'bg-white text-brand-600 border border-ink-300 hover:bg-brand-50 focus:ring-ink-300'
                       : isDark
                       ? 'text-ink-400 hover:text-white focus:ring-white/10'
                       : 'text-ink-500 hover:text-ink-900 focus:ring-ink-300'
@@ -73,7 +73,7 @@ export default function Hero({ onNavigate }: HeroProps) {
               {content.stats.map((stat, idx) => (
                 <div
                   key={idx}
-                  className={`group relative p-4 sm:p-5 rounded-2xl transition-all duration-500 hover:-translate-y-0.5 ${isDark ? 'glass-dark hover:border-white/20' : 'bg-white/80 backdrop-blur-xl border border-ink-200 shadow-soft hover:shadow-card-hover hover:border-ink-300'}`}
+                  className={`group relative p-4 sm:p-5 rounded-3xl transition-all duration-500 hover:-translate-y-0.5 ${isDark ? 'bg-ink-900 border border-ink-800 hover:border-ink-700' : 'bg-white border border-ink-200/80 hover:shadow-card-hover'}`}
                 >
                   <div className={`text-2xl sm:text-3xl font-bold mb-1 tracking-tight ${isDark ? 'text-white' : 'text-ink-900'}`}>
                     {stat.value}
@@ -85,19 +85,20 @@ export default function Hero({ onNavigate }: HeroProps) {
           </div>
 
           <div className="lg:col-span-5 animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            <div className="relative aspect-[4/5] max-w-md mx-auto lg:max-w-none rounded-3xl overflow-hidden shadow-elevated">
-              <img
-                src={heroPortraitUrl}
-                alt="Rajesh Kumar — UI/UX Architect & Senior Product Designer at work"
-                className="w-full h-full object-cover"
-                loading="eager"
-              />
-              <div className={`absolute inset-0 ${isDark ? 'bg-gradient-to-t from-ink-950/60 via-transparent to-transparent' : 'bg-gradient-to-t from-ink-950/40 via-transparent to-transparent'}`} />
-              <div className={`absolute bottom-6 left-6 right-6 rounded-2xl p-4 ${isDark ? 'glass-dark' : 'bg-white/90 backdrop-blur-xl border border-white/40 shadow-card'}`}>
-                <p className={`font-semibold text-sm ${isDark ? 'text-white' : 'text-ink-900'}`}>Rajesh Kumar</p>
-                <p className={`text-xs mt-0.5 ${isDark ? 'text-ink-400' : 'text-ink-500'}`}>UI/UX Architect · Senior Product Designer</p>
+            <figure className="max-w-md mx-auto lg:max-w-none">
+              <div className={`relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-elevated ring-1 ${isDark ? 'ring-white/10' : 'ring-ink-900/5'}`}>
+                <img
+                  src={heroVisualUrl}
+                  alt="Collage of Rajesh Kumar's product work: an operations dashboard, a field-operations mobile app, design tokens and human-in-the-loop AI states"
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                />
               </div>
-            </div>
+              <figcaption className={`mt-4 flex items-center gap-2 text-xs ${isDark ? 'text-ink-400' : 'text-ink-500'}`}>
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-500" />
+                Recreated from my work · design system, field-ops mobile, human-in-the-loop AI
+              </figcaption>
+            </figure>
           </div>
         </div>
 

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Download, Calendar, Github, Sun, Moon } from 'lucide-react';
-import { useNavigation, useContactInfo, useSocialLinks } from '../hooks/useConfig';
+import { useNavigation, useContactInfo, useSocialLinks, useSiteConfig } from '../hooks/useConfig';
 import { useTheme } from '../context/ThemeContext';
 
 interface HeaderProps {
@@ -18,7 +18,10 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
   const navItems = useNavigation();
   const { email } = useContactInfo();
   const socialLinks = useSocialLinks();
-  const githubLink = socialLinks.find(s => s.platform === 'GitHub');
+  // Header actions are switched on per item in config.json (headerActions)
+  const actions = useSiteConfig().headerActions ?? {};
+  const githubLink = actions.github ? socialLinks.find(s => s.platform === 'GitHub') : undefined;
+  const hasMenuActions = !!githubLink || actions.resume || actions.bookCall;
 
   const isDetailPage = currentPage === 'portfolio-detail' || currentPage === 'case-study-detail';
   const showSolidHeader = isScrolled || isDetailPage;
@@ -123,6 +126,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                   <Github className="w-[18px] h-[18px]" />
                 </a>
               )}
+              {actions.resume && (
               <button
                 type="button"
                 onClick={() => handleNavClick('contact')}
@@ -135,6 +139,8 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                 <Download className="w-4 h-4 mr-1.5" />
                 Resume
               </button>
+              )}
+              {actions.bookCall && (
               <a
                 href={`mailto:${email}`}
                 className="inline-flex items-center px-3.5 py-2 bg-gradient-to-r from-brand-500 to-brand-600 text-white text-xs font-semibold rounded-xl hover:shadow-glow transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-ink-950"
@@ -142,6 +148,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                 <Calendar className="w-3.5 h-3.5 mr-1.5" />
                 Book Call
               </a>
+              )}
             </div>
           </div>
 
@@ -193,6 +200,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                 </button>
               ))}
 
+              {hasMenuActions && (
               <div className="pt-3 flex flex-col gap-2 border-t border-ink-100 dark:border-ink-800 mt-2">
                 {githubLink && (
                   <a
@@ -205,6 +213,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                     GitHub Profile
                   </a>
                 )}
+                {actions.resume && (
                 <button
                   type="button"
                   onClick={() => handleNavClick('contact')}
@@ -213,6 +222,8 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                   <Download className="w-4 h-4 mr-2" />
                   Download Resume
                 </button>
+                )}
+                {actions.bookCall && (
                 <a
                   href={`mailto:${email}`}
                   className="inline-flex items-center px-4 py-2.5 bg-gradient-to-r from-brand-500 to-brand-600 text-white text-sm font-semibold rounded-xl"
@@ -220,7 +231,9 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                   <Calendar className="w-3.5 h-3.5 mr-2" />
                   Book Call
                 </a>
+                )}
               </div>
+              )}
             </div>
           </div>
         )}

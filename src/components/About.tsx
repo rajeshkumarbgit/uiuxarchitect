@@ -1,4 +1,4 @@
-import { Code, Palette, Users, Zap, Target, BookOpen, Briefcase, type LucideIcon } from 'lucide-react';
+import { Code, Palette, Users, Zap, Target, BookOpen, Briefcase, Globe, MapPin, GraduationCap, BadgeCheck, Award, type LucideIcon } from 'lucide-react';
 import { useAboutContent } from '../hooks/useContent';
 import { useSkillCategories, useTimeline } from '../hooks/useSkills';
 
@@ -32,6 +32,35 @@ export default function About() {
             ))}
           </div>
         </div>
+
+        {content.globalCollaboration && (
+          <div className="mb-20 p-6 sm:p-8 rounded-3xl bg-ink-50/60 dark:bg-ink-900/60 border border-ink-100 dark:border-ink-800">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 flex items-center justify-center">
+                <Globe className="w-5 h-5 text-white" />
+              </div>
+              <h2 className="text-2xl font-bold text-ink-900 dark:text-white tracking-tight">{content.globalCollaboration.title}</h2>
+            </div>
+            <p className="max-w-3xl text-base text-ink-600 dark:text-ink-300 leading-[1.7] mb-6">{content.globalCollaboration.description}</p>
+            <div className="flex flex-wrap gap-2 mb-8">
+              {content.globalCollaboration.regions.map((region) => (
+                <span key={region} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-white dark:bg-ink-800 border border-ink-200 dark:border-ink-700 text-ink-700 dark:text-ink-200 text-sm font-medium rounded-full">
+                  <MapPin className="w-3.5 h-3.5 text-brand-600 dark:text-brand-400" />
+                  {region}
+                </span>
+              ))}
+            </div>
+            <ol className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {content.globalCollaboration.steps.map((step, idx) => (
+                <li key={idx} className="p-4 bg-white dark:bg-ink-800/60 rounded-2xl border border-ink-100 dark:border-ink-700">
+                  <span className="text-xs font-bold text-brand-700 dark:text-brand-400">Step {idx + 1}</span>
+                  <h3 className="text-base font-bold text-ink-900 dark:text-white mt-1 mb-1.5">{step.title}</h3>
+                  <p className="text-sm text-ink-600 dark:text-ink-400 leading-[1.7]">{step.description}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        )}
 
         <div className="mb-20">
           <h2 className="text-2xl font-bold text-ink-900 dark:text-white mb-8 tracking-tight">{content.principlesTitle}</h2>
@@ -126,6 +155,33 @@ export default function About() {
             </div>
           </div>
         </div>
+
+        {content.credentials && (
+          <div className="mt-20 grid md:grid-cols-3 gap-5">
+            {[
+              { icon: GraduationCap, title: content.credentials.educationTitle, items: content.credentials.education },
+              { icon: BadgeCheck, title: content.credentials.certificationsTitle, items: content.credentials.certifications },
+              { icon: Award, title: content.credentials.awardsTitle, items: content.credentials.awards },
+            ].map(({ icon: Icon, title, items }) => (
+              <div key={title} className="p-5 bg-ink-50/60 dark:bg-ink-900/60 rounded-2xl border border-ink-100 dark:border-ink-800">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 flex items-center justify-center">
+                    <Icon className="w-4 h-4 text-white" />
+                  </div>
+                  <h2 className="text-lg font-bold text-ink-900 dark:text-white">{title}</h2>
+                </div>
+                <ul className="space-y-2.5">
+                  {items.map((item) => (
+                    <li key={item} className="flex items-start gap-2.5 text-sm text-ink-600 dark:text-ink-300 leading-[1.6]">
+                      <span className="text-brand-600 dark:text-brand-400 font-bold">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
