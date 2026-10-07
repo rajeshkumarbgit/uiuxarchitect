@@ -1,51 +1,92 @@
 {
   "timeline": [
     {
-      "year": "Dec 2012 – Present",
-      "role": "UI/UX Architect / Senior Product Design & Front-End Lead",
-      "company": "Nokia Networks & Solutions",
-      "description": "Lead UX architecture for complex telecom and enterprise applications — converting business, operational, and technical requirements into clear IA, workflows, interaction models, and production-ready UI specifications. Partner with product managers, domain experts, architects, developers, QA, and global stakeholders from discovery through release.",
+      "year": "Jul 2024 – Present",
+      "role": "Frontend Architect",
+      "company": "Nokia Networks & Solutions, Chennai",
+      "description": "Lead the UX and front-end direction of a multi-application network automation platform (assurance, performance and security) and its field-operations mobility and low-code integration products. Partner with product, architecture and engineering stakeholders across Australia, Finland, USA and France to move use cases from sketch to prototype to shipped UI.",
       "achievements": [
-        "Delivered Nokia Enterprise Operations Portal for 2,500+ users across global delivery centres",
-        "Built automation tools reducing manual effort by up to 90%",
-        "Define reusable interaction patterns, responsive layouts, and design-system guidance improving consistency, scalability, and WCAG accessibility",
-        "Provide hands-on front-end architecture using Angular, TypeScript, RxJS, NgRx, and API-driven UI patterns",
-        "Earned Nokia Excellence Award for Time Tracking & Cost Recharge workflow redesign",
-        "Led AI product portfolio: Telecom Support Copilot (secure RAG), AI UX Review Assistant, Smart Notification Rule Builder, Local Private AI Workspace"
+        "Own the design system — design tokens, reusable components and UI standards — across five operations applications, with light/dark themes",
+        "Designed dashboards and cockpit screens for change coordination and field operations, so operators see only what needs action",
+        "Defined human-in-the-loop AI patterns: clear automated, in-review and approved states with human override",
+        "Delivered the field-operations mobility app through UAT closure and the integration platform Phase I (live); leading Phase II, a low-code application",
+        "Led the operations portal Angular upgrade with security vulnerability remediation",
+        "Mentor designers and developers; introduced GitHub Copilot, Cursor, v0 and Bolt to the team"
+      ]
+    },
+    {
+      "year": "May 2022 – Jun 2024",
+      "role": "UI-UX Lead Developer",
+      "company": "Nokia Networks & Solutions, Chennai",
+      "description": "Led UI/UX design and front-end development for network operations applications.",
+      "achievements": [
+        "Led UI/UX design for network operations applications",
+        "Hands-on front-end development in Angular, TypeScript, RxJS and NgRx"
+      ]
+    },
+    {
+      "year": "Apr 2018 – Apr 2022",
+      "role": "Design & Development Engineer → Senior Development Engineer → R&D Engineer",
+      "company": "Nokia Networks & Solutions, Chennai",
+      "description": "UI design and front-end development for Nokia applications, progressing through three engineering roles.",
+      "achievements": [
+        "Design and Development Engineer (Apr 2018 – Jun 2019)",
+        "Senior Development Engineer (Jul 2019 – Jul 2020)",
+        "Research and Development Engineer (Aug 2020 – Apr 2022)"
+      ]
+    },
+    {
+      "year": "Dec 2012 – Mar 2018",
+      "role": "Usability Specialist, GDC Chennai",
+      "company": "Nokia Networks & Solutions, Chennai",
+      "description": "Usability and UI design for Nokia intranet applications and in-house tools, from concept to creation.",
+      "achievements": [
+        "Delivered the intranet portal and niche applications for 2,500+ users, on schedule",
+        "Planned the India GDC rollout and extended delivery to other global centres",
+        "Time Tracking Tool cut effort booking and cost recharge effort by 90% — Appreciate Excellence Award",
+        "GUI-based automation tool — CTO Business Excellence Award",
+        "Performance management app (Appreciate Excellence Award); Survey app (Nokia Quality Award 2013 nominee)"
       ]
     },
     {
       "year": "Apr 2011 – Dec 2012",
-      "role": "Software Developer / UI Designer",
-      "company": "Randstad India (Nokia engagement)",
-      "description": "Designed and developed user interfaces for Nokia internal applications, combining visual design, responsive front-end implementation, and stakeholder collaboration. Created an internal tools gallery and produced a monthly interactive flipbook newsletter for Nokia delivery teams.",
+      "role": "Software Developer, UI/UX Designer",
+      "company": "Randstad India (assigned to Nokia), Chennai",
+      "description": "Designed and developed UI for Nokia intranet portal and in-house applications.",
       "achievements": [
-        "Designed and developed UI for Nokia internal applications",
-        "Created internal tools gallery for Nokia delivery teams",
-        "Produced monthly interactive flipbook newsletter",
-        "Combined visual design with responsive front-end implementation"
+        "Designed and developed UI for Nokia in-house applications",
+        "Created a dedicated tools gallery",
+        "Produced the monthly newsletter in flipbook format"
       ]
     },
     {
       "year": "Jun 2007 – Apr 2011",
       "role": "Visualizer",
-      "company": "Giant Media",
-      "description": "Led visual concepts across web, print, outdoor, branding, illustration, and advertising campaigns for startup, FMCG, and corporate clients across multiple concurrent projects.",
+      "company": "Giant Media, Coimbatore",
+      "description": "Led cross-media branding, illustration and UI design projects for startups, working alongside developer teams.",
       "achievements": [
-        "Led visual concepts across web, print, outdoor, and branding campaigns",
-        "Served startup, FMCG, and corporate clients across multiple concurrent projects",
-        "Built foundation in visual design, illustration, and advertising"
+        "Branding concepts for FMCG and corporate clients across print and web",
+        "Illustration and UI design for startups with developer teams"
       ]
     },
     {
       "year": "May 2006 – Jun 2007",
       "role": "Web Designer",
-      "company": "eMahatva Technologies Pvt. Ltd.",
-      "description": "Designed 100+ microsites, landing pages, web templates, banners, and brand assets for a commercial template gallery.",
+      "company": "eMahatva Technologies, Coimbatore",
+      "description": "Designed hundreds of mini sites, logos, landing pages, web templates and banners for a web template gallery.",
       "achievements": [
-        "Designed 100+ microsites, landing pages, and web templates",
-        "Created banners and brand assets for a commercial template gallery",
-        "Built early expertise in web design and digital brand assets"
+        "Hundreds of mini sites, landing pages and web templates",
+        "Logos and banners for a commercial template gallery"
+      ]
+    },
+    {
+      "year": "Aug 2005 – May 2006",
+      "role": "Graphic Designer & Technical Instructor",
+      "company": "Camet, Coimbatore",
+      "description": "Designed print media and trained fellow designers on design tools.",
+      "achievements": [
+        "Print media design",
+        "Trained designers on design tools"
       ]
     }
   ]

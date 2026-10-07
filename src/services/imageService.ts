@@ -81,7 +81,7 @@ class ImageService {
    * @returns Fallback image URL
    */
   private getFallbackImage(): string {
-    return 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1200';
+    return '/images/work/ds-cover.webp';
   }
 
   /**

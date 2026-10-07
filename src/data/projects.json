@@ -2,403 +2,526 @@
   "projects": [
     {
       "id": "1",
-      "slug": "sath-notification-system",
-      "title": "Enterprise Incident Management Platform",
-      "category": ["Apps", "UX Flows", "Design Systems"],
-      "tags": ["Angular", "NgRx", "Data-Dense UI", "Accessibility"],
-      "role": ["Lead UX Designer", "Senior Frontend Developer"],
-      "team": "2 Designers, 6 Engineers, 1 PM",
-      "timeline": "2024 - 2025 (8 months)",
-      "kpis": ["35% reduction in incident resolution time", "92% user satisfaction", "14% improvement in rule accuracy"],
-      "summary": "Led end-to-end redesign of enterprise notification system handling 10M+ daily alerts. Created scalable design system and implemented complex rule builder with real-time validation.",
-      "cover": "project-cover-1",
-      "gallery": ["gallery-1-1", "gallery-1-2", "gallery-1-3", "gallery-1-4"],
-      "liveUrl": "https://github.com/rajeshkumar/sath-notification-system",
-      "codeUrl": "https://github.com/rajeshkumar/sath-notification-system",
-      "industry": "Enterprise SaaS",
-      "platform": ["Web"],
+      "slug": "network-automation-ui-standardisation",
+      "title": "Network Automation Platform — UI Standardisation",
+      "category": [
+        "Design Systems",
+        "Apps",
+        "UX Flows"
+      ],
+      "tags": [
+        "Angular",
+        "TypeScript",
+        "Design Tokens",
+        "Light/Dark Themes",
+        "Accessibility"
+      ],
+      "role": [
+        "Frontend Architect",
+        "Design System Owner"
+      ],
+      "team": "Product, architecture & engineering stakeholders across Australia, Finland, USA and France",
+      "timeline": "2024 – Present",
+      "kpis": [
+        "One consistent UI across 5 operations applications",
+        "Light and dark themes from a single set of design tokens",
+        "Shared, reusable component library and UI standards",
+        "Designers and developers mentored on the system"
+      ],
+      "summary": "Set the UX and front-end direction for a multi-application network automation platform covering assurance, performance and security. Owned the design system — design tokens, reusable components and UI standards — and applied it across five operations applications — including workflow management, scheduling, and procedure (MOP) launch and monitoring — with light/dark theme support.",
+      "plainTerms": "Telecom operators run their networks through several separate tools. Each one had grown its own look and behaviour, so people switching between them had to relearn the screens. I built one shared 'kit of parts' (a design system) — the same colours, buttons, tables and layouts — so all five tools now look and work alike. A 'MOP' (Method of Procedure) is a step-by-step instruction for a network change; two of the tools launch and track them, and a single switch flips them between light and dark mode. 'Design tokens' are simply named settings like 'primary colour' or 'standard spacing' that every tool reads from, so a change made once shows up everywhere.",
+      "cover": "ds-cover",
+      "gallery": [
+        "ds-cover",
+        "ds-tokens",
+        "ds-components",
+        "ds-scheduler",
+        "ds-monitor"
+      ],
+      "industry": "Telecom Network Operations",
+      "platform": [
+        "Web"
+      ],
       "featured": true,
       "status": "live"
     },
     {
       "id": "2",
-      "slug": "fintech-mobile-app",
-      "title": "Investment Banking Mobile Experience",
-      "category": ["Apps", "Prototypes"],
-      "tags": ["React Native", "iOS", "Android", "Financial Services"],
-      "role": ["Product Designer", "UX Lead"],
-      "team": "3 Designers, 8 Engineers, 2 PMs",
-      "timeline": "2023 (6 months)",
-      "kpis": ["28% increase in daily active users", "2.1s average load time", "4.8★ App Store rating"],
-      "summary": "Designed and shipped mobile-first investment platform enabling users to manage $2B+ in assets. Simplified complex financial workflows into intuitive mobile interactions.",
-      "cover": "project-cover-2",
-      "gallery": ["gallery-2-1", "gallery-2-2", "gallery-2-3", "gallery-2-4"],
-      "liveUrl": "https://github.com/rajeshkumar/fintech-mobile-app",
-      "codeUrl": "https://github.com/rajeshkumar/fintech-mobile-app",
-      "industry": "FinTech",
-      "platform": ["iOS", "Android"],
+      "slug": "field-operations-mobility-app",
+      "title": "Field Operations Mobility App",
+      "category": [
+        "Apps",
+        "UX Flows"
+      ],
+      "tags": [
+        "Angular",
+        "Responsive Design",
+        "Dashboards",
+        "Field Operations"
+      ],
+      "role": [
+        "Frontend Architect",
+        "UX Lead"
+      ],
+      "team": "Product, engineering and QA teams with global stakeholders",
+      "timeline": "2024 onward",
+      "kpis": [
+        "Front-end delivered through to UAT closure",
+        "Cockpit screens that surface only what needs action",
+        "Change coordination and field-operations workflows covered"
+      ],
+      "summary": "Designed and built dashboards and cockpit screens for change coordination and field-operations workflows, and led front-end delivery of the mobility application through to UAT closure.",
+      "plainTerms": "Engineers in the field and coordinators in the office need to know which network changes are planned, running or stuck. I designed 'cockpit' screens — one place that shows only the items needing attention, instead of long lists of everything. 'UAT' (User Acceptance Testing) is the final check where the customer's own users try the app and sign off that it does what they need; 'UAT closure' means they signed it off.",
+      "cover": "mob-cover",
+      "gallery": [
+        "mob-cover",
+        "mob-cockpit",
+        "mob-dark"
+      ],
+      "industry": "Telecom Network Operations",
+      "platform": [
+        "Web",
+        "Mobile Web"
+      ],
       "featured": true,
       "status": "live"
     },
     {
       "id": "3",
-      "slug": "healthcare-patient-portal",
-      "title": "Patient-Centered Healthcare Portal",
-      "category": ["Apps", "Websites", "UX Flows"],
-      "tags": ["React", "Accessibility", "Healthcare", "HIPAA"],
-      "role": ["Senior UX/UI Designer", "Frontend Consultant"],
-      "team": "4 Designers, 12 Engineers, 3 PMs",
-      "timeline": "2022 - 2023 (10 months)",
-      "kpis": ["40% reduction in support calls", "WCAG 2.2 AA compliant", "89% task completion rate"],
-      "summary": "Transformed legacy patient portal serving 2M+ patients. Improved information architecture, implemented accessible design patterns, and reduced patient friction by 40%.",
-      "cover": "project-cover-3",
-      "gallery": ["gallery-3-1", "gallery-3-2", "gallery-3-3", "gallery-3-4"],
-      "liveUrl": "https://github.com/rajeshkumar/healthcare-patient-portal",
-      "codeUrl": "https://github.com/rajeshkumar/healthcare-patient-portal",
-      "industry": "Healthcare",
-      "platform": ["Web", "Mobile Web"],
+      "slug": "low-code-integration-platform",
+      "title": "Low-Code Integration Platform",
+      "category": [
+        "Apps",
+        "UX Flows",
+        "Prototypes"
+      ],
+      "tags": [
+        "Angular",
+        "Low-Code",
+        "Human-in-the-Loop AI",
+        "Prototyping"
+      ],
+      "role": [
+        "Frontend Architect",
+        "UX Lead"
+      ],
+      "team": "Product, architecture & engineering stakeholders across four countries",
+      "timeline": "2024 – Present (Phase I live, Phase II in progress)",
+      "kpis": [
+        "Phase I live in production",
+        "Phase II — a low-code application — in progress",
+        "Interaction patterns for automated, in-review and approved actions with human override"
+      ],
+      "summary": "Delivered Phase I of an integration platform for network operations and now lead Phase II, a modular low-code application. Defined interaction patterns for AI-assisted operations with clear states for automated, in-review and approved actions, and a human override at every step.",
+      "plainTerms": "'Low-code' means users build or adjust a workflow by arranging ready-made blocks on screen instead of writing program code. Parts of the work are suggested or carried out by automation and AI, so the screens always show whether an action was done automatically, is waiting for someone to review it, or has been approved — and a person can step in and override it at any time. That is what 'human-in-the-loop' means: the machine helps, but a human stays in charge.",
+      "cover": "lc-cover",
+      "gallery": [
+        "lc-cover",
+        "lc-states",
+        "lc-dark"
+      ],
+      "industry": "Telecom Network Operations",
+      "platform": [
+        "Web"
+      ],
       "featured": true,
       "status": "live"
     },
     {
       "id": "4",
-      "slug": "ecommerce-design-system",
-      "title": "Global E-commerce Design System",
-      "category": ["Design Systems", "Branding"],
-      "tags": ["Figma", "React", "Storybook", "Design Tokens"],
-      "role": ["Design System Lead", "Component Architect"],
-      "team": "5 Designers, 4 Engineers",
-      "timeline": "2021 - 2022 (14 months)",
-      "kpis": ["70% faster component development", "12 products unified", "95% adoption rate"],
-      "summary": "Built comprehensive design system from ground up for global marketplace. Created 120+ components, established governance model, and enabled 12 product teams to ship consistently.",
-      "cover": "project-cover-4",
-      "gallery": ["gallery-4-1", "gallery-4-2", "gallery-4-3", "gallery-4-4"],
-      "liveUrl": "https://github.com/rajeshkumar/ecommerce-design-system",
-      "codeUrl": "https://github.com/rajeshkumar/ecommerce-design-system",
-      "industry": "E-commerce",
-      "platform": ["Web", "iOS", "Android"],
+      "slug": "operations-portal-framework-upgrade",
+      "title": "Operations Portal Framework Upgrade",
+      "category": [
+        "Apps"
+      ],
+      "tags": [
+        "Angular",
+        "TypeScript",
+        "Security",
+        "Vulnerability Remediation"
+      ],
+      "role": [
+        "Frontend Architect",
+        "Technical Lead"
+      ],
+      "team": "Engineering team with product and security stakeholders",
+      "timeline": "2024 onward",
+      "kpis": [
+        "Portal moved to a current Angular version",
+        "Known security vulnerabilities remediated"
+      ],
+      "summary": "Led the Angular framework upgrade of the platform's operations portal, combined with remediation of security vulnerabilities in the front-end code and its dependencies.",
+      "plainTerms": "Angular is the toolkit the portal's screens are built with. Like phone software, it needs regular updates — older versions stop getting security fixes. I led the move to a current version and fixed the security weaknesses ('vulnerabilities') found in the code and the third-party libraries it relies on, so the portal stays safe and supported.",
+      "cover": "up-cover",
+      "gallery": [
+        "up-cover",
+        "up-portal"
+      ],
+      "industry": "Telecom Network Operations",
+      "platform": [
+        "Web"
+      ],
       "featured": false,
       "status": "live"
     },
     {
       "id": "5",
-      "slug": "saas-dashboard-redesign",
-      "title": "Data Analytics Platform Redesign",
-      "category": ["Apps", "Wireframes"],
-      "tags": ["Vue.js", "Data Visualization", "Analytics"],
-      "role": ["Principal Designer", "UX Strategist"],
-      "team": "2 Designers, 5 Engineers, 1 PM",
-      "timeline": "2021 (5 months)",
-      "kpis": ["52% increase in feature discovery", "3.2s dashboard load", "22% higher engagement"],
-      "summary": "Redesigned complex analytics platform processing 500M+ data points daily. Simplified navigation, improved data visualization hierarchy, and enhanced real-time performance.",
-      "cover": "project-cover-5",
-      "gallery": ["gallery-5-1", "gallery-5-2", "gallery-5-3"],
-      "liveUrl": "https://github.com/rajeshkumar/saas-dashboard-redesign",
-      "codeUrl": "https://github.com/rajeshkumar/saas-dashboard-redesign",
-      "industry": "SaaS",
-      "platform": ["Web"],
+      "slug": "ai-assisted-development",
+      "title": "AI-Assisted Development Adoption",
+      "category": [
+        "Use Cases"
+      ],
+      "tags": [
+        "GitHub Copilot",
+        "Cursor",
+        "v0",
+        "Bolt",
+        "Mentoring"
+      ],
+      "role": [
+        "Frontend Architect",
+        "Mentor"
+      ],
+      "team": "Designers and front-end developers",
+      "timeline": "2024 – Present",
+      "kpis": [
+        "AI coding assistants introduced to the team",
+        "Hands-on mentoring for designers and developers"
+      ],
+      "summary": "Introduced AI coding assistants — GitHub Copilot, Cursor, v0 and Bolt — to the design and front-end team, with mentoring on how to use them in day-to-day UI work.",
+      "plainTerms": "These are AI tools that help write code. Copilot and Cursor suggest code as a developer types; v0 and Bolt can turn a written description or a sketch into a first working screen. I brought them into the team and coached people on using them well, so the team can turn ideas into working screens with AI help — with a person still reviewing what ships.",
+      "cover": "ai-cover",
+      "gallery": [
+        "ai-cover",
+        "ai-prompt"
+      ],
+      "industry": "Engineering Enablement",
+      "platform": [
+        "Web"
+      ],
       "featured": false,
       "status": "live"
     },
     {
       "id": "6",
-      "slug": "luxury-brand-campaign",
-      "title": "Luxury Fashion Brand Campaign",
-      "category": ["Campaigns", "Branding", "Websites"],
-      "tags": ["Brand Strategy", "Creative Direction", "Motion Design"],
-      "role": ["Creative Director", "Brand Designer"],
-      "team": "6 Designers, 2 Copywriters, 1 PM",
-      "timeline": "2020 (4 months)",
-      "kpis": ["180% increase in web traffic", "2.3M social impressions", "45% conversion lift"],
-      "summary": "Led complete brand refresh and digital campaign for luxury fashion house. Created visual language, art directed photoshoots, and designed immersive website experience.",
-      "cover": "project-cover-6",
-      "gallery": ["gallery-6-1", "gallery-6-2", "gallery-6-3"],
-      "liveUrl": "https://github.com/rajeshkumar/luxury-brand-campaign",
-      "codeUrl": "https://github.com/rajeshkumar/luxury-brand-campaign",
-      "industry": "Fashion & Retail",
-      "platform": ["Web", "Social"],
-      "featured": false,
-      "status": "live"
+      "slug": "enterprise-intranet-portal",
+      "title": "Enterprise Intranet Portal & In-house Tools",
+      "category": [
+        "Websites",
+        "Apps",
+        "UX Flows"
+      ],
+      "tags": [
+        "Usability",
+        "Intranet",
+        "Enterprise Tools",
+        "Front-end Development"
+      ],
+      "role": [
+        "Usability Specialist",
+        "UI Designer & Developer"
+      ],
+      "team": "Global delivery centre teams",
+      "timeline": "2011 – 2022",
+      "kpis": [
+        "Intranet portal and niche apps for 2,500+ users, delivered on schedule",
+        "90% less effort for effort booking and cost recharge (Time Tracking Tool)",
+        "CTO Business Excellence Award for a GUI-based automation tool",
+        "2× Appreciate Excellence Award; Nokia Quality Award 2013 nominee"
+      ],
+      "summary": "Took the Nokia intranet portal and a pack of niche in-house applications from concept to delivery for 2,500+ users, planned the India global delivery centre rollout and extended delivery to other global centres. Also designed the time tracking, performance management and survey applications and a GUI-based automation tool.",
+      "plainTerms": "An intranet is a company's private website for its own staff. I designed and built it, along with everyday tools people used inside the company — for logging work hours, running performance reviews and running surveys. The time tracking tool cut the effort of recording hours and billing them to the right budget by 90%. A 'GUI-based automation tool' lets people automate repetitive tasks by clicking through screens instead of writing scripts.",
+      "cover": "in-cover",
+      "gallery": [
+        "in-cover",
+        "in-time",
+        "in-survey"
+      ],
+      "industry": "Enterprise Internal Tools",
+      "platform": [
+        "Web"
+      ],
+      "featured": true,
+      "status": "archived"
     },
     {
       "id": "7",
-      "slug": "education-learning-platform",
-      "title": "Online Learning Platform for K-12",
-      "category": ["Apps", "UX Flows"],
-      "tags": ["React", "Education", "Gamification"],
-      "role": ["Lead Product Designer", "UX Researcher"],
-      "team": "3 Designers, 8 Engineers, 2 PMs",
-      "timeline": "2019 - 2020 (12 months)",
-      "kpis": ["85% student engagement rate", "60% parent satisfaction increase", "500K+ active users"],
-      "summary": "Designed engaging learning platform for elementary students and parents. Balanced educational efficacy with playful interactions, achieving high engagement and learning outcomes.",
-      "cover": "project-cover-7",
-      "gallery": ["gallery-7-1", "gallery-7-2", "gallery-7-3"],
-      "liveUrl": "https://github.com/rajeshkumar/education-learning-platform",
-      "codeUrl": "https://github.com/rajeshkumar/education-learning-platform",
-      "industry": "Education",
-      "platform": ["Web", "iPad"],
+      "slug": "alarm-triage-copilot",
+      "title": "Alarm Triage Copilot",
+      "category": [
+        "Prototypes",
+        "UX Flows"
+      ],
+      "tags": [
+        "Figma",
+        "Prototyping",
+        "Human-in-the-Loop AI",
+        "Usability testing"
+      ],
+      "role": [
+        "UX Designer",
+        "Prototyper"
+      ],
+      "team": "Solo concept",
+      "timeline": "2025 · 3-week concept",
+      "kind": "concept",
+      "kpis": [
+        "Clickable prototype covering triage to approval",
+        "AI suggestion shows evidence and confidence, never acts alone",
+        "Test plan for 5 NOC engineers"
+      ],
+      "summary": "A clickable prototype of an AI copilot for a network operations centre. It groups related alarms, suggests a likely root cause with evidence, and asks a person to approve each next step.",
+      "plainTerms": "When something breaks in a network, dozens of alarms fire at once. This concept shows how an AI assistant could point to the probable cause and propose fixes, while an engineer stays in control and approves every action. A \"prototype\" is a clickable mock-up used to test an idea before anything is built.",
+      "cover": "pt-cover",
+      "gallery": [
+        "pt-cover",
+        "pt-proto"
+      ],
+      "industry": "Telecom Network Operations",
+      "platform": [
+        "Web"
+      ],
       "featured": false,
-      "status": "live"
+      "status": "prototype"
     },
     {
       "id": "8",
-      "slug": "travel-booking-experience",
-      "title": "AI-Powered Travel Booking Platform",
-      "category": ["Apps", "Prototypes"],
-      "tags": ["Next.js", "AI/ML", "Travel", "Personalization"],
-      "role": ["Senior Product Designer", "Prototyper"],
-      "team": "4 Designers, 10 Engineers, 2 PMs",
-      "timeline": "2019 (7 months)",
-      "kpis": ["31% booking conversion increase", "1.8s search results", "4.7★ user rating"],
-      "summary": "Designed AI-powered travel platform personalizing recommendations for 5M+ users. Created sophisticated search experience with natural language processing and predictive filters.",
-      "cover": "project-cover-8",
-      "gallery": ["gallery-8-1", "gallery-8-2", "gallery-8-3"],
-      "liveUrl": "https://github.com/rajeshkumar/travel-booking-experience",
-      "codeUrl": "https://github.com/rajeshkumar/travel-booking-experience",
-      "industry": "Travel & Hospitality",
-      "platform": ["Web", "Mobile"],
+      "slug": "offline-site-survey-app",
+      "title": "Offline Site Survey App",
+      "category": [
+        "Prototypes",
+        "Apps"
+      ],
+      "tags": [
+        "Mobile",
+        "Offline-first",
+        "Prototyping",
+        "Accessibility"
+      ],
+      "role": [
+        "Product Designer"
+      ],
+      "team": "Solo concept",
+      "timeline": "2025 · 2-week concept",
+      "kind": "concept",
+      "kpis": [
+        "Works fully offline; syncs when signal returns",
+        "Large touch targets for gloved hands",
+        "GPS and time tagged on every photo"
+      ],
+      "summary": "A mobile prototype for field engineers surveying cell sites with poor signal: checklists, photo capture and a clear offline-to-sync story.",
+      "plainTerms": "Engineers often visit remote sites with no mobile data. This app saves everything on the phone first and uploads it later, so no work is lost. The screens make it obvious what is saved, what is waiting to upload and what has synced.",
+      "cover": "ss-cover",
+      "gallery": [
+        "ss-cover",
+        "ss-dark"
+      ],
+      "industry": "Field Operations",
+      "platform": [
+        "iOS",
+        "Android"
+      ],
       "featured": false,
-      "status": "live"
+      "status": "prototype"
     },
     {
       "id": "9",
-      "slug": "nonprofit-donation-platform",
-      "title": "Social Impact Fundraising Platform",
-      "category": ["Websites", "Campaigns"],
-      "tags": ["React", "Social Good", "Conversion Optimization"],
-      "role": ["UX Designer", "Frontend Developer"],
-      "team": "2 Designers, 4 Engineers, 1 PM",
-      "timeline": "2018 (5 months)",
-      "kpis": ["120% donation increase", "$8M raised in first year", "68% donor retention"],
-      "summary": "Built donation platform for social impact organizations. Optimized for trust and conversion, resulting in significant donation increases and high donor retention rates.",
-      "cover": "project-cover-9",
-      "gallery": ["gallery-9-1", "gallery-9-2", "gallery-9-3"],
-      "liveUrl": "https://github.com/rajeshkumar/nonprofit-donation-platform",
-      "codeUrl": "https://github.com/rajeshkumar/nonprofit-donation-platform",
-      "industry": "Nonprofit",
-      "platform": ["Web", "Mobile Web"],
+      "slug": "change-approval-ux-flow",
+      "title": "Network Change Approval — UX Flow",
+      "category": [
+        "UX Flows"
+      ],
+      "tags": [
+        "FigJam",
+        "Service blueprint",
+        "Journey mapping",
+        "Swimlanes"
+      ],
+      "role": [
+        "UX Designer"
+      ],
+      "team": "Solo concept",
+      "timeline": "2024 · 1-week concept",
+      "kind": "concept",
+      "kpis": [
+        "Future-state flow across four roles",
+        "Journey map from request to verification",
+        "Pain points turned into design opportunities"
+      ],
+      "summary": "A swimlane flow and journey map for approving planned network changes — who does what, where decisions happen, and where automation can remove waiting.",
+      "plainTerms": "Before designing screens, it helps to map the whole process. This flow shows every step of approving a network change, split by who is responsible, and highlights where people wait or get stuck. A \"journey map\" adds what people think and feel at each step.",
+      "cover": "fl-cover",
+      "gallery": [
+        "fl-cover",
+        "fl-journey"
+      ],
+      "industry": "Telecom Network Operations",
+      "platform": [
+        "Web",
+        "Mobile Web"
+      ],
       "featured": false,
-      "status": "live"
+      "status": "prototype"
     },
     {
       "id": "10",
-      "slug": "food-delivery-app",
-      "title": "Hyperlocal Food Delivery App",
-      "category": ["Apps", "UX Flows"],
-      "tags": ["React Native", "Location Services", "Real-time"],
-      "role": ["Product Designer", "Interaction Designer"],
-      "team": "3 Designers, 7 Engineers, 2 PMs",
-      "timeline": "2017 - 2018 (9 months)",
-      "kpis": ["18 min average delivery", "92% order accuracy", "200K+ weekly orders"],
-      "summary": "Designed end-to-end food delivery experience for hyperlocal marketplace. Optimized for speed and accuracy with real-time tracking and seamless checkout flow.",
-      "cover": "project-cover-10",
-      "gallery": ["gallery-10-1", "gallery-10-2", "gallery-10-3"],
-      "liveUrl": "https://github.com/rajeshkumar/food-delivery-app",
-      "codeUrl": "https://github.com/rajeshkumar/food-delivery-app",
-      "industry": "Food & Beverage",
-      "platform": ["iOS", "Android"],
+      "slug": "low-code-onboarding-flow",
+      "title": "Low-Code Builder — Onboarding Flow",
+      "category": [
+        "UX Flows",
+        "Prototypes"
+      ],
+      "tags": [
+        "Onboarding",
+        "Empty states",
+        "Figma",
+        "Design System"
+      ],
+      "role": [
+        "UX Designer"
+      ],
+      "team": "Solo concept",
+      "timeline": "2025 · 2-week concept",
+      "kind": "concept",
+      "kpis": [
+        "First working flow in four steps",
+        "Every empty screen offers a next step",
+        "Same patterns in light and dark themes"
+      ],
+      "summary": "A first-run experience for a low-code automation builder: pick a goal, start from a template, connect a source and see a safe first run — plus a set of helpful empty states.",
+      "plainTerms": "\"Onboarding\" is what new users see the first time they open a product. The aim here is to get someone to a working result in minutes without reading documentation. \"Empty states\" are the screens shown before there is any data — they should explain what belongs there and how to start.",
+      "cover": "ob-cover",
+      "gallery": [
+        "ob-cover",
+        "ob-empty"
+      ],
+      "industry": "Enterprise Software",
+      "platform": [
+        "Web"
+      ],
       "featured": false,
-      "status": "live"
+      "status": "prototype"
     },
     {
       "id": "11",
-      "slug": "b2b-enterprise-crm",
-      "title": "Enterprise CRM & Sales Platform",
-      "category": ["Apps", "Wireframes"],
-      "tags": ["Angular", "Enterprise", "CRM", "Complex Workflows"],
-      "role": ["Senior UX Designer", "Information Architect"],
-      "team": "4 Designers, 15 Engineers, 3 PMs",
-      "timeline": "2016 - 2017 (14 months)",
-      "kpis": ["45% faster deal closure", "30% sales productivity increase", "500+ companies onboarded"],
-      "summary": "Redesigned enterprise CRM handling complex B2B sales workflows. Simplified navigation, improved data hierarchy, and enabled sales teams to close deals 45% faster.",
-      "cover": "project-cover-11",
-      "gallery": ["gallery-11-1", "gallery-11-2", "gallery-11-3"],
-      "liveUrl": "https://github.com/rajeshkumar/b2b-enterprise-crm",
-      "codeUrl": "https://github.com/rajeshkumar/b2b-enterprise-crm",
-      "industry": "Enterprise Software",
-      "platform": ["Web"],
+      "slug": "design-system-docs-site",
+      "title": "Design System Documentation Site",
+      "category": [
+        "Websites",
+        "Design Systems"
+      ],
+      "tags": [
+        "Documentation",
+        "Responsive",
+        "Design Tokens",
+        "Angular"
+      ],
+      "role": [
+        "Designer",
+        "Frontend Developer"
+      ],
+      "team": "Solo concept",
+      "timeline": "2026 · 4-week concept",
+      "kind": "concept",
+      "kpis": [
+        "Live component previews with code and props",
+        "Light and dark themes from shared tokens",
+        "Responsive down to mobile"
+      ],
+      "summary": "A documentation website for an operations design system: guidance, live component previews, code snippets and props tables in one place.",
+      "plainTerms": "A design system only works if teams can find and understand it. This website is the \"manual\" — it shows each building block, when to use it, and the code developers copy into their apps.",
+      "cover": "dd-cover",
+      "gallery": [
+        "dd-cover",
+        "dd-responsive"
+      ],
+      "industry": "Design Systems",
+      "platform": [
+        "Web",
+        "Mobile Web"
+      ],
       "featured": false,
-      "status": "live"
+      "status": "prototype"
     },
     {
       "id": "12",
-      "slug": "fitness-wellness-app",
-      "title": "Personal Fitness & Wellness Tracker",
-      "category": ["Apps", "Prototypes"],
-      "tags": ["React Native", "Health & Fitness", "Wearables"],
-      "role": ["Lead Designer", "Product Strategist"],
-      "team": "2 Designers, 5 Engineers, 1 PM",
-      "timeline": "2015 - 2016 (8 months)",
-      "kpis": ["1M+ downloads", "75% 30-day retention", "4.6★ rating"],
-      "summary": "Created holistic fitness app integrating wearables, nutrition tracking, and social features. Achieved high retention through gamification and personalized coaching.",
-      "cover": "project-cover-12",
-      "gallery": ["gallery-12-1", "gallery-12-2", "gallery-12-3"],
-      "liveUrl": "https://github.com/rajeshkumar/fitness-wellness-app",
-      "codeUrl": "https://github.com/rajeshkumar/fitness-wellness-app",
-      "industry": "Health & Wellness",
-      "platform": ["iOS", "Android", "Apple Watch"],
+      "slug": "portfolio-website",
+      "title": "This Portfolio Website",
+      "category": [
+        "Websites"
+      ],
+      "tags": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Vite",
+        "PHP"
+      ],
+      "role": [
+        "Designer",
+        "Developer"
+      ],
+      "team": "Solo",
+      "timeline": "2026 · design & build",
+      "kind": "personal",
+      "kpis": [
+        "Designed and built end to end",
+        "Light and dark themes, responsive to mobile",
+        "Working contact form with spam protection"
+      ],
+      "summary": "The site you are on: designed and built with React, TypeScript and Tailwind CSS, with a data-driven content model, light and dark themes and a PHP contact endpoint.",
+      "plainTerms": "Everything here — layout, colours, content structure and code — was designed and built by me. Content lives in simple data files, so projects can be added without touching the page code.",
+      "cover": "pf-cover",
+      "gallery": [
+        "pf-cover",
+        "pf-pages"
+      ],
+      "industry": "Personal",
+      "platform": [
+        "Web",
+        "Mobile Web"
+      ],
       "featured": false,
-      "status": "live"
+      "status": "live",
+      "codeUrl": "https://github.com/rajeshkumarbgit/uiuxarchitect"
     },
     {
       "id": "13",
-      "slug": "smart-home-automation",
-      "title": "Smart Home Automation Dashboard",
-      "category": ["Apps", "UX Flows", "Design Systems"],
-      "tags": ["React", "IoT", "Real-time", "TypeScript"],
-      "role": ["Lead Product Designer", "Frontend Developer"],
-      "team": "3 Designers, 6 Engineers, 1 PM",
-      "timeline": "2024 (4 months)",
-      "kpis": ["3.2s device response time", "94% user setup completion", "4.7★ App Store rating"],
-      "summary": "Designed unified smart home control dashboard managing 50+ IoT device types. Created real-time device grid, automation rule builder, and energy analytics with sub-second feedback.",
-      "cover": "project-cover-13",
-      "gallery": ["gallery-13-1", "gallery-13-2", "gallery-13-3"],
-      "liveUrl": "https://github.com/rajeshkumar/smart-home-automation",
-      "codeUrl": "https://github.com/rajeshkumar/smart-home-automation",
-      "industry": "IoT & Smart Home",
-      "platform": ["Web", "iOS", "Android"],
-      "featured": true,
-      "status": "live"
-    },
-    {
-      "id": "14",
-      "slug": "agritech-sensor-platform",
-      "title": "Precision Agriculture Sensor Platform",
-      "category": ["Apps", "UX Flows"],
-      "tags": ["Angular", "NgRx", "Data Visualization", "IoT"],
-      "role": ["Senior UX Designer", "Data Visualization Specialist"],
-      "team": "2 Designers, 5 Engineers, 1 PM",
-      "timeline": "2023 (5 months)",
-      "kpis": ["40% reduction in water usage", "25% crop yield increase", "500+ farms onboarded"],
-      "summary": "Designed sensor monitoring platform for precision agriculture. Created intuitive data dashboards, alert system for soil conditions, and irrigation scheduling interface used by 500+ farms.",
-      "cover": "project-cover-14",
-      "gallery": ["gallery-14-1", "gallery-14-2", "gallery-14-3"],
-      "liveUrl": "https://github.com/rajeshkumar/agritech-sensor-platform",
-      "codeUrl": "https://github.com/rajeshkumar/agritech-sensor-platform",
-      "industry": "AgriTech",
-      "platform": ["Web", "Mobile Web"],
+      "slug": "template-gallery-mini-sites",
+      "title": "Web Template Gallery & Mini Sites",
+      "category": [
+        "Websites",
+        "Branding"
+      ],
+      "tags": [
+        "Web design",
+        "HTML/CSS",
+        "Photoshop",
+        "Branding"
+      ],
+      "role": [
+        "Web Designer"
+      ],
+      "team": "eMahatva Technologies",
+      "timeline": "2006 – 2007",
+      "kind": "client",
+      "kpis": [
+        "Hundreds of mini sites, landing pages and templates",
+        "Logos and banners for a commercial template gallery"
+      ],
+      "summary": "Early-career web design: mini sites, landing pages, web templates, logos and banners for a commercial template gallery.",
+      "plainTerms": "Before working on large software products I designed ready-made website templates that small businesses could buy and customise. It built the foundation for layout, typography and visual craft.",
+      "cover": "tg-cover",
+      "gallery": [
+        "tg-cover",
+        "tg-landing"
+      ],
+      "industry": "Web Templates",
+      "platform": [
+        "Web"
+      ],
       "featured": false,
-      "status": "live"
-    },
-    {
-      "id": "15",
-      "slug": "real-estate-search-platform",
-      "title": "Immersive Real Estate Search Platform",
-      "category": ["Apps", "Websites", "Prototypes"],
-      "tags": ["Next.js", "React", "Maps", "Virtual Tours"],
-      "role": ["Lead Product Designer", "Prototyper"],
-      "team": "3 Designers, 7 Engineers, 2 PMs",
-      "timeline": "2022 (6 months)",
-      "kpis": ["38% increase in property inquiries", "2.5s average search load", "4.8★ user rating"],
-      "summary": "Designed immersive property search platform with virtual tours, interactive maps, and AI-powered recommendations. Served 1M+ monthly active users across web and mobile.",
-      "cover": "project-cover-15",
-      "gallery": ["gallery-15-1", "gallery-15-2", "gallery-15-3"],
-      "liveUrl": "https://github.com/rajeshkumar/real-estate-search-platform",
-      "codeUrl": "https://github.com/rajeshkumar/real-estate-search-platform",
-      "industry": "Real Estate",
-      "platform": ["Web", "Mobile Web"],
-      "featured": false,
-      "status": "live"
-    },
-    {
-      "id": "16",
-      "slug": "music-streaming-app",
-      "title": "Social Music Streaming Experience",
-      "category": ["Apps", "UX Flows", "Prototypes"],
-      "tags": ["React Native", "Audio", "Social", "Real-time"],
-      "role": ["Lead Product Designer", "Interaction Designer"],
-      "team": "3 Designers, 7 Engineers, 2 PMs",
-      "timeline": "2024 (5 months)",
-      "kpis": ["42% increase in listening sessions", "3.5M monthly active users", "4.7★ App Store rating"],
-      "summary": "Designed social music streaming app with collaborative playlists, live listening rooms, and AI-powered discovery. Achieved 42% increase in daily listening sessions through social engagement features.",
-      "cover": "project-cover-16",
-      "gallery": ["gallery-16-1", "gallery-16-2", "gallery-16-3"],
-      "liveUrl": "https://github.com/rajeshkumar/music-streaming-app",
-      "codeUrl": "https://github.com/rajeshkumar/music-streaming-app",
-      "industry": "Music & Entertainment",
-      "platform": ["iOS", "Android"],
-      "featured": true,
-      "status": "live"
-    },
-    {
-      "id": "17",
-      "slug": "ev-charging-platform",
-      "title": "EV Charging Network Management Platform",
-      "category": ["Apps", "UX Flows", "Design Systems"],
-      "tags": ["React", "IoT", "Maps", "TypeScript", "Real-time"],
-      "role": ["Senior UX Designer", "Frontend Developer"],
-      "team": "3 Designers, 6 Engineers, 1 PM",
-      "timeline": "2023 - 2024 (7 months)",
-      "kpis": ["65% faster station discovery", "12K+ charging stations managed", "4.6★ App Store rating"],
-      "summary": "Designed EV charging platform with real-time station availability, route planning, and smart charging schedules. Managed 12K+ stations across 3 countries with sub-second status updates.",
-      "cover": "project-cover-17",
-      "gallery": ["gallery-17-1", "gallery-17-2", "gallery-17-3"],
-      "liveUrl": "https://github.com/rajeshkumar/ev-charging-platform",
-      "codeUrl": "https://github.com/rajeshkumar/ev-charging-platform",
-      "industry": "Clean Energy & EV",
-      "platform": ["Web", "iOS", "Android"],
-      "featured": true,
-      "status": "live"
-    },
-    {
-      "id": "18",
-      "slug": "logistics-supply-chain",
-      "title": "Supply Chain Visibility Dashboard",
-      "category": ["Apps", "Wireframes", "UX Flows"],
-      "tags": ["Angular", "NgRx", "Data Visualization", "Enterprise"],
-      "role": ["Principal Designer", "Information Architect"],
-      "team": "4 Designers, 10 Engineers, 2 PMs",
-      "timeline": "2022 - 2023 (9 months)",
-      "kpis": ["50% reduction in delivery exceptions", "99.2% tracking accuracy", "28% faster warehouse throughput"],
-      "summary": "Built end-to-end supply chain visibility platform tracking 500K+ shipments daily. Created real-time logistics dashboard with predictive alerts and automated exception management.",
-      "cover": "project-cover-18",
-      "gallery": ["gallery-18-1", "gallery-18-2", "gallery-18-3"],
-      "liveUrl": "https://github.com/rajeshkumar/logistics-supply-chain",
-      "codeUrl": "https://github.com/rajeshkumar/logistics-supply-chain",
-      "industry": "Logistics & Supply Chain",
-      "platform": ["Web"],
-      "featured": false,
-      "status": "live"
-    },
-    {
-      "id": "19",
-      "slug": "mental-wellness-app",
-      "title": "Mindful Mental Wellness Companion",
-      "category": ["Apps", "Prototypes", "UX Flows"],
-      "tags": ["React Native", "Health & Fitness", "Gamification", "Accessibility"],
-      "role": ["Lead Designer", "UX Researcher"],
-      "team": "2 Designers, 5 Engineers, 1 PM",
-      "timeline": "2023 (6 months)",
-      "kpis": ["78% 30-day retention", "4.8★ App Store rating", "500K+ downloads in first year"],
-      "summary": "Designed meditation and mental wellness app with personalized AI-guided sessions, mood tracking, and community support circles. Achieved 78% retention through gentle gamification and habit-building patterns.",
-      "cover": "project-cover-19",
-      "gallery": ["gallery-19-1", "gallery-19-2", "gallery-19-3"],
-      "liveUrl": "https://github.com/rajeshkumar/mental-wellness-app",
-      "codeUrl": "https://github.com/rajeshkumar/mental-wellness-app",
-      "industry": "Health & Wellness",
-      "platform": ["iOS", "Android"],
-      "featured": false,
-      "status": "live"
-    },
-    {
-      "id": "20",
-      "slug": "crypto-trading-platform",
-      "title": "Real-Time Crypto Trading Terminal",
-      "category": ["Apps", "Design Systems", "UX Flows"],
-      "tags": ["React", "TypeScript", "Data Visualization", "WebSockets"],
-      "role": ["Senior UX/UI Designer", "Frontend Developer"],
-      "team": "3 Designers, 8 Engineers, 2 PMs",
-      "timeline": "2024 (5 months)",
-      "kpis": ["1.2s trade execution latency", "250K+ active traders", "99.98% uptime"],
-      "summary": "Designed professional-grade crypto trading terminal with real-time order books, advanced charting, and one-tap trade execution. Built for 250K+ active traders with sub-second price updates via WebSocket.",
-      "cover": "project-cover-20",
-      "gallery": ["gallery-20-1", "gallery-20-2", "gallery-20-3"],
-      "liveUrl": "https://github.com/rajeshkumar/crypto-trading-platform",
-      "codeUrl": "https://github.com/rajeshkumar/crypto-trading-platform",
-      "industry": "FinTech & Crypto",
-      "platform": ["Web", "Mobile Web"],
-      "featured": true,
-      "status": "live"
+      "status": "archived"
     }
   ]
 }

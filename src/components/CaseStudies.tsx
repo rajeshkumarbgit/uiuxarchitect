@@ -51,7 +51,7 @@ export default function CaseStudies({ onNavigate }: CaseStudiesProps) {
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                           loading="lazy"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-ink-950/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        
                         <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-white/90 dark:bg-ink-900/90 backdrop-blur-sm text-ink-900 dark:text-white shadow-soft">
                           {caseStudy.metadata.industry}
                         </div>

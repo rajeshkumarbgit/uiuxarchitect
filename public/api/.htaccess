@@ -1,0 +1,13 @@
+# Only the contact endpoint is reachable in /api.
+Options -Indexes
+
+<FilesMatch ".*">
+  Require all denied
+</FilesMatch>
+<Files "contact.php">
+  Require all granted
+</Files>
+
+<IfModule mod_headers.c>
+  Header always set Cache-Control "no-store"
+</IfModule>

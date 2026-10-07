@@ -1,5 +1,5 @@
 import { useState, useMemo, useCallback } from 'react';
-import { Award, Search, Sparkles, Github, ExternalLink, ArrowRight } from 'lucide-react';
+import { Award, Search, Sparkles, Github, ExternalLink, ArrowRight, BookOpen } from 'lucide-react';
 import { useAllProjects } from '../hooks/useProjects';
 import { usePortfolioContent } from '../hooks/useContent';
 import { imageService } from '../services/imageService';
@@ -132,17 +132,30 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
                   <img
                     src={coverUrl}
                     alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                  {project.featured && (
-                    <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-ink-900/90 backdrop-blur-sm text-white">
-                      <Award className="w-3 h-3" />
-                      Featured
-                    </div>
-                  )}
+                  
+                  <div className="absolute top-4 left-4 flex flex-wrap gap-1.5">
+                    {project.featured && (
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-white/95 text-brand-700 shadow-soft">
+                        <Award className="w-3 h-3" />
+                        Featured
+                      </span>
+                    )}
+                    {projectService.hasCaseStudy(project.slug) && (
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-white/95 text-ink-700 shadow-soft">
+                        <BookOpen className="w-3 h-3" />
+                        Case study
+                      </span>
+                    )}
+                    {project.kind === 'concept' && (
+                      <span className="px-3 py-1.5 rounded-full text-xs font-semibold bg-white/95 text-accent-700 shadow-soft">Concept</span>
+                    )}
+                    {project.kind === 'personal' && (
+                      <span className="px-3 py-1.5 rounded-full text-xs font-semibold bg-white/95 text-accent-700 shadow-soft">Personal</span>
+                    )}
+                  </div>
 
                   {(project.codeUrl || project.liveUrl) && (
                     <div className="absolute top-4 right-4 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -186,7 +199,7 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
 
                 <div className="p-5 space-y-3">
                   <div className="space-y-2">
-                    <h3 className="text-lg font-bold text-ink-900 dark:text-white tracking-tight line-clamp-2">
+                    <h3 className="text-lg font-semibold text-ink-900 dark:text-white tracking-tight line-clamp-2">
                       {project.title}
                     </h3>
                     <p className="text-sm text-ink-500 dark:text-ink-400 leading-[1.7] line-clamp-2">{project.summary}</p>

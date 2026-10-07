@@ -18,6 +18,8 @@ export interface Project {
   timeline: string;
   kpis: string[];
   summary: string;
+  /** Plain-language explanation of the technical summary */
+  plainTerms?: string;
   cover: string;
   gallery?: string[];
   prototype?: string;
@@ -27,6 +29,8 @@ export interface Project {
   industry: string;
   platform: string[];
   status?: 'live' | 'prototype' | 'archived';
+  /** client = paid/employer work (default), concept = self-initiated study, personal = own product */
+  kind?: 'client' | 'concept' | 'personal';
 }
 
 export interface ProjectFilters {
@@ -72,6 +76,8 @@ export interface ProjectMetadata {
 }
 
 export interface CaseStudySections {
+  /** Plain-language explanation of the project for non-technical readers */
+  plainTerms?: string;
   problem: string;
   research: ResearchSection;
   solution: SolutionSection;
@@ -190,6 +196,24 @@ export interface AboutContent {
   principles: Principle[];
   skillsTitle: string;
   timelineTitle: string;
+  globalCollaboration?: GlobalCollaboration;
+  credentials?: Credentials;
+}
+
+export interface GlobalCollaboration {
+  title: string;
+  description: string;
+  regions: string[];
+  steps: { title: string; description: string }[];
+}
+
+export interface Credentials {
+  educationTitle: string;
+  education: string[];
+  certificationsTitle: string;
+  certifications: string[];
+  awardsTitle: string;
+  awards: string[];
 }
 
 export interface PortfolioContent {
@@ -228,6 +252,13 @@ export interface ContactContent {
   bookCallSubtext: string;
   resumeSubtext: string;
   portfolioSubtext: string;
+  topicsLabel: string;
+  topics: string[];
+  nextStepsTitle: string;
+  nextSteps: { title: string; description: string }[];
+  successTitle: string;
+  successMessage: string;
+  errorFallback: string;
 }
 
 export interface Labels {
@@ -260,7 +291,7 @@ export interface ImageData {
 
 export interface Attribution {
   author: string;
-  source: 'dribbble' | 'behance' | 'unsplash' | 'pexels';
+  source: 'original' | 'dribbble' | 'behance' | 'unsplash' | 'pexels';
   url: string;
 }
 
@@ -281,6 +312,8 @@ export interface SiteConfig {
   };
   social: SocialLink[];
   navigation: NavItem[];
+  /** Optional header actions; set to true to show */
+  headerActions?: { github?: boolean; resume?: boolean; bookCall?: boolean };
   theme: ThemeConfig;
 }
 
@@ -289,6 +322,8 @@ export interface SocialLink {
   icon: string;
   url: string;
   username: string;
+  /** Set to false to hide this link everywhere (footer, contact, header) */
+  visible?: boolean;
 }
 
 export interface NavItem {

@@ -1,52 +1,55 @@
 {
   "name": "Rajesh Kumar Portfolio",
-  "title": "Rajesh Kumar - UI/UX Architect & Senior Product Designer",
-  "description": "UI/UX Architect and Senior Product Designer with 18+ years of experience creating impactful enterprise and consumer digital experiences",
+  "title": "Rajesh Kumar - Product Design Lead | UI/UX & Frontend Architect",
+  "description": "Product design lead and UI/UX & frontend architect with 20+ years in enterprise and telecom software",
   "url": "https://rajeshkumar.design",
   "author": {
-    "name": "Rajesh Kumar",
-    "email": "rajesh.kumar@design.com",
-    "phone": "+1 (555) 555-1234",
+    "name": "Rajesh Kumar B",
+    "email": "rajeshkumarb1@gmail.com",
+    "phone": "+91 8939670538",
     "location": "Chennai, India"
   },
   "social": [
     {
       "platform": "LinkedIn",
       "icon": "Linkedin",
-      "url": "https://linkedin.com/in/rajeshkumar",
-      "username": "@rajeshkumar"
+      "url": "https://www.linkedin.com/in/rajeshb1",
+      "username": "rajeshb1"
     },
     {
       "platform": "GitHub",
       "icon": "Github",
-      "url": "https://github.com/rajeshkumar",
-      "username": "@rajeshkumar"
-    },
-    {
-      "platform": "Twitter",
-      "icon": "Twitter",
-      "url": "https://twitter.com/rajeshkumarux",
-      "username": "@rajeshkumarux"
-    },
-    {
-      "platform": "Dribbble",
-      "icon": "Dribbble",
-      "url": "https://dribbble.com/rajeshkumar",
-      "username": "@rajeshkumar"
-    },
-    {
-      "platform": "Behance",
-      "icon": "Briefcase",
-      "url": "https://behance.net/rajeshkumar",
-      "username": "@rajeshkumar"
+      "url": "https://github.com/rajeshkumarbgit",
+      "username": "rajeshkumarbgit",
+      "visible": false
     }
   ],
   "navigation": [
-    { "id": "home", "label": "Home", "href": "/" },
-    { "id": "about", "label": "About", "href": "/about" },
-    { "id": "portfolio", "label": "Portfolio", "href": "/portfolio" },
-    { "id": "case-studies", "label": "Case Studies", "href": "/case-studies" },
-    { "id": "contact", "label": "Contact", "href": "/contact" }
+    {
+      "id": "home",
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "href": "/about"
+    },
+    {
+      "id": "portfolio",
+      "label": "Portfolio",
+      "href": "/portfolio"
+    },
+    {
+      "id": "case-studies",
+      "label": "Case Studies",
+      "href": "/case-studies"
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "href": "/contact"
+    }
   ],
   "theme": {
     "colors": {
@@ -59,5 +62,10 @@
     "spacing": {
       "grid": 8
     }
+  },
+  "headerActions": {
+    "github": false,
+    "resume": false,
+    "bookCall": false
   }
 }

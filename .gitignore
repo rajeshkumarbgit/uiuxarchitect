@@ -21,3 +21,6 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# contact form state (local PHP testing)
+.portfolio-contact
