@@ -3,6 +3,7 @@
     {
       "category": "UX Design",
       "icon": "Palette",
+      "summary": "From discovery research to tested, accessible flows for complex operations tools.",
       "skills": [
         {
           "name": "User Research",
@@ -49,6 +50,7 @@
     {
       "category": "Frontend Development",
       "icon": "Code",
+      "summary": "I ship production Angular and React code, not just handoff files.",
       "skills": [
         {
           "name": "Angular & RxJS",
@@ -95,6 +97,7 @@
     {
       "category": "Tools & Platforms",
       "icon": "Zap",
+      "summary": "The kit I design, prototype, build and ship with.",
       "skills": [
         {
           "name": "Figma & Design Systems",
@@ -136,6 +139,7 @@
     {
       "category": "Product & Strategy",
       "icon": "Target",
+      "summary": "Framing the right problem, aligning stakeholders and growing design teams.",
       "skills": [
         {
           "name": "Product Strategy",
@@ -172,6 +176,7 @@
     {
       "category": "Domain Expertise",
       "icon": "Briefcase",
+      "summary": "Telecom network operations software, from fault dashboards to AI-assisted workflows.",
       "skills": [
         {
           "name": "Telecom Network Operations Software",

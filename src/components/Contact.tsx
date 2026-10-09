@@ -8,6 +8,8 @@ interface ContactProps {
 }
 
 const ENDPOINT = import.meta.env.VITE_CONTACT_ENDPOINT ?? '/api/contact.php';
+// Optional Cloudflare Turnstile CAPTCHA; also set TURNSTILE_SECRET in public/api/contact.php.
+const TURNSTILE_SITE_KEY: string = import.meta.env.VITE_TURNSTILE_SITE_KEY ?? '';
 const MAX_MESSAGE = 5000;
 
 type Status = 'idle' | 'sending' | 'sent' | 'error';
@@ -16,13 +18,93 @@ type Field = 'name' | 'email' | 'company' | 'message';
 const emptyForm = { name: '', email: '', company: '', topic: '', message: '', website: '' };
 
 // Mirrors the server-side rules in public/api/contact.php
+// No leading, trailing or double dots in the local part (written without lookbehind for older Safari).
+const EMAIL_PATTERN = /^(?=[^@]{1,64}@)(?=.{1,160}$)[A-Za-z0-9_%+-]+(?:\.[A-Za-z0-9_%+-]+)*@([A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\.)+[A-Za-z]{2,24}$/;
+
+// Common domain typos (kept in sync with EMAIL_TYPOS in public/api/contact.php).
+const EMAIL_TYPOS: Record<string, string> = {
+  'gmial.com': 'gmail.com', 'gmai.com': 'gmail.com', 'gmal.com': 'gmail.com', 'gamil.com': 'gmail.com',
+  'gmail.co': 'gmail.com', 'gmail.con': 'gmail.com', 'gmail.cm': 'gmail.com', 'gnail.com': 'gmail.com',
+  'yaho.com': 'yahoo.com', 'yahooo.com': 'yahoo.com', 'yahoo.con': 'yahoo.com', 'yahoo.co': 'yahoo.com',
+  'hotmial.com': 'hotmail.com', 'hotmal.com': 'hotmail.com', 'hotmail.con': 'hotmail.com',
+  'outlok.com': 'outlook.com', 'outlook.con': 'outlook.com', 'iclod.com': 'icloud.com',
+  'icloud.con': 'icloud.com', 'rediffmal.com': 'rediffmail.com',
+};
+
+/** Returns the corrected address when the domain looks like a typo of a common provider. */
+function suggestEmail(email: string): string | null {
+  const [local, domain] = email.trim().split('@');
+  const fix = domain && EMAIL_TYPOS[domain.toLowerCase()];
+  return local && fix ? `${local}@${fix}` : null;
+}
+
 function validate(form: typeof emptyForm): Partial<Record<Field, string>> {
   const errors: Partial<Record<Field, string>> = {};
+  const email = form.email.trim();
   if (form.name.trim().length < 2 || /[<>"@]/.test(form.name)) errors.name = 'Please enter your name.';
-  if (!/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(form.email.trim())) errors.email = 'Please enter a valid email address.';
+  if (!email) errors.email = 'Please enter your email address.';
+  else if (!EMAIL_PATTERN.test(email)) errors.email = 'Please enter a valid email address, like name@company.com.';
   if (/[<>]/.test(form.company)) errors.company = 'Please remove < and > from the company name.';
   if (form.message.trim().length < 10) errors.message = 'Please write a little more (at least 10 characters).';
   return errors;
+}
+
+type TurnstileApi = {
+  render: (el: HTMLElement, opts: Record<string, unknown>) => string;
+  reset: (id: string) => void;
+  remove: (id: string) => void;
+};
+declare global {
+  interface Window {
+    turnstile?: TurnstileApi;
+  }
+}
+
+/** Renders the Turnstile widget when a site key is configured; returns the current response token. */
+function useTurnstile(container: React.RefObject<HTMLDivElement | null>, active: boolean) {
+  const [token, setToken] = useState('');
+  const widgetId = useRef<string | null>(null);
+
+  useEffect(() => {
+    if (!TURNSTILE_SITE_KEY || !active || !container.current) return;
+    const el = container.current;
+    const render = () => {
+      if (!window.turnstile || widgetId.current) return;
+      widgetId.current = window.turnstile.render(el, {
+        sitekey: TURNSTILE_SITE_KEY,
+        theme: document.documentElement.classList.contains('dark') ? 'dark' : 'light',
+        callback: (t: string) => setToken(t),
+        'expired-callback': () => setToken(''),
+        'error-callback': () => setToken(''),
+      });
+    };
+    let script = document.querySelector<HTMLScriptElement>('script[data-turnstile]');
+    if (window.turnstile) {
+      render();
+    } else {
+      if (!script) {
+        script = document.createElement('script');
+        script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+        script.async = true;
+        script.dataset.turnstile = '';
+        document.head.appendChild(script);
+      }
+      script.addEventListener('load', render);
+    }
+    return () => {
+      script?.removeEventListener('load', render);
+      if (widgetId.current) window.turnstile?.remove(widgetId.current);
+      widgetId.current = null;
+      setToken('');
+    };
+  }, [container, active]);
+
+  const reset = () => {
+    setToken('');
+    if (widgetId.current) window.turnstile?.reset(widgetId.current);
+  };
+
+  return { enabled: !!TURNSTILE_SITE_KEY, token, reset };
 }
 
 function useIstTime() {
@@ -50,6 +132,8 @@ export default function Contact({ onNavigate }: ContactProps) {
   const [copied, setCopied] = useState(false);
   const token = useRef('');
   const successRef = useRef<HTMLDivElement>(null);
+  const captchaRef = useRef<HTMLDivElement>(null);
+  const captcha = useTurnstile(captchaRef, status !== 'sent');
 
   // A signed, time-stamped token from the server proves the form was loaded
   // before it was sent; the server rejects posts without one.
@@ -65,6 +149,19 @@ export default function Contact({ onNavigate }: ContactProps) {
   useEffect(loadToken, []);
 
   const clientErrors = validate(form);
+  const emailSuggestion = suggestEmail(form.email);
+
+  // The send button stays disabled until everything the server checks is satisfied;
+  // the hint next to it says exactly what is still missing.
+  const missing = [
+    (clientErrors.name || serverErrors.name) && 'your name',
+    (clientErrors.email || serverErrors.email) && 'a valid email',
+    !clientErrors.email && emailSuggestion && 'a corrected email domain',
+    (clientErrors.company || serverErrors.company) && 'a company name without < or >',
+    (clientErrors.message || serverErrors.message) && 'a message (10+ characters)',
+    captcha.enabled && !captcha.token && 'the verification check',
+  ].filter((item): item is string => !!item);
+  const canSend = missing.length === 0;
   const errorFor = (field: Field) => (touched[field] ? clientErrors[field] : undefined) ?? serverErrors[field];
 
   useEffect(() => {
@@ -80,6 +177,11 @@ export default function Contact({ onNavigate }: ContactProps) {
     e.preventDefault();
     setTouched({ name: true, email: true, company: true, message: true });
     if (Object.keys(clientErrors).length > 0) return;
+    if (captcha.enabled && !captcha.token) {
+      setErrorMessage('Please complete the verification check above.');
+      setStatus('error');
+      return;
+    }
 
     setStatus('sending');
     setErrorMessage('');
@@ -87,7 +189,7 @@ export default function Contact({ onNavigate }: ContactProps) {
       const res = await fetch(ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, token: token.current }),
+        body: JSON.stringify({ ...form, email: form.email.trim(), token: token.current, captcha: captcha.token }),
       });
       const data = await res.json().catch(() => null);
       if (res.ok && data?.ok) {
@@ -96,6 +198,8 @@ export default function Contact({ onNavigate }: ContactProps) {
       }
       if (data?.fields) setServerErrors(data.fields);
       if (res.status === 400) loadToken();
+      // Turnstile tokens are single-use; field errors (422) are rejected before it is checked.
+      if (res.status !== 422) captcha.reset();
       setErrorMessage(data?.error ?? 'The message could not be sent right now.');
       setStatus('error');
     } catch {
@@ -216,11 +320,27 @@ export default function Contact({ onNavigate }: ContactProps) {
                         onChange={(e) => update('email', e.target.value)}
                         onBlur={() => setTouched((t) => ({ ...t, email: true }))}
                         aria-invalid={!!errorFor('email')}
-                        aria-describedby={errorFor('email') ? 'email-error' : undefined}
+                        aria-describedby={emailSuggestion || errorFor('email') ? 'email-error' : undefined}
+                        spellCheck={false}
+                        autoCapitalize="off"
                         className={fieldClass('email')}
                         placeholder="you@company.com"
                       />
-                      {errorFor('email') && <p id="email-error" className="mt-1.5 text-xs text-danger-600 dark:text-danger-400">{errorFor('email')}</p>}
+                      {emailSuggestion ? (
+                        <p id="email-error" className="mt-1.5 text-xs text-ink-600 dark:text-ink-300">
+                          Did you mean{' '}
+                          <button
+                            type="button"
+                            onClick={() => update('email', emailSuggestion)}
+                            className="font-medium text-brand-600 dark:text-brand-300 underline underline-offset-2"
+                          >
+                            {emailSuggestion}
+                          </button>
+                          ?
+                        </p>
+                      ) : (
+                        errorFor('email') && <p id="email-error" className="mt-1.5 text-xs text-danger-600 dark:text-danger-400">{errorFor('email')}</p>
+                      )}
                     </div>
                   </div>
 
@@ -268,6 +388,8 @@ export default function Contact({ onNavigate }: ContactProps) {
                     <input id="website" tabIndex={-1} autoComplete="off" value={form.website} onChange={(e) => update('website', e.target.value)} />
                   </div>
 
+                  {captcha.enabled && <div ref={captchaRef} className="min-h-[65px]" />}
+
                   {status === 'error' && (
                     <div role="alert" className="flex items-start gap-3 p-4 rounded-2xl bg-danger-50 dark:bg-danger-500/10 border border-danger-100 dark:border-danger-500/30">
                       <AlertCircle className="w-5 h-5 text-danger-600 dark:text-danger-400 flex-shrink-0 mt-0.5" />
@@ -282,7 +404,16 @@ export default function Contact({ onNavigate }: ContactProps) {
                   )}
 
                   <div className="flex flex-col sm:flex-row sm:items-center gap-4 pt-1">
-                    <button type="submit" disabled={status === 'sending'} className="btn-primary h-12 px-8 disabled:opacity-70 disabled:cursor-wait">
+                    <button
+                      type="submit"
+                      disabled={!canSend || status === 'sending'}
+                      aria-describedby="send-hint"
+                      className={`btn-primary h-12 px-8 flex-shrink-0 whitespace-nowrap self-start sm:self-auto ${
+                        status === 'sending'
+                          ? 'cursor-wait opacity-80'
+                          : 'disabled:bg-ink-200 disabled:text-ink-500 disabled:shadow-none disabled:cursor-not-allowed dark:disabled:bg-ink-800 dark:disabled:text-ink-400'
+                      }`}
+                    >
                       {status === 'sending' ? (
                         <>
                           <Loader2 className="w-4 h-4 mr-2 animate-spin" />
@@ -295,8 +426,15 @@ export default function Contact({ onNavigate }: ContactProps) {
                         </>
                       )}
                     </button>
-                    <p className="text-xs text-ink-500 dark:text-ink-400 leading-[1.6]">
-                      Your details are only used to reply to you. Nothing is stored on this site.
+                    <p id="send-hint" aria-live="polite" className="text-xs text-ink-500 dark:text-ink-400 leading-[1.6]">
+                      {canSend || status === 'sending' ? (
+                        "Your details are only used to reply to you. You'll get a confirmation email; nothing is stored on this site."
+                      ) : (
+                        <>
+                          <span className="font-medium text-ink-700 dark:text-ink-200">To send, add </span>
+                          {missing.join(', ').replace(/, ([^,]*)$/, ' and $1')}.
+                        </>
+                      )}
                     </p>
                   </div>
                 </form>

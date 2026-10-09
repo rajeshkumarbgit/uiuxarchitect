@@ -213,7 +213,7 @@
       }
     ],
     "successTitle": "Message sent",
-    "successMessage": "Thanks for reaching out — your message is in my inbox. I'll reply personally to {email}.",
+    "successMessage": "Thanks for reaching out — your message is in my inbox. A confirmation is on its way to {email}, and I'll reply to you personally.",
     "errorFallback": "You can also email me directly at"
   },
   "labels": {
