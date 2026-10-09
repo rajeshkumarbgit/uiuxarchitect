@@ -121,12 +121,13 @@ export interface Testimonial {
 export interface SkillCategory {
   category: string;
   icon: string;
+  summary?: string;
   skills: Skill[];
 }
 
 export interface Skill {
   name: string;
-  level: number; // 0-100
+  level: number; // 0-100; not displayed — 90+ marks a core skill
   years: string; // e.g., "10+"
 }
 

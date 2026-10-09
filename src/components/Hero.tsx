@@ -86,7 +86,7 @@ export default function Hero({ onNavigate }: HeroProps) {
 
           <div className="lg:col-span-5 animate-slide-up" style={{ animationDelay: '0.2s' }}>
             <figure className="max-w-md mx-auto lg:max-w-none">
-              <div className={`relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-elevated ring-1 ${isDark ? 'ring-white/10' : 'ring-ink-900/5'}`}>
+              <div className={`relative aspect-[4/5] rounded-4xl overflow-hidden shadow-elevated ring-1 ${isDark ? 'ring-white/10' : 'ring-ink-900/5'}`}>
                 <img
                   src={heroVisualUrl}
                   alt="Collage of Rajesh Kumar's product work: an operations dashboard, a field-operations mobile app, design tokens and human-in-the-loop AI states"

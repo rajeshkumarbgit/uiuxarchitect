@@ -131,7 +131,7 @@
   .gradient-border {
     position: relative;
     background: theme('colors.white');
-    border-radius: 1rem;
+    border-radius: 0.5rem;
   }
 
   .dark .gradient-border {

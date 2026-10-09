@@ -62,7 +62,7 @@ export function ImageGallery({ images, title, backLabel, onBack }: ImageGalleryP
     <div className="pt-20 px-4 sm:px-6 lg:px-8">
       <div
         ref={heroRef}
-        className={`relative aspect-[16/10] max-h-[78vh] max-w-6xl mx-auto mt-4 rounded-[2rem] overflow-hidden bg-ink-100 dark:bg-ink-900 ring-1 ring-ink-900/5 dark:ring-white/10 select-none ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
+        className={`relative aspect-[16/10] max-h-[78vh] max-w-6xl mx-auto mt-4 rounded-4xl overflow-hidden bg-ink-100 dark:bg-ink-900 ring-1 ring-ink-900/5 dark:ring-white/10 select-none ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
         onTouchStart={(e) => dragStart(e.touches[0].clientX)}
         onTouchMove={(e) => dragMove(e.touches[0].clientX)}
         onTouchEnd={dragEnd}

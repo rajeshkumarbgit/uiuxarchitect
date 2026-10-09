@@ -135,7 +135,7 @@ export default function Carousel({ items, autoPlay = false, interval = 5000, cla
     <div className={`relative w-full ${className}`}>
       <div
         ref={containerRef}
-        className={`relative aspect-[16/10] max-h-[640px] w-full overflow-hidden rounded-[2rem] bg-ink-100 dark:bg-ink-800 ring-1 ring-ink-900/5 dark:ring-white/10 select-none ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
+        className={`relative aspect-[16/10] max-h-[640px] w-full overflow-hidden rounded-4xl bg-ink-100 dark:bg-ink-800 ring-1 ring-ink-900/5 dark:ring-white/10 select-none ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}

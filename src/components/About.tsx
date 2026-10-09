@@ -12,6 +12,9 @@ const iconMap: Record<string, LucideIcon> = {
   Briefcase,
 };
 
+// Skills at or above this level are shown as core strengths; the level itself is never displayed.
+const CORE_LEVEL = 90;
+
 export default function About() {
   const content = useAboutContent();
   const skillCategories = useSkillCategories();
@@ -84,35 +87,73 @@ export default function About() {
         </div>
 
         <div className="mb-20">
-          <h2 className="text-2xl font-bold text-ink-900 dark:text-white mb-8 tracking-tight">{content.skillsTitle}</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+            <h2 className="text-2xl font-bold text-ink-900 dark:text-white tracking-tight">{content.skillsTitle}</h2>
+            <ul className="flex items-center gap-4 text-xs text-ink-500 dark:text-ink-400" aria-label="Legend">
+              <li className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-500" aria-hidden="true" />
+                Core strength
+              </li>
+              <li className="flex items-center gap-1.5">
+                <span className="w-3 h-2 rounded-full border border-dashed border-ink-400 dark:border-ink-500" aria-hidden="true" />
+                Also work with
+              </li>
+            </ul>
+          </div>
+          <div className="grid md:grid-cols-2 gap-5">
             {skillCategories.map((category, idx) => {
               const Icon = iconMap[category.icon];
+              const core = category.skills.filter((s) => s.level >= CORE_LEVEL);
+              const supporting = category.skills.filter((s) => s.level < CORE_LEVEL);
+              // With an odd number of categories the last card spans the full row.
+              const wide = idx === skillCategories.length - 1 && skillCategories.length % 2 === 1;
               return (
-                <div key={idx} className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 flex items-center justify-center">
-                      <Icon className="w-5 h-5 text-white" />
+                <article
+                  key={category.category}
+                  className={`group flex flex-col p-6 bg-white dark:bg-ink-900 rounded-2xl border border-ink-200/70 dark:border-ink-800 hover:border-brand-200 dark:hover:border-brand-500/40 hover:shadow-card transition-all duration-300 ${
+                    wide ? 'md:col-span-2' : ''
+                  }`}
+                >
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-brand-50 dark:bg-brand-500/15 flex items-center justify-center flex-shrink-0 group-hover:bg-gradient-to-br group-hover:from-brand-500 group-hover:to-accent-500 transition-colors duration-300">
+                      <Icon className="w-5 h-5 text-brand-600 dark:text-brand-300 group-hover:text-white transition-colors duration-300" />
                     </div>
-                    <h3 className="text-lg font-bold text-ink-900 dark:text-white">{category.category}</h3>
+                    <div>
+                      <h3 className="text-base font-bold text-ink-900 dark:text-white leading-tight">{category.category}</h3>
+                      {category.summary && (
+                        <p className="mt-1 text-sm text-ink-500 dark:text-ink-400 leading-[1.6]">{category.summary}</p>
+                      )}
+                    </div>
                   </div>
-                  <div className="space-y-3 pl-1">
-                    {category.skills.map((skill, skillIdx) => (
-                      <div key={skillIdx} className="space-y-2">
-                        <div className="flex items-center justify-between text-sm">
-                          <span className="font-semibold text-ink-900 dark:text-white">{skill.name}</span>
-                          <span className="text-ink-500 dark:text-ink-400">{skill.years}</span>
-                        </div>
-                        <div className="h-2 bg-ink-100 dark:bg-ink-800 rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-gradient-to-r from-brand-500 to-accent-500 rounded-full transition-all duration-1000"
-                            style={{ width: `${skill.level}%` }}
-                          />
-                        </div>
-                      </div>
+
+                  <ul className="flex flex-wrap gap-2" aria-label={`${category.category}: core strengths`}>
+                    {core.map((skill) => (
+                      <li
+                        key={skill.name}
+                        className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-ink-50 dark:bg-ink-800/70 border border-ink-200 dark:border-ink-700 text-[13px] font-medium text-ink-800 dark:text-ink-100"
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full bg-brand-500" aria-hidden="true" />
+                        {skill.name}
+                      </li>
                     ))}
-                  </div>
-                </div>
+                  </ul>
+
+                  {supporting.length > 0 && (
+                    <ul
+                      className="flex flex-wrap gap-2 mt-3 pt-3 border-t border-dashed border-ink-200 dark:border-ink-800"
+                      aria-label={`${category.category}: also work with`}
+                    >
+                      {supporting.map((skill) => (
+                        <li
+                          key={skill.name}
+                          className="inline-flex items-center px-3 py-1.5 rounded-full border border-dashed border-ink-300 dark:border-ink-700 text-[13px] text-ink-600 dark:text-ink-400"
+                        >
+                          {skill.name}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </article>
               );
             })}
           </div>

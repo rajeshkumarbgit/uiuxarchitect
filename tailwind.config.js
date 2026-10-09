@@ -96,10 +96,16 @@ export default {
         'inner-soft': 'inset 0 1px 2px rgba(0, 0, 0, 0.03)',
         'elevated': '0 24px 64px -16px rgba(0, 0, 0, 0.16), 0 8px 24px -8px rgba(0, 0, 0, 0.08)',
       },
+      // Half of Tailwind's default scale, for a crisper, more architectural look.
       borderRadius: {
-        '2xl': '1rem',
-        '3xl': '1.5rem',
-        '4xl': '2rem',
+        sm: '0.0625rem',
+        DEFAULT: '0.125rem',
+        md: '0.1875rem',
+        lg: '0.25rem',
+        xl: '0.375rem',
+        '2xl': '0.5rem',
+        '3xl': '0.75rem',
+        '4xl': '1rem',
       },
       animation: {
         'fade-in': 'fadeIn 0.8s ease-out',
